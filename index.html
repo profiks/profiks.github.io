@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+    <meta charset="utf-8">
+    <title>ChefPlaza | Soopholenghi&#39;s Menu Vlees</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Content/bootstrap.css">
+    <link rel="stylesheet" href="Content/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="Content/bootstrap-slider.css">
+    <link rel="stylesheet" href="Content/select-2-css/select2.css">
+    <link rel="stylesheet" href="Content/select2-bootstrap.css">
+    <link rel="stylesheet" href="Content/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="Content/jquery.range.css" >
+    <link rel="stylesheet" href="Content/Site.css">
+    <link rel="stylesheet" href="Content/steps-form-custom-styles.css">
+    <link rel="stylesheet" href="Content/custom-bootstrap-slider.css">
+    <link rel="stylesheet" href="Content/custom-select2-bootstrap.css">
+  
+</head>
+<body>
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/home/Index/">
+                    <img src="Content/images/logo_sm.png" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+                
+    <form action="zoek_een_menu/" class="navbar-form navbar-left date-input-container " method="post" role="search">    <div class="form-group">
+        <label for="location" class="sr-only">Location</label>
+        <select class="form-control" id="Location" name="Location"><option>Noord-Holland</option>
+        <option>Zuid-Holland</option>
+        <option>Utrecht</option>
+        <option>Overijssel</option>
+        <option>Drenthe</option>
+        <option>Gelderland</option>
+        <option>Noord-Brabant</option>
+        <option>Limburg</option>
+        <option>Zeeland</option>
+        <option>Friesland</option>
+        <option>Groningen</option>
+        <option>Flevoland</option>
+        <option>Antwerpen</option>
+        <option>Oost-Vlaanderen</option>
+        <option>Vlaams-Brabant</option>
+        <option>West-Vlaanderen</option>
+        <option>Waals-Brabant</option>
+        <option>Luik</option>
+        <option>Luxemburg</option>
+        <option>Namen</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="date" class="sr-only">Email address</label>
+        
+<input class="form-control" data-date-format="d-m-yyyy" data-provide="datepicker" id="Date" name="Date" placeholder="Datum" type="text" value="" />
+
+    </div>
+    <button type="submit" class="btn btn-danger text-uppercase">Zoek</button>
+</form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="/blog/">blog</a></li>
+                    <li><a href="/home/neem_contact_op/">Contact</a></li>
+                    
+                    <li><a href="https://www.instagram.com/chefplaza/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="http://facebook.com/chefplaza" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://twitter.com/chefplaza" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div>
+        <section>
+            <div class="spinner"></div>
+            <div class="busy-overlay"></div>
+            
+
+<div id="menu-page" class="menu-page">
+    <div class="menu-header">
+        <div class="menu-header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="go-back text-uppercase pull-left" href="/zoek_een_menu/">< terug naar zoeken</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="more-menus slide-bar-toggle-in text-uppercase pull-right">meer menus van Chef Sophie van Oyen ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-header-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        
+                        <div class="menu-image" style="background-image:url('http://chefplazaweb.azurewebsites.net/images/Sophie%20van%20Oyen/Food/Hoofdgerecht_optie_2_SOOPHOLENGHI%27S.jpg')"></div>
+                    </div>
+                    <div class="col-md-6 menu-info">
+                        <div class="menu-info-general">
+                            <h1>Soopholenghi&#39;s Menu Vlees</h1>
+                            <div class="price-area">
+                                <span>&euro; </span>
+                                <span class="price">93,00</span>
+                                
+                            </div>
+                            <span class="persons">/per persoon</span>
+                            <div class="rating" data-bind="template: { name: 'rating-template', data: 5 }"></div>
+                        </div>
+                        <button class="btn btn-lg btn-danger text-uppercase btn-rounded" data-toggle="modal" data-target="#requestMenuDialog">aanvragen</button>
+                        <div class="menu-courses">
+                                <div class="row">
+                                    <div class="col-md-3 course-title">
+                                        <span>Voorgerecht</span>
+                                    </div>
+                                    <div class="col-md-9 course-descr">
+                                        <span>Burrata met korianderzaad, perzik en verjus</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 course-title">
+                                        <span>Hoofdgerecht</span>
+                                    </div>
+                                    <div class="col-md-9 course-descr">
+                                        <span>Lamsfilet geserveerd met pompoen, salsa verde en seizoensgroenten</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 course-title">
+                                        <span>Dessert</span>
+                                    </div>
+                                    <div class="col-md-9 course-descr">
+                                        <span>Ananas, citroengras, kokos en basilicum</span>
+                                    </div>
+                                </div>
+                        </div>
+                        <div id="scrollAnchor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-bar more-menus">
+            <div class="slide-bar-header">
+                <a class="go-back slide-bar-toggle-out text-uppercase pull-left">< Terug naar huidige menu</a>
+            </div>
+                <div class="menu-item">
+                    <a data-bind="attr:{href: ChefPlaza.basePath + 'menu/aan-huis/sophies-5-gangen-signature-menu/c1c25d17-0154-e511-8128-c4346bad6288'}">
+                        <div class="item-image" style="background-image:url('http://chefplazaweb.azurewebsites.net/images/Sophie%20van%20Oyen/Food/Lam.jpg')"></div>
+                        <div class="image-overlay"></div>
+                    </a>
+                    <div class="rating" data-bind="template: { name: 'rating-template', data: 0 }"></div>
+                    <a class="reviews" data-bind="attr:{href: ChefPlaza.basePath + 'menu/aan-huis/sophies-5-gangen-signature-menu/c1c25d17-0154-e511-8128-c4346bad6288' + '#scrollAnchor'}"><span>0 Recensies</span></a>
+                    <span class="item-name">Sophie&#39;s 5 gangen signature menu</span>
+                    <div class="item-price-area">
+                        <span>&euro; </span>
+                        <span class="price">99,00</span>
+                        <span class="persons">/p.p. voor 10 personen</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a data-bind="attr:{href: ChefPlaza.basePath + 'menu/aan-huis/soopholenghis-menu-vis/3caee355-0454-e511-8128-c4346bad6288'}">
+                        <div class="item-image" style="background-image:url('http://chefplazaweb.azurewebsites.net/images/Sophie%20van%20Oyen/Food/Hoofdgerecht_optie_1_SOOPHOLENGHI%27S.jpg')"></div>
+                        <div class="image-overlay"></div>
+                    </a>
+                    <div class="rating" data-bind="template: { name: 'rating-template', data: 0 }"></div>
+                    <a class="reviews" data-bind="attr:{href: ChefPlaza.basePath + 'menu/aan-huis/soopholenghis-menu-vis/3caee355-0454-e511-8128-c4346bad6288' + '#scrollAnchor'}"><span>0 Recensies</span></a>
+                    <span class="item-name">Soopholenghi&#39;s Menu Vis</span>
+                    <div class="item-price-area">
+                        <span>&euro; </span>
+                        <span class="price">93,00</span>
+                        <span class="persons">/p.p. voor 10 personen</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a data-bind="attr:{href: ChefPlaza.basePath + 'menu/aan-huis/soopholenghis-menu-vlees-4-gangen/6ef90fb2-0754-e511-8128-c4346bad6288'}">
+                        <div class="item-image" style="background-image:url('http://chefplazaweb.azurewebsites.net/images/Sophie%20van%20Oyen/Food/Voorgerecht%20SOOPHOLENGHI%27S.jpg')"></div>
+                        <div class="image-overlay"></div>
+                    </a>
+                    <div class="rating" data-bind="template: { name: 'rating-template', data: 0 }"></div>
+                    <a class="reviews" data-bind="attr:{href: ChefPlaza.basePath + 'menu/aan-huis/soopholenghis-menu-vlees-4-gangen/6ef90fb2-0754-e511-8128-c4346bad6288' + '#scrollAnchor'}"><span>0 Recensies</span></a>
+                    <span class="item-name">Soopholenghi&#39;s Menu Vlees 4 gangen</span>
+                    <div class="item-price-area">
+                        <span>&euro; </span>
+                        <span class="price">67,00</span>
+                        <span class="persons">/p.p. voor 10 personen</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="menu-main container" id="menu-main">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="chef-info">
+                    
+                    <div class="chef-img img-circle" style="background-image:url('http://chefplazaweb.azurewebsites.net/images/Sophie%20van%20Oyen/Sophie.jpg')"></div>
+                    <div class="info-area">
+                            <a class="chef-name-link" data-bind="attr:{href: ChefPlaza.basePath + 'chef/aan-huis/chef-sophie-van-oyen' +'/'}"><span class="chef-name">Chef Sophie van Oyen</span></a>
+                            <div class="chef-city-area">
+                                <div class="map-marker glyphicon glyphicon-map-marker"></div>
+                                <div class="chef-city">Noord-Holland. Overige regio&#39;s op aanvraag.</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="chef-details">
+                    <div class="chef-details-item stats">
+                        <h5>Chef score</h5>
+                        <span class="rating-label text-uppercase">5 sterren</span>
+                        <div class="rating" data-bind="template: { name: 'rating-template', data: 5 }"></div>
+                        <br />
+                        <a class="reviews" data-bind="attr:{href: ChefPlaza.basePath + 'Chef/aan-huis/chef-sophie-van-oyen' +'/' + '#scrollAnchor'}">
+                            2 reviews
+                        </a>
+                    </div>
+                    <div class="chef-details-item aboutme">
+                        <h5>over mij</h5>
+                        <p class="item-body">Al van kleins af aan in de keuken te vinden, begonnen met pannenkoeken op zaterdagochtend en uitgegroeid tot professioneel chef bij Ottolenghi in Londen. Ik ben altijd ge&#239;nteresseerd geweest in voeding en eten. Hierdoor ben ik Voeding &amp; Di&#235;tetiek gaan studeren waarna ik naar Londen ben gegaan voor een full diploma year Leiths School of Food and Wine.</p>
+                    </div>
+                    <div class="chef-details-item region">
+                        <h5>regio</h5>
+                        <p class="item-body">Noord-Holland. Overige regio&#39;s op aanvraag.</p>
+                    </div>
+                    <div class="chef-details-item specialty">
+                        <h5>specialiteit</h5>
+                        <p class="item-body"></p>
+                    </div>
+                    <div class="chef-details-item experience">
+                        <h5>ervaring</h5>
+                        <p class="item-body">Bachelor diploma in Voeding &amp; Dietetiek. Stage en werken bij HelloFresh. Full year diploma Leiths School of Food and Wine. Chef bij Nopi by Ottolenghi. In Londen veel gewerkt als private chef en cateraar.</p>
+                    </div>
+                    <div class="chef-details-item chef-details-footer">
+                        
+                        <a class="btn btn-lg btn-danger text-uppercase btn-rounded link-btn" data-bind="attr: { href: ChefPlaza.basePath + 'Chef/aan-huis/chef-sophie-van-oyen' +'/'+ '7974b2da-f053-e511-8128-c4346bad6288' + '#requestCustomMenu' }">Vraag menu op maat aan</a>
+                        <a class="btn btn-primary btn-circle text-uppercase"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-info btn-circle text-uppercase"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7" role="tablist">
+                <div id="services-reviews">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li role="presentation" class="active"><a href="#menudetails" aria-controls="menudetails" role="tab" data-toggle="tab">Services</a></li>
+                        <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">2 Recensies</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="menudetails">
+                            <div class="text-uppercase menudetails-title"></div>
+                            <div class="row">
+                                <div class="col-md-6 menudetail-item"
+     onmouseover="$(this).find('.menudetail-img').attr('src', 'http://www.chefplaza.com/content/images/icons/services/menuDetail_PH_FamilyStyleIcon_Hover.png')"
+     onmouseout="$(this).find('.menudetail-img').attr('src', 'http://www.chefplaza.com/content/images/icons/services/menuDetail_PH_FamilyStyleIcon.png')">
+    <div class="menudetail-item-inner">
+        <img class="menudetail-img" src="http://www.chefplaza.com/content/images/icons/services/menuDetail_PH_FamilyStyleIcon.png" />
+        <span>Volledig aanpasbaar</span>
+        <div class="menudetail-description">Dit menu is volledig aanpasbaar.</div>
+    </div>
+</div><div class="col-md-6 menudetail-item"
+     onmouseover="$(this).find('.menudetail-img').attr('src', 'http://www.chefplaza.com/content/images/icons/services/menuDetail_PH_WineSuggestionIcon_Hover.png')"
+     onmouseout="$(this).find('.menudetail-img').attr('src', 'http://www.chefplaza.com/content/images/icons/services/menuDetail_PH_WineSuggestionIcon.png')">
+    <div class="menudetail-item-inner">
+        <img class="menudetail-img" src="http://www.chefplaza.com/content/images/icons/services/menuDetail_PH_WineSuggestionIcon.png" />
+        <span>Wijnadvies mogelijk</span>
+        <div class="menudetail-description">Vraag de chef naar het perfecte wijnarrangement bij dit menu.</div>
+    </div>
+</div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade scrollable" id="review">
+                            <div class="menu-line padding-md">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Fam. Raaijmakers <small></small></h4>
+            <h5 class="text-uppercase">Fantastische avond</h5>
+        </div>
+        <div class="col-md-6">
+            <div class="pull-right">
+                <div class="rating pull-right" data-bind="template: { name: 'rating-template', data: 5 }"></div>
+                <h6 class="text-uppercase text-right">5 sterren</h6>
+            </div>
+        </div>
+    </div>
+    <blockquote>
+        Eten op sterren niveau. 
+
+Chef Sophie heeft ons een avond gegeven om niet snel te vergeten. Vanaf het moment dat ze binnen kwam tot vertrek geen seconde naar om hoeven te kijken. We kregen een fantastisch diner zoals we dat in een restaurant gewend waren alleen veel persoonlijker. 
+
+Vanaf nu in plaats van een restaurant, een kok aan thuis. Dank Sophie we kunnen je aan iedereen aanraden. 
+    </blockquote>
+</div>
+<div class="menu-line padding-md">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Fam. Strijbos <small></small></h4>
+            <h5 class="text-uppercase">Geheel zonder zorgen</h5>
+        </div>
+        <div class="col-md-6">
+            <div class="pull-right">
+                <div class="rating pull-right" data-bind="template: { name: 'rating-template', data: 5 }"></div>
+                <h6 class="text-uppercase text-right">5 sterren</h6>
+            </div>
+        </div>
+    </div>
+    <blockquote>
+        Met de kleine in  haar eigen bed een heerlijk ontspannen avond gehad. Van begin tot eind tot in de puntjes verzorgd. We hadden nog nooit een chef aan huis gehad maar raden het absoluut aan! 
+
+Sophie kwam binnen met al haar spullen, verzorgde een mooie, als in een restaurant, gedekte tafel terwijl wij in de woonkamer gezellig spelletjes aan het doen waren. Heerlijk gegeten en naderhand ook geen zorgen gehad om de afwas of het schoonmaken van de keuken. Dit gaan we zeker vaker doen.
+    </blockquote>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+         <!-- *****************************   test modal ****************************************  -->     
+     <div id="requestMenuDialog" class="modal fade menurequest" tabindex="-1" role="dialog" aria-labelledby="label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content order-modal">               
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                   
+                    <input id="RedirectToThanks" name="RedirectToThanks" type="hidden" value="/Bedankt/" />
+                    <div class="request-form">
+                        
+                        <!-- *************************   2 step form ****************** -->
+                         <form id="orderForm" class="form-horizontal" data-bind="submit: submitRequest" novalidate="novalidate">
+    
+            
+           <h3 style="display:none">Order details</h3>
+        <section class="col-xs-12 modal-step-1 steps-section">
+          <div class="menu-info-general">
+                        <h1>Soopholenghi&#39;s Menu Vlees</h1>
+                        <div class="price-area">
+                            <span>&euro; </span>
+                            <span class="price">93,00 </span>
+                            
+                        </div>
+                        <span class="persons">/ per persoon</span>
+                        <div class="rating" data-bind="template: { name: 'rating-template', data: 5 }"></div>
+                    </div>
+                    <div class="menu-courses-area">
+                        <div class="menu-courses">
+                                <div class="row">
+                                    <div class="col-md-3 course-title">
+                                        <span>Voorgerecht</span>
+                                    </div>
+                                    <div class="col-md-9 course-descr">
+                                        <span>Burrata met korianderzaad, perzik en verjus</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 course-title">
+                                        <span>Hoofdgerecht</span>
+                                    </div>
+                                    <div class="col-md-9 course-descr">
+                                        <span>Lamsfilet geserveerd met pompoen, salsa verde en seizoensgroenten</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 course-title">
+                                        <span>Dessert</span>
+                                    </div>
+                                    <div class="col-md-9 course-descr">
+                                        <span>Ananas, citroengras, kokos en basilicum</span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+           <input name="__RequestVerificationToken" type="hidden" value="rcyzXG5ToaIi2NrBJjnaO3dAzK1OiRSTJ4cnGaDXmYNZLGyYWNVYLJg26db8oFQHSrcfYHwYg9p7ij6imOXnl1Xt11voTlx-_-MM230_3Do1">    
+                           <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="location" class="inline-img-label control-label"><i class="fa fa-map-marker"></i></label>
+                                    <select class="form-control input-lg valid" data-val="true" data-val-required="The Location field is required." id="location" name="MenuRequest.Location" aria-required="true" aria-invalid="false" aria-describedby="location-error"><option>Noord-Holland</option>
+                                        <option>Zuid-Holland</option>
+                                        <option>Utrecht</option>
+                                        <option>Overijssel</option>
+                                        <option>Drenthe</option>
+                                        <option>Gelderland</option>
+                                        <option>Noord-Brabant</option>
+                                        <option>Limburg</option>
+                                        <option>Zeeland</option>
+                                        <option>Friesland</option>
+                                        <option>Groningen</option>
+                                        <option>Flevoland</option>
+                                        <option>Antwerpen</option>
+                                        <option>Oost-Vlaanderen</option>
+                                        <option>Vlaams-Brabant</option>
+                                        <option>West-Vlaanderen</option>
+                                        <option>Waals-Brabant</option>
+                                        <option>Luik</option>
+                                        <option>Luxemburg</option>
+                                        <option>Namen</option>
+                                    </select>
+                                </div>                                
+                            </div>
+                            
+                            <div class="col-sm-6">
+                                <div class="form-group input-half-left">
+                               <label for="persons" class="inline-img-label control-label"><img src="Content/images/cp_selectGuestAmountIcon.png"></label>
+                                    <input class="form-control input-lg text-box single-line" data-val="true" data-val-number="The field Persons Count must be a number." data-val-required="The Persons Count field is required." id="persons" name="MenuRequest.PersonsCount" placeholder="Amount of guests" type="number" value="">
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="MenuRequest.PersonsCount" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-6">
+                                <div class="form-group input-half-right">
+                                  <label for="date" class="inline-img-label control-label"><i class="fa fa-calendar"></i></label>
+
+
+
+                                <input class="form-control input-lg" data-date-format="d-m-yyyy" data-provide="datepicker" data-val="true" data-val-date="The field Date must be a date." data-val-required="The Date field is required." id="date" name="MenuRequest.Date" placeholder="Datum" type="text" value="">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="MenuRequest.Date" data-valmsg-replace="true">
+                               </div>
+                            </div>
+                            
+                           <div class="modal-footer col-sm-12">
+        <button type="reset" class="font-bold btn btn-gray btn-round-xlg text-uppercase pull-left" data-step="reset">annuleren</button>
+        <a class="font-bold btn btn-danger btn-round-xlg text-uppercase pull-right" data-step="next">nex step <i class="fa fa-long-arrow-right"></i></a>
+        
+                           </div>
+        </section>
+        <h3 style="display:none">contact details</h3>
+    <section class="col-xs-12 modal-step-2  steps-section">
+           
+               <div class="col-sm-12">
+                    <div class="form-group">
+                    <label for="name" class="inline-img-label control-label"><i class="fa fa-user"></i></label>
+                                
+                    <input class="form-control input-lg text-uppercase text-box single-line" data-val="true" data-val-required="The Name field is required." id="name" name="MenuRequest.Name" placeholder="Naam" type="text" value="">
+                    <span class="field-validation-valid text-danger" data-valmsg-for="MenuRequest.Name" data-valmsg-replace="true"></span>
+                               
+                    </div>
+               </div>
+           
+                <div class="col-sm-6">
+                    <div class="form-group input-half-left">
+                                <label for="phone" class="inline-img-label control-label"><i class="fa fa-phone"></i></label>
+                                <input class="form-control input-lg text-uppercase text-box single-line" data-val="true" data-val-required="The Phone field is required." data-val-number="The field Phone must be a valid Phone number." id="phone" name="MenuRequest.Phone" placeholder="Telephon number" type="tel" value="">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="MenuRequest.Phone" data-valmsg-replace="true"></span>                               
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                     <div class="form-group input-half-right">
+                                <label for="email" class="inline-img-label control-label"><i class="fa fa-envelope"></i></label>
+                               <input class="form-control input-lg text-uppercase text-box single-line" data-val="true" data-val-required="The Email field is required." id="email" name="MenuRequest.Email" placeholder="E-mail" type="email" value="">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="MenuRequest.Email" data-valmsg-replace="true"></span>
+                                
+                        </div>
+                </div>                      
+                            
+               <div class="col-sm-12">
+                   <div class="form-group">
+                        <label for="comment" class="inline-img-label control-label"><i class="fa fa-comment"></i></label>
+                        <textarea class="form-control input-lg text-box multi-line" id="comment" name="MenuRequest.Comment" placeholder="Bericht (Wat is de gelegenheid? Spesiale wensen)" rows="4"></textarea>
+                                
+                    </div>
+               </div> 
+               
+        <div class="modal-footer col-sm-12">
+        <a  class="font-bold btn btn-gray btn-round-xlg text-uppercase pull-left" data-step="previous"><i class="fa fa-long-arrow-left"></i> previous step</a>
+        <button type="button" class="font-bold btn btn-danger btn-round-xlg text-uppercase pull-right" data-step="finish"><i class="fa fa-check"></i> bevestig</button>
+        </div>
+                           
+        </section>
+        
+   
+  
+</form>
+                        <!-- ************************* end 2 step form **************** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>     
+    <!-- ****************************** end test modal ***************************************-->
+ 
+  
+    
+    <div id="requestMenuDialogConfirmation" class="modal fade menurequest" tabindex="-1" role="dialog" aria-labelledby="label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="request-menu-confirm-msg">
+                        <h3><i class="fa fa-check"></i></h3>
+                        <h2>Bedankt voor uw aanvraag</h2>
+                    <p>U hebt een e-mail met de details van uw vrijblijvende offerteaanvraag ontvangen. Wij nemen zo snel mogelijk contact met u op om te bevestigen of chef Chef Sophie van Oyen nog beschikbaar is op uw gewenste datum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        </section>
+        <section>
+            
+    <div id="getinspired">
+    <div class="container">
+        <h1 class="text-center">Word geïnspireerd</h1>
+            <div class="row">
+                <div class="col-lg-3">
+                    <a href="/kok-aan-huis/" class="img-responsive kok-aan-huis">
+                        <h3 class="text-center">Kok aan huis</h3>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/franse-kok/" class="img-responsive franse-kok">
+                        <h3 class="text-center">Franse kok aan huis</h3>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/italiaanse-kok/" class="img-responsive italiaanse-kok">
+                        <h3 class="text-center">Italiaanse kok aan huis</h3>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/spaanse-kok/" class="img-responsive spaanse-kok">
+                        <h3 class="text-center">Spaanse kok aan huis</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="/cadeaubon" class="img-responsive giftcard">
+                        <img src="Content/images/send_gift_card.png" />
+                        <div id="description">
+                            <h3>Geef een Cadeaubon</h3>
+                            <p>
+                                Een chef aan huis is een superleuk, origineel cadeau voor elke gelegenheid.
+                            </p>
+                            <p class="text-uppercase">
+                                MEER INFO >
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/kerst" class="img-responsive christmas-family-dinner">
+                        <h3 class="text-center">Kerstdiner</h3>
+                    </a>
+                </div>
+
+                <div class="col-lg-3">
+                    <a href="/winter-bbq" class="img-responsive barbeque">
+                        <h3 class="text-center">Winter Barbecue</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <a href="/familiediner" class="img-responsive dinner-date">
+                        <h3 class="text-center">Familiediners</h3>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/gezellig-met-het-gezin" class="img-responsive anniversary-party">
+                        <h3 class="text-center">gezellig met het Gezin</h3>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="/verjaardag" class="img-responsive easter-holiday-dinner">
+                        <h3 class="text-center">Verjaardagsfeest</h3>
+                    </a>
+                </div>
+                
+
+                <div class="col-lg-3">
+                    <a href="/live-cooking" class="img-responsive dinner-with-friends">
+                        <h3 class="text-center">Live Cooking</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+    <div href="#" class="col-lg-12">
+        <div class="img-responsive match-op-maat">
+            <center>
+                 <h3>Match op maat</h3>
+                <h3><small>De kernwaarden van ChefPlaza zijn ontzorgen, kwaliteit en persoonlijk. Hierbij staat het ontzorgen van zowel de gast als de chefs voorop. Voor de gast wordt alle zorg uit handen genomen, zodat zij alleen maar hoeven te genieten. Dit maakt een diner aan huis ook een perfect cadeau. De chef doet de boodschappen, dekt de tafel, serveert het eten en neemt aan het einde van de avond de afwas weer mee naar huis. Voor de chef nemen wij het administratieve werk uit handen. De aanvragen worden door ons afgehandeld, waardoor de chef zich volledig kan richten op het verzorgen van een perfecte avond.</small> </h3>
+                <h3><small>Onze chefs zijn allemaal door ons persoonlijk getest en gekeurd. Dit betekent dat u alleen de allerbeste chefs kunt verwachten. Alle menu’s die onze chefkoks voorstellen zijn gebaseerd op uw persoonlijke voorkeur en kunnen worden aangepast tot u 100% tevreden bent. Hier komt de kernwaarde persoonlijk in het spel. Dit komt nog duidelijker naar voren als de chef bij u thuis de maaltijd serveert. Hij zal een uitleg geven van wat hij u serveert en er is altijd ruimte voor vragen en uitleg. Van kerstdiner tot 21 diner, onze koks maken voor iedere gelegenheid een culinair hoogstandje wat volledig op uw wensen in gebaseerd.</small> </h3>
+                <h3><small>Kunt u niet kiezen of hebt u bijzondere wensen? Wij helpen u graag.<br />
+                    Vertel ons alles en wij stellen samen met onze chefs het perfecte voorstel op maat voor u op.</small> </h3>
+                <button type="button" class="btn btn-round btn-lg btn-success text-uppercase" onclick="location.href = '/chef/aan-huis#requestCustomMenu';">boek nu <i class="fa fa-angle-right"></i> </button>
+            </center>
+        </div>
+    </div>
+</div>
+
+        </div>
+</div>
+
+        </section>
+    </div>
+    <footer class="footer navbar-inverse">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <ul class="navbar-header">
+                    <li>
+                        <a href="/home/Index/">
+                            <img src="Content/images/logo_sm.png" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 hidden-xs hidden-sm">
+                <ul class="nav navbar-nav">
+                    <font color="white">
+
+                        <li>(+31) 010 3000 360</li>
+                    </font>
+
+                    <li><a href="mailto:info@chefplaza.com">info@chefplaza.com</a></li>
+                    <li><br /> </li>
+                    <font color="white">
+                        <li>Marconistraat 16 | 3029AK Rotterdam</li>
+                    </font>
+                </ul>
+            </div>
+            <div class="col-md-2 hidden-xs hidden-sm">
+                <ul class="nav navbar-nav">
+                    
+                    <li><a href="/blog/">blog</a></li>
+                    <li><a href="/home/neem_contact_op/">contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-2 hidden-xs hidden-sm">
+                <ul class="nav navbar-nav">
+                    <li><a class="hr">Volg ons:</a></li>
+                    <li>
+                        
+                        <a class="hr" href="https://www.instagram.com/chefplaza/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a class="hr" href="http://facebook.com/chefplaza" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a class="hr" href="http://twitter.com/chefplaza" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 hidden-xs hidden-sm">
+                <ul class="nav navbar-nav">
+                    <li><a class="hr">Aanmelden nieuwsbrief</a></li>
+                    <li>
+                        <form class="navbar-form">
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control input-xlg" placeholder="Vul uw e-mail adres in">
+                                <span class="glyphicon glyphicon-chevron-right form-control-feedback"></span>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="Scripts/min-js/jquery-2.1.4.js"></script>
+    <script src="Scripts/spin.min.js"></script>
+
+    <script src="Scripts/globalize.js"></script>
+    
+    <script src="Scripts/min-js/jquery.steps.min.js"></script>
+    <script src="Scripts/stepsForm-script.js"></script>  
+     
+    <script src="Scripts/min-js/bootstrap.js"></script>
+    <script src="Scripts/min-js/bootstrap-datepicker.js"></script>
+    <script src="Scripts/min-js/respond.js"></script>
+
+
+    
+    
+    <script src="Scripts/custom-script.js"></script>
+
+    <script src="Scripts/min-js/modernizr-2.6.2.js"></script>
+    
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="Scripts/jquery.validate.globalize.js"></script>
+    
+    <script>
+        var sOpts = {
+            lines: 9,
+            length: 35,
+            width: 7,
+            radius: 25,
+            color: '#fff',
+            speed: 0.8,
+            zIndex: 2e9,
+            top: '300px',
+            left: '50%',
+            visibility: true
+        };
+        var spinnerObj = new Spinner(sOpts);
+
+        ChefPlaza = {
+            basePath: '/',
+            busy: function () {
+                $('.spinner').after(spinnerObj.spin().el);
+                $('.busy-overlay').show();
+            },
+            idle: function () {
+                spinnerObj.stop();
+                $('.busy-overlay').hide();
+            }
+        };
+    </script>
+    <script type="text/html" id="rating-template">
+        <div class="rating-star pull-right"><span data-bind="css: { 'glyphicon-star-empty': $data < 5, 'glyphicon-star': $data >= 5 }" class="glyphicon"></span></div>
+        <div class="rating-star pull-right"><span data-bind="css: { 'glyphicon-star-empty': $data < 4, 'glyphicon-star': $data >= 4 }" class="glyphicon"></span></div>
+        <div class="rating-star pull-right"><span data-bind="css: { 'glyphicon-star-empty': $data < 3, 'glyphicon-star': $data >= 3 }" class="glyphicon"></span></div>
+        <div class="rating-star pull-right"><span data-bind="css: { 'glyphicon-star-empty': $data < 2, 'glyphicon-star': $data >= 2 }" class="glyphicon"></span></div>
+        <div class="rating-star pull-right"><span data-bind="css: { 'glyphicon-star-empty': $data < 1, 'glyphicon-star': $data >= 1 }" class="glyphicon"></span></div>
+    </script>
+    
+    
+    
+    
+    <script src="Scripts/perfect-scrollbar.jquery.js"></script>
+
+    <script src="Scripts/select2.js"></script>
+
+    <script src="Scripts/knockout-3.3.0.debug.js"></script>
+    <script src="Scripts/knockout.validation.js"></script>
+    <script src="Scripts/knockout.mapping-latest.debug.js"></script>
+
+    <script src="Scripts/bootstrap-slider.js"></script>
+    
+    <script src="ViewModels/Menu/MenuViewModel.js"></script>
+    <script>
+        $('.scrollable').perfectScrollbar();
+        $('.price-slider').slider({});
+        $('#cuisines').select2();
+
+        var vm = ChefPlaza.MenuViewModel('');
+        ko.applyBindings(vm);
+
+        $('.slide-bar-toggle-in').click(function () {
+            var slidebar = $('.slide-bar');
+            if (slidebar.css('display') != 'none')
+                return;
+            slidebar.animate({ width: 'toggle' }, 350);
+        });
+
+        $('.slide-bar-toggle-out').click(function () {
+            var slidebar = $('.slide-bar');
+            if (slidebar.css('display') == 'none')
+                return;
+            slidebar.animate({ width: 'toggle' }, 350);
+        });
+
+        $(function () {
+            if (window.location.hash) {
+                $(document.body).animate({
+                    'scrollTop': $(window.location.hash).offset().top - 110
+                }, 1000);
+                if (window.location.hash == "#scrollAnchor") {
+                    $('.nav-tabs a[href="#review"]').tab('show');
+                }                
+            }
+            $('#requestMenuDialog').on('shown.bs.modal', function () {
+                $('#date').datepicker('remove');
+                $('#date').datepicker('update');
+            });
+            
+           
+        });
+        
+    </script>
+   
+    
+</body>
+</html>

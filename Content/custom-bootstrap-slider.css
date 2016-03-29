@@ -1,0 +1,58 @@
+﻿
+.slider.slider-horizontal {
+  width: auto;
+}
+
+.slider.slider-horizontal .slider-track {
+  height: 5px;
+  width: 100%;
+  margin-top: -2px;
+  top: 50%;
+  left: 0;
+}
+.slider-track {
+  position: absolute;
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+  background: #b2b2b2;
+  background-image: none;
+  border-radius: 0;
+}
+
+.slider-track-low,
+.slider-track-high {
+  position: absolute;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+.slider-handle.round {
+  border-radius: 50%;
+}
+.slider.slider-horizontal .slider-tick,
+.slider.slider-horizontal .slider-handle {
+  margin-left: -10px;
+  margin-top: -9px;
+}
+.slider-handle {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff;
+  border: 2px solid #e84c3d;
+  background-image: none;
+}
+
+.slider-selection {
+  position: absolute;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #e84c3d;
+  background-image: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-radius: 0;
+}
