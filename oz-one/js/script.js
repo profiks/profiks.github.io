@@ -1,6 +1,8 @@
 $(document).ready(function(){
     
-    $('#ozoneCarousel').carousel();
+    $('#ozoneCarousel').carousel({
+        //interval: false
+    });
     
     $("#ozoneCarousel").swiperight(function(){
         $(this).carousel("prev")
@@ -38,6 +40,11 @@ $(document).ready(function(){
     $("#leftNavScrollbar").mCustomScrollbar({
 				axis: "y"
    });
+    
+    
+    $('.parallax-scene').parallax({      
+    
+    });
     
     
 });//end DOM ready
