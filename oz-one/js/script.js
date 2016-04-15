@@ -34,4 +34,10 @@ $(document).ready(function(){
     });
     
     
+    
+    $("#leftNavScrollbar").mCustomScrollbar({
+				axis: "y"
+   });
+    
+    
 });//end DOM ready
