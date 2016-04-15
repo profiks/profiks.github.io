@@ -13,7 +13,17 @@ $(document).ready(function(){
     
     // Instantiate a slider
      var mySlider = $("input.slider").slider();
-
+    
+    $("input.slider").each(function () {
+        var days = $(this).data("slider-days");
+        var open = $(this).data("slider-open");
+        var close = $(this).data("slider-close");
+        $(this).prev(".slider").find(".slider-selection").append("<span class='ozone-start-hour'>"+open+"</span><p class='ozone-work-day'>"+days+"</p><span class='ozone-end-hour'>"+close+"</span>");
+    });
+    
+    var days = $("input.slider").data("slider-days");
+    var open = $("input.slider").data("slider-open");
+    var close = $("input.slider").data("slider-close");
     
      $('.goTo').on('click',function(e){
                 e.preventDefault();
