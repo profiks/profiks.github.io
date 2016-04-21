@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+        
+    <link rel="stylesheet" type="text/css" href="css/themes/jquery.mobile.material.theme.css" />
+    <link rel="stylesheet" href="lib/pulltorefresh/xpull.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <title>Simple Reader</title>
+</head>
+<body>
+    
+    <div data-role="page" id="page-index">
+        <div data-role="header" data-theme="d" data-tap-toggle="false" data-position="fixed">
+            <h1 class="header-title ui-padding-off">Wellcome</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content ui-padding">
+
+            <div class="app-desc">
+                <p>Thank You for using this app. <br/>
+                    Now You can read all stream from 3 the most popular social networks that are put together here.
+                    <br/><br/>
+                    Choose a one, and enjoy. <br/><br/></p>
+            </div>
+
+            <a href="fb.html" data-transition="slide" class="ui-btn ui-btn-d ui-corner-all fb-btn">
+                Use Facebook
+            </a>
+            <a href="tw.html" data-ajax="false" data-transition="slideup" class="ui-btn ui-btn-d ui-corner-all tw-btn">
+                Use Twitter
+            </a>
+            <a href="in.html" data-ajax="false" data-transition="slideup" class="ui-btn ui-btn-d ui-corner-all in-btn">
+                Use Instagram
+            </a>
+            
+        </div><!-- /content -->
+
+        <div data-role="footer" data-theme="d" data-tap-toggle="false" data-position="fixed" role="contentinfo">
+                 <h1 class="copyright ui-padding-off">Copyright 2016. All right reserved.</h1>
+        </div>
+
+    </div><!-- /page -->
+    
+    <script src="lib/jquery/2.1.1/jquery-2.1.1.min.js"></script>    
+    <script src="lib/jqm/1.4.5/jquery.mobile-1.4.5.min.js"></script>  
+    
+    <script src="lib/pulltorefresh/xpull.js"></script>
+   
+    <script src="lib/oauth/oauth.js"></script> 
+     
+    <script src="js/app/fb.js"></script>  
+    <script src="js/script.js"></script>
+</body>
+</html>
