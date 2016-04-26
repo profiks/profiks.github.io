@@ -278,7 +278,12 @@ html,body{
             @media (max-width: $mobile-big ) { 
                 font-size: 18px;
                 color: $footer;
-                @include text-shadow(none);
+                @include text-shadow(
+                   1px 1px 0 $white,
+                 -1px -1px 0 $white,  
+                  1px -1px 0 $white,
+                  -1px 1px 0 $white,
+                   1px 1px 0 $white);
             }//end media query
         }//end h3
         
@@ -294,7 +299,12 @@ html,body{
             @media (max-width: $mobile-big ) { 
                 font-size: 30px;
                 color: $footer;
-                @include text-shadow(none);
+                @include text-shadow(
+                   1px 1px 0 $white,
+                 -1px -1px 0 $white,  
+                  1px -1px 0 $white,
+                  -1px 1px 0 $white,
+                   1px 1px 0 $white);
             }//end media query
         }//end h1
         
@@ -309,7 +319,12 @@ html,body{
             @media (max-width: $mobile-big ) { 
                 font-size: 18px;
                 color: $footer;
-                @include text-shadow(none);
+                @include text-shadow(
+                   1px 1px 0 $white,
+                 -1px -1px 0 $white,  
+                  1px -1px 0 $white,
+                  -1px 1px 0 $white,
+                   1px 1px 0 $white);
             }//end media query
         }
         
