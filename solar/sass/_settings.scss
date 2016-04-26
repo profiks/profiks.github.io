@@ -1,0 +1,65 @@
+// _settings.scss
+@import 'compass'; 
+
+//sizes
+$large          :1200px;
+$desktop        : 992px;
+$tablet         : 767px;
+$mobile-big     : 460px;
+$mobile-small   : 320px;
+
+$white : #fff;
+$gray : #676767;
+$dark-gray : #1a1e23;
+$orange : #f66513;
+$gark-orange : #674d14;
+$blue : #0e94e8;
+$red : #ff0000;
+$footer : #1a1e23;
+$footer-gray : #8d8e8e;
+
+
+.inner{
+    max-width: $large;
+    margin: 0 auto;
+}
+
+.orange{
+    color: $orange;
+}
+
+.no-padding{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.text-right{
+    text-align: right;
+}
+
+
+
+body{
+    overflow-x: hidden;
+}
+
+.row{
+    margin: 0 !important;
+     min-width: $mobile-small !important;
+}
+
+.container, .container-fluid{
+   padding-left: 0;
+    padding-right: 0;
+}
+
+
+

@@ -11,7 +11,11 @@ $(document).ready(function(){
 		}, 1000);
 	});
     
+    $.stellar({ 
+        horizontalScrolling: false,
+        verticalOffset: 60,
     
+    });
     
     
    $('#flipClock').prepend("<ul class='flip  play'><li class='flip-clock-before'><a href='#'><div class='up'><div class='shadow'></div><div class='inn'>$</div></div><div class='down'><div class='shadow'></div><div class='inn'>$</div></div></a></li><li class='flip-clock-active'><a href='#'><div class='up'><div class='shadow'></div><div class='inn'>$</div></div><div class='down'><div class='shadow'></div><div class='inn'>$</div></div></a></li></ul>");
