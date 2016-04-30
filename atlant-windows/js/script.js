@@ -1,5 +1,6 @@
 $(document).ready(function(){
     
+  $(".fancybox").fancybox();    
   
   $('.owl-carousel').owlCarousel({
     loop:true,
@@ -33,8 +34,11 @@ $(document).ready(function(){
        var goTo = $(this).attr('href');
 				$('body').scrollTo(goTo,{
 					duration:900,
+                    axis:'y'
 				});
   });
+    
+    
 
     
     
