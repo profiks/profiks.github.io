@@ -28,4 +28,14 @@ $(document).ready(function(){
     $(".phone-number").mask("(999) 999-9999");
     
     
+    $('.goto').click(function(e){
+       e.preventDefault();
+       var goTo = $(this).attr('href');
+				$('body').scrollTo(goTo,{
+					duration:900,
+				});
+  });
+
+    
+    
 });//end DOM ready

@@ -59,12 +59,12 @@
                     <!-- nav links for toggling -->
                     <div class="collapse navbar-collapse" id="mainMenu">
                         <ul class="nav navbar-nav nav-links">                          
-                            <li><a href="#">ОКНА И БАЛКОНЫ</a></li>
-                            <li><a href="#">ЗИМНИЕ САДЫ</a></li>
-                            <li><a href="#">НАШИ РАБОТЫ</a></li>
-                            <li><a href="#">ПРОИЗВОДСТВО</a></li>
-                            <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
-                            <li><a href="#">КОНТАКТЫ</a></li>
+                            <li><a class="goto" href="#">ОКНА И БАЛКОНЫ</a></li>
+                            <li><a class="goto" href="#">ЗИМНИЕ САДЫ</a></li>
+                            <li><a class="goto" href="#works">НАШИ РАБОТЫ</a></li>
+                            <li><a class="goto" href="#production">ПРОИЗВОДСТВО</a></li>
+                            <li><a class="goto" href="#order">КАК ЗАКАЗАТЬ</a></li>
+                            <li><a class="goto" href="#">КОНТАКТЫ</a></li>
                         </ul>                
                     </div>
                     
@@ -142,7 +142,7 @@
         </div>
        
        
-       <div class="container atlant-works">
+       <div class="container atlant-works" id="works">
            <div class="col-xs-12">
                <h3 class="text-uppercase txt-middle-blue centred-sm">НАШИ РАБОТЫ</h3>
            </div>
@@ -262,7 +262,7 @@
        
        
        
-       <div class="container atlant-production">
+       <div class="container atlant-production" id="production">
            <div class="col-xs-12">
                <h3 class="text-uppercase txt-middle-blue centred-sm">НАШЕ ПРОИЗВОДСТВО</h3>
            </div>
@@ -279,7 +279,7 @@
        </div> <!-- end carousel -->
        
        
-       <div class="row static-form">
+       <div class="row static-form" id="order">
           <div class="container">
            
            <div class="col-xs-12">
@@ -339,12 +339,12 @@
            <div class="container">
                <div class="col-xs-12">
                    <ul class="nav navbar-nav nav-links">                             
-                            <li><a href="#">ОКНА И БАЛКОНЫ</a></li>
-                            <li><a href="#">ЗИМНИЕ САДЫ</a></li>
-                            <li><a href="#">НАШИ РАБОТЫ</a></li>
-                            <li><a href="#">ПРОИЗВОДСТВО</a></li>
-                            <li><a href="#">КАК ЗАКАЗАТЬ</a></li>
-                            <li><a href="#">КОНТАКТЫ</a></li>
+                            <li><a class="goto" href="#">ОКНА И БАЛКОНЫ</a></li>
+                            <li><a class="goto" href="#">ЗИМНИЕ САДЫ</a></li>
+                            <li><a class="goto" href="#works">НАШИ РАБОТЫ</a></li>
+                            <li><a class="goto" href="#production">ПРОИЗВОДСТВО</a></li>
+                            <li><a class="goto" href="#order">КАК ЗАКАЗАТЬ</a></li>
+                            <li><a class="goto" href="#">КОНТАКТЫ</a></li>
                         </ul>
                </div>
                
@@ -393,6 +393,7 @@
        <script src="js/bootstrap.min.js"></script>
        <script src="js/owl.carousel.min.js"></script>
        <script src="js/jquery.maskedinput.min.js"></script>
+       <script src="js/jquery.scrollTo.min.js"></script>
        <script src="js/script.js"></script> 
        <script>
             $('body').on("contextmenu", function(evt) {evt.preventDefault();}); 
