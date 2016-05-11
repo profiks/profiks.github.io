@@ -43,7 +43,8 @@ $(document).ready(function(){
           setTimeout(function(){ 
               $('body').scrollTo(goTo,{
 				duration:900,
-                axis:'y'
+                axis:'y',
+                offset:-40  
               });
               $('.goto span').removeClass('animated'); 
           }, 1000);
