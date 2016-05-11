@@ -12,12 +12,14 @@
             <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
         <![endif]-->
          <style>
+
             body,html{
                  -webkit-user-select: none;  
                   -moz-user-select: none;    
                   -ms-user-select: none;      
                   user-select: none; 
             }
+
         </style>
     </head>        
     <body class="main-page"> 
@@ -43,7 +45,7 @@
                 <li><a href="#">Контакты</a></li>            
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li class="nv-promo"><a href="#">АКЦИЯ</a></li>
+                <li class="nv-promo"><a href="#" data-toggle="modal" data-target="#promoModal" >АКЦИЯ</a></li>
                 <li><a href="#">EN</a></li>
               </ul>
             </div><!--/.nav-collapse -->
@@ -72,7 +74,7 @@
         </header> 
         <!-- end header -->
         
-        <section class="row no-padding nv-next-events" id="nextEvents">            
+        <section class="container no-padding nv-next-events" id="nextEvents">            
                  <h4 class="txt-center txt-blue">Ближайшие путешествия</h4>
                  
                 <figure class="col-xs-12 nv-figure nv-banner no-padding"> 
@@ -80,41 +82,42 @@
                     <picture>
                       <source 
                          media="(max-width: 600px)"
-                         srcset="img/img-1-sm.jpg">
-                      <source 
-                         media="(max-width: 800px)"
-                         srcset="img/img-1-md.jpg">
-                    <source 
-                         media="(min-width: 801px)"
-                         srcset="img/img-1.jpg">
+                         srcset="img/img-6.jpg">
                       <img 
                          class="img-responsive"
                          src="img/img-1.jpg" 
                          alt="banner">
                     </picture>
                     
-                    <figcaption class="txt-center">
-                        <h3 class="txt-white">ОСТРОВА ГРЕЦИИ <br> июль 2016</h3>
-                        <a href="#" class="nv-btn btn-pink">ПРИСОЕДИНИТЬСЯ</a>
+                    <figcaption class="txt-center centred-link">
+                        <h3 class="txt-white">ОСТРОВА ГРЕЦИИ <br> июль 2016 <br>
+                         <a href="#" class="nv-btn btn-pink">ПРИСОЕДИНИТЬСЯ</a></h3>
+                        
                     </figcaption>                    
                 </figure>
                 
                 <figure class="col-xs-12 col-sm-4 nv-figure no-padding">
-                    <img src="img/img-2.jpg" class="img-responsive" alt="horvatia">
+                    <img src="img/test.jpg" class="img-responsive" alt="horvatia">
                     <figcaption class="txt-center">
                         <a class="centred-link" href="#"><h3>ХОРВАТИЯ<br>октябрь 2016</h3></a>
                     </figcaption>
                 </figure>
                             
                 <figure class="col-xs-12 col-sm-4 nv-figure no-padding">
-                    <img src="img/img-3.jpg" class="img-responsive" alt="horvatia">
+                    <img src="img/img-6.jpg" class="img-responsive" alt="horvatia">
                     <figcaption class="txt-center">
                         <a class="centred-link" href="#"><h3>ТУРЦИЯ<br>2017</h3></a>
                     </figcaption>
                 </figure>
                                                                                                                                         
                 <figure class="col-xs-12 col-sm-4 nv-figure no-padding">
-                    <img src="img/img-4.jpg" class="img-responsive" alt="horvatia">
+                    <img src="img/img-6.jpg" class="img-responsive" alt="horvatia">
+                    <figcaption class="txt-center">
+                        <a class="centred-link" href="#"><h3>ИТАЛИЯ<br>2017</h3></a>
+                    </figcaption>
+                </figure> 
+                <figure class="col-xs-12 col-sm-4 nv-figure no-padding">
+                    <img src="img/img-6.jpg" class="img-responsive" alt="horvatia">
                     <figcaption class="txt-center">
                         <a class="centred-link" href="#"><h3>ИТАЛИЯ<br>2017</h3></a>
                     </figcaption>
@@ -125,26 +128,26 @@
                                   
         </section> <!-- end next events -->
         
-        <section class="row no-padding nv-past-events" id="pastEvents">
+        <section class="container no-padding nv-past-events" id="pastEvents">
                 <h4 class="txt-center txt-blue">Где мы побывали</h4>
                 
                 <div class="col-xs-12">
-                    <figure class="col-xs-12 col-sm-4 nv-figure">
-                    <img src="img/img-5.jpg" class="img-responsive img-circle" alt="horvatia">
+                    <figure class="col-xs-12 col-sm-4 no-padding nv-figure circle">
+                    <img src="img/test.jpg" class="img-circle" alt="horvatia">
                     <figcaption class="txt-center">
                        <a class="centred-link" href="#"> <h4>ГРЕЦИЯ <br> август  2015</h4></a>
                     </figcaption>
                 </figure>
                 
-                <figure class="col-xs-12 col-sm-4 nv-figure">
-                    <img src="img/img-6.jpg" class="img-responsive img-circle" alt="horvatia">
+                <figure class="col-xs-12 col-sm-4 no-padding nv-figure circle">
+                    <img src="img/img-6.jpg" class="img-circle" alt="horvatia">
                     <figcaption class="txt-center">
                         <a class="centred-link" href="#"><h4>ИТАЛИЯ <br> август  2014</h4></a>
                     </figcaption>
                 </figure>
                 
-                <figure class="col-xs-12 col-sm-4 nv-figure">
-                    <img src="img/img-7.jpg" class="img-responsive img-circle" alt="horvatia">
+                <figure class="col-xs-12 col-sm-4 no-padding nv-figure circle">
+                    <img src="img/img-7.jpg" class="img-circle" alt="horvatia">
                     <figcaption class="txt-center">
                         <a class="centred-link" href="#"><h4>ГРЕЦИЯ <br>июль 2014</h4></a>
                     </figcaption>
@@ -165,7 +168,7 @@
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 txt-center">
-                    <a href="#" class="nv-btn btn-blue no-margin">СВЯЗАТЬСЯ С НАМИ</a>
+                    <a href="#" class="nv-btn btn-blue-border no-margin">СВЯЗАТЬСЯ С НАМИ</a>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <p class="txt-right txt-white no-margin">© Nirvana Club 2011-2016</p>
@@ -173,6 +176,35 @@
              </div>
             
         </footer>
+        
+        
+        
+        <!-- Modal -->
+        <div class="modal fade nv-modal" id="promoModal" tabindex="-1" role="dialog" aria-labelledby="promoModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header txt-center">                
+                <a data-dismiss="modal" class="close-modal" aria-label="Close"><span class="nv-sprite-close"></span></a>
+                <h4 class="txt-red">Акция раннего бронирования!</h4>
+                <p><b>Забронируй  место, сделай предоплату до конца июля 2016 
+                        и гарантировано получи супер <span class="txt-red">скидку в 200 евро</span> 
+                        на путешествие в Хорватию! </b> </p>
+                
+                    <a href="#" class="nv-btn btn-pink">ПРИСОЕДИНИТЬСЯ</a>
+                    <a href="#" class="nv-btn btn-blue btn-sm">        
+                            <span class="nv-icon nv-sprite-like"></span>
+                    </a>
+                        
+              </div>
+              <div class="modal-body">
+                <img src="img/test444.jpg"  class="img-responsive" alt="ban">
+              </div>
+              <div class="modal-footer txt-center">
+                <a href="#"><b>Подписаться на АКЦИИ от Nirvana Club</b></a>
+              </div>
+            </div>
+          </div>
+        </div>
       
         
        <script src="js/jquery.min.js"></script>

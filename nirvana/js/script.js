@@ -44,7 +44,7 @@ $(document).ready(function(){
               $('body').scrollTo(goTo,{
 				duration:900,
                 axis:'y',
-                offset:-40  
+                offset:-30  
               });
               $('.goto span').removeClass('animated'); 
           }, 1000);
