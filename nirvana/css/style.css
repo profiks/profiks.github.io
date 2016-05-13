@@ -4111,7 +4111,7 @@ a:hover, a:focus {
 }
 @media (max-width: 460px) {
   .nv-video .container {
-    padding-bottom: 50px;
+    padding-bottom: 150px;
   }
 }
 .nv-video .nv-social {
@@ -4174,9 +4174,9 @@ a:hover, a:focus {
 .nv-figure.nv-banner {
   margin-bottom: 15px;
   height: auto;
-  min-height: 200px;
 }
 .nv-figure.nv-banner img {
+  min-height: 200px;
   /* media queries */
   /* media queryes*/
 }
