@@ -1,6 +1,9 @@
 $(document).ready(function(){
     
     var header = $(".main-navigation");
+    
+    
+    
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
         
@@ -32,8 +35,6 @@ $(document).ready(function(){
         
     });
     
-   
-  
     
     $('.goto').click(function(e){
        e.preventDefault();
@@ -44,7 +45,7 @@ $(document).ready(function(){
               $('body').scrollTo(goTo,{
 				duration:900,
                 axis:'y',
-                offset:-30  
+                offset:-20  
               });
               $('.goto span').removeClass('animated'); 
           }, 1000);
