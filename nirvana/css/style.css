@@ -4100,13 +4100,19 @@ a:hover, a:focus {
 }
 @media (max-width: 460px) {
   .nv-video {
-    min-height: 375px;
-    padding-top: 150px;
+    min-height: 450px;
+    padding-top: 130px;
   }
 }
 .nv-video .container {
   position: relative;
   height: 100%;
+  min-height: 100%;
+}
+@media (max-width: 460px) {
+  .nv-video .container {
+    padding-bottom: 50px;
+  }
 }
 .nv-video .nv-social {
   position: absolute;
@@ -4168,6 +4174,7 @@ a:hover, a:focus {
 .nv-figure.nv-banner {
   margin-bottom: 15px;
   height: auto;
+  min-height: 200px;
 }
 .nv-figure.nv-banner img {
   /* media queries */
