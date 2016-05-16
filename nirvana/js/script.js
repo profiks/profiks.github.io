@@ -7,34 +7,19 @@ $(document).ready(function(){
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
         
-        if ($(window).width() > 1020) {
-             if (scroll > 600) {
+      
+        if (scroll > 10) {
             header.addClass("navbar-default");
-            } else {
-                header.removeClass("navbar-default");
-            }
-        }else if ($(window).width() > 600) {
-             if (scroll > 450) {
-            header.addClass("navbar-default");
-            } else {
-                header.removeClass("navbar-default");
-            }
-        }else if ($(window).width() > 460) {
-             if (scroll > 375) {
-            header.addClass("navbar-default");
-            } else {
-                header.removeClass("navbar-default");
-            }
-        }else if ($(window).width() < 459) {
-             if (scroll > 375) {
-            header.addClass("navbar-default");
-            } else {
-                header.removeClass("navbar-default");
-            }
+        } else {
+            header.removeClass("navbar-default");
         }
+        
         
     });
     
+    $(".txt-h1").fitText(1.2,{ minFontSize: '30px', maxFontSize: '72px' }); 
+    $(".txt-h3").fitText(1.2,{ minFontSize: '26px', maxFontSize: '48px' }); 
+    $(".txt-h4").fitText(1.2,{ minFontSize: '22px', maxFontSize: '36px' }); 
     
     $('.goto').click(function(e){
        e.preventDefault();
