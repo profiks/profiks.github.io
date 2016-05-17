@@ -38,6 +38,25 @@ $(document).ready(function(){
   });
     
     
+    
+    
+     $('#videBg').vide({
+     'mp4': 'video/ocean',
+     'webm': 'video/ocean',
+     'ogv': 'video/ocean',
+     'poster': 'video/ocean'
+    }, {
+      volume: 0,
+      playbackRate: 1,
+      muted: true,
+      loop: true,
+      autoplay: true,
+      position: '50% 50%', 
+      posterType: 'detect', 
+      resizing: true, 
+      bgColor: 'transparent', 
+      className: ''    
+    });
 
     
     
