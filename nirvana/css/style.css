@@ -3478,7 +3478,7 @@ tbody.collapse.in {
   font-style: normal;
 }
 .nv-sprite-sprite, .nv-sprite-close, .nv-sprite-fb, .nv-sprite-in, .nv-sprite-like, .nv-sprite-paluba, .nv-sprite-shturval, .nv-sprite-tw {
-  background-image: url('../img/nv-sprite-s0a57d0a3e5.png');
+  background-image: url('../img/nv-sprite-s367f6e12ce.png');
   background-repeat: no-repeat;
 }
 
@@ -3903,9 +3903,6 @@ a:hover, a:focus {
 .main-navigation .nav > li a:hover, .main-navigation .nav > li a:focus {
   color: #d42b8e;
   background: transparent;
-}
-.main-navigation .nav > li a:active {
-  font-weight: 900;
 }
 .main-navigation .nav .nv-promo {
   outline: none;
@@ -4342,6 +4339,13 @@ a:hover, a:focus {
   padding-top: 0;
   margin-bottom: 0;
   border-bottom: none;
+}
+.nv-modal .modal-content .btn-blue {
+  background: url("../img/nv-sprite/like.png") no-repeat rgba(0, 183, 246, 0.65);
+  background-position: center center;
+}
+.nv-modal .modal-content .btn-blue:hover {
+  background-color: #00b7f6;
 }
 .nv-modal .modal-content .modal-body {
   padding: 0;
