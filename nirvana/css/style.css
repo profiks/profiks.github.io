@@ -4489,7 +4489,7 @@ a:hover, a:focus {
     margin-top: 10px;
   }
 }
-@media (min-height: 500px) {
+@media (min-height: 510px) {
   .nv-contact-baner .container hgroup.txt-center {
     margin-top: 18px;
     margin-top: 10vh;
@@ -4508,10 +4508,6 @@ a:hover, a:focus {
   line-height: 80px;
 }
 @media (max-width: 460px) {
-  .nv-contact-baner .white-bg {
-    height: 60px;
-    margin-top: -60px;
-  }
   .nv-contact-baner .white-bg h4 {
     line-height: 60px;
   }
