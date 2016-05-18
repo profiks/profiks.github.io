@@ -4455,7 +4455,7 @@ a:hover, a:focus {
 }
 @media (max-width: 460px) {
   .nv-contact-baner {
-    min-height: 450px;
+    min-height: 420px;
     padding-top: 10px;
   }
 }
@@ -4482,7 +4482,8 @@ a:hover, a:focus {
 @media (max-width: 600px) {
   .nv-contact-baner .container hgroup.txt-center {
     display: block;
-    margin-top: 30px;
+    margin-top: 18%;
+    margin-top: 10vh;
   }
 }
 .nv-contact-baner .white-bg {
@@ -4496,6 +4497,15 @@ a:hover, a:focus {
 .nv-contact-baner .white-bg h4 {
   margin: 0;
   line-height: 80px;
+}
+@media (max-width: 460px) {
+  .nv-contact-baner .white-bg {
+    height: 60px;
+    margin-top: -60px;
+  }
+  .nv-contact-baner .white-bg h4 {
+    line-height: 60px;
+  }
 }
 .nv-contact-baner #feedBack {
   width: 1px;
