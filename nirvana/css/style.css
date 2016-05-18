@@ -4455,7 +4455,7 @@ a:hover, a:focus {
 }
 @media (max-width: 460px) {
   .nv-contact-baner {
-    min-height: 510px;
+    min-height: 450px;
     padding-top: 10px;
   }
 }
@@ -4482,8 +4482,7 @@ a:hover, a:focus {
 @media (max-width: 600px) {
   .nv-contact-baner .container hgroup.txt-center {
     display: block;
-    margin-top: 20%;
-    margin-top: 15vh;
+    margin-top: 30px;
   }
 }
 .nv-contact-baner .white-bg {
