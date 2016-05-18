@@ -4508,6 +4508,10 @@ a:hover, a:focus {
   line-height: 80px;
 }
 @media (max-width: 460px) {
+  .nv-contact-baner .white-bg {
+    height: 60px;
+    margin-top: -60px;
+  }
   .nv-contact-baner .white-bg h4 {
     line-height: 60px;
   }
