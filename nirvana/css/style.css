@@ -4145,7 +4145,7 @@ a:hover, a:focus {
 }
 @media (max-width: 460px) {
   .nv-video {
-    min-height: 550px;
+    min-height: 450px;
   }
 }
 .nv-video .container {
