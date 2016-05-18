@@ -4540,7 +4540,7 @@ a:hover, a:focus {
     font-size: 16px;
     text-align: left;
   }
-  .nv-contact-form [type="checkbox"] + label:before {
+  .nv-contact-form [type="checkbox"] + label:before, .nv-contact-form [type="checkbox"] + label:after {
     top: 5px;
   }
 }
