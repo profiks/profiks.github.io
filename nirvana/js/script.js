@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    var header = $(".main-navigation");
+    var header = $("#mainNav");
     
     
     
