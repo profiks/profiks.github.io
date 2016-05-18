@@ -3766,8 +3766,7 @@ a:hover, a:focus {
   vertical-align: top;
   height: 58px;
   margin: 15px auto;
-  padding: 0 5px;
-  min-width: 262px;
+  padding: 0 15px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -3776,6 +3775,11 @@ a:hover, a:focus {
   font-weight: 700;
   font-size: 22px;
   text-decoration: none;
+}
+@media (min-width: 600px) {
+  .nv-btn {
+    min-width: 262px;
+  }
 }
 .nv-btn.btn-sm {
   min-width: 60px;
@@ -4178,10 +4182,14 @@ a:hover, a:focus {
 }
 @media (max-width: 768px) {
   .nv-video .nv-social {
-    position: static;
     right: 0;
     width: 100%;
     text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .nv-video .nv-social {
+    position: static;
   }
 }
 
