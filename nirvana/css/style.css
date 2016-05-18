@@ -4439,22 +4439,24 @@ a:hover, a:focus {
 /* banner page settings */
 .nv-contact-baner {
   width: 100%;
-  height: 100vh;
-  min-height: 590px;
-  padding-top: 70px;
+  height: calc(100vh - 70px);
+  min-height: 600px;
+  margin-top: 70px;
+  position: relative;
   background: url("../img/contacts-baner.jpg") no-repeat transparent;
   background-size: cover;
   background-position: center center;
 }
 @media (max-width: 600px) {
   .nv-contact-baner {
-    min-height: 500px;
+    min-height: 600px;
     padding-top: 40px;
   }
 }
 @media (max-width: 460px) {
   .nv-contact-baner {
-    min-height: 450px;
+    min-height: 510px;
+    padding-top: 10px;
   }
 }
 .nv-contact-baner h4 {
@@ -4475,6 +4477,7 @@ a:hover, a:focus {
 .nv-contact-baner .container hgroup.txt-center {
   display: table-cell;
   vertical-align: middle;
+  padding-bottom: 70px;
 }
 @media (max-width: 600px) {
   .nv-contact-baner .container hgroup.txt-center {
@@ -4482,6 +4485,25 @@ a:hover, a:focus {
     margin-top: 20%;
     margin-top: 15vh;
   }
+}
+.nv-contact-baner .white-bg {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin-top: -80px;
+  float: left;
+  background-color: #fff;
+}
+.nv-contact-baner .white-bg h4 {
+  margin: 0;
+  line-height: 80px;
+}
+.nv-contact-baner #feedBack {
+  width: 1px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: -70px;
 }
 
 /* contact form */
