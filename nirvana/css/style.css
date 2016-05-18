@@ -4178,6 +4178,7 @@ a:hover, a:focus {
 }
 @media (max-width: 768px) {
   .nv-video .nv-social {
+    position: static;
     right: 0;
     width: 100%;
     text-align: center;
