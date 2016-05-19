@@ -4453,6 +4453,11 @@ a:hover, a:focus {
     padding-top: 40px;
   }
 }
+@media (max-width: 768px) {
+  .nv-contact-baner {
+    background-image: url("../img/contacts-baner-sm.jpg");
+  }
+}
 @media (max-width: 460px) {
   .nv-contact-baner {
     min-height: 420px;
@@ -4569,6 +4574,11 @@ a:hover, a:focus {
 }
 .nv-contact-form button.nv-btn:focus, .nv-contact-form button.nv-btn:active {
   outline: none;
+}
+@media (max-width: 768px) {
+  .nv-contact-form button.nv-btn {
+    background-color: #d42b8e;
+  }
 }
 .nv-contact-form [type="checkbox"] + label {
   margin-bottom: 20px;
