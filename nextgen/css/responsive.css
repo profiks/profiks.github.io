@@ -40,6 +40,16 @@
 	.footer {padding-bottom: 60px;}
 	.single-blog-post{margin-bottom: 50px;}
 	.blog-home {padding-bottom: 40px;}
+    .navbar-default .navbar-nav a{
+        font-size: 14px;
+        color: #363636;
+        height: 40px;
+        line-height: 32px;
+        text-align: center;
+    }
+    .navbar-default .navbar-nav>.active>a::before,.navbar-default .navbar-nav>.active>a::after{
+        display: none;
+    }
 }
 @media (max-width: 600px) {
 	.home-appointment-form {margin: 0;}
@@ -70,6 +80,13 @@
 	.faq-home .accrodion .accrodion-title h4 span.decor {vertical-align: top;margin-top: 15px;}
 }
 
+@media (max-width: 820px) {
+    .navbar-default .navbar-nav a{
+        font-size: 14px;
+    }
+}
+
+
 @media (max-width: 375px) {
 	.single-header-info {float: none;text-align: center;padding: 0;}
 	.top-bar .left-text p {line-height: 20px; padding: 14px 0;}
@@ -88,6 +105,15 @@
 @media (max-width: 650px) {
 	.tp-caption {display: none !important;}
 }
+
+@media (max-width: 420px) {
+   .single-sidebar-widget.popular-post ul li .img-box,
+    .single-sidebar-widget.popular-post ul li .content-box {
+       display: block;
+    } 
+}
+
+
 
 /* menu responsive styles */
 

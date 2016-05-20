@@ -294,6 +294,25 @@ function toTop(){
     
 }
 
+
+function accrodionMain () {
+	function toggleChevron(e) {
+        $(e.target)
+            .prev('.panel-heading')
+            .find("i.fa")
+            .toggleClass('fa-minus fa-plus');
+    }
+    $('#accordion').on('hidden.bs.collapse', toggleChevron);
+    $('#accordion').on('shown.bs.collapse', toggleChevron);
+}
+
+
+
+
+function stickyNav(){
+     $("#stickyNav").sticky({topSpacing:0});
+}
+
 // Dom Ready Function
 jQuery(document).on('ready', function () {
 	(function ($) {
@@ -307,8 +326,8 @@ jQuery(document).on('ready', function () {
 		contactFormValidation();
 		selectInput();
 		datePicker();
-		//gMap();
-		mobileMenu();
+		accrodionMain();
+        stickyNav();
         toTop();
 	})(jQuery);
 });
