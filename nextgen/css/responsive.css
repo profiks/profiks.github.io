@@ -26,7 +26,7 @@
 	.single-header-info .content {text-align: center;margin-top: 15px;}
 	.social-icons,.left-text {float: none !important;text-align: center;}
 	.social-icons ul li a {border-bottom: 1px solid #EAEAEA;margin-left: -4px;}
-	.single-call-to-action {height: 200px;}
+	.single-call-to-action {min-height: 100px;}
 	.single-call-to-action .icon-box i.flaticon-coins, .single-call-to-action .icon-box i.flaticon-medical, .single-call-to-action .icon-box i.flaticon-clock {position: static;}
 	.offer-wrapper:after, .offer-wrapper:before, .offer-wrapper .has-overlay:before, .offer-wrapper .has-overlay:after {width: 100%;height: 50%;}
 	.offer-wrapper:before , .offer-wrapper .has-overlay:before {top: auto;bottom:0;}
@@ -49,6 +49,17 @@
     }
     .navbar-default .navbar-nav>.active>a::before,.navbar-default .navbar-nav>.active>a::after{
         display: none;
+    }
+    .top_banner{
+        height: 50vh;
+        margin-bottom: 0px;
+    }
+    .single-call-to-action:hover .thm-btn{
+         opacity: 0;
+    }
+
+    .single-call-to-action:hover .content{
+        margin-bottom: -50px;
     }
 }
 @media (max-width: 600px) {
@@ -91,7 +102,7 @@
 	.single-header-info {float: none;text-align: center;padding: 0;}
 	.top-bar .left-text p {line-height: 20px; padding: 14px 0;}
 	.mainmenu-area .search-box {width: 230px;}
-	.single-call-to-action {padding: 50px 0;}
+	.single-call-to-action {padding: 5px 0;}
 	.single-call-to-action .icon-box, .single-call-to-action .content-box {display: block;text-align: center;}
 	.single-call-to-action .icon-box {margin-left: auto;margin-right: auto;}
 	.single-call-to-action .content-box {width: 100%;}
