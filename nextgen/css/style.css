@@ -207,7 +207,7 @@ img {
 	font-size: 13px;
 	color: #B6B6B6;	
 	margin: 0;
-	line-height: 48px;
+	line-height: 30px;
 }
 
 .top-bar .left-text p span {
@@ -231,9 +231,9 @@ img {
 	font-size: 15px;
 	color: #A4A4A4;
 	border-right: 1px solid #EAEAEA;
-	line-height: 48px;
+	line-height: 30px;
 	text-align: center;
-	padding: 0 16px;
+	padding: 0 10px;
 	margin-left: -5px;
 	transition: all .3s ease;
 }
