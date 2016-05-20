@@ -51,8 +51,10 @@
         display: none;
     }
     .top_banner{
-        height: 50vh;
+        height: auto;
+        padding-top: 50%;
         margin-bottom: 0px;
+        background-size: contain;
     }
     .single-call-to-action:hover .thm-btn{
          opacity: 0;
