@@ -56,13 +56,6 @@
         margin-bottom: 0px;
         background-size: contain;
     }
-    .single-call-to-action:hover .thm-btn{
-         opacity: 0;
-    }
-
-    .single-call-to-action:hover .content{
-        margin-bottom: -50px;
-    }
 }
 @media (max-width: 600px) {
 	.home-appointment-form {margin: 0;}
