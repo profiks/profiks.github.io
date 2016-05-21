@@ -296,14 +296,11 @@ function toTop(){
 
 
 function accrodionMain () {
-	function toggleChevron(e) {
-        $(e.target)
-            .prev('.panel-heading')
-            .find("i.fa")
-            .toggleClass('fa-minus fa-plus');
-    }
-    $('#accordion').on('hidden.bs.collapse', toggleChevron);
-    $('#accordion').on('shown.bs.collapse', toggleChevron);
+	$("#imedica-dep-accordion").accordion({
+        heightStyle: "content",
+        autoHeight: !1,
+        clearStyle: !0
+    });
 }
 
 
