@@ -62,6 +62,109 @@
 
 
 
+/* image bg*/
+.ofer1{
+    background: url('../img/new/primary_health_care_01.jpg') no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 100%;
+    min-height: 230px;
+}
+.ofer1:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,129,232,.9);
+}
+.ofer2{
+    background: url('../img/new/nextgen_pic_06.jpg') no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 100%;
+    min-height: 230px;
+}
+.ofer2:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,79,178,.9);
+}
+
+
+/* services*/
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.servi:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;    
+    opacity: .8;
+}
+.servi:hover:before{
+    opacity: .5;
+}
+.servi{
+    cursor: pointer;
+}
+.servi:hover h3, .servi:hover p{
+    color: #000 !important;
+}
+
+.s-1:before{
+    background: url(../img/new/nextgen_pic_12.jpg) center center no-repeat; 
+    background-size: cover;
+}
+.s-2:before{
+    background: url(../img/new/nextgen_pic_05.jpg) center center no-repeat; 
+    background-size: cover;
+}
+.s-3:before{
+    background: url(../img/new/primary_health_care_01.jpg) center center no-repeat;
+    background-size: cover;
+}
+.s-4:before{
+    background: url(../img/new/nextgen_pic_09.jpg) center center no-repeat; 
+    background-size: cover;
+}
+.s-5:before{
+    background: url(../img/new/nextgen_pic_13.jpg) center center no-repeat;
+    background-size: cover;
+}
+.s-6:before{
+    background: url(../img/new/highly_trained_attendant_01.jpg) center center no-repeat; 
+    background-size: cover;
+}
+.s-7:before{
+    background: url(../img/new/nextgen_pic_04.jpg) center center no-repeat; 
+    background-size: cover;
+}
+.s-8:before{
+    background: url(../img/new/nextgen_pic_12.jpg) center center no-repeat;  
+    background-size: cover;
+}
+.s-9:before{
+    background: url(../img/new/nextgen_pic_14.jpg) center center no-repeat;
+    background-size: cover;
+}
+.s-10:before{
+    background: url(../img/new/nextgen_pic_08.jpg) center center no-repeat;
+    background-size: cover;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 14px;

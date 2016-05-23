@@ -6,6 +6,7 @@
 @media (min-width: 1200px) {
 	.container {padding: 0; width: 1180px; }
 }
+
 @media (max-width: 1024px) {
 	
 	.navigation .nav-header > ul > li > a {padding: 23px 12px;}
@@ -55,6 +56,9 @@
         padding-top: 50%;
         margin-bottom: 0px;
         background-size: contain;
+    }
+    .row-eq-height{
+        display: block;
     }
 }
 @media (max-width: 600px) {
