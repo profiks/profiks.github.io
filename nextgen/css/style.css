@@ -420,12 +420,12 @@ img {
 /* top baner */
 .top_banner{
     width: 100%;
-    background: url('../img/slides/3.jpg') no-repeat transparent;
+    background: url('../img/new/slider_01.jpg') no-repeat transparent;
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     height: 100%;
     height: 86vh;
-    margin-bottom: -160px;
+    margin-bottom: -110px;
 }
 
 .ui-accordion .ui-accordion-content {
@@ -809,9 +809,7 @@ img {
 }
 
 .single-call-to-action:hover .figure img{
-   -ms-transform: scale(1.3,1.3); /* IE 9 */
-    -webkit-transform: scale(1.3,1.3); /* Safari */
-    transform: scale(1.3,1.3);
+  
 }
 
 
@@ -871,7 +869,11 @@ img {
 	min-height: 160px;
     display: table;
     width: 100%;
-	padding: 10px 0;    
+	padding: 10px 0; 
+    cursor: pointer;
+}
+.call-to-action-corner:hover:before,.call-to-action-center:hover:before{
+   background: rgba(0,129,232,1);
 }
 .single-call-to-action .icon-box,
 .single-call-to-action .content-box {
@@ -1059,9 +1061,10 @@ img {
 
 .offer-wrapper {
 	position: relative;
+    margin-top: 10px;
 }
 .offer-wrapper:before {
-	content: '';
+	/*content: '';
 	position: absolute;
 	top:0;
 	left:0;
@@ -1069,10 +1072,10 @@ img {
 	width: 50%;
 	height: 100%;
 	background: url(../img/offer/1.jpg) 0 0 no-repeat;
-	opacity: .9;
+	opacity: .9;*/
 }
 .offer-wrapper:after {
-	content: '';
+	/*content: '';
 	position: absolute;
 	top:0;
 	right:0;
@@ -1080,7 +1083,7 @@ img {
 	width: 50%;
 	height: 100%;
 	background: url(../img/offer/2.jpg) 0 0 no-repeat;
-	opacity: .9;
+	opacity: .9;*/
 }
 .offer-wrapper .has-overlay:before {
 	content: '';
@@ -1090,7 +1093,7 @@ img {
 	width: 50%;
 	height: 100%;
 	background: #0375d3;
-	opacity: .9;
+	opacity: .7;
 }
 .offer-wrapper .has-overlay:after {
 	content: '';
@@ -1099,8 +1102,8 @@ img {
 	right:0;
 	width: 50%;
 	height: 100%;
-	background: #195db2;
-	opacity: .9;
+	background: #0375d3;
+	opacity: .7;
 }
 .single-offer {
 	position: relative;
@@ -1142,10 +1145,10 @@ img {
 	color: #262F36;
 }
 .single-offer.left {
-	padding-right: 70px;
+	padding:30px 30px 30px 40px;
 }
 .single-offer.right {
-	padding-left: 70px;
+	padding:30px 30px 40px 30px;
 }
 
 
