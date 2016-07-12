@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic&subset=latin,cyrillic);
+/***************** content **********************
+
+    1. navigation
+
+
+*************************************************/
+.navbar-default {
+  position: relative;
+  min-height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #027c85; }
+  .navbar-default .navbar-brand {
+    height: 80px;
+    padding: 3px; }
+  .navbar-default .navbar-nav {
+    margin-top: 18px; }
+    .navbar-default .navbar-nav a {
+      padding: 10px 15px;
+      font-size: 15px;
+      font-family: 'Roboto', sans-serif;
+      text-transform: uppercase;
+      color: #000 !important; }
+      .navbar-default .navbar-nav a:hover {
+        text-decoration: underline; }
+    .navbar-default .navbar-nav .active > a {
+      background: #fff;
+      border: 2px solid #027c85;
+      text-decoration: underline; }
+      .navbar-default .navbar-nav .active > a:hover {
+        background: #cbedee; }
+
+.img-separator {
+  display: block;
+  margin: 25px auto 20px auto; }
