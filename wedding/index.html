@@ -13,8 +13,6 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
     
@@ -28,7 +26,7 @@
 </head>
 <body>
   
-      <!-- navigation -->
+      <!-- ************************ navigation***************************** -->      
       <nav class="navbar-default">
         <div class="container">
          
@@ -58,7 +56,7 @@
       </nav>
       <!-- end navigation -->
       
-      <!-- intro block -->
+      <!-- ************************ intro block *************************** -->      
       <div class="intro-block">         
          
           <div class="container">
@@ -70,12 +68,12 @@
           <div class="jumbotron-gradient">
               <article class="container">
                 
-                <div class="col-xs-12 col-sm-6">                    
+                <div class="col-xs-12 col-sm-6 desc">                    
                   <h4>Обучение свадебных специалистов с практикой и  последующим трудоустройством</h4>
                   <p>Свадебные курсы для тех, кто устал искать интересную работу и хочет освоить новую профессию или повысить квалификацию. Станьте востребованным специалистом под руководством мастеров свадебной индустрии. </p>
 
                   <a href="#" class="btn btn-primary">Подробнее</a>
-                  <a href="#" class="btn btn-info">оставить заявку</a>
+                  <a href="#" class="btn btn-info" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>
                 </div>
             
                   
@@ -86,10 +84,11 @@
               </article>
           </div> <!-- end jumbotron-gradient -->
           
-      </div> <!-- end intro-block -->
+      </div>
+      <!-- end intro-block -->
       
       
-      <!-- schedule block -->
+      <!-- ************************* schedule block ************************ -->      
       <div class="schedule">
           <img src="img/separator2.png" class="img-responsive img-separator" alt="separator">          
           <h2 class="text-center text-uppercase">расписание занятий</h2>
@@ -100,32 +99,32 @@
                  
                   <figure class="col-xs-12 col-sm-6 schedule-thumbnail">
                       <img src="img/img2.jpg" alt="Курс 1" class="img-responsive">
-                      <figcaption class="schedule-badge">курс <br>№1</figcaption>
+                      <figcaption class="schedule-badge">курс<br>№1</figcaption>
                   </figure>
                   
-                  <div class="col-xs-12 col-sm-6">
+                  <div class="col-xs-12 col-sm-6 schedule-desc">
                       <span class="schedule-name">КУРС СВАДЕБНОГО КООРДИНАТОРА</span>
                       <table class="table table-striped schedule-table">
                           <tr>
-                              <td>Дата:</td>
+                              <td><img src="img/sprites/ico-calendar.png" alt="callendar"> Дата:</td>
                               <td>идет набор</td>
                           </tr>
                           <tr>
-                              <td>Время:</td>
+                              <td><img src="img/sprites/ico-time.png" alt="clock"> Время:</td>
                               <td>12:00 - 18:00</td>
                           </tr>
                           <tr>
-                              <td>Продолжительнось:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Продолжительнось:</td>
                               <td>2 дня</td>
                           </tr>
                           <tr>
-                              <td>Стоимость:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Стоимость:</td>
                               <td>8 000 р.</td>
                           </tr>
                       </table>
                       
                       <a href="#" class="btn btn-primary">Подробнее</a>
-                      <a href="#" class="btn btn-info">оставить заявку</a>                      
+                      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>                      
                   </div>
                                     
               </div><!-- end container -->              
@@ -139,32 +138,32 @@
                  
                   <figure class="col-xs-12 col-sm-6 col-sm-push-6 schedule-thumbnail">
                       <img src="img/img3.jpg" alt="Курс 2" class="img-responsive">
-                      <figcaption class="schedule-badge">курс <br>№2</figcaption>
+                      <figcaption class="schedule-badge">курс<br>№2</figcaption>
                   </figure>
                   
-                  <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+                  <div class="col-xs-12 col-sm-6 col-sm-pull-6 schedule-desc">
                       <span class="schedule-name">СВАДЕБНОЕ АГЕНТСТВО С НУЛЯ</span>
                       <table class="table table-striped schedule-table">
                           <tr>
-                              <td>Дата:</td>
+                              <td><img src="img/sprites/ico-calendar.png" alt="callendar"> Дата:</td>
                               <td>идет набор</td>
                           </tr>
                           <tr>
-                              <td>Время:</td>
+                              <td><img src="img/sprites/ico-time.png" alt="clock"> Время:</td>
                               <td>12:00 - 18:00</td>
                           </tr>
                           <tr>
-                              <td>Продолжительнось:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Продолжительнось:</td>
                               <td>2 дня</td>
                           </tr>
                           <tr>
-                              <td>Стоимость:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Стоимость:</td>
                               <td>8 000 р.</td>
                           </tr>
                       </table>
                       
-                      <a href="#" class="btn btn-primary">Подробнее</a>
-                      <a href="#" class="btn btn-info">оставить заявку</a>                      
+                      <a href="#" class="btn btn-pink">Подробнее</a>
+                      <a href="#" class="btn btn-details" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>                      
                   </div>
                                     
               </div><!-- end container -->              
@@ -178,32 +177,32 @@
                  
                   <figure class="col-xs-12 col-sm-6 schedule-thumbnail">
                       <img src="img/img4.jpg" alt="Курс 3" class="img-responsive">
-                      <figcaption class="schedule-badge">курс <br>№3</figcaption>
+                      <figcaption class="schedule-badge">курс<br>№3</figcaption>
                   </figure>
                   
-                  <div class="col-xs-12 col-sm-6">
+                  <div class="col-xs-12 col-sm-6 schedule-desc">
                       <span class="schedule-name">КУРС СВАДЕБНОГО КООРДИНАТОРА</span>
                       <table class="table table-striped schedule-table">
                           <tr>
-                              <td>Дата:</td>
+                              <td><img src="img/sprites/ico-calendar.png" alt="callendar"> Дата:</td>
                               <td>идет набор</td>
                           </tr>
                           <tr>
-                              <td>Время:</td>
+                              <td><img src="img/sprites/ico-time.png" alt="clock"> Время:</td>
                               <td>12:00 - 18:00</td>
                           </tr>
                           <tr>
-                              <td>Продолжительнось:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Продолжительнось:</td>
                               <td>2 дня</td>
                           </tr>
                           <tr>
-                              <td>Стоимость:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Стоимость:</td>
                               <td>8 000 р.</td>
                           </tr>
                       </table>
                       
                       <a href="#" class="btn btn-primary">Подробнее</a>
-                      <a href="#" class="btn btn-info">оставить заявку</a>                      
+                      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>                      
                   </div>
                                     
               </div><!-- end container -->              
@@ -217,32 +216,32 @@
                  
                   <figure class="col-xs-12 col-sm-6 col-sm-push-6 schedule-thumbnail">
                       <img src="img/img5.jpg" alt="Курс 4" class="img-responsive">
-                      <figcaption class="schedule-badge">курс <br>№4</figcaption>
+                      <figcaption class="schedule-badge">курс<br>№4</figcaption>
                   </figure>
                   
-                  <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+                  <div class="col-xs-12 col-sm-6 col-sm-pull-6 schedule-desc">
                       <span class="schedule-name">СВАДЕБНОЕ АГЕНТСТВО С НУЛЯ</span>
                       <table class="table table-striped schedule-table">
                           <tr>
-                              <td>Дата:</td>
+                              <td><img src="img/sprites/ico-calendar.png" alt="callendar"> Дата:</td>
                               <td>идет набор</td>
                           </tr>
                           <tr>
-                              <td>Время:</td>
+                              <td><img src="img/sprites/ico-time.png" alt="clock"> Время:</td>
                               <td>12:00 - 18:00</td>
                           </tr>
                           <tr>
-                              <td>Продолжительнось:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Продолжительнось:</td>
                               <td>2 дня</td>
                           </tr>
                           <tr>
-                              <td>Стоимость:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Стоимость:</td>
                               <td>8 000 р.</td>
                           </tr>
                       </table>
                       
-                      <a href="#" class="btn btn-primary">Подробнее</a>
-                      <a href="#" class="btn btn-info">оставить заявку</a>                      
+                      <a href="#" class="btn btn-pink">Подробнее</a>
+                      <a href="#" class="btn btn-details" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>                     
                   </div>
                                     
               </div><!-- end container -->              
@@ -256,32 +255,32 @@
                  
                   <figure class="col-xs-12 col-sm-6 schedule-thumbnail">
                       <img src="img/img6.jpg" alt="Курс 5" class="img-responsive">
-                      <figcaption class="schedule-badge">курс <br>№5</figcaption>
+                      <figcaption class="schedule-badge">курс<br>№5</figcaption>
                   </figure>
                   
-                  <div class="col-xs-12 col-sm-6">
+                  <div class="col-xs-12 col-sm-6 schedule-desc">
                       <span class="schedule-name">КУРС СВАДЕБНОГО КООРДИНАТОРА</span>
                       <table class="table table-striped schedule-table">
                           <tr>
-                              <td>Дата:</td>
+                              <td><img src="img/sprites/ico-calendar.png" alt="callendar"> Дата:</td>
                               <td>идет набор</td>
                           </tr>
                           <tr>
-                              <td>Время:</td>
+                              <td><img src="img/sprites/ico-time.png" alt="clock"> Время:</td>
                               <td>12:00 - 18:00</td>
                           </tr>
                           <tr>
-                              <td>Продолжительнось:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Продолжительнось:</td>
                               <td>2 дня</td>
                           </tr>
                           <tr>
-                              <td>Стоимость:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Стоимость:</td>
                               <td>8 000 р.</td>
                           </tr>
                       </table>
                       
                       <a href="#" class="btn btn-primary">Подробнее</a>
-                      <a href="#" class="btn btn-info">оставить заявку</a>                      
+                      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>                      
                   </div>
                                     
               </div><!-- end container -->              
@@ -295,32 +294,32 @@
                  
                   <figure class="col-xs-12 col-sm-6 col-sm-push-6 schedule-thumbnail">
                       <img src="img/img7.jpg" alt="Курс 6" class="img-responsive">
-                      <figcaption class="schedule-badge">курс <br>№6</figcaption>
+                      <figcaption class="schedule-badge">курс<br>№6</figcaption>
                   </figure>
                   
-                  <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+                  <div class="col-xs-12 col-sm-6 col-sm-pull-6 schedule-desc">
                       <span class="schedule-name">СВАДЕБНОЕ АГЕНТСТВО С НУЛЯ</span>
                       <table class="table table-striped schedule-table">
                           <tr>
-                              <td>Дата:</td>
+                              <td><img src="img/sprites/ico-calendar.png" alt="callendar"> Дата:</td>
                               <td>идет набор</td>
                           </tr>
                           <tr>
-                              <td>Время:</td>
+                              <td><img src="img/sprites/ico-time.png" alt="clock"> Время:</td>
                               <td>12:00 - 18:00</td>
                           </tr>
                           <tr>
-                              <td>Продолжительнось:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Продолжительнось:</td>
                               <td>2 дня</td>
                           </tr>
                           <tr>
-                              <td>Стоимость:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Стоимость:</td>
                               <td>8 000 р.</td>
                           </tr>
                       </table>
                       
-                      <a href="#" class="btn btn-primary">Подробнее</a>
-                      <a href="#" class="btn btn-info">оставить заявку</a>                      
+                      <a href="#" class="btn btn-pink">Подробнее</a>
+                      <a href="#" class="btn btn-details" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>                     
                   </div>
                                     
               </div><!-- end container -->              
@@ -335,32 +334,32 @@
                  
                   <figure class="col-xs-12 col-sm-6 schedule-thumbnail">
                       <img src="img/img8.jpg" alt="Курс 7" class="img-responsive">
-                      <figcaption class="schedule-badge">курс <br>№7</figcaption>
+                      <figcaption class="schedule-badge">курс<br>№7</figcaption>
                   </figure>
                   
-                  <div class="col-xs-12 col-sm-6">
+                  <div class="col-xs-12 col-sm-6 schedule-desc">
                       <span class="schedule-name">КУРС СВАДЕБНОГО КООРДИНАТОРА</span>
                       <table class="table table-striped schedule-table">
                           <tr>
-                              <td>Дата:</td>
+                              <td><img src="img/sprites/ico-calendar.png" alt="callendar"> Дата:</td>
                               <td>идет набор</td>
                           </tr>
                           <tr>
-                              <td>Время:</td>
+                              <td><img src="img/sprites/ico-time.png" alt="clock"> Время:</td>
                               <td>12:00 - 18:00</td>
                           </tr>
                           <tr>
-                              <td>Продолжительнось:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Продолжительнось:</td>
                               <td>2 дня</td>
                           </tr>
                           <tr>
-                              <td>Стоимость:</td>
+                              <td><img src="img/sprites/ico-during.png" alt="durring"> Стоимость:</td>
                               <td>8 000 р.</td>
                           </tr>
                       </table>
                       
                       <a href="#" class="btn btn-primary">Подробнее</a>
-                      <a href="#" class="btn btn-info">оставить заявку</a>                      
+                      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>                      
                   </div>
                                     
               </div><!-- end container -->              
@@ -370,26 +369,28 @@
           
           
           
-      </div><!-- end schedule -->
+      </div>
+      <!-- end schedule -->
       
       
-      
-      <div class="jumbotron-gradient">
+      <!-- *************************** small jumbotron *********************** -->      
+      <div class="jumbotron-small">
           <div class="container">
-             <div class="col-xs-12 col-sm-10">
+             <div class="col-xs-12 col-sm-7">
                  <h4 class="text-uppercase">Чтобы ваша жизнь стала ярче...</h4>
                  <p>Подружитесь с Первой школой свадебных профессионалов!</p>
              </div>
              
-             <div class="col-xs-12 col-sm-2">
-                 <a href="#" class="btn btn-primary">оставить заявку</a> 
+             <div class="col-xs-12 col-sm-5 text-right">
+                 <a href="#" class="btn btn-success" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a> 
              </div>
                
           </div>
       </div>
+      <!-- end small jumbotron -->
       
       
-      
+      <!-- ****************************** teachers *************************** -->      
       <div class="teachers">
           <img src="img/separator3.png" alt="separator" class="img-responsive img-separator">
           <h2 class="text-center text-uppercase">НАШИ ПРЕПОДАВАТЕЛИ</h2>
@@ -397,107 +398,109 @@
           <div class="container">
                
               <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
+              <a href="#" class="col-xs-12 col-sm-6 col-md-3">
+                  <figure class="teacher">
+                      <img src="img/teacher.jpg" alt="teacher">
+                      <figcaption class="teacher-desc">
+                          <div class="techer-mid">
+                              <h4><i>Алена Мерная</i></h4>
+                              <p><i>Преподаватель стильных свадеб</i></p>
+                          </div>
+                      </figcaption>
+                  </figure>
               </a>
               <!-- end teacher panel -->
               
               <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
+              <a href="#" class="col-xs-12 col-sm-6 col-md-3">
+                  <figure class="teacher">
+                      <img src="img/teacher.jpg" alt="teacher">
+                      <figcaption class="teacher-desc">
+                          <div class="techer-mid">
+                              <h4><i>Алена Мерная</i></h4>
+                              <p><i>Преподаватель стильных свадеб</i></p>
+                          </div>
+                      </figcaption>
+                  </figure>
+              </a>
+              <!-- end teacher panel --> <!-- teacher panel -->       
+              <a href="#" class="col-xs-12 col-sm-6 col-md-3">
+                  <figure class="teacher">
+                      <img src="img/teacher.jpg" alt="teacher">
+                      <figcaption class="teacher-desc">
+                          <div class="techer-mid">
+                              <h4><i>Алена Мерная</i></h4>
+                              <p><i>Преподаватель стильных свадеб</i></p>
+                          </div>
+                      </figcaption>
+                  </figure>
+              </a>
+              <!-- end teacher panel --> <!-- teacher panel -->       
+              <a href="#" class="col-xs-12 col-sm-6 col-md-3">
+                  <figure class="teacher">
+                      <img src="img/teacher.jpg" alt="teacher">
+                      <figcaption class="teacher-desc">
+                          <div class="techer-mid">
+                              <h4><i>Алена Мерная</i></h4>
+                              <p><i>Преподаватель стильных свадеб</i></p>
+                          </div>
+                      </figcaption>
+                  </figure>
               </a>
               <!-- end teacher panel -->
               
-              <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
+               <!-- teacher panel -->       
+              <a href="#" class="col-xs-12 col-sm-6 col-md-3">
+                  <figure class="teacher">
+                      <img src="img/teacher.jpg" alt="teacher">
+                      <figcaption class="teacher-desc">
+                          <div class="techer-mid">
+                              <h4><i>Алена Мерная</i></h4>
+                              <p><i>Преподаватель </i></p>
+                          </div>
+                      </figcaption>
+                  </figure>
               </a>
               <!-- end teacher panel -->
               
-              <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
-              </a>
-              <!-- end teacher panel -->
-              
-              <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
-              </a>
-              <!-- end teacher panel -->
-              
-              <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
-              </a>
-              <!-- end teacher panel -->
-              
-              <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
-              </a>
-              <!-- end teacher panel -->
-              
-              <!-- teacher panel -->       
-              <a href="#" class="col-xs-12 col-sm-6 col-md-3 teacher">
-                  <img src="img/teacher.jpg" alt="teacher">
-                  <div class="teacher-desc">
-                      <h4><i>Алена Мерная</i></h4>
-                      <p><i>Преподаватель стильных свадеб</i></p>
-                  </div>
+               <!-- teacher panel -->       
+              <a href="#" class="col-xs-12 col-sm-6 col-md-3">
+                  <figure class="teacher">
+                      <img src="img/teacher.jpg" alt="teacher">
+                      <figcaption class="teacher-desc">
+                          <div class="techer-mid">
+                              <h4><i>Алена Мерная</i></h4>
+                              <p><i>Преподаватель стильных dfg dfg gf df  fdfd df df df df ddd ddddd свадеб</i></p>
+                          </div>
+                      </figcaption>
+                  </figure>
               </a>
               <!-- end teacher panel -->
               
           </div> <!-- end container -->
           
-      </div><!-- end teachers -->
+      </div>
+      <!-- end teachers -->
       
       
-      
-      <div class="jumbotron-gradient">
+      <!-- *************************** small jumbotron *********************** -->      
+     <div class="jumbotron-small">
           <div class="container">
-             <div class="col-xs-12 col-sm-10">
+             <div class="col-xs-12 col-sm-7">
                  <h4 class="text-uppercase">Чтобы ваша жизнь стала ярче...</h4>
                  <p>Подружитесь с Первой школой свадебных профессионалов!</p>
              </div>
              
-             <div class="col-xs-12 col-sm-2">
-                 <a href="#" class="btn btn-primary">оставить заявку</a> 
+             <div class="col-xs-12 col-sm-5 text-right">
+                 <a href="#" class="btn btn-success" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a> 
              </div>
                
           </div>
       </div>
+      <!-- end small jumbotron -->
       
       
-      <!-- advantages -->
+      <!-- **************************** advantages ************************** -->      
       <div class="advantages">
           <img src="img/separator4.png" alt="separator" class="img-responsive img-separator">
           <h2 class="text-center text-uppercase">Наши преимущества</h2>
@@ -505,8 +508,8 @@
           <div class="container advantage-circles">
             
              <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item pink">
+                  <div class="advantage-ico"><img src="img/advantage1.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                       Индивидуальный <br> подход
                   </span>
@@ -514,8 +517,8 @@
               <!-- end advantage item -->
               
               <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item green">
+                  <div class="advantage-ico"><img src="img/advantage2.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                      БОЛЬШОЙ <br> ОПЫТ
                   </span>
@@ -523,8 +526,8 @@
               <!-- end advantage item -->
               
               <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item">
+                  <div class="advantage-ico"><img src="img/advantage3.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                      нестандартные <br> решения
                   </span>
@@ -533,8 +536,8 @@
               
               
               <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item">
+                  <div class="advantage-ico"><img src="img/advantage4.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                     Мы создаем <br>новое
                   </span>
@@ -542,8 +545,8 @@
               <!-- end advantage item -->
               
                <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item">
+                  <div class="advantage-ico"><img src="img/advantage5.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                    Лучшие <br> преподаватели
                   </span>
@@ -551,8 +554,8 @@
               <!-- end advantage item -->
               
               <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item">
+                  <div class="advantage-ico"><img src="img/advantage6.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                    мы любим свою <br> работу
                   </span>
@@ -560,8 +563,8 @@
               <!-- end advantage item -->
               
                <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item">
+                  <div class="advantage-ico"><img src="img/advantage7.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                   Решаем задачи <br> любой <br>сложности
                   </span>
@@ -570,17 +573,17 @@
               
               
                <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item">
+                  <div class="advantage-ico"><img src="img/advantage8.png" alt="advantage1"></div>
                   <span class="advantage-desc">
-                  Мы являемся <br>членами <br>International <br>Wedding <br>Association
+                  Мы являемся <br>членами <br>International Wedding Association
                   </span>
               </div>
               <!-- end advantage item -->
               
                <!-- advantage item -->
-              <div class="col-xs-12 col-sm-6 col-md-3 advantage-item">
-                  <div class="advantage-ico"></div>
+              <div class="advantage-item">
+                  <div class="advantage-ico"><img src="img/advantage9.png" alt="advantage1"></div>
                   <span class="advantage-desc">
                    ГАРАНТИРУЕМ! <br> вы будете <br>довольны
                   </span>
@@ -593,22 +596,24 @@
       <!-- end advantages -->
       
       
-      
-      <div class="jumbotron-gradient">
+      <!-- *************************** small jumbotron *********************** -->      
+     <div class="jumbotron-small">
           <div class="container">
-             <div class="col-xs-12 col-sm-10">
+             <div class="col-xs-12 col-sm-7">
                  <h4 class="text-uppercase">Чтобы ваша жизнь стала ярче...</h4>
                  <p>Подружитесь с Первой школой свадебных профессионалов!</p>
              </div>
              
-             <div class="col-xs-12 col-sm-2">
-                 <a href="#" class="btn btn-primary">оставить заявку</a> 
+             <div class="col-xs-12 col-sm-5 text-right">
+                 <a href="#" class="btn btn-success" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a> 
              </div>
                
           </div>
       </div>
+      <!-- end small jumbotron -->
       
       
+      <!-- *************************** teaching process ************************ -->      
       <div class="teaching-process">
           <img src="img/separator5.png" alt="separator" class="img-responsive img-separator">
           <h2 class="text-center text-uppercase">Как происходит обучение</h2>
@@ -701,83 +706,101 @@
               
           </div><!-- end teaching roadmap -->
           
-      </div><!-- end teaching process -->
+      </div>
+      <!-- end teaching process -->
       
-      
+      <!-- ***************************  news block ****************************** -->      
       <div class="blog-news">
           <img src="img/separator6.png" alt="separator" class="img-responsive img-separator">
           <h2 class="text-center text-uppercase">Новости из блога</h2>
           
+          <div class="blog">
+          
           <div class="container">
               
               <div class="news-panel col-xs-12 col-md-6">
-                  <div class="col-xs-12 col-sm-5">
+                  <div class="news-holder">
+                      <div class="col-xs-12 col-sm-5">
                       <img src="img/img9.jpg" class="img-responsive" alt="new">
-                  </div>
-                  <div class="col-xs-12 col-sm-7">
-                      <h4 class="text-uppercase">Новые новости ыфв</h4>
-                      <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
-                      <a href="#" class="btn btn-info">подробнее</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-7">
+                          <h4 class="text-uppercase">Новые новости ыфв</h4>
+                          <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
+                          <a href="#" class="btn btn-pink">подробнее</a>
+                      </div>
                   </div>
               </div><!-- end news panel -->
               
               
               <div class="news-panel col-xs-12 col-md-6">
-                  <div class="col-xs-12 col-sm-5">
+                  <div class="news-holder">
+                      <div class="col-xs-12 col-sm-5">
                       <img src="img/img9.jpg" class="img-responsive" alt="new">
-                  </div>
-                  <div class="col-xs-12 col-sm-7">
-                      <h4 class="text-uppercase">Новые новости ыфв</h4>
-                      <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
-                      <a href="#" class="btn btn-info">подробнее</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-7">
+                          <h4 class="text-uppercase">Новые новости ыфв</h4>
+                          <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
+                          <a href="#" class="btn btn-pink">подробнее</a>
+                      </div>
                   </div>
               </div><!-- end news panel -->
               
               <div class="news-panel col-xs-12 col-md-6">
-                  <div class="col-xs-12 col-sm-5">
+                  <div class="news-holder">
+                      <div class="col-xs-12 col-sm-5">
                       <img src="img/img9.jpg" class="img-responsive" alt="new">
-                  </div>
-                  <div class="col-xs-12 col-sm-7">
-                      <h4 class="text-uppercase">Новые новости ыфв</h4>
-                      <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
-                      <a href="#" class="btn btn-info">подробнее</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-7">
+                          <h4 class="text-uppercase">Новые новости ыфв</h4>
+                          <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
+                          <a href="#" class="btn btn-pink">подробнее</a>
+                      </div>
                   </div>
               </div><!-- end news panel -->
               
               <div class="news-panel col-xs-12 col-md-6">
-                  <div class="col-xs-12 col-sm-5">
+                  <div class="news-holder">
+                      <div class="col-xs-12 col-sm-5">
                       <img src="img/img9.jpg" class="img-responsive" alt="new">
-                  </div>
-                  <div class="col-xs-12 col-sm-7">
-                      <h4 class="text-uppercase">Новые новости ыфв</h4>
-                      <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
-                      <a href="#" class="btn btn-info">подробнее</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-7">
+                          <h4 class="text-uppercase">Новые новости ыфв</h4>
+                          <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
+                          <a href="#" class="btn btn-pink">подробнее</a>
+                      </div>
                   </div>
               </div><!-- end news panel -->
               
               <div class="news-panel col-xs-12 col-md-6">
-                  <div class="col-xs-12 col-sm-5">
+                  <div class="news-holder">
+                      <div class="col-xs-12 col-sm-5">
                       <img src="img/img9.jpg" class="img-responsive" alt="new">
-                  </div>
-                  <div class="col-xs-12 col-sm-7">
-                      <h4 class="text-uppercase">Новые новости ыфв</h4>
-                      <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
-                      <a href="#" class="btn btn-info">подробнее</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-7">
+                          <h4 class="text-uppercase">Новые новости ыфв</h4>
+                          <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
+                          <a href="#" class="btn btn-pink">подробнее</a>
+                      </div>
                   </div>
               </div><!-- end news panel -->
               
-              <div class="news-panel col-xs-12 col-md-6">
-                  <div class="col-xs-12 col-sm-5">
+             <div class="news-panel col-xs-12 col-md-6">
+                  <div class="news-holder">
+                      <div class="col-xs-12 col-sm-5">
                       <img src="img/img9.jpg" class="img-responsive" alt="new">
-                  </div>
-                  <div class="col-xs-12 col-sm-7">
-                      <h4 class="text-uppercase">Новые новости ыфв</h4>
-                      <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
-                      <a href="#" class="btn btn-info">подробнее</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-7">
+                          <h4 class="text-uppercase">Новые новости ыфв</h4>
+                          <p class="elipsis">для свадебных специалистов. Только для свадебных специалистов. Только для....</p>
+                          <a href="#" class="btn btn-pink">подробнее</a>
+                      </div>
                   </div>
               </div><!-- end news panel -->
               
-             
+              
+              <div class="col-xs-12 text-center">
+                  <a href="#" class="btn btn-default">Смотреть все</a>
+              </div>
               
               
               
@@ -785,39 +808,51 @@
               
           </div><!-- end container -->
           
-      </div><!-- end blog news -->
+          </div> <!-- end blog -->
+          
+      </div>
+      <!-- end blog news -->
       
       
       
-      
-       <div class="jumbotron-gradient">
+      <!-- *************************** small jumbotron *********************** -->      
+      <div class="jumbotron-small">
           <div class="container">
-             <div class="col-xs-12 col-sm-10">
+             <div class="col-xs-12 col-sm-7">
                  <h4 class="text-uppercase">Чтобы ваша жизнь стала ярче...</h4>
                  <p>Подружитесь с Первой школой свадебных профессионалов!</p>
              </div>
              
-             <div class="col-xs-12 col-sm-2">
-                 <a href="#" class="btn btn-primary">оставить заявку</a> 
+             <div class="col-xs-12 col-sm-5 text-right">
+                 <a href="#" class="btn btn-success" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>  
              </div>
                
           </div>
-      </div>
+      </div> <!-- end small jumbotron -->
       
       
-      <!-- footer -->
+      <!-- ******************************* footer ********************************** -->      
       <footer class="footer">
           <div class="container">
              
              <ul class="col-xs-12 col-md-3 bordered">
                  <li class="top"><b>Cвяжитесь с нами!</b></li>
-                 <li><a href="#">+7(495) 135-30-98</a></li>
-                 <li><a href="#">+7 906 755 88 66</a></li>
-                 <li><a href="#">student@1school.wedding</a></li>
-                 <li><a href="#">school.wedding</a></li>
+                 <li>
+                     <span class="soc-ico"><img src="img/sprites/ico-cell.png" alt="cellphone"></span>
+                     <a href="#">+7(495) 135-30-98</a></li>
+                 <li>
+                     <span class="soc-ico"><img src="img/sprites/ico-watsupp.png" alt="whatsup"></span>
+                     <span class="soc-ico"><img src="img/sprites/ico-viber.png" alt="viber"></span>
+                     <a href="#">+7 906 755 88 66</a></li>
+                 <li>
+                     <span class="soc-ico"><img src="img/sprites/ico-mail.png" alt="mail"></span>
+                     <a href="#">student@1school.wedding</a></li>
+                 <li>
+                     <span class="soc-ico"><img src="img/sprites/ico-skype.png" alt="skype"></span>
+                     <a href="#">school.wedding</a></li>
              </ul>
              
-             <ul class="col-xs-12 col-md-2">
+             <ul class="col-xs-12 col-md-2 nb-first">
                  <li class="top"><b>О школе</b></li>
                  <li><a href="#">Главная</a></li>
                  <li><a href="#">Расписание</a></li>
@@ -826,7 +861,7 @@
                  <li><a href="#">Контакты</a></li>
              </ul>
              
-             <ul class="col-xs-12 col-md-2">
+             <ul class="col-xs-12 col-md-2 nb-center">
                  <li class="top"><b>Поиск по курсам</b></li>
                  <li><a href="#">Все курсы</a></li>
                  <li><a href="#">Бесплатные</a></li>
@@ -834,18 +869,23 @@
                  <li><a href="#">Для продвинутых</a></li>
              </ul>
              
-             <ul class="col-xs-12 col-md-2">
+             <ul class="col-xs-12 col-md-2 nb-last">
                  <li class="top"><b>Популярные курсы</b></li>
                  <li><a href="#">Свадебный координатор</a></li>
                  <li><a href="#">Свадебный организатор</a></li>
              </ul>
              
               <ul class="col-xs-12 col-md-3 bordered">
-                 <li class="top"><b>Cвяжитесь с нами!</b></li>
-                 <li><a href="#">+7(495) 135-30-98</a></li>
-                 <li><a href="#">+7 906 755 88 66</a></li>
-                 <li><a href="#">student@1school.wedding</a></li>
-                 <li><a href="#">school.wedding</a></li>
+                 <li class="top"><b>Подпишись на наши новости!</b></li>
+                 <li>
+                 <!-- ***************** this is place for share widget ************ -->
+                 
+                 <a href="#" class="share-widget">
+                     <img src="img/share-widget.png" alt="widget">
+                 </a>
+                 
+                 <!-- ******************* end widget ******************************* -->
+                 </li>
              </ul>
              
               
@@ -855,10 +895,62 @@
       <div class="bottom">
           <p>2016 ©  Первая школа свадебных профессионалов</p>
       </div>
-      
       <!-- end footer -->
       
   
+      <!-- *********************** subscripbe modal ************************************** -->       
+        <div class="modal fade modal-subscribe" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="mySubscribeModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <img src="img/sprites/ico-close.png" alt="close">
+                    </span>
+                </button>
+                <h4 class="modal-title" id="mySubscribeModal">
+                   <img src="img/logo-big.png" class="img-responsive" alt="logo">
+                </h4>
+              </div>
+              <div class="modal-body">
+                <h3 class="text-center"><i>Записаться на курс</i></h3>
+                
+                <!-- subscribe form -->
+                <form action="#" class="form subscribe-form">
+                   
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>                        
+                        <div class="input-group">
+                          <div class="input-ico"><img src="img/sprites/ico-person.png" alt="person"></div>
+                          <input type="email" class="form-control" id="name" placeholder="Ваше имя">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">Ваш телефон</label>
+                        <div class="input-group">
+                          <div class="input-ico"><img src="img/sprites/ico-phone.png" alt="phone"></div>
+                          <input type="text" class="form-control inp-tel" id="tel" placeholder="Ваш телефон">
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш e-mail</label>
+                        <div class="input-group">
+                          <div class="input-ico"><img src="img/sprites/ico-email.png" alt="email"></div>
+                          <input type="email" class="form-control inp-email" id="email" placeholder="Ваш e-mail">
+                        </div>
+                        
+                    </div>
+                    
+                  <button type="submit" class="btn btn-pink">отправить</button>
+                    
+                </form><!-- end subscribe form -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- end subscribe modal -->
    
    
    <!-- vendor scripts -->
