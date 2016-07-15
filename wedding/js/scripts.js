@@ -2,6 +2,7 @@ $( document ).ready(function() {
     
     $('h1').fitText(1.2, { minFontSize: '25px', maxFontSize: '42px' });
     $('h2').fitText(1.2, { minFontSize: '22px', maxFontSize: '34px' });
+    $('h2.text-med').fitText(1.2, { minFontSize: '20px', maxFontSize: '25px' });
     $('h4').fitText(1.2, { minFontSize: '18px', maxFontSize: '23px' });
     
     
