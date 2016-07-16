@@ -5460,7 +5460,7 @@ button.close {
 
 /*
 // media query
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : $tablet) {
 
 }//end media query
 */
@@ -5505,6 +5505,12 @@ button.close {
 
 body, h1, h2, h3, h4, h5, h6, p, span, a, li, * {
   font-family: 'Roboto', sans-serif; }
+
+.text-italic {
+  font-style: italic; }
+
+.text-bold {
+  font-weight: 700; }
 
 h1 {
   font-size: 42px; }
@@ -10887,6 +10893,210 @@ p {
     -o-animation-name: slideOutUp;
        animation-name: slideOutUp; }
 
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+    -o-animation-duration: 1000ms;
+       animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+       animation-fill-mode: both; }
+
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+    -o-animation-name: fadeOut;
+       animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out; }
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1; }
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y; }
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel.owl-loaded {
+  display: block; }
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block; }
+
+.owl-carousel.owl-hidden {
+  opacity: 0; }
+
+.owl-carousel .owl-refresh .owl-item {
+  display: none; }
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d; }
+
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto; }
+
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: -moz-grab;
+  cursor: grab; }
+
+.owl-carousel.owl-rtl {
+  direction: rtl; }
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right; }
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-item img {
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+
+/* 
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: scale 100ms ease;
+  -moz-transition: scale 100ms ease;
+  -o-transition: scale 100ms ease;
+  transition: scale 100ms ease; }
+
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transition: scale(1.3, 1.3);
+  -moz-transition: scale(1.3, 1.3);
+  -o-transition: scale(1.3, 1.3);
+  transition: scale(1.3, 1.3); }
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none; }
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1; }
+
 /***************** content ***************************************
 
     1. navigation
@@ -11103,13 +11313,15 @@ p {
     text-transform: uppercase;
     font-size: 20px;
     text-align: center; }
-  .separator-empty .separator0 { background-image: url(../img/sprite.png); background-position: -389px 0; }
+  .separator-empty .separator0 { background-image: url(../img/sprite.png); background-position: 0 -304px; }
   .separator-empty .separator1 { background-image: url(../img/sprite.png); background-position: 0 -94px; }
   .separator-empty .separator2 { background-image: url(../img/sprite.png); background-position: -179px 0; }
   .separator-empty .separator3 { background-image: url(../img/sprite.png); background-position: -284px 0; }
   .separator-empty .separator4 { background-image: url(../img/sprite.png); background-position: 0 -199px; }
   .separator-empty .separator5 { background-image: url(../img/sprite.png); background-position: -105px -199px; }
   .separator-empty .separator6 { background-image: url(../img/sprite.png); background-position: -210px -199px; }
+  .separator-empty .separator7 { background-image: url(../img/sprite.png); background-position: -389px 0; }
+  .separator-empty .separator8 { background-image: url(../img/sprite.png); background-position: -389px -105px; }
 
 .jumbotron-gradient {
   padding-top: 40px;
@@ -11221,10 +11433,10 @@ p {
       float: left;
       width: 39px;
       height: 39px; }
-      .schedule .schedule-item .schedule-table .ico-calendar { background-image: url(../img/sprite.png); background-position: -179px -105px; }
-      .schedule .schedule-item .schedule-table .ico-time { background-image: url(../img/sprite.png); background-position: -284px -105px; }
-      .schedule .schedule-item .schedule-table .ico-durring { background-image: url(../img/sprite.png); background-position: -105px -94px; }
-      .schedule .schedule-item .schedule-table .ico-money { background-image: url(../img/sprite.png); background-position: -389px -213px; }
+      .schedule .schedule-item .schedule-table .ico-calendar { background-image: url(../img/sprite.png); background-position: -284px -105px; }
+      .schedule .schedule-item .schedule-table .ico-time { background-image: url(../img/sprite.png); background-position: -389px -210px; }
+      .schedule .schedule-item .schedule-table .ico-durring { background-image: url(../img/sprite.png); background-position: -179px -105px; }
+      .schedule .schedule-item .schedule-table .ico-money { background-image: url(../img/sprite.png); background-position: -494px -324px; }
     .schedule .schedule-item .schedule-table .hide-sm {
       display: inline-block;
       float: left;
@@ -11399,12 +11611,12 @@ p {
       width: 66px;
       height: 88px;
       margin: 0 auto; }
-      .teaching-process .teaching-roadmap .ico-teacher { background-image: url(../img/sprite.png); background-position: -258px -304px; }
-      .teaching-process .teaching-roadmap .ico-task { background-image: url(../img/sprite.png); background-position: -344px -304px; }
-      .teaching-process .teaching-roadmap .ico-idea { background-image: url(../img/sprite.png); background-position: -172px -304px; }
-      .teaching-process .teaching-roadmap .ico-gift { background-image: url(../img/sprite.png); background-position: -86px -304px; }
-      .teaching-process .teaching-roadmap .ico-coffee { background-image: url(../img/sprite.png); background-position: 0 -304px; }
-      .teaching-process .teaching-roadmap .ico-visualisation { background-image: url(../img/sprite.png); background-position: -389px -105px; }
+      .teaching-process .teaching-roadmap .ico-teacher { background-image: url(../img/sprite.png); background-position: -86px -409px; }
+      .teaching-process .teaching-roadmap .ico-task { background-image: url(../img/sprite.png); background-position: -172px -409px; }
+      .teaching-process .teaching-roadmap .ico-idea { background-image: url(../img/sprite.png); background-position: 0 -409px; }
+      .teaching-process .teaching-roadmap .ico-gift { background-image: url(../img/sprite.png); background-position: -494px -216px; }
+      .teaching-process .teaching-roadmap .ico-coffee { background-image: url(../img/sprite.png); background-position: -494px -108px; }
+      .teaching-process .teaching-roadmap .ico-visualisation { background-image: url(../img/sprite.png); background-position: -494px 0; }
   .teaching-process img {
     display: block;
     margin: 0 auto; }
@@ -11565,11 +11777,11 @@ p {
     width: 29px;
     height: 29px;
     margin-right: 6px; }
-    .footer .soc-ico.phone { background-image: url(../img/sprite.png); background-position: -49px -412px; }
-    .footer .soc-ico.whatsup { background-image: url(../img/sprite.png); background-position: -315px -249px; }
-    .footer .soc-ico.viber { background-image: url(../img/sprite.png); background-position: -430px -304px; }
-    .footer .soc-ico.mail { background-image: url(../img/sprite.png); background-position: -430px -353px; }
-    .footer .soc-ico.skype { background-image: url(../img/sprite.png); background-position: 0 -412px; }
+    .footer .soc-ico.phone { background-image: url(../img/sprite.png); background-position: -154px -304px; }
+    .footer .soc-ico.whatsup { background-image: url(../img/sprite.png); background-position: -105px -144px; }
+    .footer .soc-ico.viber { background-image: url(../img/sprite.png); background-position: -315px -199px; }
+    .footer .soc-ico.mail { background-image: url(../img/sprite.png); background-position: -315px -248px; }
+    .footer .soc-ico.skype { background-image: url(../img/sprite.png); background-position: -105px -304px; }
   .footer .share-widget {
     width: 100%;
     text-align: center; }
@@ -11596,7 +11808,7 @@ p {
 
 .modal-subscribe button.close {
   width: 25px;
-  height: 26px; background-image: url(../img/sprite.png); background-position: -448px -213px; }
+  height: 26px; background-image: url(../img/sprite.png); background-position: -448px -210px; }
 
 .modal-subscribe .modal-header {
   border-bottom: none; }
@@ -11635,7 +11847,7 @@ p {
     display: block;
     width: 37px;
     height: 30px;
-    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -315px -199px; }
+    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -105px -94px; }
   .modal-subscribe .subscribe-form .input-ico .phone {
     display: block;
     width: 17px;
@@ -11645,7 +11857,7 @@ p {
     display: block;
     width: 28px;
     height: 26px;
-    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -105px -153px; }
+    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -203px -304px; }
 
 .modal-subscribe .subscribe-form .form-control {
   height: 40px;
@@ -11731,3 +11943,159 @@ p {
         padding-left: 0; } }
     .course-accordion .panel-collapse ul li {
       padding: 6px; }
+
+.about-teacher .jumbotron-gradient {
+  margin-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.about-teacher .teacher-photo {
+  width: 100%;
+  border: 5px solid #fff;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75); }
+
+.about-teacher .teacher-info {
+  padding: 12px;
+  font-size: 15px;
+  text-align: center; }
+
+.about-teacher .teacher-desc > h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0; }
+
+.about-teacher .teacher-desc > p {
+  font-size: 18px; }
+
+.about-teacher .teacher-desc {
+  background: #fff;
+  padding: 20px; }
+
+.teacher-portfolio {
+  margin-top: 23px; }
+
+.slider {
+  background: #80dae3;
+  padding-top: 24px;
+  padding-bottom: 24px; }
+  .slider .container {
+    padding-left: 35px;
+    padding-right: 35px; }
+  .slider .icon-l {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    background: #027c85;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: -15px; }
+    @media only screen and (max-width: 767px) {
+      .slider .icon-l {
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        letter-spacing: 0;
+        border-radius: 10px;
+        line-height: 50px;
+        left: 0; } }
+  .slider .icon-r {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: -35px;
+    background: #027c85;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: -15px; }
+    @media only screen and (max-width: 767px) {
+      .slider .icon-r {
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        letter-spacing: 0;
+        border-radius: 10px;
+        line-height: 50px;
+        right: 0; } }
+
+.news-article .article-heading {
+  margin-top: 30px;
+  margin-bottom: 34px; }
+  @media only screen and (max-width: 767px) {
+    .news-article .article-heading {
+      text-align: center; } }
+
+.news-article .news-poster {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .news-article .news-poster {
+      width: 100%;
+      margin-right: 0; } }
+
+.vote-widget {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.contact-form {
+  background: #86e1f3;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.comment-f .btn {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 24px;
+  float: right; }
+
+.comment-f label, .comment-f p {
+  font-weight: normal;
+  font-size: 15px; }
+
+.comment-f .form-control {
+  height: 45px;
+  width: 100%;
+  border: 1px solid #027c85;
+  border-radius: 0; }
+
+.comment-f textarea.form-control {
+  min-height: 150px;
+  max-width: 100%; }
+
+@media only screen and (max-width: 767px) {
+  .comment-f {
+    padding-left: 0;
+    padding-right: 0; }
+    .comment-f .col-sm-12 {
+      padding-left: 0;
+      padding-right: 0; }
+    .comment-f .btn {
+      width: 100%;
+      margin-top: 0;
+      float: none; } }
+
+.single-comment {
+  background: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px; }
+  .single-comment .comment-owner {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px; }
