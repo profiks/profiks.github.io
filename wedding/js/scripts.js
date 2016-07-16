@@ -9,7 +9,8 @@ $( document ).ready(function() {
     
     $("#tel").mask("(999) 999-9999");
     
-    $("#subscribeForm").validate({
+    if($("#subscribeForm").length !== 0) {
+         $("#subscribeForm").validate({
                 rules: {					
 					name: {
 						required: true,
@@ -32,31 +33,38 @@ $( document ).ready(function() {
                        email: ""    
                     }
 				}
-    });
+        });
+    }//end if
+    
+   
     
     
-    $(".owl-carousel").owlCarousel({
-        loop:true,
-        margin:10,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-                nav:true
+    if($(".owl-carousel").length !== 0) {
+		  $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:5,
+                    nav:true,
+                    loop:false
+                }
             },
-            600:{
-                items:3,
-                nav:false
-            },
-            1000:{
-                items:5,
-                nav:true,
-                loop:false
-            }
-        },
-        nav: true,
-        navText: ["<span class='icon-l'><</span>","<span class='icon-r'>></span>"]
-    });
+            nav: true,
+            navText: ["<span class='icon-l'><</span>","<span class='icon-r'>></span>"]
+        });
+    }//end if
+    
+  
     
     
     
@@ -64,10 +72,7 @@ $( document ).ready(function() {
     wow = new WOW(
       {
         animateClass: 'animated',
-        offset:       100,
-        callback:     function(box) {
-          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
+        offset:       100
       }
     );
     wow.init();
