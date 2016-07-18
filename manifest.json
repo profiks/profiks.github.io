@@ -1,5 +1,9 @@
-{
-  "name": "Sites development in Chernivtsi.",
+{  
+  "lang": "en-UA",
+  "dir": "ltr",
+  "name": "Front end developer Chernivtsi",
+  "description": "Design and development of low-cost sites in Chernivtsi",
+  "short_name": "profiks",
   "icons": [    
     {
       "src": "icon/apple-touch-icon-72x72.png",
@@ -22,5 +26,7 @@
   ],
   "start_url": "index.html",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "theme_color": "#363c4c",
+  "background_color": "#363c4c"
 }
