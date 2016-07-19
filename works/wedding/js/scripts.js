@@ -1,10 +1,9 @@
 $( document ).ready(function() {
     
-    $('h1.text-blue').fitText(1.2, { minFontSize: '25px', maxFontSize: '42px' });
-    $('h2').fitText(1.2, { minFontSize: '22px', maxFontSize: '34px' });
-    $('h3.header-big').fitText(1.2, { minFontSize: '22px', maxFontSize: '34px' });
-    $('h2.text-med').fitText(1.2, { minFontSize: '20px', maxFontSize: '25px' });
-    $('h4').fitText(1.2, { minFontSize: '18px', maxFontSize: '23px' });
+    $('.js-h1').fitText(1.2, { minFontSize: '25px', maxFontSize: '40px' });
+    $('.js-h2').fitText(1.2, { minFontSize: '22px', maxFontSize: '30px' });
+    $('.js-h3').fitText(1.2, { minFontSize: '18px', maxFontSize: '25px' });
+    $('.js-h4').fitText(1.2, { minFontSize: '16px', maxFontSize: '23px' });
     
     
     $("#tel").mask("(999) 999-9999");
@@ -64,9 +63,40 @@ $( document ).ready(function() {
         });
     }//end if
     
+    
+    function showButton() {
+
+
+        var button  = $('.scroll-top'), //button that scrolls user to top
+            view = $(window);
+        
+        
+        $(document).on('scroll', function() {
+           
+                if (view.scrollTop() > 1000) {
+                    button.show();
+                }
+                else {
+                    button.hide();
+                }
+        });
+    }
   
+    if($(".scroll-top").length !== 0) { 
+        
+        showButton();
+        
+        $('.scroll-top').click(function(e){
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+        
+         
+        
+    }
     
-    
+
     
     
     wow = new WOW(

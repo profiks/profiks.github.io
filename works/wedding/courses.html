@@ -8,15 +8,13 @@
     <meta name="description" content="">
     <meta name="keywords" content=""> 
     
-    <title>Преподаватели</title>
+    <title>Наши курсы</title>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
-    <!--  Android 5 Chrome Color-->
-    <meta name="theme-color" content="#cbedee">
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,11 +42,11 @@
           <div id="navbar" class="navbar-collapse collapse">            
             <ul class="nav navbar-nav navbar-right">
               <li><a href="index.html">главная</a></li>
-              <li><a href="#">о школе</a></li>
-              <li><a href="#">курсы</a></li>
-              <li><a href="#">фото видео</a></li>
-              <li><a href="#">блог</a></li>
-              <li><a href="#">конктакты</a></li>
+              <li><a href="about.html">о школе</a></li>
+              <li class="active"><a href="courses.html">курсы</a></li>
+              <li><a href="teachers.html">преподаватели</a></li>
+              <li><a href="blog.html">блог</a></li>
+              <li><a href="contacts.html">контакты</a></li>
             </ul>            
           </div><!-- end navbar-collapse -->
           
@@ -61,112 +59,38 @@
      <div class="container">
         
         <ol class="breadcrumbs">
-          <li><a href="index.html">Главная</a></li>
-          <li class="active"><a href="course.html">Преподаватели</a></li>
+          <li><a href="index.html">Главная <span class="visible-xxs"> > </span></a></li>
+          <li class="active"><a href="">Наши курсы <span class="visible-xxs"> > </span></a></li>
         </ol>
         
      </div> 
      <!-- end breadcrumbs -->   
     
-    <!-- ************************* about teacher **************************** -->    
-     <div class="about-teacher">         
-         
-         <div class="container">
-              <div class="separator-empty"><span class="ico separator1"></span></div>  
-                <h1 class="text-center text-uppercase">Алёна мерная</h1>
-               <h2 class="text-center text-uppercase text-italic text-med">преподаватель стильных свадеб</h2>
-              
-          </div>
-          
-          
-          <!-- *********************** jumbotron gradient ************************** -->
-          <div class="jumbotron-gradient">          
-              <div class="container">
-                 
-                <figure class="col-sm-12 col-md-4">
-                    
-                    <img src="img/teacher.jpg" class="img-responsive teacher-photo" alt="teacher">
-                    
-                    <figcaption class="teacher-info text-center">
-                        Ведет: <br>
-                        Курсы свадебного координатора. <br>
-                        Курсы свадебного координатора.
-                        
-                        <div class="popup-holder">
-                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a>
-                        </div>
-                    </figcaption>
-                </figure> 
-                   
-                <article class="col-sm-12 col-md-8 teacher-desc">
-                    <h3>Образование:</h3>
-                    <p>Новая модель организационной деятельности позволяет выполнять важные задания по разработке новых предложений. Задача </p>
-                    
-                    <h3>Квалификация:</h3>
-                    <p> и богатый опыт начало повседневной работы по формированию позиции позволяет оценить значение позиций, занимаемых участниками </p>
-                    
-                    <p>Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры требуют от нас анализа систем массового участия. укрепление и развитие структуры требуют от нас анализа систем массового участия. укрепление и развитие структуры требуют от нас анализа систем массового участия.</p>
-                    
-                </article><!-- end teacher-desc -->     
-                    
-                  
-              </div> <!-- end container -->         
-          </div><!-- end jumbotron-gradient -->
-          
-         
-     </div>
-    <!-- end about-teacher --> 
-                 
-     <!-- ********************************** teacher-portfolio ******************************* -->                        
-    <div class="teacher-portfolio">
-        
-        <div class="container">
-              <div class="separator-empty"><span class="ico separator7"></span></div>
-              <h2 class="text-center text-uppercase">портфолио</h2>
-        </div>
-        
-        
-        <!-- ****************************** slider ************************************** -->
-        <div class="slider">            
-            <div class="container">
-                <div class="owl-carousel">
-                  <div> <img src="img/portfolio1.jpg" alt="portfolio item"> </div>
-                  <div> <img src="img/portfolio2.jpg" alt="portfolio item"> </div>
-                  <div> <img src="img/portfolio3.jpg" alt="portfolio item"> </div>
-                  <div> <img src="img/portfolio4.jpg" alt="portfolio item"> </div>
-                  <div> <img src="img/portfolio1.jpg" alt="portfolio item"> </div>
-                  <div> <img src="img/portfolio2.jpg" alt="portfolio item"> </div>
-                  <div> <img src="img/portfolio1.jpg" alt="portfolio item"> </div>
-                  <div> <img src="img/portfolio2.jpg" alt="portfolio item"> </div>
-                </div>
-            </div>            
-        </div>
-        <!-- end slider -->
-        
-        
-    </div> 
-    <!-- end teacher-portfolio -->                                                
-                  
           
    
+    <!-- ***************************** courses table ***************************** -->   
+                          
+     <div class="container courses-table">
+         
+         <div class="separator-empty"><span class="ico separator5"></span></div>  
+         <h1 class="text-center text-uppercase js-h2">Наши курсы</h1>
+           
+        
+        <table class="table-striped table courses-list">
+            
+            <tr>
+                <th>№<br> курса</th>
+                <th>Картинка</th>
+                <th>Название курса</th>
+                <th>Срок<br> Обучения</th>
+                <th>Цена</th>
+            </tr>
+            
+        </table>                       
+                       
+    </div>
+    <!-- end courses-table -->                               
    
-       <!-- *************************** small jumbotron *********************** -->      
-      <div class="jumbotron-small">
-          <div class="container">
-             <div class="col-sm-12 col-md-7">
-                 <h4 class="text-uppercase">Чтобы ваша жизнь стала ярче...</h4>
-                 <p>Подружитесь с Первой школой свадебных профессионалов!</p>
-             </div>
-             
-             <div class="col-sm-12 col-md-5 text-right">
-                 <a href="#" class="btn btn-success" data-toggle="modal" data-target="#subscribeModal">оставить заявку</a> 
-             </div>
-               
-          </div>
-      </div>
-      <!-- end small jumbotron -->
-      
-      
   
     
      <!-- ******************************* footer ********************************** -->      
@@ -286,6 +210,9 @@
         </div>
       <!-- end subscribe modal -->
       
+      
+       <!-- *********************************** scroll-top ********************* -->
+      <a href="#" class="scroll-top"></a>
    
    <!-- vendor libraries -->
    <script src="js/vendor/jquery.min.js"></script>
@@ -294,7 +221,6 @@
    <script src="js/vendor/jquery.maskedinput.js"></script> 
    <script src="js/vendor/jquery.validate.js"></script>
    <script src="js/vendor/wow.min.js"></script>
-   <script src="js/vendor/owl.carousel.min.js"></script>
    
    <!-- custom scripts -->
    <script src="js/scripts.js"></script>  
