@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*******************************************************************************
 ***
 ***   Dear friend :
@@ -11992,7 +11993,7 @@ p {
       width: 100%; } }
 
 .single-course {
-  padding-bottom: 90px; }
+  padding-bottom: 20px; }
   @media only screen and (max-width: 767px) {
     .single-course {
       padding-bottom: 30px; } }
@@ -12004,7 +12005,7 @@ p {
   @media only screen and (max-width: 767px) {
     .single-course .course-thumb {
       padding: 0; } }
-  .single-course h2.text-center {
+  .single-course h1.js-h2 {
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 15px;
@@ -12266,3 +12267,204 @@ p {
     @media only screen and (max-width: 480px) {
       .contacts .contacts__desc h3 {
         font-size: 16px; } }
+
+.courses-list {
+  border: 1px solid #027c85;
+  margin-top: 25px; }
+  .courses-list thead > tr > th {
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    border: none;
+    border-right: 1px solid #027c85;
+    background: #cbedee;
+    font-size: 16px; }
+  .courses-list tbody > tr:nth-of-type(odd) {
+    background: #fff; }
+  .courses-list tbody > tr:nth-of-type(even) {
+    background: #cbedee; }
+  .courses-list tbody > tr:hover {
+    color: #df6e97; }
+    .courses-list tbody > tr:hover a {
+      color: #df6e97; }
+  .courses-list tbody > tr > td {
+    text-align: center;
+    vertical-align: middle;
+    border-top: none;
+    border-right: 1px solid #027c85;
+    font-size: 18px; }
+    .courses-list tbody > tr > td:first-child {
+      font-weight: bold; }
+    .courses-list tbody > tr > td h2, .courses-list tbody > tr > td h3 {
+      font-size: 18px;
+      font-weight: 400;
+      text-align: left;
+      padding-left: 20px;
+      padding-right: 20px; }
+    .courses-list tbody > tr > td a {
+      color: #000; }
+      .courses-list tbody > tr > td a:hover {
+        color: #df6e97; }
+
+@media only screen and (max-width: 767px) {
+  table.courses-list {
+    display: block; }
+    table.courses-list thead, table.courses-list tbody, table.courses-list th, table.courses-list td, table.courses-list tr {
+      display: block; }
+    table.courses-list thead tr {
+      display: none; }
+    table.courses-list tr {
+      border-bottom: 1px solid #027c85; }
+      table.courses-list tr > td {
+        border: none;
+        border-bottom: 1px solid #027c85;
+        position: relative;
+        padding-left: 40%;
+        text-align: left; }
+        table.courses-list tr > td:before {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 30%;
+          padding-right: 0;
+          text-align: right;
+          white-space: nowrap; }
+        table.courses-list tr > td h2 {
+          padding: 0;
+          margin: 0; }
+      table.courses-list tr > td:nth-of-type(1):before {
+        content: "№:"; }
+      table.courses-list tr > td:nth-of-type(3):before {
+        content: "Название:"; }
+      table.courses-list tr > td:nth-of-type(4):before {
+        content: "Обучения:"; }
+      table.courses-list tr > td:nth-of-type(5):before {
+        content: "Цена:"; } }
+
+.course-form {
+  margin-bottom: 50px; }
+  .course-form h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px; }
+    @media only screen and (max-width: 767px) {
+      .course-form h3 {
+        font-size: 18px;
+        text-align: center; } }
+  .course-form label {
+    font-size: 20px;
+    font-weight: 700; }
+    @media only screen and (max-width: 767px) {
+      .course-form label {
+        font-size: 18px;
+        text-align: center;
+        width: 50%;
+        float: left;
+        line-height: 56px; } }
+  .course-form .control-number {
+    height: 56px;
+    width: 100px;
+    margin-left: 30px;
+    margin-right: 20px;
+    border-radius: 0;
+    border-color: #027c85;
+    font-size: 20px;
+    text-align: center; }
+    @media only screen and (max-width: 480px) {
+      .course-form .control-number {
+        width: 50%; } }
+  @media only screen and (max-width: 767px) {
+    .course-form .btn {
+      width: 100%; } }
+
+.blog .heading-ribbon {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  background: #289097; }
+
+.blog .blog-figure {
+  border: 1px solid #289097;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px; }
+  .blog .blog-figure > img {
+    height: 100%; }
+  .blog .blog-figure:hover .blog-desc {
+    background: rgba(219, 113, 151, 0.7);
+    bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .blog .blog-figure {
+      height: auto; }
+      .blog .blog-figure > img {
+        width: 100%; } }
+
+.blog .blog-desc {
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  padding: 10px;
+  background: rgba(37, 134, 138, 0.7);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  @media only screen and (max-width: 767px) {
+    .blog .blog-desc {
+      bottom: 0;
+      position: static;
+      height: auto; } }
+  .blog .blog-desc h3 {
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3; }
+    @media only screen and (max-width: 767px) {
+      .blog .blog-desc h3 {
+        height: auto; } }
+  .blog .blog-desc .blog-more {
+    display: block;
+    height: 30px;
+    width: 100%;
+    color: #fff;
+    font-size: 15px;
+    text-align: right; }
+
+.pagination > li > a {
+  border: 1px solid #31b7bc;
+  border-radius: 0;
+  color: #000;
+  margin-left: 5px;
+  padding: 8px 14px; }
+  @media only screen and (max-width: 480px) {
+    .pagination > li > a {
+      padding: 3px 7px; } }
+  .pagination > li > a:hover, .pagination > li > a:focus {
+    background: rgba(237, 110, 151, 0.8);
+    color: #fff;
+    border-color: #31b7bc; }
+
+.pagination > .active > a, .pagination > .active > a:hover {
+  background: #ed6e97;
+  color: #fff;
+  border-color: #31b7bc; }
+
+.pagination > li:first-child > a, .pagination > li:last-child > a {
+  border: none;
+  background: none;
+  color: #31b7bc;
+  font-size: 25px;
+  padding-top: 0;
+  padding-bottom: 0; }
+  @media only screen and (max-width: 480px) {
+    .pagination > li:first-child > a, .pagination > li:last-child > a {
+      font-size: 18px; } }
+  .pagination > li:first-child > a:hover, .pagination > li:last-child > a:hover {
+    color: #ed6e97; }
