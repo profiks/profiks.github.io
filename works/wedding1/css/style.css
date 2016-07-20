@@ -11146,7 +11146,9 @@ p {
   .navbar-default .navbar-brand {
     height: 74px;
     width: 169px;
-    margin-top: 3px; background-image: url(../img/sprite.png); background-position: 0 0; }
+    margin-top: 3px;
+    background: url(../img/Pervaya_Svadebnaya_Shkola.png) no-repeat;
+    background-size: contain; }
     @media only screen and (max-width: 767px) {
       .navbar-default .navbar-brand {
         margin-left: 15px; } }
@@ -11391,19 +11393,19 @@ p {
     text-transform: uppercase;
     font-size: 20px;
     text-align: center; }
-  .separator-empty .separator0 { background-image: url(../img/sprite.png); background-position: -504px 0; }
-  .separator-empty .separator1 { background-image: url(../img/sprite.png); background-position: -105px -304px; }
-  .separator-empty .separator2 { background-image: url(../img/sprite.png); background-position: -189px 0; }
-  .separator-empty .separator3 { background-image: url(../img/sprite.png); background-position: -294px 0; }
-  .separator-empty .separator4 { background-image: url(../img/sprite.png); background-position: 0 -199px; }
-  .separator-empty .separator5 { background-image: url(../img/sprite.png); background-position: -105px -199px; }
-  .separator-empty .separator6 { background-image: url(../img/sprite.png); background-position: -210px -199px; }
-  .separator-empty .separator7 { background-image: url(../img/sprite.png); background-position: -399px 0; }
-  .separator-empty .separator8 { background-image: url(../img/sprite.png); background-position: -399px -105px; }
-  .separator-empty .separator9 { background-image: url(../img/sprite.png); background-position: 0 -304px; }
-  .separator-empty .separator10 { background-image: url(../img/sprite.png); background-position: 0 -94px; }
-  .separator-empty .separator11 { background-image: url(../img/sprite.png); background-position: -210px -304px; }
-  .separator-empty .separator12 { background-image: url(../img/sprite.png); background-position: -315px -304px; }
+  .separator-empty .separator0 { background-image: url(../img/sprite.png); background-position: -105px 0; }
+  .separator-empty .separator1 { background-image: url(../img/sprite.png); background-position: 0 -315px; }
+  .separator-empty .separator2 { background-image: url(../img/sprite.png); background-position: 0 -210px; }
+  .separator-empty .separator3 { background-image: url(../img/sprite.png); background-position: 0 -105px; }
+  .separator-empty .separator4 { background-image: url(../img/sprite.png); background-position: -105px -105px; }
+  .separator-empty .separator5 { background-image: url(../img/sprite.png); background-position: -210px 0; }
+  .separator-empty .separator6 { background-image: url(../img/sprite.png); background-position: -210px -105px; }
+  .separator-empty .separator7 { background-image: url(../img/sprite.png); background-position: 0 0; }
+  .separator-empty .separator8 { background-image: url(../img/sprite.png); background-position: -105px -210px; }
+  .separator-empty .separator9 { background-image: url(../img/sprite.png); background-position: -210px -210px; }
+  .separator-empty .separator10 { background-image: url(../img/sprite.png); background-position: -315px 0; }
+  .separator-empty .separator11 { background-image: url(../img/sprite.png); background-position: -315px -105px; }
+  .separator-empty .separator12 { background-image: url(../img/sprite.png); background-position: -315px -210px; }
 
 .jumbotron-gradient {
   padding-top: 40px;
@@ -11515,10 +11517,10 @@ p {
       float: left;
       width: 39px;
       height: 39px; }
-      .schedule .schedule-item .schedule-table .ico-calendar { background-image: url(../img/sprite.png); background-position: -294px -105px; }
-      .schedule .schedule-item .schedule-table .ico-time { background-image: url(../img/sprite.png); background-position: -189px -105px; }
-      .schedule .schedule-item .schedule-table .ico-durring { background-image: url(../img/sprite.png); background-position: -105px -94px; }
-      .schedule .schedule-item .schedule-table .ico-money { background-image: url(../img/sprite.png); background-position: -399px -210px; }
+      .schedule .schedule-item .schedule-table .ico-calendar { background-image: url(../img/sprite.png); background-position: -164px -315px; }
+      .schedule .schedule-item .schedule-table .ico-time { background-image: url(../img/sprite.png); background-position: -105px -315px; }
+      .schedule .schedule-item .schedule-table .ico-durring { background-image: url(../img/sprite.png); background-position: -223px -315px; }
+      .schedule .schedule-item .schedule-table .ico-money { background-image: url(../img/sprite.png); background-position: -420px -324px; }
     .schedule .schedule-item .schedule-table .hide-sm {
       display: inline-block;
       float: left;
@@ -11702,12 +11704,12 @@ p {
       width: 66px;
       height: 88px;
       margin: 0 auto; }
-      .teaching-process .teaching-roadmap .ico-teacher { background-image: url(../img/sprite.png); background-position: -504px -105px; }
-      .teaching-process .teaching-roadmap .ico-task { background-image: url(../img/sprite.png); background-position: -504px -213px; }
-      .teaching-process .teaching-roadmap .ico-idea { background-image: url(../img/sprite.png); background-position: 0 -409px; }
-      .teaching-process .teaching-roadmap .ico-gift { background-image: url(../img/sprite.png); background-position: -86px -409px; }
-      .teaching-process .teaching-roadmap .ico-coffee { background-image: url(../img/sprite.png); background-position: -172px -409px; }
-      .teaching-process .teaching-roadmap .ico-visualisation { background-image: url(../img/sprite.png); background-position: -258px -409px; }
+      .teaching-process .teaching-roadmap .ico-teacher { background-image: url(../img/sprite.png); background-position: -506px -108px; }
+      .teaching-process .teaching-roadmap .ico-task { background-image: url(../img/sprite.png); background-position: -506px -216px; }
+      .teaching-process .teaching-roadmap .ico-idea { background-image: url(../img/sprite.png); background-position: -506px 0; }
+      .teaching-process .teaching-roadmap .ico-gift { background-image: url(../img/sprite.png); background-position: -420px -216px; }
+      .teaching-process .teaching-roadmap .ico-coffee { background-image: url(../img/sprite.png); background-position: -420px -108px; }
+      .teaching-process .teaching-roadmap .ico-visualisation { background-image: url(../img/sprite.png); background-position: -420px 0; }
   .teaching-process img {
     display: block;
     margin: 0 auto; }
@@ -11883,11 +11885,11 @@ p {
     width: 29px;
     height: 29px;
     margin-right: 6px; }
-    .footer .soc-ico.phone { background-image: url(../img/sprite.png); background-position: -442px -409px; }
-    .footer .soc-ico.whatsup { background-image: url(../img/sprite.png); background-position: -420px -304px; }
-    .footer .soc-ico.viber { background-image: url(../img/sprite.png); background-position: -420px -353px; }
-    .footer .soc-ico.mail { background-image: url(../img/sprite.png); background-position: -344px -409px; }
-    .footer .soc-ico.skype { background-image: url(../img/sprite.png); background-position: -393px -409px; }
+    .footer .soc-ico.phone { background-image: url(../img/sprite.png); background-position: -147px -420px; }
+    .footer .soc-ico.whatsup { background-image: url(../img/sprite.png); background-position: -98px -420px; }
+    .footer .soc-ico.viber { background-image: url(../img/sprite.png); background-position: 0 -420px; }
+    .footer .soc-ico.mail { background-image: url(../img/sprite.png); background-position: -196px -420px; }
+    .footer .soc-ico.skype { background-image: url(../img/sprite.png); background-position: -49px -420px; }
   .footer .share-widget {
     width: 100%;
     text-align: center; }
@@ -11914,7 +11916,7 @@ p {
 
 .modal-subscribe button.close {
   width: 25px;
-  height: 26px; background-image: url(../img/sprite.png); background-position: -458px -210px; }
+  height: 26px; background-image: url(../img/sprite.png); background-position: -153px -374px; }
 
 .modal-subscribe .modal-header {
   border-bottom: none; }
@@ -11953,17 +11955,17 @@ p {
     display: block;
     width: 37px;
     height: 30px;
-    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -315px -199px; }
+    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -282px -315px; }
   .modal-subscribe .subscribe-form .input-ico .phone {
     display: block;
     width: 17px;
     height: 35px;
-    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -353px -105px; }
+    margin: 0 auto; background-image: url(../img/sprite.png); background-position: 0 -469px; }
   .modal-subscribe .subscribe-form .input-ico .email {
     display: block;
     width: 28px;
     height: 26px;
-    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -105px -153px; }
+    margin: 0 auto; background-image: url(../img/sprite.png); background-position: -105px -374px; }
 
 .modal-subscribe .subscribe-form .form-control {
   height: 40px;
@@ -12216,7 +12218,7 @@ p {
   border: 1px solid transparent;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  border-radius: 100%; background-image: url(../img/sprite.png); background-position: -504px -321px;
+  border-radius: 100%; background-image: url(../img/sprite.png); background-position: -506px -324px;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -12230,7 +12232,7 @@ p {
   @media only screen and (max-width: 767px) {
     .scroll-top {
       width: 32px;
-      height: 32px; background-image: url(../img/sprite.png); background-position: -315px -249px;
+      height: 32px; background-image: url(../img/sprite.png); background-position: -339px -315px;
       border: 1px solid #027c85;
       background-color: rgba(255, 255, 255, 0.8); } }
 
