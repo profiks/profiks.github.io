@@ -1,0 +1,117 @@
+// _settings.scss
+@import 'compass'; 
+
+$xl-desktop     : 1600px;
+$large-desktop  : 1200px;
+$desktop        : 1020px;
+$small-screen   : 992px;
+$tablet         : 768px;
+$tablet-small   : 600px;
+$mobile-big     : 460px;
+$mobile-small   : 320px;
+
+
+
+
+$nv-white : #fff;
+$nv-red   : #ff0000;
+$nv-blue  : #00b7f6;
+$nv-pink  : #d42b8e;
+$nv-gray  : #5e5e5e;
+
+/* Custom container */
+ .container{
+    max-width: $xl-desktop !important;
+    min-width: $mobile-small !important;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+.row{
+    margin: 0 !important;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+     src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+$nv-sprite-spacing: 5px; 
+@import "nv-sprite/*.png";
+@include all-nv-sprite-sprites;
+
+
+
+@-webkit-keyframes spinnerRotate
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes spinnerRotate
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes spinnerRotate
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
+
+@-webkit-keyframes spinnerRotateUp
+{
+    from{-webkit-transform:rotate(180deg);}
+    to{-webkit-transform:rotate(540deg);}
+}
+@-moz-keyframes spinnerRotateUp
+{
+    from{-moz-transform:rotate(180deg);}
+    to{-moz-transform:rotate(540deg);}
+}
+@-ms-keyframes spinnerRotateUp
+{
+    from{-ms-transform:rotate(180deg);}
+    to{-ms-transform:rotate(540deg);}
+}
+
+
+/*
+@media (max-width: $tablet ) { 
+    }//end media query
+*/
+
