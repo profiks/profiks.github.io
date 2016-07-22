@@ -100,7 +100,7 @@ input, select {
 
 /*
 // media query
-@media only screen and (min-width : $screen__tablet) {
+@media only screen and (max-width : $screen__mobile--big) {
 
 }//end media query
 */
@@ -171,7 +171,6 @@ input, select {
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
-  min-width: 320px;
   overflow: hidden; }
 
 [class$="__container"]:before {
@@ -194,7 +193,8 @@ input, select {
 body {
   background: #313540;
   color: #fff;
-  font: 400 1em 'Letter Gothic', sans-serif; }
+  font: 400 1em 'Letter Gothic', sans-serif;
+  min-width: 300px; }
 
 .heading {
   margin-top: .3em;
@@ -204,9 +204,26 @@ body {
   font-size: 2.25em;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.26); }
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.26);
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in; }
+  @media only screen and (max-width: 768px) {
+    .heading {
+      font-size: 1.625em; } }
+  @media only screen and (max-width: 480px) {
+    .heading {
+      font-size: 1.3em;
+      line-height: 1.5; } }
   .heading--big {
     font-size: 3em; }
+    @media only screen and (max-width: 768px) {
+      .heading--big {
+        font-size: 2em; } }
+    @media only screen and (max-width: 480px) {
+      .heading--big {
+        font-size: 1.4em; } }
   .heading--sm {
     text-transform: none; }
   .heading--underline:after {
@@ -298,6 +315,9 @@ body {
   line-height: 1; }
   .txt-nav > li {
     display: inline-block; }
+    @media only screen and (max-width: 480px) {
+      .txt-nav > li {
+        margin-bottom: 10px; } }
   .txt-nav__link {
     color: #fff;
     text-transform: uppercase;
@@ -343,6 +363,9 @@ body {
   overflow: hidden;
   background: #363c4c;
   padding: 5px 30px; }
+  @media only screen and (max-width: 600px) {
+    .top-bar {
+      padding: 5px 15px; } }
   .top-bar__logo {
     display: block;
     float: left;
@@ -353,6 +376,9 @@ body {
     line-height: 40px;
     font-weight: 900;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.26); }
+    @media only screen and (max-width: 480px) {
+      .top-bar__logo {
+        font-size: 16px; } }
   .top-bar .social {
     float: right; }
 
@@ -391,6 +417,9 @@ body {
      -moz-animation: animation__bg-color 15s cubic-bezier(0.39, 1.66, 0.12, 0.9) infinite;
        -o-animation: animation__bg-color 15s cubic-bezier(0.39, 1.66, 0.12, 0.9) infinite;
           animation: animation__bg-color 15s cubic-bezier(0.39, 1.66, 0.12, 0.9) infinite; }
+  @media only screen and (max-width: 600px) {
+    .intro {
+      padding: 15px; } }
   .intro__container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -434,6 +463,9 @@ body {
     position: relative;
     width: 50%;
     margin: 20px 0 10px 0; }
+    @media only screen and (max-width: 480px) {
+      .intro__map {
+        width: 80%; } }
   .intro__map-img {
     display: block;
     margin: 0 auto;
@@ -444,19 +476,26 @@ body {
   width: 100%;
   padding: 30px;
   background: #363c4c; }
+  @media only screen and (max-width: 600px) {
+    .skills {
+      padding: 15px; } }
 
 .make-for {
   width: 100%;
   padding: 30px;
   background: #313540;
+  min-height: 600px;
   height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   position: relative; }
+  @media only screen and (max-width: 600px) {
+    .make-for {
+      padding: 15px; } }
   .make-for__container {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -528,7 +567,11 @@ body {
     text-align: center;
     margin-top: 2em;
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; }
     .timeline__title:first-of-type {
       margin-top: 0; }
     .timeline__title--last {
@@ -536,6 +579,9 @@ body {
       margin-bottom: 0;
       max-width: 2em;
       border-radius: 50%; }
+    @media only screen and (max-width: 768px) {
+      .timeline__title {
+        font-size: 1.375em; } }
   .timeline__event {
     position: relative;
     text-align: center;
@@ -544,6 +590,10 @@ body {
     width: 45%;
     margin: 1em 2.5%;
     background: #363c4c;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
     border-radius: 5px;
     list-style-type: none;
     display: block;
@@ -552,15 +602,16 @@ body {
     color: #fff;
     border: 1px solid #fff;
     text-decoration: none; }
-    @media all and (max-width: 600px) {
+    @media all and (max-width: 768px) {
       .timeline__event {
-        width: 85%; } }
+        width: 100%;
+        margin: 1em auto; } }
     .timeline__event--first {
       margin-top: -1.5em; }
     .timeline__event:nth-of-type(2n) {
       float: left;
       clear: left; }
-    @media all and (min-width: 650px) {
+    @media all and (min-width: 768px) {
       .timeline__event:after {
         display: block;
         content: ' ';
@@ -581,6 +632,12 @@ body {
   position: relative;
   min-height: 300px;
   clear: both; }
+  @media only screen and (max-width: 768px) {
+    .device {
+      width: 100%; } }
+  @media only screen and (max-width: 480px) {
+    .device {
+      min-height: 200px; } }
   .device__item {
     position: absolute;
     -webkit-transition: all 0.6s cubic-bezier(0.39, 1.66, 0.12, 0.9);
@@ -592,20 +649,50 @@ body {
       left: -moz-calc(50% - 145.5px);
       left: calc(50% - 145.5px);
       top: 0; }
+      @media only screen and (max-width: 480px) {
+        .device__item--desktop {
+          left: 0; } }
     .device__item--notebook {
       right: 0;
       top: 100px; }
+      @media only screen and (max-width: 480px) {
+        .device__item--notebook {
+          top: 70px; } }
     .device__item--tablet {
       left: 59px;
       bottom: 40px; }
+      @media only screen and (max-width: 480px) {
+        .device__item--tablet {
+          left: 0;
+          top: 100px; } }
     .device__item--phone {
       left: 30%;
       bottom: 0; }
+      @media only screen and (max-width: 480px) {
+        .device__item--phone {
+          left: 90px;
+          top: 120px; } }
+  .device__img {
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; }
+    @media only screen and (max-width: 768px) {
+      .device__img {
+        max-width: 70%; } }
+    @media only screen and (max-width: 480px) {
+      .device__img {
+        max-width: 50%;
+        display: block;
+        margin: 0 auto; } }
 
 .work {
   width: 100%;
   padding: 30px;
   background: #eee; }
+  @media only screen and (max-width: 600px) {
+    .work {
+      padding: 15px; } }
   .work__item {
     float: left;
     width: calc(99.9% * 1/2 - 15px);
@@ -616,6 +703,12 @@ body {
     position: relative;
     overflow: hidden;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5), -1px -1px 5px 0px rgba(0, 0, 0, 0.5); }
+    @media only screen and (max-width: 600px) {
+      .work__item {
+        float: left;
+        width: calc(99.9% * 1/1 - 5px);
+        margin-left: 2.5px;
+        margin-right: 2.5px; } }
     .work__item:hover .work__desc, .work__item:hover .work__txt, .work__item:hover .work__link {
       -webkit-transform: scale(1);
          -moz-transform: scale(1);
@@ -687,6 +780,9 @@ body {
   width: 100%;
   padding: 30px;
   background: #363c4c; }
+  @media only screen and (max-width: 600px) {
+    .resume {
+      padding: 15px; } }
 
 .contact {
   width: 100%;
@@ -694,13 +790,17 @@ body {
   background: #eee;
   color: #313540;
   position: relative;
+  min-height: 500px;
   height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 600px) {
+    .contact {
+      padding: 15px; } }
   .contact__container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -740,6 +840,9 @@ body {
   padding: 30px;
   background: #313540;
   text-align: center; }
+  @media only screen and (max-width: 600px) {
+    .footer {
+      padding: 15px; } }
   .footer__copyright {
     font-size: .8em;
     margin-top: 10px; }
