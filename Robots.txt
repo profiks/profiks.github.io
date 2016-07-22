@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /works/
-Sitemap: http://profiks.github.io/sitemap.xml
