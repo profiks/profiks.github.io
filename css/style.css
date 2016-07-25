@@ -6644,7 +6644,11 @@ body {
 .cd-nav-trigger {
   display: none; }
 
+#cd-vertical-nav {
+  display: none; }
+
 .no-touch #cd-vertical-nav {
+  display: block;
   position: fixed;
   right: 10px;
   top: 50%;
@@ -6784,6 +6788,7 @@ body {
   bottom: -9px; }
 
 .touch #cd-vertical-nav {
+  display: block;
   position: fixed;
   z-index: 14;
   right: 5%;
