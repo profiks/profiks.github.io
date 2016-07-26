@@ -1441,7 +1441,7 @@ address {
 
 /*
 // media query
-@media only screen and (max-width : $screen__phone ) {
+@media only screen and (max-width : $screen__medium ) {
 
 }//end media query
 */
@@ -2482,7 +2482,7 @@ h1, h2, h3, h4, p, a, li, html {
   .article__heading {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     position: relative; }
     .article__heading:after {
       content: '';
@@ -2506,15 +2506,19 @@ h1, h2, h3, h4, p, a, li, html {
   .article__italic {
     font-style: italic; }
   .article__image {
-    max-width: 100%;
+    max-width: 500px;
     float: left;
     display: block;
     margin-right: 15px;
     margin-bottom: 15px;
     outline: 1px solid #00b4cc; }
+    @media only screen and (max-width: 990px) {
+      .article__image {
+        max-width: 400px; } }
     @media only screen and (max-width: 768px) {
       .article__image {
         margin-right: 0;
+        max-width: 100%;
         width: 100%;
         height: auto; } }
   .article__txt {
