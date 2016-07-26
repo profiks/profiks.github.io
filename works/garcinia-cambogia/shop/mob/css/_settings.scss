@@ -1,0 +1,58 @@
+// _settings.scss
+
+
+
+$design: 980px;
+$normal: 1024px;
+$small-screen: 992px;
+$tablets: 768px;
+
+$small-tablets:570px;
+$large-mobile: 480px;
+
+
+
+$mobile-bg: #b8cd4d;
+
+
+$purple: #f60585;
+$greenDark: #386021;
+$greenLight: #51af27;
+$orange: #af5a09;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transform-rotate($deg) {
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+   -webkit-transform: rotate($deg); 
+   -o-transform: rotate($deg); 
+   transform: rotate($deg);
+}
+
+@mixin box-shadow($x, $y, $radius, $color){
+    -moz-box-shadow: $x $y $radius $color;
+    -webkit-box-shadow: $x $y $radius $color;
+    box-shadow: $x $y $radius $color;
+}
+
+
+@mixin bg-size($size){
+    -webkit-background-size: $size;
+      -moz-background-size: $size;
+      -o-background-size: $size;
+      background-size: $size;
+}
+
+
+@mixin linear-gradient($direction, $color1, $color2) {                   
+ background: -webkit-linear-gradient($direction, $color1, $color2);
+ background: -moz-linear-gradient($direction, $color1, $color2);
+ background: -o-linear-gradient($direction, $color1, $color2);
+ background: -ms-linear-gradient($direction, $color1, $color2);
+}

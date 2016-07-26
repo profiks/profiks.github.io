@@ -1,0 +1,340 @@
+/* ==========================================================================
+   mobile and tablet custom style
+   ========================================================================== */
+body {
+  background: #fff; }
+
+/* Custom container */
+.container {
+  width: 1120px !important;
+  max-width: 1120px !important;
+  min-width: 1120px !important;
+  margin: 0 auto; }
+
+.table-no-border > thead > tr > th,
+.table-no-border > tbody > tr > th,
+.table-no-border > tfoot > tr > th,
+.table-no-border > thead > tr > td,
+.table-no-border > tbody > tr > td,
+.table-no-border > tfoot > tr > td {
+  border-top: none; }
+
+@font-face {
+  font-family: Monotype-Corsiva;
+  src: url(../fonts/Monotype-Corsiva.ttf); }
+/*@media all and (min-width: $tablet) {}*/
+.main-header {
+  background: #fff794;
+  min-width: 1120px;
+  overflow: visible;
+  position: relative; }
+  .main-header::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    min-width: 1120px;
+    background: -webkit-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -moz-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -o-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -ms-linear-gradient(bottom, #0069b4, #0095ff); }
+  .main-header img[src="img/girl-head2.png"] {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .main-header hgroup {
+    text-align: center; }
+    .main-header hgroup h2 {
+      font-family: "Monotype Corsiva";
+      font-size: 63px;
+      color: #d84401; }
+    .main-header hgroup h5 {
+      font-family: Arial;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      color: #104a84;
+      margin-bottom: 0; }
+    .main-header hgroup h3 {
+      font-family: Arial;
+      font-size: 39px;
+      font-weight: bold;
+      font-style: italic;
+      text-transform: uppercase;
+      color: #d84401;
+      margin-top: 0; }
+  .main-header .col-xs-1 img {
+    padding-top: 14px; }
+
+.top-slug {
+  padding-top: 10px;
+  position: relative; }
+  .top-slug ul li {
+    list-style: none;
+    font-family: Arial;
+    font-size: 19px;
+    line-height: 1;
+    font-weight: bold;
+    font-style: italic;
+    color: #c03f00; }
+  .top-slug #product_header_box {
+    height: 23px;
+    width: 350px;
+    font-family: Arial;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    background: #ffff00;
+    border: 2px solid #000;
+    border-bottom: none;
+    overflow: hidden;
+    position: absolute;
+    left: 30px;
+    bottom: 0; }
+
+#panels .the-panel {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px; }
+  #panels .the-panel .checker {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    cursor: pointer; }
+  #panels .the-panel .holder {
+    background: #fff794;
+    height: 210px;
+    padding-top: 15px; }
+    #panels .the-panel .holder .col-xs-7 {
+      padding-right: 0; }
+  #panels .the-panel .bottom-border {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    background: -webkit-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -moz-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -o-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -ms-linear-gradient(bottom, #0069b4, #0095ff); }
+  #panels .the-panel header {
+    height: 53px;
+    background: -webkit-linear-gradient(top, #0069b4, #0095ff);
+    background: -moz-linear-gradient(top, #0069b4, #0095ff);
+    background: -o-linear-gradient(top, #0069b4, #0095ff);
+    background: -ms-linear-gradient(top, #0069b4, #0095ff); }
+    #panels .the-panel header h2 {
+      text-align: center;
+      font-family: Arial;
+      font-size: 29px;
+      text-transform: uppercase;
+      color: #e9e700;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-bottom: 0; }
+      #panels .the-panel header h2 span {
+        font-size: 39px;
+        color: #fff; }
+  #panels .the-panel .col-xs-7 h3 {
+    font-family: Arial;
+    font-size: 27px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #007ed7;
+    margin-bottom: 0;
+    margin-top: 0; }
+  #panels .the-panel .col-xs-7 img {
+    margin-bottom: 7px; }
+  #panels .the-panel .col-xs-7 p {
+    font-family: Arial;
+    font-size: 20px;
+    font-style: italic;
+    color: #1a0005;
+    line-height: 0.5; }
+    #panels .the-panel .col-xs-7 p span {
+      color: #d84401; }
+  #panels .the-panel .col-xs-5 img:nth-child(1) {
+    margin-bottom: 15px; }
+  #panels .the-panel .col-xs-5 .btn-select-package {
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    width: 205px;
+    height: 57px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    border-radius: 40px;
+    border: 3px solid #fff;
+    background: -webkit-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -moz-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -o-linear-gradient(bottom, #0069b4, #0095ff);
+    background: -ms-linear-gradient(bottom, #0069b4, #0095ff); }
+    #panels .the-panel .col-xs-5 .btn-select-package:hover {
+      background: -webkit-linear-gradient(bottom, #1d4267, #1d5587);
+      background: -moz-linear-gradient(bottom, #1d4267, #1d5587);
+      background: -o-linear-gradient(bottom, #1d4267, #1d5587);
+      background: -ms-linear-gradient(bottom, #1d4267, #1d5587); }
+#panels .selected .checker {
+  background: url(../img/cheacked.png) no-repeat center center; }
+
+#bascket {
+  height: 203px;
+  background: #b7db8d;
+  padding-top: 45px; }
+  #bascket table {
+    font-family: Arial;
+    font-size: 19px;
+    font-style: italic;
+    color: #000; }
+    #bascket table b {
+      font-style: normal; }
+    #bascket table td {
+      padding-bottom: 0px;
+      padding-top: 0px; }
+    #bascket table .red {
+      color: #d84401;
+      font-weight: bold; }
+
+#form-panel {
+  background: #fff794;
+  height: 1060px; }
+  #form-panel .form-horizontal {
+    padding-left: 35px; }
+    #form-panel .form-horizontal select {
+      padding-top: 0;
+      padding-bottom: 0; }
+    #form-panel .form-horizontal .col-xs-7, #form-panel .form-horizontal .col-xs-3 {
+      padding-left: 0; }
+    #form-panel .form-horizontal .col-xs-3 select, #form-panel .form-horizontal .col-xs-4 select {
+      padding-left: 2px; }
+    #form-panel .form-horizontal hgroup h1 {
+      font-family: Arial;
+      font-size: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #006ebd;
+      margin-top: 10px;
+      margin-bottom: 0; }
+    #form-panel .form-horizontal hgroup h4 {
+      font-family: Arial;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #006ebd;
+      margin-top: 0; }
+    #form-panel .form-horizontal .form-group {
+      margin-bottom: 2px; }
+      #form-panel .form-horizontal .form-group .form-control {
+        border: 1px solid #000;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        height: 25px;
+        font-size: 14px; }
+      #form-panel .form-horizontal .form-group label {
+        font-family: Arial;
+        font-size: 15px;
+        color: #000;
+        font-weight: normal; }
+    #form-panel .form-horizontal textarea {
+      height: 50px !important;
+      width: 176px !important; }
+    #form-panel .form-horizontal h4 {
+      font-family: Arial;
+      font-size: 19px;
+      text-transform: uppercase;
+      color: #006ebd; }
+    #form-panel .form-horizontal .payment {
+      margin-bottom: 12px; }
+    #form-panel .form-horizontal .btn-rush-order {
+      width: 217px;
+      height: 68px;
+      background: url(../img/bottom.png) no-repeat transparent;
+      margin-bottom: 10px; }
+    #form-panel .form-horizontal #ccv {
+      cursor: pointer;
+      color: #0000ff;
+      display: block;
+      padding-top: 7px; }
+    #form-panel .form-horizontal .modal-content {
+      background: transparent;
+      box-shadow: none;
+      border: none; }
+  #form-panel .form-panel-footer {
+    font-family: Arial; }
+    #form-panel .form-panel-footer center b {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000; }
+    #form-panel .form-panel-footer h5 {
+      font-size: 14px;
+      color: #006ebd;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 0; }
+    #form-panel .form-panel-footer i {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #000; }
+    #form-panel .form-panel-footer p {
+      font-size: 14px;
+      color: #000; }
+    #form-panel .form-panel-footer img[src="img/social.png"] {
+      margin-top: 9px;
+      margin-bottom: 5px; }
+  #form-panel .label1 {
+    padding-left: 0px; }
+  #form-panel .label-desc {
+    padding-right: 0px;
+    padding-left: 0px; }
+    #form-panel .label-desc b {
+      font-size: 11px;
+      color: #000;
+      text-transform: uppercase; }
+    #form-panel .label-desc p {
+      font-size: 11px;
+      color: #000;
+      text-align: justify;
+      line-height: 1; }
+
+footer img {
+  margin-top: 30px;
+  margin-bottom: 21px; }
+footer p {
+  font-family: Arial;
+  font-size: 10px;
+  color: #000; }
+footer b {
+  font-family: Arial;
+  font-size: 11px;
+  color: #000; }
+  footer b a {
+    color: #000; }
+    footer b a:hover {
+      color: #000; }
+footer #recentPurchase {
+  height: 35px;
+  background: #ffff00;
+  border: 2px solid #000;
+  text-align: center;
+  font-family: Arial;
+  font-size: 11px;
+  line-height: 2.5;
+  color: #000; }
+
+/*# sourceMappingURL=style.css.map */

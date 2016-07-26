@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Це Чернівці, крихітко!</title>
+        <meta name="description" content=""> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>    
+    <body>
+        <!-- alert messages block -->
+        <div id="msgHolder"></div>
+        
+     <!-- begin wrapper container -->   
+    <div class="container">
+
+<div class="row">
+    <!-- begin inner pages navigation -->
+    <nav class="navbar navbar-default col-xs-12 col-md-10 col-md-offset-1 nav-tcb-custom">
+
+        <!-- just for mobile -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#innerNav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- end just for mobile -->
+
+        <!-- begin nav items -->
+        <div class="collapse navbar-collapse" id="innerNav">
+            <ul class="nav navbar-nav">
+                <li data-nav="description"><a href="admin/dashboard">Опис сторінок</a></li>
+                <li data-nav="postslist"><a href="admin/post">Пости</a></li>
+                <li class="active" data-nav="films"><a href="admin/film">Фільми</a></li>
+                <li data-nav="users"><a href="admin/user">Користувачі</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="admin/logout">Вийти <i class="glyphicon glyphicon-off"></i></a></li>
+            </ul>
+        </div>
+        <!-- end nav items -->
+
+
+    </nav>
+    <!-- end inner pages navigation -->
+</div> <!-- end row -->
+
+         <section class="row">
+
+             <div class="col-xs-12 col-md-10 col-md-offset-1 page-app" id="">
+
+                 <div class="table-responsive">
+                     <table id="mytable" class="table table-bordered table-striped">
+
+                         <thead>
+                             <th>№</th>
+                             <th>Дата</th>
+                             <th>Назва</th>
+                              <th></th>
+                         </thead>
+
+                         <tbody>
+
+                         {films}
+                         <tr>
+                             <td>{n}</td>
+                             <td>{date}</td>
+                             <td>{title}</td>
+                             <td>
+                                 <p>
+                                     <button
+                                             data-filmid="{id}"
+                                             class="btn btn-primary btn-xs"
+                                             data-toggle="modal"
+                                             data-target="#editFilmModal">
+                                         <span class="glyphicon glyphicon-pencil"></span>
+                                     </button>
+                                     <button
+                                             data-filmid="{id}"
+                                             class="btn btn-primary btn-xs"
+                                             data-toggle="modal"
+                                             data-target="#deleteFilmModal">
+                                         <span class="glyphicon glyphicon-trash"></span>
+                                     </button>
+                                 </p>
+                             </td>
+                         </tr>
+                         {/films}
+
+                         </tbody>
+
+                     </table>
+                 </div>
+
+
+             </div>
+             <!-- end app -->
+
+
+
+             <!-- edit film modal -->
+             <div class="modal fade" id="editFilmModal" tabindex="-1" role="dialog"  aria-hidden="true">
+                 <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-body">
+                             <!-- content goes here -->
+                             <form>
+                                 <div class="form-group">
+                                     <label for="meta_description">Короткий опис</label>
+                                     <input id="meta_description"
+                                            type="text"
+                                            tabindex="1"
+                                            class="form-control"
+                                            placeholder="Короткий опис"
+                                            value="Короткий опис">
+
+                                     <label for="text">Текст</label>
+
+                                     <textarea
+                                             tabindex="2"
+                                             name="text"
+                                             id="text"
+                                             rows="4"
+                                             class="form-control"
+                                             placeholder="Текст"> Текст </textarea>
+
+                                     <label for="year">Рік</label>
+                                     <input id="year"
+                                            type="number"
+                                            tabindex="3"
+                                            class="form-control"
+                                            placeholder="Рік"
+                                            value="2015">
+
+                                     <label for="country">Країна</label>
+                                     <input id="country"
+                                            type="text"
+                                            tabindex="4"
+                                            class="form-control"
+                                            placeholder="КраЇна"
+                                            value="США">
+
+                                     <label for="genre">Жанр</label>
+                                     <input id="genre"
+                                            type="text"
+                                            tabindex="5"
+                                            class="form-control"
+                                            placeholder="Жанр"
+                                            value="Комедія">
+
+                                     <label for="length">Тривалість</label>
+                                     <input id="length"
+                                            type="number"
+                                            tabindex="6"
+                                            class="form-control"
+                                            placeholder="Тривалість"
+                                            value="2">
+
+
+                                 </div>
+                                 <button type="submit" class="btn btn-primary">Зберегти</button>
+                                 <button type="reset" class="btn btn-default">Відмінити</button>
+                                 <button type="button" class="btn btn-default pull-right" data-dismiss="modal">
+                                     X
+                                 </button>
+                             </form>
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- end edit film modal -->
+
+             <!-- delete film modal -->
+             <div class="modal fade" id="deleteFilmModal" tabindex="-1" role="dialog"  aria-hidden="true">
+                 <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-body">
+                             <!-- content goes here -->
+                             <h4>Ви підтверджуєте видалення ?</h4>
+                             <input type="hidden" data-deletefilmid="{{ id }}" value="" />
+                             <button type="button" class="btn btn-primary">Так</button>
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Ні</button>
+
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- end delete film modal -->
+
+
+         </section>
+
+    <footer class="row">
+             <div class="text-center">
+                 <p><br/><br/><br/>© 2016 спільнота «це чернівці. крихітко!»</p>
+             </div>
+    </footer>
+    </div> <!-- end wrapper container -->   
+                        
+        <script src="assets/js/jquery-2.1.4.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/script.js"></script>
+
+    </body>
+</html>

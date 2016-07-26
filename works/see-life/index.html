@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Seelife</title>
+        <meta name="description" content=""> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="favicon.ico" rel="shortcut icon">
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300italic,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css">
+             <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>    
+    <body>
+    <div class="container" id="wrapper">
+        <header class="col-xs-12" id="main-header">
+            <img src="img/headr-bg.jpg" class="header-bg" alt="header background"/>
+
+            <div class="top-bar">
+                <a href="#" class="navbar-brand"> </a>
+
+                <div id="custom-search-input">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Поиск" />
+                        <button class="btn btn-seach"><span></span></button>
+                    </div>
+                </div>
+                <!-- end search button -->
+
+
+                <div id="custom-select-input">
+                    <div class="input-group">
+                        <button value="3" class="dropdown-toggle form-control select-control" type="button" id="dropdownCity" data-toggle="dropdown">Черновцы</button>
+                        <ul class="dropdown-menu select-control-for-city" aria-labelledby="dropdownCity" id="city">
+                            <li value="3"><a href="#">Черновцы</a></li>
+                            <li value="4"><a href="#">Киев</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- end select -->
+                <div id="social-btns">
+                    <a href="http://vk.com/seelifebiz" class="vk" target="_blank"><img src="img/social-icons/vk.png"/></a>
+                    <a href="https://www.facebook.com/seelifebiz" class="fb" target="_blank"><img src="img/social-icons/fb.png"/></a>
+                    <a href="#" class="g-plus"><img src="img/social-icons/g-plus.png"/></a>
+                </div>
+                <!-- end socila buttons -->
+                <a id="entry-btn" data-toggle="modal" class="login-icon-login-icon" data-target="#login-modal">Вход</a>
+
+
+                <!-- end exit btn -->
+            </div>
+            <!-- end top bar -->
+        </header>
+
+
+        <section class="col-xs-12" id="touday-events">
+
+            <a href="#" class="touday">Сегодня</a>
+
+            <ul id="events-list">
+
+                <li class="event-owerlay">
+
+                    <!-- post panel -->
+                    <div class="post-panel post-hidden panel-news">
+                        <div class="post-thumbnail">
+                            <a href="#">
+                                <img src="http://placehold.it/100x100"/>
+                            </a>
+                        </div>
+                        <div class="post-body">
+                            <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                            <time datetime="13/08/2015">13/08/2015</time>
+                        </div>
+                        <div class="post-footer">
+                            <p class="pull-left">
+                                <a href="#" class="like active"></a> 15
+                                <a href="#" class="comm"></a> 33
+                            </p>
+                            <p class="pull-right">вечеринки</p>
+                        </div>
+                    </div>
+                    <!-- end post panel -->
+                </li>
+
+
+                <li class="event-owerlay">
+
+                    <!-- post panel -->
+                    <div class="post-panel post-hidden panel-news">
+                        <div class="post-thumbnail">
+                            <a href="#">
+                                <img src="http://placehold.it/100x100"/>
+                            </a>
+                        </div>
+                        <div class="post-body">
+                            <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                            <time datetime="13/08/2015">13/08/2015</time>
+                        </div>
+                        <div class="post-footer">
+                            <p class="pull-left">
+                                <a href="#" class="like active"></a> 15
+                                <a href="#" class="comm"></a> 33
+                            </p>
+                            <p class="pull-right">вечеринки</p>
+                        </div>
+                    </div>
+                    <!-- end post panel -->
+                </li>
+
+
+                <li class="event-owerlay">
+
+                    <!-- post panel -->
+                    <div class="post-panel post-hidden panel-catalog">
+                        <div class="post-thumbnail">
+                            <a href="#">
+                                <img src="img/poster.jpg"/>
+                            </a>
+                        </div>
+                        <div class="post-body">
+                            <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                            <time datetime="13/08/2015">13/08/2015</time>
+                        </div>
+                        <div class="post-footer">
+                            <p class="pull-left">
+                                <a href="#" class="like active"></a> 15
+                                <a href="#" class="comm"></a> 33
+                            </p>
+                            <p class="pull-right">вечеринки</p>
+                        </div>
+                    </div>
+                    <!-- end post panel -->
+                </li>
+
+
+                <li class="event-owerlay">
+
+                    <!-- post panel -->
+                    <div class="post-panel post-hidden panel-catalog">
+                        <div class="post-thumbnail">
+                            <a href="#">
+                                <img src="img/poster.jpg"/>
+                            </a>
+                        </div>
+                        <div class="post-body">
+                            <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                            <time datetime="13/08/2015">13/08/2015</time>
+                        </div>
+                        <div class="post-footer">
+                            <p class="pull-left">
+                                <a href="#" class="like active"></a> 15
+                                <a href="#" class="comm"></a> 33
+                            </p>
+                            <p class="pull-right">вечеринки</p>
+                        </div>
+                    </div>
+                    <!-- end post panel -->
+                </li>
+
+                <li class="event-owerlay">
+
+                <!-- post panel -->
+                <div class="post-panel post-hidden panel-catalog">
+                    <div class="post-thumbnail">
+                        <a href="#">
+                            <img src="img/poster.jpg"/>
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like active"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <p class="pull-right">вечеринки</p>
+                    </div>
+                </div>
+                <!-- end post panel -->
+            </li>
+
+                <li class="event-owerlay">
+
+                <!-- post panel -->
+                <div class="post-panel post-hidden panel-catalog">
+                    <div class="post-thumbnail">
+                        <a href="#">
+                            <img src="img/poster.jpg"/>
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like active"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <p class="pull-right">вечеринки</p>
+                    </div>
+                </div>
+                <!-- end post panel -->
+            </li>
+
+                <li class="event-owerlay">
+
+                <!-- post panel -->
+                <div class="post-panel post-hidden panel-catalog">
+                    <div class="post-thumbnail">
+                        <a href="#">
+                            <img src="img/poster.jpg"/>
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like active"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <p class="pull-right">вечеринки</p>
+                    </div>
+                </div>
+                <!-- end post panel -->
+            </li>
+
+                <li class="event-owerlay">
+
+                <!-- post panel -->
+                <div class="post-panel post-hidden panel-catalog">
+                    <div class="post-thumbnail">
+                        <a href="#">
+                            <img src="img/poster.jpg"/>
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like active"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <p class="pull-right">вечеринки</p>
+                    </div>
+                </div>
+                <!-- end post panel -->
+            </li>
+
+
+
+                <!-- max count = 8 -->
+
+            </ul>
+
+        </section>
+        <!-- end touday section events -->
+
+        <main role="main" class="col-xs-12">
+            <!-- navigation -->
+            <nav class="panel-group col-xs-1" id="main-menu" role="tablist">
+            
+                	<!-- news -->
+                    <div class="panel accordion-heading">
+                       
+        <a class="menu-item menu-icons-news-ico" data-toggle="collapse" data-parent="#main-menu" aria-expanded="false" href="#news-menu"></a>
+                      
+
+                        <div id="news-menu" class="panel-collapse collapse">
+                           
+
+                            <a href="#" class="menu-item menu-icons-news-spent-time"></a>
+                            <a href="#" class="menu-item menu-icons-news-hobby"></a>
+                            <a href="#" class="menu-item menu-icons-news-in-city"></a>
+                            <a href="#" class="menu-item menu-icons-news-society"></a>
+                            <a href="#" class="menu-item menu-icons-news-useful"></a>
+
+                        </div>
+                    </div>
+                <!-- end news -->
+         
+
+                <!-- catalog -->                
+                	<div class="panel accordion-heading">
+                    
+                        <a class="menu-item menu-icons-catalog-ico" data-toggle="collapse"
+                           data-parent="#main-menu" aria-expanded="false" href="#catalog-menu"></a>
+                    
+                    <div id="catalog-menu" class="panel-collapse collapse">
+                     
+                        <a href="#" class="menu-item menu-icons-catalog-food"></a>
+                        <a href="#" class="menu-item menu-icons-catalog-spent-time"></a>
+                        <a href="#" class="menu-item menu-icons-catalog-hobby"></a>
+                        <a href="#" class="menu-item menu-icons-catalog-appartment"></a>
+                        <a href="#" class="menu-item menu-icons-catalog-tourism"></a>
+                        <a href="#" class="menu-item menu-icons-catalog-beauty-healt"></a>
+                        <a href="#" class="menu-item menu-icons-catalog-shoping"></a>
+                       
+                    </div>
+                </div>               
+                <!-- end catalog -->
+
+                <!-- notice -->
+                <div class="panel accordion-heading">
+                    
+                        <a class="menu-item menu-icons-notice-ico" data-toggle="collapse"
+                           data-parent="#main-menu" aria-expanded="false" href="#notice-menu"></a>
+                   
+                    <div id="notice-menu" class="panel-collapse collapse">                       
+                            <a href="#" class="menu-item menu-icons-notice-teatr"></a>
+                            <a href="#" class="menu-item menu-icons-notice-party"></a>
+                            <a href="#" class="menu-item menu-icons-notice-training"></a>
+                            <a href="#" class="menu-item menu-icons-notice-circ"></a>
+                            <a href="#" class="menu-item menu-icons-notice-presentation"></a>
+                            <a href="#" class="menu-item menu-icons-notice-showing"></a>
+                            <a href="#" class="menu-item menu-icons-notice-mouvie"></a>
+                            <a href="#" class="menu-item menu-icons-notice-concert"></a>
+                            <a href="#" class="menu-item menu-icons-notice-recitals"></a>                       
+                    </div>
+                </div>
+                <!-- end notice -->
+                <!-- people -->
+                <div class="panel accordion-heading">
+                   
+                        <a class="menu-item menu-icons-people-ico" data-toggle="collapse"
+                           data-parent="#main-menu" href="#people-menu"></a>
+                  
+                    <div id="people-menu" class="panel-collapse collapse">
+                        
+                            <a href="#" class="menu-item menu-icons-people-show-biz"></a>
+                            <a href="#" class="menu-item menu-icons-people-science"></a>
+                            <a href="#" class="menu-item menu-icons-people-politica"></a>
+                            <a href="#" class="menu-item menu-icons-people-beauty"></a>
+                            <a href="#" class="menu-item menu-icons-people-healt"></a>
+                            <a href="#" class="menu-item menu-icons-people-law"></a>
+                            <a href="#" class="menu-item menu-icons-people-other"></a>
+                       
+                    </div>
+                </div>
+                <!-- end people -->
+            </nav>
+            <!-- END navigation -->
+            <!-- articles -->
+            <div class="col-xs-9 article-holder">
+                <!-- post panel -->
+                <div class="col-xs-4 post-panel panel-news">
+                       <div class="post-thumbnail">
+                           <a href="#"><img src="img/poster.jpg" alt="poster"/></a>
+                       </div>
+                        <div class="post-body">
+                            <h3 class="ellipsis multiline">ВОСКРЕСНЫЙ DANCING В ВОСКРЕСНЫЙ DANCINGertertr bertertrt  ertert В HARD ROCK CLUB HARD ROCK CLUB</h3>
+                            <time datetime="13/08/2015">13/08/2015</time>
+                        </div>
+                       <div class="post-footer">
+                                <p class="pull-left">
+                                    <a href="#" class="like active"></a> 15
+                                    <a href="#" class="comm"></a> 33
+                                </p>
+                          <p class="pull-right">вечеринки</p>
+                       </div>
+                </div>
+                <!-- end post panel -->
+                <!-- post panel -->
+                <div class="col-xs-4 post-panel panel-news">
+                    <div class="post-thumbnail">
+                        <a href="#"> <img src="img/poster.jpg" alt="poster"/></a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCIN CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like"></a> 15
+                            <a href="#" class="comm active"></a> 33
+                        </p>
+                        <a href="#" class="pull-right">вечеринки</a>
+                    </div>
+                </div>
+                <!-- end post panel -->
+                <!-- post panel -->
+                <div class="col-xs-4 post-panel panel-catalog">
+                    <div class="post-thumbnail">
+                        <a href="#"><img src="img/poster.jpg" alt="poster"/></a>
+                    </div>
+                    <div class="post-body">
+                        <h3 class="ellipsis multiline">I  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque aut consequuntur cum dicta ea facere ipsa itaque, magni perspiciatis rerum, sed, soluta unde! Blanditiis eaque necessitatibus optio temporibus voluptatum!NG В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <p class="pull-right">вечеринки</p>
+                    </div>
+                </div>
+                <!-- end post panel -->
+                <!-- post panel -->
+                <div class="col-xs-4 post-panel panel-catalog">
+                    <div class="post-thumbnail">
+                        <a href="#"><img src="img/poster.jpg" alt="poster"/></a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <p class="pull-right">вечеринки</p>
+                    </div>
+                </div>
+                <!-- end post panel -->
+                <!-- post panel -->
+                <div class="col-xs-4 post-panel panel-notice">
+                    <div class="post-thumbnail">
+                        <a href="#"><img src="img/poster.jpg" alt="poster"/></a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <p class="pull-right">вечеринки</p>
+                    </div>
+                </div>
+                <!-- end post panel -->
+                <!-- post panel -->
+                <div class="col-xs-4 post-panel panel-people">
+                    <div class="post-thumbnail">
+                        <a href="#"><img src="img/poster.jpg" alt="poster"/></a>
+                    </div>
+                    <div class="post-body">
+                        <h3>ВОСКРЕСНЫЙ DANCING В HARD ROCK CLUB</h3>
+                        <time datetime="13/08/2015">13/08/2015</time>
+                    </div>
+                    <div class="post-footer">
+                        <p class="pull-left">
+                            <a href="#" class="like"></a> 15
+                            <a href="#" class="comm"></a> 33
+                        </p>
+                        <a href="#" class="pull-right">вечеринки</a>
+                    </div>
+                </div>
+                <!-- end post panel -->
+            </div>
+            <!-- end articles -->
+            <!-- promotion block -->
+            <aside id="promotion" class="col-xs-2">
+
+                <div class="promo-block">
+                    <p class="promo-p">РЕКЛАМА</p>
+                </div>
+
+                <div class="promo-block">
+                    <p class="promo-p">РЕКЛАМА</p>
+                </div>
+
+                <div class="promo-block">
+                    <p class="promo-p">РЕКЛАМА</p>
+                </div>
+
+                <div class="promo-block">
+                    <p class="promo-p">РЕКЛАМА</p>
+                </div>
+
+            </aside>
+            <!-- end promotion -->
+        </main>
+        <!-- end main -->
+        <footer id="footer" class="col-xs-12">
+            <div class="col-xs-7 col-xs-offset-2">
+                <div class="col-xs-4">
+                    <ul>
+                        <li><b>see-life.biz</b></li>
+                        <li><a href="#">О Нас</a></li>
+                        <li><a href="#">Условия использования</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Для правообладателей</a></li>
+                        <li><a href="#">Размещение рекламы</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4">
+                    <ul>
+                        <li><b>Помощь</b></li>
+                        <li><a href="#">Нашли ошибку?</a></li>
+                        <li><a href="#">Правила использования</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4">
+                    <ul>
+                        <li><b>Мы в сети</b></li>
+                        <li><a href="#">Вконтакте</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Odnoklassniki</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" id="toTop" style="display: none">&#x2191;</a>
+
+
+        <!-- login modal -->
+        <div class="modal" id="login-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <a type="button"  data-dismiss="modal"><span aria-hidden="true">&times;</span></a>
+
+
+                <!-- login form -->
+                <form id="login-form" action="#" method="post" role="form" autocomplete="on" style="display: block;">
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" tabindex="1" class="form-control" placeholder="Логин" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" tabindex="2" class="form-control" placeholder="Пароль" required>
+                    </div>               
+                    
+                    <div class="form-group">
+                        <input type="checkbox" tabindex="3" name="remember" id="remember">
+                        <label for="remember"> Запомнить меня</label>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="login-submit" tabindex="4" class="btn login-btn">Вход</button>
+                    </div>
+
+                    <div class="form-group">
+                    <a href="#" id="register-form-link">Регистрация!</a>
+                    </div>
+                    
+
+                    <div class="form-group login-by-social">
+                        <p>Войти через: 
+                    <a href="#" class="vk"><img src="img/social-icons/vk.png"/></a>
+                    <a href="#" class="fb"><img src="img/social-icons/fb.png"/></a>
+                    <a href="#" class="g-plus"><img src="img/social-icons/g-plus.png"/></a>
+
+                    </p>
+              
+                    </div>
+              </form>
+                                    
+                <form id="register-form" action="#" method="post" role="form" autocomplete="off" style="display: none;">
+                <p>Регистрация на сайте</p>
+                   <div class="form-group">
+                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Логин" required>
+                   </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Почта" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Пароль" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="nickname" id="nickname" tabindex="2" class="form-control" placeholder="Ник" required>
+                    </div>
+                        <p>Регистрируясь, вы соглашаетесь <a href="#">с уловиями пользовательского соглашения</a></p>
+
+                    <div class="form-group">
+                        <button type="submit" id="login-submit" tabindex="4" class="btn login-btn">Регистрировать</button>
+                    </div>
+                 </form>
+
+
+                 <form id="restore-ppassword-form" action="#" method="post" role="form" autocomplete="on" style="display: none;">                 
+                   <p>Восстановление пароля:</p><br>
+                   <p>Введите ваш логин или e-mail:</p><br>
+                    
+                   <div class="form-group">
+                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Логин" required>
+                   </div>                   
+                    <div class="form-group">
+                                <button type="submit" id="login-submit" tabindex="4" class="btn login-btn">ОК
+                        </button>
+                    </div>
+                 </form>
+
+
+
+
+
+                <!-- reg form -->
+
+
+
+
+            </div>
+        </div>
+        <!-- end login modal -->
+
+
+
+
+
+     </div> <!-- end wrapper container -->
+
+
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.elipsis.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

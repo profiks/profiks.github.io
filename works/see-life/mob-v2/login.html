@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Войти</title>
+        <meta name="description" content=""> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="favicon.ico" rel="shortcut icon">
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css">
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>    
+    <body> 
+            <header class="main-header container">
+                <img id="logo-image" src="img/header-bg.jpg" alt="logo"/>
+            </header>
+
+            <nav class="container top-nav">
+
+                <ul class="nav-buttons-holder">
+                    <li
+                            class="menu-toggle"><a href="#left-menu" id="menu-togle"
+                                                   class="nav-button"><span class="menu"></span></a></li>
+                    <li class="nav-item-1"><a href="login.html" class="nav-button user-not-logged">войти</a></li>
+                    <li class="nav-item-2">
+
+
+
+                        <a class="nav-button dropdown-toggle" id="dropdownCity" data-toggle="dropdown" aria-expanded="false">Черновцы</a>
+                        <ul class="dropdown-menu select-control-for-city"  id="city">
+                            <li value="3"><a href="#">Черновцы</a></li>
+                            <li value="4"><a href="#">Киев</a></li>
+                        </ul>                   </li>
+                </ul>
+
+            </nav>
+            <!-- end nav -->
+
+
+            <div class="content container">
+
+
+
+                <nav class="panel-group left-side" id="left-menu" role="tablist">
+                    <!-- news -->
+                    <div class="panel accordion-heading">
+                        <a class="news cat-item" category="10" data-toggle="collapse" data-parent="#left-menu"
+                           aria-expanded="false" href="#news-menu">НОВОСТИ</a>
+
+                        <div id="news-menu" class="panel-collapse collapse">
+                            <a href="#" class="cat-item menu-item" category="29">ДОСУГ</a>
+                            <a href="#" class="cat-item menu-item" category="30">ХОББИ</a>
+                            <a href="#" class="cat-item menu-item" category="34">в городе</a>
+                            <a href="#" class="cat-item menu-item" category="36">общество</a>
+                            <a href="#" class="cat-item menu-item" category="37">полезное</a>
+                        </div>
+                    </div>
+                    <!-- end news -->
+                    <!-- catalog -->
+                    <div class="panel accordion-heading">
+
+                        <a class="catalog cat-item"  category="11" data-toggle="collapse" data-parent="#left-menu"
+                           aria-expanded="false" href="#catalog-menu">КАТАЛОГ</a>
+
+                        <div id="catalog-menu" class="panel-collapse collapse">
+                            <a href="#" class="cat-item menu-item" category="38">еда</a>
+                            <a href="#" class="cat-item menu-item" category="39">ДОСУГ</a>
+                            <a href="#" class="cat-item menu-item" category="40">ХОББИ</a>
+                            <a href="#" class="cat-item menu-item" category="41">жилье</a>
+                            <a href="#" class="cat-item menu-item" category="42">туризм</a>
+                            <a href="#" class="cat-item menu-item" category="44">красота и здоровье</a>
+                            <a href="#" class="cat-item menu-item" category="45">покупки</a>
+
+                        </div>
+                    </div>
+                    <!-- end catalog -->
+
+                    <!-- notice -->
+                    <div class="panel accordion-heading">
+                        <a class="notice cat-item" category="12" data-toggle="collapse" data-parent="#left-menu"
+                           aria-expanded="false"
+                           href="#notice-menu">АФИША</a>
+
+                        <div id="notice-menu" class="panel-collapse collapse">
+                            <a href="#" class="cat-item menu-item" category="21">театр</a>
+                            <a href="#" class="cat-item menu-item" category="22">вечеринки</a>
+                            <a href="#" class="cat-item menu-item" category="23">тренинги</a>
+                            <a href="#" class="cat-item menu-item" category="24">цирк</a>
+                            <a href="#" class="cat-item menu-item" category="25">презентации</a>
+                            <a href="#" class="cat-item menu-item" category="25">выставки</a>
+                            <a href="#" class="cat-item menu-item" category="26">кино</a>
+                            <a href="#" class="cat-item menu-item" category="27">концерты</a>
+                            <a href="#" class="cat-item menu-item" category="28">творческие вечера</a>
+                        </div>
+                    </div>
+                    <!-- end notice -->
+                    <!-- people -->
+                    <div class="panel accordion-heading">
+
+                        <a class="people cat-item" category="13" data-toggle="collapse"
+                           data-parent="#left-menu" href="#people-menu">люди</a>
+
+                        <div id="people-menu" class="panel-collapse collapse">
+
+                            <a href="#" class="cat-item menu-item" category="14">шоу-бизнес</a>
+                            <a href="#" class="cat-item menu-item" category="52">наука</a>
+                            <a href="#" class="cat-item menu-item" category="47">политика</a>
+                            <a href="#" class="cat-item menu-item" category="48">красота</a>
+                            <a href="#" class="cat-item menu-item" category="49">здоровье</a>
+                            <a href="#" class="cat-item menu-item" category="50">юриспруденция</a>
+                            <a href="#" class="cat-item menu-item" category="51">другое</a>
+                        </div>
+                    </div>
+                    <!-- end people -->
+
+                    <div class="panel accordion-heading">
+                        <a class="today" category="100" href="today.html">сегодня</a>
+                    </div>
+                    <!-- end today -->
+
+                </nav>
+
+
+                        <div class="main-holder">
+
+                    <div class="col-xs-12">
+                        <form class="auth-form" action="#" method="post" role="form">
+                    
+                            <div class="form-group">
+                                <input type="text" name="username" id="username" tabindex="1" class="form-control"
+                                       placeholder="Логин" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" tabindex="2" class="form-control"
+                                       placeholder="Пароль" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="login-submit"  tabindex="4"  class="submit-btn">Войти</button>
+                            </div>
+
+                            <div class="form-group">
+                                <a href="registr.html" class="form-anchor">Регистрация</a>
+                            </div>
+
+
+                            <div id="social-btns" class="col-xs-8 col-xs-offset-2">
+
+                                <div class="col-xs-4">
+                                    <a href="#" class="vk"><img src="img/social-icons/vk.png"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="#" class="fb"><img src="img/social-icons/fb.png"></a>
+                                </div>
+                                <div class="col-xs-4">
+                                    <a href="#" class="g-plus"><img src="img/social-icons/g-plus.png"></a>
+                                </div>
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+
+
+
+                        </div>
+                        <!-- end posts holder -->
+
+            </div>
+            <!--  end content -->
+
+
+
+            <footer class="container main-footer">
+                <ul class="footer-links col-xs-12">
+                    <div class="col-xs-4">
+                        <li><b>О Нас</b></li>
+                        <li><a href="#">Условия использования</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Для правообладателей</a></li>
+                        <li><a href="#">Размещение рекламы</a></li>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <li><b>Помощь</b></li>
+                        <li><a href="#">Нашли ошибку?</a></li>
+                        <li><a href="#">Правила использования</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <li><b>Мы в сети</b></li>
+                        <li><a href="#">Вконтакте</a></li>
+                        <li><a href="#">Вконтакте</a></li>
+                        <li><a href="#">Odnoklassniki</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </div>
+
+
+                </ul>
+            </footer>
+
+
+
+
+
+            <script src="http://see-life.biz/assets/js/jquery-1.11.1.min.js"></script>
+            <script src="http://see-life.biz/assets/js/bootstrap.min.js"></script>
+            <script src="js/jquery.panelslider.min.js"></script>
+            <script src="js/script.js"></script>
+    </body>
+</html>
