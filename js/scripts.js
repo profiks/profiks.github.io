@@ -6,8 +6,8 @@ $(function() {
     $('.js__parallax').parallax({
       calibrateX: true,
       calibrateY: true,
-      invertX: false,
-      invertY: false,
+      invertX: true,
+      invertY: true,
       limitX: false,
       limitY: false,
       scalarX: 8,
