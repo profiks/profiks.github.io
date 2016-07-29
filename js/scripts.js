@@ -114,7 +114,7 @@ $(function() {
     
     
     scrollorama1.animate('.intro__map-img',{
-        delay:-10, duration:400, property:'zoom', start: 0.7, end: 1.5
+        delay:-10, duration:400, property:'zoom', start: 0.7, end: 1.2
     });
     
     scrollorama.animate('.device__item--desktop',{
