@@ -6338,8 +6338,7 @@ body {
     -webkit-justify-content: center;
        -moz-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    overflow-x: visible; }
+            justify-content: center; }
   .make-for .scroll-btn {
     position: absolute;
     bottom: 30px;
