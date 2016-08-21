@@ -1,0 +1,162 @@
+// ***** themes *****
+
+
+// $primary
+.color-theme--1{
+    
+    .intro{
+        background-color: $primary;
+    }
+    
+    .aside{
+         background-color: $primary;
+    }
+    
+    .equalizer{    
+        &__bar{
+            background-color: $primary;
+        }
+        &:after{
+            border-left: 20px solid $primary;
+        }
+    }
+    
+    .social{
+        &__link{
+            &:hover{
+                background-color: $primary;
+            }
+        }
+    }
+    
+    .lang-dropdown{
+        &__select{
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+    
+    .offcanvas-toggle{
+        &__line{
+            background-color: $primary;
+        }
+    }
+    
+    
+    .nicescroll-cursors{
+        background-color: $primary !important;
+    }
+    
+    
+} // .color-theme--1
+
+
+
+
+
+
+// $black
+.color-theme--2{
+    
+    .intro{
+        background-color: $black;
+    }
+    
+    .aside{
+         background-color: $black;
+    }
+    
+    .equalizer{    
+        &__bar{
+            background-color: $black;
+        }
+        &:after{
+            border-left: 20px solid $black;
+        }
+    }
+    
+    .social{
+        &__link{
+            &:hover{
+                background-color: $black;
+            }
+        }
+    }
+    
+    .lang-dropdown{
+        &__select{
+            &:hover{
+                color: $black;
+            }
+        }
+    }
+    
+    .offcanvas-toggle{
+        &__line{
+            background-color: $black;
+        }
+    } 
+    
+    .nicescroll-cursors{
+        background-color: $black !important;
+    }
+    
+} // .color-theme--2
+
+
+
+
+
+
+// $brick
+.color-theme--3{
+    
+    .intro{
+        background-color: $brick;
+    }
+    
+    .aside{
+         background-color: $brick;
+    }
+    
+    .equalizer{    
+        &__bar{
+            background-color: $brick;
+        }
+        &:after{
+            border-left: 20px solid $brick;
+        }
+    }
+    
+    .social{
+        &__link{
+            &:hover{
+                background-color: $brick;
+            }
+        }
+    }
+    
+    .lang-dropdown{
+        &__select{
+            &:hover{
+                color: $brick;
+            }
+        }
+    }
+    
+    .offcanvas-toggle{
+        &__line{
+            background-color: $brick;
+        }
+    } 
+    
+    .nicescroll-cursors{
+        background-color: $brick !important;
+    }
+    
+} // .color-theme--3
+
+
+
+

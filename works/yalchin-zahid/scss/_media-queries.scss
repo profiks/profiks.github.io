@@ -1,0 +1,136 @@
+// ***** 320px *****
+@media only screen and (min-width : $mobile) {
+    
+    // mobile first
+} // end media query 320px
+
+
+
+
+
+
+// ***** 480px *****
+@media only screen and (min-width : $mobile--lg) {    
+    
+    .logo{
+        width: 371px;
+        height: 56px;
+        
+        &--inner{
+            width: 100%;
+        }
+        
+    }// .logo
+    
+    .lang{
+        &__link{
+            margin: 0 25px;
+            width: 60px;
+            height: 60px;
+            line-height: 56px;
+        }
+    }// .lang
+    
+    .intro-header{
+        padding: 60px;
+    }// .intro-header
+    
+    .intro-footer{
+        padding: 60px;
+    }// .intro-footer
+    
+    
+    .skyline{
+        &__path{
+            stroke-width: 0.5;
+        }
+    }// .skyline
+    
+    
+    .aside{
+        padding: 55px 30px 30px 30px;
+    }
+    
+    
+    .lang-dropdown{
+        display: block;
+    }//. labg-dropdown
+        
+}// end media query 480px
+
+
+
+
+
+
+
+
+// ***** 768px *****
+@media only screen and (min-width : $tablet) {
+    
+    .aside{
+        width: 280px;
+        padding: 55px 44px 30px 44px;
+        
+        &__copyright{
+            text-align: left;
+        }
+    }
+    
+    .top-nav{
+        padding: 15px 45px 45px;
+    
+        display: flex;
+        justify-content: flex-end;
+    }//.top nav
+    
+    .canvas-menu--open{
+        .content{
+           width: calc(100% - 280px);
+        }
+    }// .canvas-menu--open
+    
+    .offcanvas-toggle{ 
+        left: 45px;
+        
+        &--inner{
+            display: none;
+        }
+        
+    }
+    
+    .container{
+        padding: 40px;
+    } //.container
+    
+    
+}// end media query 768px
+
+
+
+
+
+
+
+
+// ***** 996px *****
+@media only screen and (min-width : $desktop--sm) {
+    
+    .offcanvas-toggle{
+        display: none;
+    }
+    
+    .aside{
+        transform: translateX(0);
+    }
+    
+    .content{
+        width: calc(100% - 280px);
+    }
+   
+}// end media query 996px
+
+
+
+
+

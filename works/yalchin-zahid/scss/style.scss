@@ -1,0 +1,645 @@
+/*******************************************************************************
+***
+***   Dear friend :
+***   When I wrote this code, only I and God knew what it was.
+***
+***   But now only God knows what is here ! 
+***   
+***   So, if you done trying to 'optimize' this code,
+***   please include this comment as a warning for the next guy who also will  
+***   trying to do this.
+***
+***   Author : denys.ark@gmail.com
+***
+********************************************************************************/
+
+
+@import 'functions';
+@import 'reset';
+@import 'variables';
+@import 'fonts';
+@import 'animation';
+@import 'themes';
+
+
+// ***** body *****
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+// ***** wrapper *****
+.wrapper{    
+    width: 100%;
+    
+    &:before {
+        content: '';
+        display: table;
+    }
+    
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }    
+}// .wrapper
+
+
+
+
+// ***** logo *****
+.logo{
+    display: inline-block;
+    width: 70%;
+    height: 56px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: contain;
+    float: left;
+    
+    &--inner{
+        float: right;
+        width: 100%;
+        background-position: center center;
+    }
+    
+}// .logo
+
+
+
+// ***** color-switch *****
+.color-switch{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $white;
+    float: right;
+    margin-left: 30px;
+    
+    background-color: transparent;
+    transition: background-color .3s ease-in;
+    
+    &:focus{
+        outline: none;
+    }
+    
+    &[data-color='2']{
+        background-color: $brick;
+    }
+    
+    &[data-color='1']{
+        background-color: $black;
+    }
+    
+    &[data-color='3']{
+       background-color: $primary;
+    }
+    
+}// .color-switch
+
+
+
+// ***** lang *****
+.lang{
+    
+    &__item{
+        display: inline-block;
+    }
+    
+    &__link{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $white;
+        border-radius: 100%;
+        margin: 0 5px;
+        
+        line-height: 36px;
+        color: $white;
+        text-transform: uppercase;
+        font-size: em(16);
+        text-decoration: none;
+        
+        &:hover, &--active{
+            background-color: rgba($white, .3);
+        }
+    }
+    
+    
+}// .lang
+
+
+
+
+// ****** intro ******
+.intro{
+    min-height: 100vh;
+    transition: background-color .3s ease-in;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}// .intro
+
+
+// ***** intro-header *****
+.intro-header{
+    width: 100%;
+    float: left;
+    padding: 20px;
+    
+}// .intro-header
+
+
+// ***** skyline *****
+.skyline{
+    width: 100%;
+    float: left;
+    position: relative;
+    
+    &__city{
+        max-width: 100%;
+        max-height: 450px;
+        
+        &--back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        &--front{
+            position: relative;
+            z-index: 2; 
+        }
+    }
+    
+    &__path{
+        stroke: $white;
+        stroke-width: 1;
+        transition: opacity 1s;
+        &--front{            
+            opacity: 0;
+        }
+        &--back{
+            opacity: .3;
+        }
+        
+        &--animated{
+            animation-name: draw;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1; 
+            animation-timing-function: linear; 
+        }
+    }
+    
+}// .skyline
+
+// ***** intro-footer *****
+.intro-footer{
+    width: 100%;
+    float: left;
+    padding: 20px;
+    
+    text-align: center;
+}// .intro-footer
+
+
+
+
+
+
+//***** content *****
+.content{
+    background-color: $content;
+    float: right;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    
+    transition: width .3s ease-in;
+        
+    &:before {
+        content: '';
+        display: table;
+    }
+    
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }  
+}// .content
+
+
+// ***** top-nav *****
+.top-nav{
+    width: 100%;
+    padding: 15px 15px 45px 15px;
+    display: block;
+    
+    &:before {
+        content: '';
+        display: table;
+    }
+    
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }  
+    
+}// .top-nav
+
+
+
+// ***** social *****
+.social{
+    width: auto;
+    float: right;
+    margin: 0 20px;
+    
+    &__item{
+        display: inline-block;
+        margin: 0 4px;
+    }
+    
+    &__link{
+        display: block;
+        width: 35px;
+        height: 35px;        
+        line-height: 35px;
+        border: 1px solid $white;
+        border-radius: 100%;
+        
+        transition: background-color 0.3s ease-out;
+        
+        color: $white;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+}// .social
+
+// ***** lang *****
+.lang-dropdown{
+    width: auto;
+    float: right;
+    position: relative;
+    display: none;
+    
+    &__current{
+        display: block;
+        background: none;
+        border: none;
+        height: 35px;
+        padding: 0;
+        position: relative;
+        
+        text-transform: uppercase;
+        color: $white;
+        font-size: em(14);
+        line-height: 35px;
+        
+        &:focus{
+            outline: none;
+            
+        }
+        
+        &:after{
+             content: '';
+             display: block;
+             width: 0; 
+             height: 0; 
+             border-left: 8px solid transparent;
+             border-right: 8px solid transparent;
+             border-top: 8px solid $white;         
+             float: right;
+             margin: 13.5px 8px;
+            
+             transition: transform 0.3s ease-out;
+        }
+        
+        
+    }
+    
+    
+    &__content{
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        
+        transition: height 0.3s ease-out;
+    }
+    
+    &__select{
+        width: 100%;
+        display: block;
+        padding: 8px 0;
+        
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: left;
+        font-size: em(14);
+        color: $white;
+    }
+    
+    &:hover &__content, &:focus &__content{
+        height: auto;
+    }
+    
+    &:hover &__current:after, &:focus &__current:after{
+        transform: rotate(180deg);
+    }
+
+    
+}// .lang
+
+
+
+
+
+// ***** equalizer ******
+.equalizer{
+    overflow: hidden;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    float: right;
+    
+    &__bar{
+        height: 2px;
+        width: 3px;
+        margin: 0 2px;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        
+        animation: none;
+        animation-name: none;
+        
+        &:nth-child(1){
+            left: 0;
+            animation-name: eq1;
+            animation-delay: 0ms;
+        }
+        
+         &:nth-child(2){
+            left: 7px;
+            animation-name: eq2;
+            animation-delay: 300ms;
+        }
+        
+         &:nth-child(3){
+            left: 14px;
+            animation-name: eq3;
+            animation-delay: 600ms;
+        }
+        
+         &:nth-child(4){
+            left: 21px;
+            animation-name: eq4;
+            animation-delay: 900ms;
+        }
+        
+         &:nth-child(5){
+            left: 28px;
+            animation-name: eq5;
+            animation-delay: 1200ms;
+        }
+        
+        
+    } //.bar
+    
+    &:after{
+        content: '';
+        display: block;
+        display: block;
+        width: 0; 
+        height: 0; 
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        
+        opacity: 1;
+        transition: opacity 0.3s ease-out; 
+    }
+    
+    
+    &--play{
+        .equalizer__bar{
+            animation-duration: 500ms;
+            animation-play-state: running;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        &:after{
+            opacity: 0;
+        }
+        
+    }
+    
+}// .equalizer
+
+
+
+// ***** main-nav *****
+.main-nav{    
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    
+    &__link{
+        display: block;
+        width: 100%;
+        padding: 15px 0 30px 0;
+        position: relative;
+        
+        text-align: center;
+        font-size: em(14);
+        color: $white;
+        text-decoration: none;
+        letter-spacing: 1px;
+        
+        transition: letter-spacing 0.3s ease-out;
+        
+        &:hover{
+            letter-spacing: 3px;
+        }
+        
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 15px;
+            background: url(../img/under-nav.png) no-repeat;
+            background-position: center center;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    
+     &__item{
+        &:last-child .main-nav__link{
+            &:after{
+                content: none;
+            }
+        }
+    }
+    
+}// .main-nav
+
+
+
+// ***** offcanvas-toggle *****
+.offcanvas-toggle{ 
+    width: 25px;
+    height: 35px;
+    margin: 0;
+    padding: 0;    
+    background: none;
+    border:none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    flex: 1; 
+    
+    float: left;
+    
+    &:focus{
+        outline: none;
+    }
+    
+    &__line{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 2px 0;
+        opacity: 1;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out, background-color .3s ease-in, transform-origin .3s ease-in;
+    }
+    
+    &--inner{
+        position: absolute;
+        top: -40px;
+        left: -15px;
+    }
+    
+}// .offcanvas-toggle
+
+
+
+// ***** aside *****
+.aside{
+    width: 100%;
+    height: 100%;   
+    float: left;
+    padding: 55px 15px 15px 15px;
+    transition: background-color .3s ease-in, transform .3s ease-in, width .3s ease-in;    
+    position: fixed;
+    top:0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 2;
+    
+    transform: translateX(-100%);
+    
+    
+    &:before {
+        content: '';
+        display: table;
+    }
+    
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    } 
+    
+    
+    &__inner{
+        width: 100%;
+        float: left;
+        z-index: 5;
+        position: relative;
+    }
+    
+    .particles-js-canvas-el{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    
+    &__copyright{
+        width: 100%;
+        float: left;
+        
+        text-align: center;
+        font-size: em(12);
+        color: $content--dark;
+    }
+    
+}// .aside
+
+
+//***** canvas-menu--open *****
+.canvas-menu--open{
+    
+    .aside{
+       transform: translateX(0); 
+    }
+    
+    .offcanvas-toggle{ 
+        &__line{
+            &:nth-child(1){
+                transform: rotate(45deg);
+                transform-origin: 10% 10%;
+                background-color: $white;
+            }
+            
+            &:nth-child(2){
+                opacity: 0;
+            }
+            
+            &:nth-child(3){
+                transform: rotate(-45deg);
+                transform-origin: 10% 90%;
+                background-color: $white;
+            }
+        }
+    }
+    
+    
+}// .canvas-menu--open
+
+
+
+// ***** container *****
+.container{
+    padding: 15px;
+    
+    p{
+        margin-bottom: 15px;
+    }
+    
+    img{
+        max-width: 100%;
+    }
+    
+} //.container
+
+
+
+
+
+
+@import 'media-queries';
