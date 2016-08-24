@@ -17,7 +17,7 @@ export var backgroundAudio = {
     playAudion : function(self) {
         this.toggle = document.getElementById('bgAudion');
         this.click = ('ontouchstart' in window ? 'touchstart' : 'click');
-        var audio = new Audio('../audio/background-music.mp3');
+        var audio = new Audio('./audio/background-music.mp3');
         
             if(this.toggle){
                 
