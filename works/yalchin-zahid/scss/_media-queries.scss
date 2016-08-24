@@ -126,6 +126,17 @@
         max-width: 100%;
     }
     
+    .modal{
+        &__content{
+            margin: 10% auto;
+        }
+        
+        &__close{
+            top: auto;
+            bottom: -50px;
+        }
+    }
+    
     
 }// end media query 768px
 
@@ -148,6 +159,10 @@
     }
     
     .content{
+        width: calc(100% - 280px);
+    }
+    
+    .slide{    
         width: calc(100% - 280px);
     }
    

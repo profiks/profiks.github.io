@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content=""> 
     
-    <title>Video</title>
+    <title>Slide</title>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -82,86 +82,19 @@
            
        </nav> <!-- /.top-nav -->
        
-           
-           
        
-           
-           <div class="container">
-              
-              
-               <div class="row">
-                   
-
-                   <div class="container__inner container__inner--pad">
-                     
-                     
-                      
-                       <div class="video">
-                           <img class="img" src="img/item.jpg" alt="item">
-                           <a href="//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1" class="video__play"></a>
-                       </div>
-                       
-                       <h2 class="heading heading--sm">Lorem ipsum</h2>
-                       <span class="badge">1.08.2016</span>
-                       
-                   </div>
-
-
-                   <div class="container__inner container__inner--pad container__inner--last">
-                      
-                       <div class="video">
-                           <img class="img" src="img/item.jpg" alt="item">
-                           <a href="//www.youtube.com/embed/LaBb7T4eRwk?enablejsapi=1" class="video__play"></a>
-                       </div>
-                       
-                       <h2 class="heading heading--sm">Lorem ipsum</h2>
-                       <span class="badge">1.08.2016</span>
-                       
-                   </div>
-                   
-                   <div class="container__inner container__inner--pad">
-                      
-                       <div class="video">
-                           <img class="img" src="img/item.jpg" alt="item">
-                           <a href="//www.youtube.com/embed/ljYePhxfn6A?enablejsapi=1" class="video__play"></a>
-                       </div>
-                       
-                       <h2 class="heading heading--sm">Lorem ipsum</h2>
-                       <span class="badge">1.08.2016</span>
-                       
-                   </div>
-
-
-                   <div class="container__inner container__inner--pad container__inner--last">
-                      
-                       <div class="video">
-                           <img class="img" src="img/item.jpg" alt="item">
-                           <a href="//www.youtube.com/embed/oIr-Je37zkk?enablejsapi=1" class="video__play"></a>
-                       </div>
-                       
-                       <h2 class="heading heading--sm">Lorem ipsum</h2>
-                       <span class="badge">1.08.2016</span>
-                       
-                   </div>
-                   
-                   <div class="container__inner container__inner--pad container__inner--last">
-                      
-                       <div class="video">
-                           <img class="img" src="img/item.jpg" alt="item">
-                           <a href="//www.youtube.com/embed/WyRo67h_YJ8?enablejsapi=1" class="video__play"></a>
-                       </div>
-                       
-                       <h2 class="heading heading--sm">Lorem ipsum</h2>
-                       <span class="badge">1.08.2016</span>
-                       
-                   </div>
-                   
-               </div> <!-- /.row -->
-           
-               
-               
-           </div> <!-- ./container -->
-    
+        <div id="slideImg" class="slide" 
+           data-image="img/slides/slide1.jpg,img/slides/slide2.jpg,img/slides/slide3.jpg,img/slides/slide4.jpg,img/slides/slide5.jpg,img/slides/slide6.jpg">           
+            <img class="slide__preload" src="img/slides/slide1.jpg" alt="alt">
+            <img class="slide__preload" src="img/slides/slide2.jpg" alt="alt">
+            <img class="slide__preload" src="img/slides/slide3.jpg" alt="alt">
+            <img class="slide__preload" src="img/slides/slide4.jpg" alt="alt">
+            <img class="slide__preload" src="img/slides/slide5.jpg" alt="alt">
+            <img class="slide__preload" src="img/slides/slide6.jpg" alt="alt">
+        </div>
+   
+       
+      
        
        
    </main><!-- /.content -->                   
@@ -169,27 +102,11 @@
               
     </div> <!-- ./wrapper -->
     
-    
-    <div id="videoModal" class="modal"> 
-      
-      <div class="modal__content">
-        <span class="modal__close" id="closeModal">+</span>
-        
-        
-        <div class="video-wrap">
-            <iframe src="" class="video" frameborder="0" allowfullscreen id="videoPlay"></iframe>
-        </div>
-        
-        
-      </div> <!-- /.modal__content -->
-
-    </div> <!-- /.modal -->
-    
-    
-    
    <script src="js/vendor/jquery.js"></script>
    <script src="js/vendor/jquery.nicescroll.js"></script>
-   <script src="js/vendor/particles.js"></script>                           
-   <script src="js/bundle.js"></script>   
+   <script src="js/vendor/particles.js"></script>
+   <script src="js/vendor/jquery.fancybox.js"></script>
+   <script src="js/vendor/helpers/jquery.fancybox-media.js"></script>                            
+   <script src="js/bundle.js"></script>    
 </body>
 </html>

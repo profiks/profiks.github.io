@@ -26,14 +26,14 @@ export var backgroundAudio = {
                     this.toggle.style.display = "none";
                     
                 }else{
-                   
+                    
                     audio.volume = 0.10;
                     audio.loop = true;
                     self.fadeAudio(audio);
                     audio.play();
 
-                    this.toggle.classList.add('equalizer--play');
-
+                    this.toggle.classList.add('equalizer--play'); 
+                    localStorage.setItem('audio', '1');
 
                     this.toggle.addEventListener(this.click, () => {
 
@@ -44,11 +44,13 @@ export var backgroundAudio = {
                             audio.play();
 
                             this.toggle.classList.add('equalizer--play');
+                            localStorage.setItem('audio', '1');
 
                         } else {
                             audio.volume = 0.10;
                             audio.pause();
-                            this.toggle.classList.remove('equalizer--play');                     
+                            this.toggle.classList.remove('equalizer--play');
+                            localStorage.setItem('audio', '0');
                         }
 
                     }, false);

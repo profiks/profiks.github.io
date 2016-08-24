@@ -1,0 +1,70 @@
+.modal{
+    display: none;
+    position: fixed; 
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba($black, .8);
+    
+    
+    &__content{
+        background-color: $modal;
+        margin: 25% auto;
+        padding: 10px;
+        width: 95%;
+        max-width: 900px;
+        position: relative;
+        transition: transform .2s linear;
+        position: relative;
+        
+        
+        animation-duration: 0.4s;
+        animation-name: animatetop;
+    }
+   
+    &--close{
+        .modal__content{
+            animation-name: animatebottom;
+        }
+    }
+    
+    &--open{
+        display: block;
+    }
+    
+    
+    &__close{
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: #aaa;
+        float: right;
+        font-size: 40px;
+        font-weight: 400;
+        cursor: default;
+        position: absolute;
+        top: -70px;
+        right: 50%;
+        
+        opacity: .8;
+        
+        transform: translateX(20px) rotate(45deg);
+        
+        border-radius: 50%;
+        background-color: $white;
+        
+        
+        &:hover{
+            opacity: 1;
+        }
+        
+    }
+    
+    
+    
+}// modal

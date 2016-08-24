@@ -22,6 +22,7 @@
 @import 'themes';
 @import 'typography';
 @import 'form';
+@import 'modal';
 @import 'fancybox';
 
 
@@ -242,6 +243,8 @@ body{
     width: 100%;
     padding: 15px 15px 45px 15px;
     display: block;
+    position: relative;
+    z-index: 4;
     
     &:before {
         content: '';
@@ -550,7 +553,7 @@ body{
     top:0;
     left: 0;
     overflow-y: auto;
-    z-index: 2;
+    z-index: 5;
     
     transform: translateX(-100%);
     
@@ -707,14 +710,14 @@ body{
         margin-bottom: 0;
     }
     
-    &:after{
-        content: '';
+    &__play{
         display: block;
         width: 0; 
         height: 0; 
         border-top: 30px solid transparent;
         border-bottom: 30px solid transparent;        
-        border-left: 35px solid $white;
+        border-left: 35px solid transparent;
+        cursor: default;
         
         position: absolute;
         top: 50%;
@@ -722,10 +725,61 @@ body{
         margin-left: -17.5px;
         margin-top: -30px;
         
+        transition: border-left-color .2s ease-out;
+        
+        &:hover{
+            border-left-color: $white;
+        }
+        
     }
     
 }//. video
 
+
+
+// ***** slide *****
+
+.slide{    
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;    
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-clip: content-box;
+    
+    transition: background-image 1s linear;
+    
+    position: absolute;
+    top:0;
+    right: 0;
+    
+    &__preload{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    
+}// .slide
+
+
+// ***** video-wrap *****
+.video-wrap{
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+    
+    .video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+}// .video-wrap
 
 
 @import 'media-queries';

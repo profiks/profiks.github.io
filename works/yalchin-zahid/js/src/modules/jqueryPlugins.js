@@ -23,7 +23,7 @@ export var jqueryPlugins = {
                });  
             }*/
             
-            if($('.video')){
+           /* if($('.video')){
               
                  $('.video').fancybox({
                     openEffect  : 'none',
@@ -39,7 +39,7 @@ export var jqueryPlugins = {
                     }
                 });
                 
-            }
+            }*/
             
            
             

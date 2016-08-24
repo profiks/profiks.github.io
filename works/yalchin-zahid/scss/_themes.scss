@@ -65,6 +65,18 @@
     }
     
     
+    .modal{
+        &__close{
+            color: $primary;
+        }
+    }
+    
+    .video{
+        &__play{
+            border-left-color: $primary;
+        }
+    }
+    
 } // .color-theme--1
 
 
@@ -134,6 +146,18 @@
         color: $black;
     }
     
+    .modal{
+        &__close{
+            color: $black;
+        }
+    }
+    
+    .video{
+        &__play{
+            border-left-color: $black;
+        }
+    }
+    
 } // .color-theme--2
 
 
@@ -201,6 +225,18 @@
     
     .link{
         color: $brick;
+    }
+    
+    .modal{
+        &__close{
+            color: $brick;
+        }
+    }
+    
+    .video{
+        &__play{
+            border-left-color: $brick;
+        }
     }
     
 } // .color-theme--3
