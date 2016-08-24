@@ -48,6 +48,22 @@
         background-color: $primary !important;
     }
     
+    .badge{
+        background-color: $primary;
+    }
+    
+    .contact-form{ 
+        
+        &__submit{
+            background-color: $primary;
+        }
+        
+    }
+    
+    .link{
+        color: $primary;
+    }
+    
     
 } // .color-theme--1
 
@@ -102,6 +118,22 @@
         background-color: $black !important;
     }
     
+    .badge{
+        background-color: $black;
+    }
+    
+    .contact-form{ 
+        
+        &__submit{
+            background-color: $black;
+        }
+        
+    }
+    
+    .link{
+        color: $black;
+    }
+    
 } // .color-theme--2
 
 
@@ -153,6 +185,22 @@
     
     .nicescroll-cursors{
         background-color: $brick !important;
+    }
+    
+    .badge{
+        background-color: $brick;
+    }
+    
+    .contact-form{ 
+        
+        &__submit{
+            background-color: $brick;
+        }
+        
+    }
+    
+    .link{
+        color: $brick;
     }
     
 } // .color-theme--3

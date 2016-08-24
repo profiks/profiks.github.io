@@ -20,6 +20,9 @@
 @import 'fonts';
 @import 'animation';
 @import 'themes';
+@import 'typography';
+@import 'form';
+@import 'fancybox';
 
 
 // ***** body *****
@@ -259,7 +262,7 @@ body{
 .social{
     width: auto;
     float: right;
-    margin: 0 20px;
+    margin: 0 5px;
     
     &__item{
         display: inline-block;
@@ -288,7 +291,7 @@ body{
     width: auto;
     float: right;
     position: relative;
-    display: none;
+    margin: 0 5px;
     
     &__current{
         display: block;
@@ -417,7 +420,6 @@ body{
     &:after{
         content: '';
         display: block;
-        display: block;
         width: 0; 
         height: 0; 
         border-top: 15px solid transparent;
@@ -530,7 +532,7 @@ body{
     &--inner{
         position: absolute;
         top: -40px;
-        left: -15px;
+        left: 0;
     }
     
 }// .offcanvas-toggle
@@ -626,19 +628,103 @@ body{
 // ***** container *****
 .container{
     padding: 15px;
+    width: 100%;
+    max-width: 900px;
     
-    p{
-        margin-bottom: 15px;
+    &:before {
+        content: '';
+        display: table;
     }
     
-    img{
-        max-width: 100%;
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    } 
+    
+    &__inner{
+        width: 100%;
+        
+         > .heading , > .paragraph{
+            margin-top: 0;
+        }
+        
+        &:before {
+            content: '';
+            display: table;
+        }
+
+        &:after{
+            content: '';
+            display: table;
+            clear: both;
+        } 
+        
+        &--pad{
+            padding-bottom: 30px;
+        }
+        
     }
     
 } //.container
 
 
 
+// ***** row *****
+.row{
+    
+    width: 100%;
+    float: left;
+    
+    &:before {
+        content: '';
+        display: table;
+    }
+    
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+}// .row
+
+
+// ***** map *****
+.map{
+    margin-bottom: 25px;
+}//. map
+
+
+
+// ***** video *****
+.video{
+    margin-bottom: 13px;
+    display: block;
+    position: relative;
+    
+    > .img{
+        margin-bottom: 0;
+    }
+    
+    &:after{
+        content: '';
+        display: block;
+        width: 0; 
+        height: 0; 
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;        
+        border-left: 35px solid $white;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -17.5px;
+        margin-top: -30px;
+        
+    }
+    
+}//. video
 
 
 

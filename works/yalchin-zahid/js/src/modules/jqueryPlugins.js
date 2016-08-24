@@ -23,6 +23,20 @@ export var jqueryPlugins = {
                });  
             }*/
             
+            $('.video').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                helpers : {
+                    media : {}
+                },
+                afterShow: function() {
+                    $( "#bgAudion" ).trigger( "click" );
+                },
+                afterClose : function(){
+                    $( "#bgAudion" ).trigger( "click" );
+                }
+            });
+            
             
             
             particlesJS("particles-js", {

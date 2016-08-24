@@ -52,9 +52,11 @@
     }
     
     
-    .lang-dropdown{
-        display: block;
-    }//. labg-dropdown
+    .offcanvas-toggle{
+        &--inner{
+            left: -15px;
+        }
+    }
         
 }// end media query 480px
 
@@ -101,7 +103,28 @@
     
     .container{
         padding: 40px;
+        
+         &__inner{
+            width: calc(50% - 10px);
+            float: left;
+            margin-right: 10px;
+        
+        }
     } //.container
+    
+    
+    .row{
+        .container__inner:nth-child(even){
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+    
+    
+    .img{
+        width: auto;
+        max-width: 100%;
+    }
     
     
 }// end media query 768px
