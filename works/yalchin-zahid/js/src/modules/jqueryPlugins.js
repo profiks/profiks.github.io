@@ -44,11 +44,12 @@ export var jqueryPlugins = {
            
             
             
-            
-            particlesJS("particles-js", {
+            if( $('#particles-js').length ){
+                
+                particlesJS("particles-js", {
               "particles": {
                 "number": {
-                  "value": 80,
+                  "value": 100,
                   "density": {
                     "enable": true,
                     "value_area": 800
@@ -76,7 +77,7 @@ export var jqueryPlugins = {
                   "value": 0.5,
                   "random": false,
                   "anim": {
-                    "enable": false,
+                    "enable": true,
                     "speed": 1,
                     "opacity_min": 0.1,
                     "sync": false
@@ -115,7 +116,7 @@ export var jqueryPlugins = {
                 }
               },
               "interactivity": {
-                "detect_on": "canvas",
+                "detect_on": "window",
                 "events": {
                   "onhover": {
                     "enable": true,
@@ -156,6 +157,9 @@ export var jqueryPlugins = {
               "retina_detect": true
             });
 
+                
+            }
+            
             
             
             
