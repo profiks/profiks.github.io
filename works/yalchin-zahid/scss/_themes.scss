@@ -77,6 +77,11 @@
         }
     }
     
+    
+    .heading, .paragraph{
+        color: $primary;
+    }
+    
 } // .color-theme--1
 
 
@@ -158,6 +163,10 @@
         }
     }
     
+    .heading, .paragraph{
+        color: #333;
+    }
+    
 } // .color-theme--2
 
 
@@ -237,6 +246,10 @@
         &__play{
             border-left-color: $brick;
         }
+    }
+    
+    .heading, .paragraph{
+        color: $brick;
     }
     
 } // .color-theme--3

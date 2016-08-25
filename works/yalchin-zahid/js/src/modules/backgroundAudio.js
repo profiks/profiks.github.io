@@ -18,6 +18,11 @@ export var backgroundAudio = {
         this.toggle = document.getElementById('bgAudion');
         this.click = ('ontouchstart' in window ? 'touchstart' : 'click');
         var audio = new Audio('./audio/background-music.mp3');
+        var that = this;
+        
+        this.audioPlay = localStorage.getItem('audio');
+        
+        
         
             if(this.toggle){
                 
@@ -27,13 +32,20 @@ export var backgroundAudio = {
                     
                 }else{
                     
-                    audio.volume = 0.10;
-                    audio.loop = true;
-                    self.fadeAudio(audio);
-                    audio.play();
+                    if (this.audioPlay === undefined || this.audioPlay === null) {
+                        localStorage.setItem('audio', '1');
+                        this.audioPlay = localStorage.getItem('audio');
+                    }
+                    
+                    if (this.audioPlay == '1'){
+                        audio.volume = 0.10;
+                        audio.loop = true;
+                        self.fadeAudio(audio);
+                        audio.play();
 
-                    this.toggle.classList.add('equalizer--play'); 
-                    localStorage.setItem('audio', '1');
+                        this.toggle.classList.add('equalizer--play');
+                    }
+                    
 
                     this.toggle.addEventListener(this.click, () => {
 
@@ -53,9 +65,9 @@ export var backgroundAudio = {
                             localStorage.setItem('audio', '0');
                         }
 
-                    }, false);
+                    }, false); // end click
                     
-                }
+                }// end else
             
                 
 

@@ -274,9 +274,9 @@ body{
     
     &__link{
         display: block;
-        width: 35px;
-        height: 35px;        
-        line-height: 35px;
+        width: 36px;
+        height: 36px;        
+        line-height: 36px;
         border: 1px solid $white;
         border-radius: 100%;
         
@@ -285,6 +285,26 @@ body{
         color: $white;
         text-align: center;
         text-decoration: none;
+    }
+    
+    .socicon-facebook{
+        background-image: url(../img/sprite/facebook.png#social);
+        background-position: center center;
+    }
+    
+    .socicon-linkedin{
+        background-image: url(../img/sprite/linkedin.png#social);
+        background-position: center center; 
+    } 
+    
+    .socicon-instagram{
+        background-image: url(../img/sprite/instagram.png#social);
+        background-position: center center;
+    }
+    
+    .socicon-youtube{
+        background-image: url(../img/sprite/youtube.png#social);
+        background-position: center center;
     }
     
 }// .social
@@ -319,9 +339,9 @@ body{
              display: block;
              width: 0; 
              height: 0; 
-             border-left: 8px solid transparent;
-             border-right: 8px solid transparent;
-             border-top: 8px solid $white;         
+             border-left: 6px solid transparent;
+             border-right: 6px solid transparent;
+             border-top: 6px solid $white;         
              float: right;
              margin: 13.5px 8px;
             
@@ -384,6 +404,8 @@ body{
         position: absolute;
         bottom: 0;
         
+        transition: height .6s linear;
+        
         animation: none;
         animation-name: none;
         
@@ -391,46 +413,40 @@ body{
             left: 0;
             animation-name: eq1;
             animation-delay: 0ms;
+            height: 10px;
         }
         
          &:nth-child(2){
             left: 7px;
             animation-name: eq2;
             animation-delay: 300ms;
+             height: 15px;
         }
         
          &:nth-child(3){
             left: 14px;
             animation-name: eq3;
             animation-delay: 600ms;
+             height: 25px;
         }
         
          &:nth-child(4){
             left: 21px;
             animation-name: eq4;
             animation-delay: 900ms;
+             height: 15px;
         }
         
          &:nth-child(5){
             left: 28px;
             animation-name: eq5;
             animation-delay: 1200ms;
+             height: 10px;
         }
         
         
     } //.bar
-    
-    &:after{
-        content: '';
-        display: block;
-        width: 0; 
-        height: 0; 
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-        
-        opacity: 1;
-        transition: opacity 0.3s ease-out; 
-    }
+   
     
     
     &--play{
@@ -440,10 +456,6 @@ body{
             animation-direction: alternate;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
-        }
-        
-        &:after{
-            opacity: 0;
         }
         
     }
@@ -462,7 +474,7 @@ body{
     &__link{
         display: block;
         width: 100%;
-        padding: 15px 0 30px 0;
+        padding: 10px 0 25px 0;
         position: relative;
         
         text-align: center;
@@ -554,6 +566,7 @@ body{
     left: 0;
     overflow-y: auto;
     z-index: 5;
+    display: flex;
     
     transform: translateX(-100%);
     
@@ -575,6 +588,11 @@ body{
         float: left;
         z-index: 5;
         position: relative;
+        
+        display: flex;
+        flex-direction: column;        
+        flex: 1;
+        justify-content: space-between;
     }
     
     .particles-js-canvas-el{
@@ -714,16 +732,16 @@ body{
         display: block;
         width: 0; 
         height: 0; 
-        border-top: 30px solid transparent;
-        border-bottom: 30px solid transparent;        
+        border-top: 21px solid transparent;
+        border-bottom: 21px solid transparent;        
         border-left: 35px solid transparent;
         cursor: default;
         
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-left: -17.5px;
-        margin-top: -30px;
+        margin-left: -21px;
+        margin-top: -17.5px;
         
         transition: border-left-color .2s ease-out;
         

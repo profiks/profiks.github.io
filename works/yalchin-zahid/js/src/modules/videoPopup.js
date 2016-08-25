@@ -54,15 +54,17 @@ export var videoPopup = {
         
     },
     
-    showPopup : function(modal){
+    showPopup : function(modal){        
         this.audioPlay = localStorage.getItem('audio');
         
         modal.classList.remove('modal--close');
         modal.classList.add('modal--open');
         
         if (this.audioPlay == '1'){
-            this.pauseAudio()
+            localStorage.setItem('audioAfterVideo', '1');
+            this.pauseAudio();
         }else{
+            localStorage.setItem('audioAfterVideo', '0');
             return;
         }
         
@@ -70,6 +72,7 @@ export var videoPopup = {
     
     hidePopup : function(modal){
         this.audioPlay = localStorage.getItem('audio');
+        this.audioAfterVideo = localStorage.getItem('audioAfterVideo');
         
         modal.classList.add('modal--close');
         setTimeout(()=>{
@@ -79,7 +82,7 @@ export var videoPopup = {
         this.videoPlay = document.getElementById('videoPlay');
         this.videoPlay.setAttribute('src', '');
         
-        if (this.audioPlay == '0'){
+        if (this.audioAfterVideo == '1'){
             this.playAudio();
         }else{
             return;
@@ -89,7 +92,7 @@ export var videoPopup = {
     },
     
     pauseAudio : function(){
-      
+        
         this.audioBg = document.getElementById('bgAudion');
         this.audioBg.click();
         

@@ -63,6 +63,7 @@ export var colorTheme = {
         if (this.colorCode === undefined || this.colorCode === null) {
             this.colorBody.classList.remove('color-theme--1', 'color-theme--2', 'color-theme--3');
             this.colorBody.classList.add('color-theme--1');
+            localStorage.setItem('colorCode', '1');
             if(this.colorNumb){
                this.colorNumb.dataset.color = 1; 
             }            
