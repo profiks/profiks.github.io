@@ -6,7 +6,7 @@ export var preventCopy = {
     
     pageLoad : function() {
           document.addEventListener('contextmenu', function(e){
-            //e.preventDefault();
+            e.preventDefault();
         }, false); 
     }
     

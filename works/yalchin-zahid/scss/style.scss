@@ -758,7 +758,7 @@ body{
 // ***** container *****
 .container{
     padding: 15px;
-    width: calc(100% - 50px);
+    width: 100%;
     max-width: 900px;
     z-index: 2;
     position: relative;
@@ -873,7 +873,7 @@ body{
 // ***** animated-logo *****
 .animated-logo{
     
-    width: 50%;
+    width: 80%;
     height: auto;
     position: absolute;
     top: 50%;
@@ -1005,6 +1005,7 @@ body{
     height: 100%;
     
     z-index: 1;
+    opacity: .5;
     background: transparent;
 }
 

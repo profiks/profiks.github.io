@@ -61,6 +61,9 @@
     }
     
     
+    .animated-logo{
+        width: 50%;
+    }
         
 }// end media query 480px
 
@@ -135,6 +138,9 @@
         margin: 0 30px;
     }
     
+    #bgAnimation{
+        opacity: .9;
+    }
     
 }// end media query 768px
 
@@ -150,6 +156,10 @@
 
     .animated-logo{
         width: 30%;
+    }
+    
+    #bgAnimation{
+        opacity: 1;
     }
     
    
