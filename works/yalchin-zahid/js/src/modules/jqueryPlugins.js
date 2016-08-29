@@ -44,7 +44,7 @@ export var jqueryPlugins = {
            
             
             
-            if( $('#particles-js').length ){
+            /*if( $('#particles-js').length ){
                 
                 particlesJS("particles-js", {
               "particles": {
@@ -158,7 +158,7 @@ export var jqueryPlugins = {
             });
 
                 
-            }
+            }*/
             
             
             

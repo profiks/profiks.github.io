@@ -36,12 +36,7 @@
             }
         }
     }
-    
-    .offcanvas-toggle{
-        &__line{
-            background-color: $primary;
-        }
-    }
+   
     
     
     .nicescroll-cursors{
@@ -80,6 +75,20 @@
     
     .heading, .paragraph{
         color: $primary;
+    }
+    
+    
+    
+    .animated-logo{
+        &__p{
+            stroke: $primary;
+        }
+    }
+    
+    .next{
+        &:hover{
+            background-color: $primary;
+        }
     }
     
 } // .color-theme--1
@@ -124,12 +133,7 @@
             }
         }
     }
-    
-    .offcanvas-toggle{
-        &__line{
-            background-color: $black;
-        }
-    } 
+  
     
     .nicescroll-cursors{
         background-color: $black !important;
@@ -165,6 +169,18 @@
     
     .heading, .paragraph{
         color: #333;
+    }
+    
+    .animated-logo{
+        &__p{
+            stroke: $black;
+        }
+    }
+    
+    .next{
+        &:hover{
+            background-color: $black;
+        }
     }
     
 } // .color-theme--2
@@ -210,11 +226,7 @@
         }
     }
     
-    .offcanvas-toggle{
-        &__line{
-            background-color: $brick;
-        }
-    } 
+   
     
     .nicescroll-cursors{
         background-color: $brick !important;
@@ -250,6 +262,18 @@
     
     .heading, .paragraph{
         color: $brick;
+    }
+    
+    .animated-logo{
+        &__p{
+            stroke: $brick;
+        }
+    }
+    
+    .next{
+        &:hover{
+            background-color: $brick;
+        }
     }
     
 } // .color-theme--3

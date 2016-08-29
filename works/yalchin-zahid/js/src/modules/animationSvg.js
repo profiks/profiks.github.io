@@ -19,7 +19,7 @@ export var animationSvg = {
         
             this.path.style.opacity='1';
             this.path.style.strokeDasharray = this.totalLenght;
-            this.path.style.strokeDashoffset = this.totalLenght;
+            this.path.style.strokeDashoffset = this.totalLenght * 2;
             this.path.classList.add('skyline__path--animated');  
         }
     }

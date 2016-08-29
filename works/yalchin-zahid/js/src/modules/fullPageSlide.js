@@ -14,7 +14,7 @@ export var fullPageSlide = {
     carousel : function() {
         let self = this;
         this.slideIndex = 0;
-        this.slideTime = 5000;
+        this.slideTime = 6000;
     
         this.slideHolder = document.getElementById('slideImg');
         if(this.slideHolder){

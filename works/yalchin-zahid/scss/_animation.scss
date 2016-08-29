@@ -5,7 +5,18 @@
   }
 }
 
+@keyframes drawLine {
+  to { stroke-dashOffset: 0; }
+}
 
+@keyframes fadeStroke {
+  to { stroke-opacity: 1; }
+}
+
+@keyframes fillIn {
+  from { fill-opacity: 0; }
+  to { fill-opacity: 1; }
+}
 
 
 @keyframes eq1 {
@@ -46,3 +57,12 @@
     from {top: 0; opacity: 1}
     to {top: -300px; opacity: 0}
 }
+
+
+@keyframes slideSize {
+    to {width: 110%;}
+}
+
+
+
+

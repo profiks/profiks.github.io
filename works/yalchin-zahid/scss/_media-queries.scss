@@ -14,10 +14,10 @@
     
     .logo{
         width: 371px;
-        height: 56px;
+        height: 90px;
         
         &--inner{
-            width: 100%;
+            width: 60%;
         }
         
     }// .logo
@@ -48,15 +48,19 @@
     
     
     .aside{
-        padding: 55px 30px 30px 30px;
+        padding: 17px 17px 34px 17px;
+        width: 70px;
+    }
+    
+    .lang-dropdown{
+        display: block;
+    }
+    
+     .content{
+        width: calc(100% - 70px);
     }
     
     
-    .offcanvas-toggle{
-        &--inner{
-            left: -15px;
-        }
-    }
         
 }// end media query 480px
 
@@ -71,14 +75,12 @@
 @media only screen and (min-width : $tablet) {
     
     .aside{
-        width: 280px;
-        padding: 55px 44px 30px 44px;
         
         &__copyright{
-            text-align: left;
             margin-bottom: 15px;
         }
     }
+    
     
     .top-nav{
         padding: 15px 45px 45px;
@@ -86,21 +88,6 @@
         display: flex;
         justify-content: flex-end;
     }//.top nav
-    
-    .canvas-menu--open{
-        .content{
-           width: calc(100% - 280px);
-        }
-    }// .canvas-menu--open
-    
-    .offcanvas-toggle{ 
-        left: 45px;
-        
-        &--inner{
-            display: none;
-        }
-        
-    }
     
     .container{
         padding: 40px;
@@ -125,6 +112,11 @@
     .img{
         width: auto;
         max-width: 100%;
+        
+        &--lg{
+            width: 100%;
+        }
+        
     }
     
     .modal{
@@ -155,25 +147,54 @@
 
 // ***** 996px *****
 @media only screen and (min-width : $desktop--sm) {
+
+    .animated-logo{
+        width: 30%;
+    }
+    
+   
+}// end media query 996px
+
+
+// ***** 1200px *****
+@media only screen and (min-width : $desktop--lg) {
+    
+    .content{
+        width: calc(100% - 280px);
+    }
+    
+    
+    .canvas-menu--open{
+    
+        .aside{
+            width: 280px;
+        }
+    }
+    
+    .logo{
+        
+        &--inner{
+            width: 100%;
+        }
+        
+    }// .logo
     
     .offcanvas-toggle{
         display: none;
     }
     
     .aside{
-        transform: translateX(0);
+        padding: 5px 42px 25px 42px;
+        width: 280px;
+        height: 100%;
+        
+        &__inner{
+            transform: scale(1);
+        }
     }
     
-    .content{
-        width: calc(100% - 280px);
-    }
     
-    .slide{    
-        width: calc(100% - 280px);
-    }
-   
-}// end media query 996px
-
+}// end media query 1200px
 
 
 
