@@ -15,68 +15,73 @@ export var videoInner = {
         this.video = document.getElementById('videoInner');
         this.videoBg = document.getElementById('videoInnerBg');
         
-        if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+        if(this.video){
+        
+                if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
                
-            this.video.style.display = "none";
-            this.videoBg.style.display = "none";
-                    
-        }else{
-            
-           if(this.video){
-            
-                    this.audioBg = document.getElementById('bgAudion');
-                    this.audioPlay = localStorage.getItem('audio');
+                    this.video.style.display = "none";
+                    this.videoBg.style.display = "none";
 
-                    this.scrollTop = $(window).scrollTop();
-                    this.elementOffset = $('#videoInner').offset().top;
-                    this.distance  = (this.elementOffset - this.scrollTop);
+                }else{
+
+                            this.audioBg = document.getElementById('bgAudion');
+                            this.audioPlay = localStorage.getItem('audio');
+
+                            this.scrollTop = $(window).scrollTop();
+                            this.elementOffset = $('#videoInner').offset().top;
+                            this.distance  = (this.elementOffset - this.scrollTop);
 
 
-                    if( this.distance < 100 ){
+                            if( this.distance < 100 ){
 
-                       this.video.play(); 
+                               this.video.play(); 
 
-                       if (this.audioPlay == '1'){ 
+                               if (this.audioPlay == '1'){ 
 
-                            localStorage.setItem('audioAfterVideoBg', '1');
-                            this.audioBg.click();  
+                                    localStorage.setItem('audioAfterVideoBg', '1');
+                                    this.audioBg.click();  
 
-                        }else if( this.audioPlay == '0' && localStorage.getItem('audioAfterVideoBg') == '1' ){
+                                }else if( this.audioPlay == '0' && localStorage.getItem('audioAfterVideoBg') == '1' ){
 
-                            return;
+                                    return;
 
-                        }else{ 
+                                }else{ 
 
-                            localStorage.setItem('audioAfterVideoBg', '0');
-                            return;
-                        } 
-
-
-                    }else if ( (this.distance > 100 && localStorage.getItem('audioAfterVideoBg') == '1')  || (this.distance > 100 && localStorage.getItem('audioAfterVideoBg') == '0'))  {
-
-                        this.video.pause();
-
-                        this.audioAfterVideoBg = localStorage.getItem('audioAfterVideoBg');
-
-                        if (this.audioAfterVideoBg == '1'){
-                            this.audioBg.click();
-                            localStorage.setItem('audioAfterVideoBg', '0');
-                        }else{
-                            return;
-                        }
-
-                    }
+                                    localStorage.setItem('audioAfterVideoBg', '0');
+                                    return;
+                                } 
 
 
-            }//end if 
-            
-        }
+                            }else if ( (this.distance > 100 && localStorage.getItem('audioAfterVideoBg') == '1')  || (this.distance > 100 && localStorage.getItem('audioAfterVideoBg') == '0'))  {
+
+                                this.video.pause();
+
+                                this.audioAfterVideoBg = localStorage.getItem('audioAfterVideoBg');
+
+                                if (this.audioAfterVideoBg == '1'){
+                                    this.audioBg.click();
+                                    localStorage.setItem('audioAfterVideoBg', '0');
+                                }else{
+                                    return;
+                                }
+
+                            }
+
+
+
+
+                }// end else
+        
+        }//end if 
+        
+        
+        
         
         
         
         
               
-    }
+    } // end playVideoBg()
     
     
 }
