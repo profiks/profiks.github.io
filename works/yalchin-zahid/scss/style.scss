@@ -64,20 +64,16 @@ body{
 // ***** logo *****
 .logo{
     display: block;
-    width: 70%;
-    height: 90px;
-    background: url(../img/logo.png) no-repeat;
-    background-size: contain;
     float: left;
+    width: 60%;
+    max-width: 360px;
+    height: auto;
     
-    //-webkit-mask: -webkit-gradient(radial, 17 17, 123, 17 17, 138, from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)));
     
     &--inner{
         float: right;
-        width: 50%;
-        margin: 30px auto 0 auto;
-        padding-top: 50px;
-        background-position: center center;
+        width: 70%;
+        margin: 25px auto -10px auto;
     }
     
     &:before {
@@ -92,6 +88,19 @@ body{
     } 
     
 }// .logo
+
+
+
+// ***** logo-intro *****
+.logo-intro{
+    
+    display: block;
+    float: left;
+    width: 60%;
+    max-width: 360px;
+    height: auto;
+    
+}// .logo-intro
 
 
 
@@ -614,7 +623,7 @@ body{
     height: auto;   
     float: left;
     padding: 7px;
-    transition: background-color .3s ease-in, transform .3s ease-in, width .5s linear;    
+    transition: background-color .3s ease-in, transform .3s ease-in, width .5s linear, height .5s linear;    
     position: fixed;
     top:0;
     left: 0;
@@ -931,6 +940,58 @@ body{
     }
     
 }// .animated-logo
+
+
+.animated-aside-logo, .animated-intro-logo{
+    &__p{
+        fill-opacity: 1;
+        stroke-dashArray: 1100;
+        stroke-dashoffset: 1100; 
+        
+        fill: $white;
+        stroke: $white;
+        stroke-miterlimit: 5;
+        stroke-width: 1;
+        
+    }
+    
+    &__t{
+        
+        fill-opacity: 1;
+        stroke-dashArray: 1100;
+        stroke-dashoffset: 1100;
+        stroke-width: 2;
+        
+        fill: $white;
+        stroke: $white;
+        stroke-miterlimit: 5;
+        
+    }
+    
+    &--animated{
+        .animated-aside-logo__p, .animated-intro-logo__p{
+            fill-opacity: 0;
+            animation-name: drawLine, fillIn;
+            animation-duration: 3s, 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s, 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+        }
+        
+        .animated-aside-logo__t, .animated-intro-logo__t{
+            fill-opacity: 0;
+             animation-name: drawLine, fillIn;
+            animation-duration: 3s, 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s, 3s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+        
+    }
+}
 
 
 // ***** slide *****

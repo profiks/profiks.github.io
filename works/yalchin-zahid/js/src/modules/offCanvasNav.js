@@ -17,13 +17,22 @@ export var offCanvasNav = {
     },    
     
     offCanvas : function () {
-        this.offCanvas = document.getElementById('colorTheme'); 
+        this.offCanvas = document.getElementById('colorTheme');
+        this.animateMenu = document.getElementById('animatedLogoAside');
         
         if(this.offCanvas.classList.contains('canvas-menu--open')){
             this.offCanvas.classList.remove('canvas-menu--open');
         }else{
             this.offCanvas.classList.add('canvas-menu--open');
         } 
+        
+        // ***** //
+        
+        if(this.animateMenu.classList.contains('animated-aside-logo--animated')){
+            this.animateMenu.classList.remove('animated-aside-logo--animated');
+        }else{
+            this.animateMenu.classList.add('animated-aside-logo--animated');
+        }
         
     }
     

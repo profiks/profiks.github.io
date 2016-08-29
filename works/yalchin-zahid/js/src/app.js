@@ -12,7 +12,7 @@ import {preventCopy} from './modules/preventCopy';
 import {videoInner} from './modules/videoInner';
 import {jqueryPlugins} from './modules/jqueryPlugins';
 
-preventCopy.init();
+//preventCopy.init();
 colorTheme.init();
 videoInner.init();
 animationSvg.init(); 

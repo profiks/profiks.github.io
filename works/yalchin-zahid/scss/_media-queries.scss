@@ -13,11 +13,8 @@
 @media only screen and (min-width : $mobile--lg) {    
     
     .logo{
-        width: 371px;
-        height: 90px;
-        
         &--inner{
-            width: 60%;
+            width: 50%;
         }
         
     }// .logo
@@ -169,9 +166,6 @@
 // ***** 1200px *****
 @media only screen and (min-width : $desktop--lg) {
     
-    .content{
-        width: calc(100% - 280px);
-    }
     
     
     .canvas-menu--open{
@@ -189,19 +183,7 @@
         
     }// .logo
     
-    .offcanvas-toggle{
-        display: none;
-    }
     
-    .aside{
-        padding: 5px 42px 25px 42px;
-        width: 280px;
-        height: 100%;
-        
-        &__inner{
-            transform: scale(1);
-        }
-    }
     
     
 }// end media query 1200px

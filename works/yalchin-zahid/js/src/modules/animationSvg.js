@@ -5,10 +5,14 @@ export var animationSvg = {
     },
     
     pageLoad : function() {
-        if (window.addEventListener)
-        window.addEventListener("load", setTimeout(this.animateLine, 1000), false);
-        else if (window.attachEvent)
-        window.attachEvent("onload", setTimeout(this.animateLine, 1000));
+        if (window.addEventListener){ 
+            window.addEventListener("load", this.animateLogo, false);
+            window.addEventListener("load", setTimeout(this.animateLine, 3000), false);
+        }
+        else if (window.attachEvent) { 
+            window.attachEvent("onload", this.animateLogo);
+            window.attachEvent("onload", setTimeout(this.animateLine, 3000));
+        }
         
     },
     
@@ -20,7 +24,18 @@ export var animationSvg = {
             this.path.style.opacity='1';
             this.path.style.strokeDasharray = this.totalLenght;
             this.path.style.strokeDashoffset = this.totalLenght * 2;
-            this.path.classList.add('skyline__path--animated');  
+            this.path.classList.add('skyline__path--animated');
+            
+            
+            
+        }
+    },
+    
+    animateLogo : function() {
+        this.logo = document.getElementById('animatedLogoIntro');
+        
+        if(this.logo){
+            this.logo.classList.add('animated-intro-logo--animated');
         }
     }
     
