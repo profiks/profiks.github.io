@@ -513,7 +513,7 @@ body{
     &__link{
         display: block;
         width: 100%;
-        padding: 10px 0 25px 0;
+        padding: 17px 0 18px 0;
         position: relative;
         
         text-align: center;
@@ -532,7 +532,7 @@ body{
             content: '';
             display: block;
             width: 100%;
-            height: 15px;
+            height: 1px;
             background: url(../img/under-nav.png) no-repeat;
             background-position: center center;
             position: absolute;
@@ -942,7 +942,7 @@ body{
 }// .animated-logo
 
 
-.animated-aside-logo, .animated-intro-logo{
+.animated-aside-logo{
     &__p{
         fill-opacity: 1;
         stroke-dashArray: 1100;
@@ -988,6 +988,61 @@ body{
             animation-delay: 1s, 3s;
             animation-fill-mode: forwards;
             animation-iteration-count: 1;
+        }
+        
+    }
+}
+
+
+
+
+.animated-intro-logo{
+    &__p{
+        fill-opacity: 1;
+        stroke-dashArray: 1100;
+        stroke-dashoffset: 1100; 
+        
+        fill: $white;
+        stroke: $white;
+        stroke-miterlimit: 5;
+        stroke-width: 2;
+        
+    }
+    
+    &__t{
+        
+        fill-opacity: 1;
+        stroke-dashArray: 1100;
+        stroke-dashoffset: 1100;
+        stroke-width: 2;
+        
+        fill: $white;
+        stroke: $white;
+        stroke-miterlimit: 5;
+        
+    }
+    
+    &--animated{
+        .animated-intro-logo__p{
+            fill-opacity: 0;
+            animation-name: drawLine;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        .animated-intro-logo__t{
+            fill-opacity: 0;
+             animation-name: drawLine;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-direction: normal;
         }
         
     }
