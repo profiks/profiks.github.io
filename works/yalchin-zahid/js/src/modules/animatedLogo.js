@@ -6,7 +6,7 @@ export var animatedLogo = {
     
     pageLoad : function() {
         if (window.addEventListener)
-        window.addEventListener("load", this.animateLogoLines, false);
+        window.addEventListener("load", this.animateLogoLines);
         else if (window.attachEvent)
         window.attachEvent("onload", this.animateLogoLines);
         
