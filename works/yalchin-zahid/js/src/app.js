@@ -13,7 +13,6 @@ import {videoInner} from './modules/videoInner';
 import {jqueryPlugins} from './modules/jqueryPlugins';
 
 //preventCopy.init();
-colorTheme.init();
 videoInner.init();
 animationSvg.init(); 
 offCanvasNav.init(); 

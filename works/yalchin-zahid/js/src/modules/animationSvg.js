@@ -19,23 +19,25 @@ export var animationSvg = {
     animateLine : function() { 
        setTimeout(function(){
             this.path = document.getElementById('skylinePath');
+           
             if(this.path){
                 this.totalLenght = this.path.getTotalLength();
 
-                this.path.style.opacity='1';
                 this.path.style.strokeDasharray = this.totalLenght;
                 this.path.style.strokeDashoffset = this.totalLenght * 2;
                 this.path.classList.add('skyline__path--animated');
-
-
-
+                
+                
+                setTimeout(function () {
+                   window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
+                }, 30000); //will call the function after 2 secs.
             }
        }, 3000);
     },
     
     animateLogo : function() {
-        this.logo = document.getElementById('animatedLogoIntro');
-        
+                
+        this.logo = document.getElementById('animatedLogoIntro');        
         if(this.logo){
             this.logo.classList.add('animated-intro-logo--animated');
         }

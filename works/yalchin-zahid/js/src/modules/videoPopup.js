@@ -7,7 +7,7 @@ export var videoPopup = {
     
     injectYoutube : function(){
         this.tag = document.createElement('script');
-        this.tag.src = "//www.youtube.com/player_api";
+        this.tag.src = "http://www.youtube.com/player_api";
         this.firstScriptTag = document.getElementsByTagName('script')[0];
         this.firstScriptTag.parentNode.insertBefore(this.tag, this.firstScriptTag);
     },

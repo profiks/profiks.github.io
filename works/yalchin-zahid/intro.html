@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css">   
              
 </head>
-<body id="colorTheme" class="color-theme"> 
+<body id="colorTheme" class="color-theme color-theme--1"> 
        
    
     <div class="wrapper intro">
@@ -97,7 +97,6 @@
             
             </a>
             
-            <button id="colorSwitch" data-color="" class="color-switch"></button>
             
         </header> <!-- /.header -->
         
@@ -108,7 +107,7 @@
             <svg version="1.1" class="skyline__city skyline__city--front" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 658 110.381" enable-background="new 0 0 658 110.381" xml:space="preserve">
 
-                   <path class="skyline__path skyline__path--front" id="skylinePath" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M0,110.131h150.679
+                  <path class="skyline__path skyline__path--front" id="skylinePath" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M0,110.131h150.679
                     c0,0-3.534-4.651-3.534-7.999s1.488-6.139,5.952-6.511c4.465-0.372,14.696,2.419,18.044,1.674
                     c3.349-0.744,10.976-8.557,15.254-12.277c4.279-3.72,5.209-5.395,7.999-5.022c2.791,0.372,4.093,2.604,4.651,7.999s0,14.51,0,14.51
                     s8.185-0.187,10.231,0.186s4.279,1.116,4.837,2.047c0.558,0.93,0.634,2.021,0.574,2.764c-0.125,1.562-1.877,2.631-1.877,2.631
@@ -137,6 +136,7 @@
                     l5.396,0.187v2.79l2.79-0.372v-4.466l2.977,0.187c0,0,3.162-7.254,3.348-11.905c0.187-4.649-0.558-11.904,1.116-16.556
                     c1.674-4.65,13.58-12.091,13.58-12.091s-0.744,5.394,1.302,12.277c2.047,6.884,3.721,15.254,3.721,20.092v6.695h3.906v10.79h5.58
                     v11.533H658"/>
+                    
 
             </svg>
             
@@ -144,7 +144,7 @@
             <svg version="1.1" class="skyline__city skyline__city--back" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 658 110.381" enable-background="new 0 0 658 110.381" xml:space="preserve">
 
-                   <path class="skyline__path skyline__path--back" fill="none" stroke="#FFFFFF"  stroke-miterlimit="10" d="M0,110.131h150.679
+                   <path class="skyline__path skyline__path--back" id="skyLineContour" fill="none" stroke="#FFFFFF"  stroke-miterlimit="10" d="M0,110.131h150.679
                     c0,0-3.534-4.651-3.534-7.999s1.488-6.139,5.952-6.511c4.465-0.372,14.696,2.419,18.044,1.674
                     c3.349-0.744,10.976-8.557,15.254-12.277c4.279-3.72,5.209-5.395,7.999-5.022c2.791,0.372,4.093,2.604,4.651,7.999s0,14.51,0,14.51
                     s8.185-0.187,10.231,0.186s4.279,1.116,4.837,2.047c0.558,0.93,0.634,2.021,0.574,2.764c-0.125,1.562-1.877,2.631-1.877,2.631
@@ -195,7 +195,8 @@
    <script src="js/vendor/jquery.min.js"></script>
    <script src="js/vendor/jquery.nicescroll.min.js"></script>
    <script src="js/vendor/particles.min.js"></script>
-   <script src="js/vendor/TweenLite.min.js"></script>                           
+   <script src="js/vendor/TweenLite.min.js"></script>
+   <script src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=1899"></script>                           
    <script src="js/bundle.js"></script>    
 </body>
 </html>
