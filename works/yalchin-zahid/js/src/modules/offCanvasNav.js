@@ -21,9 +21,13 @@ export var offCanvasNav = {
         
         this.initializeOpen = localStorage.getItem('navOpen');
         
-        if(!this.initializeOpen){            
+        
+        
+        if(this.initializeOpen == null){            
             localStorage.setItem('navOpen', false);
+            this.initializeOpen = true;
         }
+
         
         window.addEventListener('scroll', () => {
             
