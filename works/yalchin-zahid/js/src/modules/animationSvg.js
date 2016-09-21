@@ -29,7 +29,7 @@ export var animationSvg = {
                 
                 
                 setTimeout(function () {
-                   window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
+                   window.location.href = "/"; //will redirect to your blog page (an ex: blog.html)
                 }, 30000); //will call the function after 2 secs.
             }
        }, 3000);
