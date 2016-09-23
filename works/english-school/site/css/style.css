@@ -1,0 +1,377 @@
+/*******************************************************************************
+***
+***   Dear friend :
+***   When I wrote this code, only I and God knew what it was.
+***
+***   But now only God knows what is here ! 
+***   
+***   So, if you done trying to 'optimize' this code,
+***   please include this comment as a warning for the next guy who also will  
+***   trying to do this.
+***
+***   Author : denys.ark@gmail.com
+***
+********************************************************************************/
+/**
+* Code PRO Bold font
+*/
+@font-face {
+  font-family: 'Code PRO';
+  src: url("../fonts/CodeProBold.otf");
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+/**
+* Top red line before navigation
+*/
+.top {
+  background: #c42521;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.top__icon {
+  float: left;
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 25px;
+}
+
+.top__content {
+  float: left;
+}
+
+.top__txt {
+  display: block;
+}
+
+.top__link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.top__link:hover, .top__link:focus {
+  color: #fff;
+}
+
+/**
+* Main navigation styles
+*/
+.navbar {
+  background: #da2d29;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  text-align: center;
+  z-index: 9 !important;
+}
+
+.navbar__logo {
+  display: inline-block;
+  width: 202px;
+  height: 42px;
+  background: url(../images/logo.png) no-repeat transparent;
+  margin: 7px 0 0 0;
+}
+
+.navbar__nav {
+  width: -webkit-calc(50% - 101px);
+  width: -moz-calc(50% - 101px);
+  width: calc(50% - 101px);
+  padding-right: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__nav:before, .navbar__nav:after {
+  content: none;
+}
+
+.navbar__nav.navbar-right {
+  padding-right: 15px;
+  padding-left: 40px;
+}
+
+.navbar__nav .open > .navbar__link, .navbar__nav .open > .navbar__link:hover, .navbar__nav .open > .navbar__link:focus {
+  background-color: #c42521;
+  border-color: none;
+}
+
+.navbar__menu-item {
+  display: inline-block !important;
+  float: none !important;
+}
+
+.navbar__collapse {
+  padding: 0;
+}
+
+.navbar__link {
+  padding: 23px 10px !important;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1 !important;
+}
+
+.navbar__link:hover {
+  background: none !important;
+  color: #fff;
+  text-decoration: underline !important;
+}
+
+.navbar__link:focus {
+  background: #c42521 !important;
+  color: #fff;
+}
+
+/**
+* Mega drop down menu
+*/
+.mega-drop-down {
+  width: 1060px;
+  background: #da2d29;
+  top: 110%;
+  padding: 60px 40px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.mega-drop-down__title {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.mega-drop-down__link {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.mega-drop-down__link:hover, .mega-drop-down__link:focus {
+  color: #fff;
+}
+
+/**
+* Horisontal white line for headings
+*/
+.mega-drop-down__title:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+
+/**
+* Banner background and text
+*/
+.banner {
+  width: 100%;
+  min-height: 500px;
+  min-height: -webkit-calc(100vh - 114px);
+  min-height: -moz-calc(100vh - 114px);
+  min-height: calc(100vh - 114px);
+  background: url(../images/banner.jpg) no-repeat transparent;
+  background-size: cover;
+  position: relative;
+  padding-top: 130px;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.banner__heading {
+  font-family: 'Code PRO', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+.banner__slug {
+  font-size: 12px;
+}
+
+/**
+* Banner pattern overlay
+*/
+.banner:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/banner-bg.png) repeat repeat;
+}
+
+/**
+* News feed slider on banner bottom (Owl carousell)
+*/
+.feed-slider {
+  margin-top: 80px;
+}
+
+.feed-slider__container {
+  display: block;
+  min-height: 130px;
+  padding: 10px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  opacity: .8;
+}
+
+.feed-slider__container:hover, .feed-slider__container:focus {
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.feed-slider__heading {
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.feed-slider__text {
+  font-size: 14px;
+}
+
+/**
+* Promotion tiles block with images
+*/
+.promo {
+  width: 50%;
+  max-width: 230px;
+  height: 230px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo__poster {
+  width: 100%;
+  height: 100%;
+  display: block;
+  float: left;
+}
+
+.promo__caption {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.promo__heading {
+  margin: 0 0 14px 0;
+  font-family: 'Code PRO', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.promo__text {
+  font-size: 12px;
+  margin: 0 0 14px 0;
+}
+
+/**
+* Promotion tiles colors
+*/
+.promo--default .promo__caption {
+  background: transparent;
+}
+
+.promo--red .promo__caption {
+  background: rgba(218, 45, 41, 0.68);
+  color: #fff;
+}
+
+.promo--white .promo__caption {
+  background: rgba(255, 255, 255, 0.75);
+  color: #656565;
+}
+
+.promo--gray .promo__caption {
+  background: rgba(140, 140, 140, 0.75);
+  color: #fff;
+}
+
+/**
+* Media queries rules
+*/
