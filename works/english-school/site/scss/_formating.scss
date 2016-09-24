@@ -1,0 +1,61 @@
+/**
+* Overwrite general styles for some element
+*/
+.promo-tiles{
+    padding-left: 0;
+}// END promo-tiles
+
+.promo__caption{
+    .btn{
+        width: 120px;
+        display: flex;
+        align-self: flex-end;
+    }
+    
+    .heading{
+        margin-bottom: 18px;
+    }
+    
+}// END promo__caption
+
+.wellcome-text{
+    padding: 0 60px;
+}// END wellcome-text
+
+
+.ribbon{
+    
+    .btn{
+        margin-top: 25px;
+    }
+    
+}// ribbon
+
+.red-form{
+    
+    .btn{
+        margin-top: 35px;
+    }
+}
+
+.test-form{
+    .red-form{
+        padding: 80px 30px 160px 30px;
+         .heading{
+            margin-bottom: 75px;
+        }
+    }
+}
+
+
+.news-block{
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d3-tour{
+    width: 100%;
+}
+
+

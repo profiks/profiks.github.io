@@ -13,13 +13,81 @@
 ***
 ********************************************************************************/
 /**
-* Code PRO Bold font
+* Font Open Sans
+*/
+/* Open Sans Regular cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(../fonts/opensans/OpenSansRegularC.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Open Sans Regular latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(../fonts/opensans/OpenSansRegular.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* Open Sans Bold cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/opensans/OpenSansBoldC.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Open Sans Bold latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/opensans/OpenSansBold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* Open Sans Italic cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url(../fonts/opensans/OpenSansItalicC.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Open Sans Italic latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url(../fonts/opensans/OpenSansItalic.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/**
+* Font Code PRO Bold
 */
 @font-face {
   font-family: 'Code PRO';
-  src: url("../fonts/CodeProBold.otf");
+  src: url("../fonts/codepro/CodeProBold.otf");
   font-style: normal;
   font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+/**
+* Font Segoe Print
+*/
+@font-face {
+  font-family: 'Segoe';
+  src: url("../fonts/segoe/segoepr.ttf");
+  font-style: normal;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
 }
 
@@ -198,10 +266,9 @@
   min-height: -webkit-calc(100vh - 114px);
   min-height: -moz-calc(100vh - 114px);
   min-height: calc(100vh - 114px);
-  background: url(../images/banner.jpg) no-repeat transparent;
-  background-size: cover;
   position: relative;
   padding-top: 130px;
+  overflow: hidden;
   color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -228,6 +295,8 @@
      -moz-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
+  z-index: 3;
 }
 
 .banner__heading {
@@ -254,6 +323,59 @@
   width: 100%;
   height: 100%;
   background: url(../images/banner-bg.png) repeat repeat;
+  z-index: 2;
+}
+
+/**
+* Customize native bootstrap carousel for background image slider
+*/
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel__control {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 29px;
+  height: 56px;
+  background: url(../images/carousel-arrow.png) no-repeat transparent;
+  z-index: 4;
+  opacity: .5;
+}
+
+.carousel__control:hover {
+  opacity: .9;
+}
+
+.carousel__control--left {
+  left: 40px;
+  -webkit-transform: rotate(-180deg);
+     -moz-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+       -o-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.carousel__control--right {
+  left: auto;
+  right: 40px;
+}
+
+.carousel__image {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/**
+* Carousel indicators 
+*/
+.carousel__indicators {
+  display: none;
 }
 
 /**
@@ -265,13 +387,15 @@
 
 .feed-slider__container {
   display: block;
-  min-height: 130px;
+  height: 135px;
+  float: left;
   padding: 10px;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
   color: #fff;
   text-decoration: none;
-  opacity: .8;
+  opacity: .6;
+  position: relative;
 }
 
 .feed-slider__container:hover, .feed-slider__container:focus {
@@ -286,10 +410,33 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .feed-slider__text {
   font-size: 14px;
+}
+
+/**
+* Trangile on hover
+*/
+.feed-slider__heading:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 5px;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  left: -10px;
+  opacity: 0;
+}
+
+.feed-slider__heading--hover:before {
+  opacity: 1;
 }
 
 /**
@@ -337,14 +484,6 @@
           justify-content: center;
 }
 
-.promo__heading {
-  margin: 0 0 14px 0;
-  font-family: 'Code PRO', sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 .promo__text {
   font-size: 12px;
   margin: 0 0 14px 0;
@@ -355,6 +494,7 @@
 */
 .promo--default .promo__caption {
   background: transparent;
+  color: #8c8c8c;
 }
 
 .promo--red .promo__caption {
@@ -370,6 +510,557 @@
 .promo--gray .promo__caption {
   background: rgba(140, 140, 140, 0.75);
   color: #fff;
+}
+
+/**
+* Buttons styles (link)
+*/
+.btn {
+  padding: 9px 12px;
+  border-radius: 20px;
+  background: transparent;
+  font-size: 10px;
+}
+
+.btn:hover {
+  background: #da2d29;
+  color: #fff;
+}
+
+.btn__chevron {
+  display: inline-block;
+  float: left;
+  width: 10px;
+  height: 11px;
+  margin: 2px 15px 2px 0;
+  background: url(../images/button-arrow.png) no-repeat transparent;
+}
+
+.btn__chevron--white {
+  background: url(../images/button-arrow-white.png) no-repeat transparent;
+}
+
+.btn--right {
+  float: right;
+}
+
+/**
+* Buttons themes
+*/
+.btn--gray {
+  border-color: #8c8c8c;
+  color: #8c8c8c;
+}
+
+.btn--white {
+  border-color: #fff;
+  color: #fff;
+}
+
+/**
+* Typography heading styles 
+*/
+.heading {
+  margin: 0 0 8px 0;
+  font-family: 'Code PRO', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #515151;
+}
+
+.heading--segoe {
+  font-family: 'Segoe', sans-serif;
+}
+
+/**
+* Headind colors
+*/
+.heading--gray {
+  color: #8c8c8c;
+}
+
+.heading--red {
+  color: #da2d29;
+}
+
+.heading--white {
+  color: #fff;
+}
+
+/**
+* Headings size
+*/
+.heading--xs {
+  font-size: 14px;
+}
+
+.heading--sm {
+  font-size: 18px;
+}
+
+.heading--lg {
+  font-size: 24px;
+}
+
+/**
+* Margin top and bottom wrapper for  heading or group of headings like (h1, h2, h3, h4)
+*/
+.hgroup {
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+/**
+* Content text <p>
+*/
+.paragraph {
+  font-size: 12px;
+  color: #222;
+}
+
+.paragraph--gray {
+  color: #8c8c8c;
+}
+
+.paragraph--lead {
+  font-size: 14px;
+}
+
+/**
+* Program courses images
+*/
+.program__item {
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.program__poster {
+  width: 100%;
+  height: 100%;
+  display: block;
+  float: left;
+}
+
+.program__desc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 40px;
+  left: 0;
+  top: 0;
+  background: rgba(34, 34, 34, 0.36);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.program__desc--low {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/**
+* Program courses icons
+*/
+.program__ico {
+  display: block;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #da2d29;
+}
+
+.program__ico--1 { background-image: url(../images/program-icons.png); background-position: 0 0;
+}
+
+.program__ico--2 { background-image: url(../images/program-icons.png); background-position: -56px 0;
+}
+
+.program__ico--3 { background-image: url(../images/program-icons.png); background-position: 0 -56px;
+}
+
+.program__ico--4 { background-image: url(../images/program-icons.png); background-position: -56px -56px;
+}
+
+.program__ico--5 { background-image: url(../images/program-icons.png); background-position: -112px 0;
+}
+
+.program__ico--6 { background-image: url(../images/program-icons.png); background-position: -112px -56px;
+}
+
+.program__ico--7 { background-image: url(../images/program-icons.png); background-position: 0 -112px;
+}
+
+.program__ico--8 { background-image: url(../images/program-icons.png); background-position: -56px -112px;
+}
+
+/**
+* News filter by date
+*/
+.date-filter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.date-filter__date {
+  color: #656565;
+  font-size: 12px;
+  border-bottom: 1px dotted #656565;
+}
+
+.date-filter__date:hover, .date-filter__date:focus {
+  color: #da2d29;
+  text-decoration: none;
+}
+
+/**
+* Block with red robbon
+*/
+.ribbon {
+  padding: 65px 35px 25px 35px;
+  background: url(../images/promo-tile1.jpg) repeat repeat #8c8c8c;
+  position: relative;
+}
+
+.ribbon__logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -21.5px;
+}
+
+.ribbon__text {
+  font-size: 12px;
+}
+
+/**
+* Red subscribe form
+*/
+.red-form {
+  padding: 35px 30px 25px 30px;
+  background: #da2d29;
+  position: relative;
+}
+
+.red-form__input-group {
+  width: 100%;
+  float: left;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.red-form__label {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  position: absolute;
+  left: 5px;
+  bottom: 15px;
+  margin-bottom: 2px;
+}
+
+.red-form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  padding: 10px 10px 15px 60px;
+  background: transparent;
+  line-height: 1;
+  font-size: 14px;
+  color: #000;
+}
+
+/**
+* Small red logo
+*/
+.logo-red-sm {
+  width: 43px;
+  height: 35px;
+  background: url(../images/logo-icon.png) no-repeat center center #da2d29;
+}
+
+.logo-red-sm:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 21.5px 0 21.5px;
+  border-color: #da2d29 transparent transparent transparent;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+}
+
+/**
+* News post
+*/
+.post {
+  padding-right: 0;
+  margin-bottom: 18px;
+}
+
+.post__img {
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+.post__posted {
+  width: 60px;
+  float: left;
+}
+
+.post__title {
+  width: -webkit-calc(100% - 60px);
+  width: -moz-calc(100% - 60px);
+  width: calc(100% - 60px);
+  float: right;
+  margin: 0 0 15px 0;
+  color: #222;
+  padding: 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.post__header {
+  width: 100%;
+  float: left;
+}
+
+.post__body {
+  width: -webkit-calc(100% - 60px);
+  width: -moz-calc(100% - 60px);
+  width: calc(100% - 60px);
+  float: right;
+  padding: 0 10px;
+}
+
+.post__text {
+  font-size: 12px;
+  color: #333;
+}
+
+.post__tag {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+.post__footer {
+  width: 100%;
+  float: left;
+}
+
+.post__footer:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #222;
+  margin: 12px 0;
+}
+
+/**
+* Post date and month badge
+*/
+.post__date {
+  display: block;
+  width: 43px;
+  height: 35px;
+  background: #da2d29;
+  margin: 0 auto 16px auto;
+  position: relative;
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.post__date:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 21.5px 0 21.5px;
+  border-color: #da2d29 transparent transparent transparent;
+}
+
+.post__month {
+  width: 100%;
+  display: block;
+  color: #da2d29;
+  word-wrap: break-word;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/**
+* Social icons link icons
+*/
+.red-square {
+  width: 35px;
+  height: 35px;
+  background: #da2d29;
+  display: inline-block;
+  margin-right: 8px;
+  text-align: center;
+  line-height: 35px !important;
+  color: #fff;
+  font-size: 20px;
+}
+
+.red-square:hover, .red-square:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.simple-ico {
+  display: inline-block;
+  margin: 0 4px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.simple-ico:hover, .simple-ico:focus {
+  color: #da2d29;
+  text-decoration: none;
+}
+
+/**
+* Footer
+*/
+.footer {
+  margin-top: 45px;
+}
+
+.footer__logo {
+  width: 75px;
+  height: 42px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  background: url(../images/logo-icon-large.png) no-repeat transparent;
+}
+
+.footer__bottom {
+  padding: 15px 0;
+  background: url(../images/footer-bg.jpg) repeat repeat #656565;
+  color: #fff;
+  font-size: 12px;
+}
+
+.footer__copyright {
+  float: left;
+}
+
+.footer__flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/**
+* Overwrite general styles for some element
+*/
+.promo-tiles {
+  padding-left: 0;
+}
+
+.promo__caption .btn {
+  width: 120px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+.promo__caption .heading {
+  margin-bottom: 18px;
+}
+
+.wellcome-text {
+  padding: 0 60px;
+}
+
+.ribbon .btn {
+  margin-top: 25px;
+}
+
+.red-form .btn {
+  margin-top: 35px;
+}
+
+.test-form .red-form {
+  padding: 80px 30px 160px 30px;
+}
+
+.test-form .red-form .heading {
+  margin-bottom: 75px;
+}
+
+.news-block {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.d3-tour {
+  width: 100%;
 }
 
 /**

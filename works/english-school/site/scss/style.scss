@@ -18,14 +18,88 @@
 @import 'variables';
 
 /**
-* Code PRO Bold font
+* Font Open Sans
+*/
+
+/* Open Sans Regular cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans/OpenSansRegularC.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Open Sans Regular latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/opensans/OpenSansRegular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/* Open Sans Bold cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/opensans/OpenSansBoldC.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Open Sans Bold latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/opensans/OpenSansBold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* Open Sans Italic cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(../fonts/opensans/OpenSansItalicC.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* Open Sans Italic latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(../fonts/opensans/OpenSansItalic.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/**
+* Font Code PRO Bold
 */
 
 @font-face {
     font-family: 'Code PRO';
-    src: url('../fonts/CodeProBold.otf');
+    src: url('../fonts/codepro/CodeProBold.otf');
     font-style: normal;
     font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+
+/**
+* Font Segoe Print
+*/
+
+@font-face {
+    font-family: 'Segoe';
+    src: url('../fonts/segoe/segoepr.ttf');
+    font-style: normal;
+    font-weight: normal;
     text-rendering: optimizeLegibility;
 }
 
@@ -214,11 +288,9 @@
     width: 100%;
     min-height: 500px;
     min-height: calc(100vh - 114px);
-    background: url(../images/banner.jpg) no-repeat transparent;
-    background-size: cover;
     position: relative;
     padding-top: 130px;
-    
+    overflow: hidden;
     color: $white;
     
     display: flex;
@@ -228,6 +300,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        position: relative;
+        z-index: 3;
         
     }
     
@@ -259,9 +333,63 @@
         width: 100%;
         height: 100%;
         background: url(../images/banner-bg.png) repeat repeat;
+        z-index: 2;
     }
 }// END banner
 
+
+/**
+* Customize native bootstrap carousel for background image slider
+*/
+.carousel{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    &__control{
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 29px;
+        height: 56px;
+        background: url(../images/carousel-arrow.png) no-repeat transparent;
+        z-index: 4;
+        
+        opacity: .5;
+        
+        &:hover{
+            opacity: .9;
+        }
+        
+        &--left{
+            left: 40px;
+            transform: rotate(-180deg);
+        }
+        
+        &--right{
+            left: auto;
+            right: 40px;
+        }
+    }
+    
+    &__image{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+}// END  carousel
+
+
+/**
+* Carousel indicators 
+*/
+.carousel{
+    &__indicators{
+        display: none;
+    }
+}// END carousel
 
 
 /**
@@ -273,14 +401,16 @@
     
     &__container{
         display: block;
-        min-height: 130px;
+        height: 135px;
+        float: left;
         padding: 10px;
         border-left: 1px solid $white;
         border-right: 1px solid $white;
         
         color: $white;
         text-decoration: none;
-        opacity: .8;
+        opacity: .6;
+        position: relative;
         
         &:hover, &:focus{
             color: $white;
@@ -296,6 +426,8 @@
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 16px;
+        position: relative;
+    
     }
     
     &__text{
@@ -305,11 +437,42 @@
 }// end feed-slider 
 
 
+/**
+* Trangile on hover
+*/
+.feed-slider{
+    &__heading{
+        &:before{
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 0 4px 5px;
+            border-color: transparent transparent transparent $white;
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            left: -10px;
+            
+            opacity: 0;
+        }
+    }
+    
+    &__heading{
+        &--hover{
+            &:before{
+                opacity: 1;
+            }
+        }
+    }
+    
+}// end .feed-slider{
+
 
 /**
 * Promotion tiles block with images
 */
-
 
 .promo{
     width: 50%;
@@ -339,15 +502,6 @@
         justify-content: center;
     }
     
-    &__heading{
-        margin: 0 0 14px 0;
-        
-        font-family: 'Code PRO', sans-serif;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    
     &__text{
         font-size: 12px;
         margin: 0 0 14px 0;
@@ -362,6 +516,8 @@
     &--default{
         .promo__caption{
             background: transparent;
+            
+            color: $gray;
         }
     }
     
@@ -393,6 +549,537 @@
 }// End promo
 
 
+
+/**
+* Buttons styles (link)
+*/
+.btn{
+    padding: 9px 12px;
+    border-radius: 20px;
+    background: transparent;
+    
+    font-size: 10px;
+    
+    &:hover{
+        background: $red;
+        color: $white;
+    }
+    
+    &__chevron{
+        display: inline-block;
+        float: left;
+        width: 10px;
+        height: 11px;
+        margin: 2px 15px 2px 0;
+        background: url(../images/button-arrow.png) no-repeat transparent;
+        
+        &--white{
+            background: url(../images/button-arrow-white.png) no-repeat transparent;
+        }
+    }
+    
+    &--right{
+        float: right;
+    }
+    
+}// end btn
+
+/**
+* Buttons themes
+*/
+.btn{
+    &--gray{
+        border-color:$gray;
+        color: $gray;
+    }
+    
+    &--white{
+        border-color:$white;
+        color: $white;
+    }
+    
+}// END btn
+
+
+
+/**
+* Typography heading styles 
+*/
+.heading{
+    margin: 0 0 8px 0;
+    
+    font-family: 'Code PRO', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $heading;
+    
+    &--segoe{
+        font-family: 'Segoe', sans-serif;
+    }
+}// END heading
+
+
+/**
+* Headind colors
+*/
+.heading{
+    &--gray{
+        color: $gray;
+    }
+    &--red{
+        color: $red;
+    }
+    &--white{
+        color: $white;
+    }
+}// END heading
+
+/**
+* Headings size
+*/
+.heading{
+    &--xs{
+        font-size: 14px;
+    }
+    
+    &--sm{
+        font-size: 18px;
+    }
+    
+    &--md{
+        
+    }
+    
+    &--lg{
+        font-size: 24px;
+    }
+    
+}// END Heading
+
+
+/**
+* Margin top and bottom wrapper for  heading or group of headings like (h1, h2, h3, h4)
+*/
+.hgroup{
+    margin-top: 40px;
+    margin-bottom: 25px;
+}// END hgroup
+
+
+
+/**
+* Content text <p>
+*/
+.paragraph{
+    font-size: 12px;
+    color: $paragraph;
+    
+    &--gray{
+        color: $gray;
+    }
+    
+    &--lead{
+        font-size: 14px;
+    }
+    
+} //END paragraph
+
+
+
+/**
+* Program courses images
+*/
+.program{
+    &__item{
+        width: 25%;
+        height: auto;
+        //width: 269px;
+        //height: 273px;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        
+        display: flex;
+    }
+    
+    &__poster{
+        width: 100%;
+        height: 100%;
+        display: block;
+        float: left;
+    }
+    
+    &__desc{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding: 40px;
+        left: 0;
+        top: 0;
+        background: rgba($paragraph , .36);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        &--low{
+            justify-content: flex-end;
+        }
+        
+    }
+    
+    
+}// END program
+
+/**
+* Program courses icons
+*/ 
+
+.program{
+    &__ico{
+        display: block;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: $red;
+        
+        &--1{
+            background: url(../images/sprite/red-icon1.jpg#program-icons);
+        }
+        
+        &--2{
+            background: url(../images/sprite/red-icon2.jpg#program-icons);
+        }
+        
+        &--3{
+            background: url(../images/sprite/red-icon3.jpg#program-icons);
+        }
+        
+        &--4{
+            background: url(../images/sprite/red-icon4.jpg#program-icons);
+        }
+        
+        &--5{
+            background: url(../images/sprite/red-icon5.jpg#program-icons);
+        }
+        
+        &--6{
+            background: url(../images/sprite/red-icon6.jpg#program-icons);
+        }
+        
+        &--7{
+            background: url(../images/sprite/red-icon7.jpg#program-icons);
+        }
+        
+        &--8{
+            background: url(../images/sprite/red-icon8.jpg#program-icons);
+        }
+    }
+}// program
+
+
+
+/**
+* News filter by date
+*/
+.date-filter{    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    &__date{
+        color: $dark-gray;
+        font-size: 12px;
+        border-bottom: 1px dotted $dark-gray;
+        
+        &:hover, &:focus{
+            color: $red;
+            text-decoration: none;
+        }
+    }
+    
+}//end date-filter
+
+
+
+/**
+* Block with red robbon
+*/
+.ribbon{    
+    padding: 65px 35px 25px 35px;
+    background: url(../images/promo-tile1.jpg) repeat repeat $gray;
+    position: relative;
+    
+    &__logo{
+        display: block;        
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -21.5px;
+    }
+    
+    &__text{
+        font-size: 12px;
+    }
+    
+}// end ribbon
+
+
+/**
+* Red subscribe form
+*/
+.red-form{    
+    padding: 35px 30px 25px 30px;
+    background: $red;
+    position: relative;
+    
+    
+    &__input-group{
+        width: 100%;
+        float: left;
+        margin-bottom: 18px;
+        position: relative;
+    }
+    
+    &__label{
+        color: $white;
+        text-transform: uppercase;
+        font-size: 12px;
+        
+        position: absolute;
+        left: 5px;
+        bottom: 15px;
+        margin-bottom: 2px;
+    }
+    
+    &__input{
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $white;
+        outline: none;
+        padding: 10px 10px 15px 60px;
+        background: transparent;
+        
+        line-height: 1;
+        font-size: 14px;
+        color: $black;
+    }
+    
+}// END red-form
+
+
+/**
+* Small red logo
+*/
+.logo-red-sm{
+    width: 43px;
+    height: 35px;
+    background: url(../images/logo-icon.png) no-repeat center center $red;
+    
+    &:after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 21.5px 0 21.5px;
+            border-color: $red transparent transparent transparent;
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+    }
+    
+}// logo-red-sm
+
+
+/**
+* News post
+*/
+.post{
+    padding-right: 0;
+    margin-bottom: 18px;
+    
+    &__img{
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    &__posted{
+        width: 60px;
+        float: left;
+    }
+    
+    &__title{
+        width: calc(100% - 60px);
+        float: right;
+        margin: 0 0 15px 0;
+        color: $paragraph;
+        padding: 0 10px;
+        
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.4;
+        
+    }
+    
+    &__header{
+        width: 100%;
+        float: left;
+    }
+    
+    &__body{
+        width: calc(100% - 60px);
+        float: right;
+        padding: 0 10px;
+    }
+    
+    &__text{
+        font-size: 12px;
+        color: $text;
+    }
+    
+    &__tag{
+        display: block;
+        font-size: 14px;
+        color : $text;
+    }
+    
+    &__footer{
+        width: 100%;
+        float: left;
+        &:before{
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: $paragraph;
+            margin: 12px 0;
+        }
+    }
+    
+}// END post
+
+/**
+* Post date and month badge
+*/ 
+.post{
+    &__date{
+        display: block;
+        width: 43px;
+        height: 35px;
+        background: $red;
+        margin: 0 auto 16px auto;
+        position: relative;
+        
+        text-align: center;
+        line-height: 35px;
+        font-size: 14px;
+        color: $white;
+        
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 21.5px 0 21.5px;
+            border-color: $red transparent transparent transparent;
+        }
+    }
+    
+    
+    &__month{
+        width: 100%;
+        display: block;
+        
+        color: $red;        
+        word-wrap: break-word;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}// end post
+
+
+/**
+* Social icons link icons
+*/
+
+.red-square{
+    width: 35px;
+    height: 35px;
+    background: $red;
+    display: inline-block;
+    margin-right: 8px;
+    
+    text-align: center;
+    line-height: 35px !important;
+    color: $white;
+    font-size: 20px;
+    
+    &:hover, &:focus{
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+
+.simple-ico{
+    display: inline-block;
+    margin: 0 4px;
+    
+    color: $white;
+    font-size: 15px;
+    
+    &:hover, &:focus{
+        color: $red;
+        text-decoration: none;
+    }
+}
+
+/**
+* Footer
+*/
+.footer{
+    margin-top: 45px;
+    
+    &__logo{
+        width: 75px;
+        height: 42px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        background: url(../images/logo-icon-large.png) no-repeat transparent;
+    }
+    
+    &__bottom{
+        padding: 15px 0;
+        background: url(../images/footer-bg.jpg) repeat repeat $dark-gray;
+        
+        color: $white;
+        font-size: 12px;
+    }
+    
+    &__copyright{
+        float: left;
+    }
+    
+    &__flex{
+        display: flex;
+        align-items: center;
+    }
+    
+}// footer
+
+
+@import 'formating';
 
 /**
 * Media queries rules

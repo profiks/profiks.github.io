@@ -4,7 +4,7 @@
 $(document).ready(function(){
     
     /**
-    * Fixed top navigation
+    * Fixed top navigation and aside form
     * @use jquery sticky plugin : site/js/jquery.sticky.js
     */
     $("#stickyNavigation").sticky({topSpacing:0});
@@ -38,17 +38,23 @@ $(document).ready(function(){
     });
     
     /**
-    * Scrollable news feed
-    * @use jquery mouseweel : site/js/jquery.mousewheel.min.js
+    * Apply hover class for News Feed items
     */
-        
-    owl.on('mousewheel', '.owl-stage', function (e) {
-        if (e.deltaY>0) {
-            owl.trigger('next.owl');
-        } else {
-            owl.trigger('prev.owl');
-        }
-        e.preventDefault();
+    $('#bannerCourses .feed-slider__container').hover(
+           function(){ $(this).find(".feed-slider__heading").addClass('feed-slider__heading--hover') },
+           function(){ $(this).find(".feed-slider__heading").removeClass('feed-slider__heading--hover') }
+    );
+    
+    
+    /**
+    * Bootstrap carousel options
+    * @use bootstrap site/js/bootstrap.min.js
+    */
+    
+    $('.carousel').carousel({
+      interval: 6000
     });
     
+    
+
 }); // END dom ready
