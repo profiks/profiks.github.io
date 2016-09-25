@@ -891,7 +891,7 @@ address {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 970px;
   }
 }
 
@@ -5151,7 +5151,7 @@ button.list-group-item-danger.active:focus {
   text-transform: uppercase;
   position: relative;
   line-height: 1.4;
-  padding: 16.5px 20.7px;
+  padding: 16.5px 23.9px;
   font-size: 16px;
 }
 
@@ -5189,9 +5189,8 @@ button.list-group-item-danger.active:focus {
   width: 100%;
 }
 
-.navbar a.nav__home {
-  background: url(../img/home.png) no-repeat transparent;
-  background-position: center center;
+.navbar .nav {
+  width: 100%;
 }
 
 .navbar .navbar-toggle {
@@ -5204,7 +5203,7 @@ button.list-group-item-danger.active:focus {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75);
 }
 
-.nav .open > a:before, a.active:before {
+.nav .open > a:after, a.active:after {
   content: '';
   display: block;
   position: absolute;
@@ -5241,26 +5240,26 @@ button.list-group-item-danger.active:focus {
   position: absolute;
   width: 19px;
   height: 16px;
-  background: url(../img/slide-arrow.png) no-repeat transparent;
   bottom: 10px;
-  opacity: .7;
-}
-
-.carousel__control:hover, .carousel__control:focus {
   opacity: 1;
 }
 
 .carousel__control--right {
   right: 10px;
+  background: url(../img/right-inactive.png);
+}
+
+.carousel__control--right:hover {
+  background: url(../img/right-active.png);
 }
 
 .carousel__control--left {
   right: 36px;
-  -webkit-transform: rotate(-180deg);
-     -moz-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-       -o-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  background: url(../img/left-inactive.png);
+}
+
+.carousel__control--left:hover {
+  background: url(../img/left-active.png);
 }
 
 .content {
@@ -5350,6 +5349,24 @@ button.list-group-item-danger.active:focus {
 }
 
 /**
+* paddings
+*/
+.npl {
+  padding-left: 0 !important;
+}
+
+.npr {
+  padding-right: 0 !important;
+}
+
+/**
+*  center text on small
+*/
+.text-center-on-sm {
+  text-align: center;
+}
+
+/**
 * Media queries rules (mobile first approach)
 */
 @media only screen and (min-width: 480px) {
@@ -5406,21 +5423,7 @@ button.list-group-item-danger.active:focus {
     padding-left: 182px;
     padding-right: 0;
   }
-  .navbar .navbar-collapse a:after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: #000;
-    width: 2px;
-    height: 17px;
-    top: 19px;
-    right: -2px;
-  }
-  .navbar .navbar-collapse a:hover {
-    background-color: #a0a0a0 !important;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75);
-  }
-  .navbar .navbar-collapse a:hover::before {
+  .navbar .navbar-collapse a:before {
     content: '';
     display: block;
     position: absolute;
@@ -5429,6 +5432,24 @@ button.list-group-item-danger.active:focus {
     height: 17px;
     top: 19px;
     left: -2px;
+  }
+  .navbar .navbar-collapse a:hover {
+    background-color: #a0a0a0 !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75);
+  }
+  .navbar .navbar-collapse a:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 2px;
+    height: 17px;
+    top: 19px;
+    right: -1px;
+  }
+  .navbar .navbar-collapse a.home-btn {
+    width: 20px;
+    padding: 16.5px 0;
   }
   .navbar .navbar-collapse a.no-l:hover::before {
     content: none;
@@ -5442,11 +5463,14 @@ button.list-group-item-danger.active:focus {
     content: none;
     display: none;
   }
+  .navbar .navbar-collapse .dropdown-menu a:before {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 996px) {
   .content p {
-    font-size: 18px;
+    font-size: 17.4px;
   }
   .content h2 {
     font-size: 24px;
@@ -5454,11 +5478,14 @@ button.list-group-item-danger.active:focus {
   .preheader, .footer {
     background-size: auto;
   }
+  .text-center-on-sm {
+    text-align: left;
+  }
   .navbar .navbar-collapse a {
     line-height: 1;
     padding: 16.5px 30px;
     font-size: 22px;
-    padding: 16.5px 30.3px;
+    padding: 16.5px 36.1px;
   }
   .preheader__slug {
     padding-left: 60px;
