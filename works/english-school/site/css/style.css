@@ -1527,12 +1527,32 @@
         * Banner background and text
         */
   .banner {
-    min-height: -webkit-calc(100vh - 114px);
-    min-height: -moz-calc(100vh - 114px);
-    min-height: calc(100vh - 114px);
+    min-height: 700px;
+    height: -webkit-calc(100vh - 114px);
+    height: -moz-calc(100vh - 114px);
+    height: calc(100vh - 114px);
   }
   .banner__heading {
     font-size: 70px;
+  }
+  .banner__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+       -moz-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   /**
         * Promotion tiles colors
@@ -1573,14 +1593,17 @@
     */
   .banner {
     min-height: 700px;
-    min-height: -webkit-calc(100vh - 114px);
-    min-height: -moz-calc(100vh - 114px);
-    min-height: calc(100vh - 114px);
   }
   /**
     * Promotion tiles colors
     */
   .promo {
     float: right;
+  }
+  /**
+    * Customize native bootstrap carousel for background image slider
+    */
+  .carousel__control {
+    bottom: 45%;
   }
 }

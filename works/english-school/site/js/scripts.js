@@ -41,13 +41,13 @@ $(document).ready(function(){
                 items:1
             },
             600:{
-                items:1
+                items:2
             },            
             960:{
-                items:1
+                items:2
             },
             1200:{
-                items:1
+                items:4
             }
         }
     });
@@ -74,7 +74,7 @@ $(document).ready(function(){
         }else if(($(window).width() < 767) && (!program.hasClass('owl-carousel'))){
              program.owlCarousel({
                 navigation : true,
-                items:1
+                items:1                
             });
         }
     });
