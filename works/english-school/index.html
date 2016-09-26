@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content=""> 
     
-    <title>Английская школа</title>
+    <title>Main page</title>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
@@ -151,10 +151,41 @@
                            
           <!-- Images -->
           <div class="carousel-inner">
-            <div class="active item"><img class="carousel__image" src="./site/images/banner/banner.jpg" alt="slide1"/></div>
-            <div class="item"><img class="carousel__image" src="./site/images/banner/banner2.jpg" alt="slide2"/></div>
-            <div class="item"><img class="carousel__image" src="./site/images/banner/banner3.jpg" alt="slide3"/></div>
-          </div>
+           
+            <figure class="active item">
+                <picture>
+                     <source media="(max-width: 320px)" srcset="./site/images/banner/banner-xs.jpg">
+                     <source media="(max-width: 480px)" srcset="./site/images/banner/banner-xsm.jpg">
+                     <source media="(max-width: 768px)" srcset="./site/images/banner/banner-sm.jpg">
+                     <source media="(max-width: 1024px)" srcset="./site/images/banner/banner.jpg">                            
+                      <img class="carousel__image" src="./site/images/banner/banner.jpg" alt="banner">
+                </picture>            
+            </figure>
+            
+            
+            <figure class="item">
+                <picture>
+                     <source media="(max-width: 320px)" srcset="./site/images/banner/banner3-xs.jpg">
+                     <source media="(max-width: 480px)" srcset="./site/images/banner/banner3-xsm.jpg">
+                     <source media="(max-width: 768px)" srcset="./site/images/banner/banner3-sm.jpg">
+                     <source media="(max-width: 1024px)" srcset="./site/images/banner/banner3.jpg">                            
+                      <img class="carousel__image" src="./site/images/banner/banner3.jpg" alt="banner">
+                </picture>            
+            </figure>
+            
+            <figure class="item">
+                <picture>
+                     <source media="(max-width: 320px)" srcset="./site/images/banner/banner2-xs.jpg">
+                     <source media="(max-width: 480px)" srcset="./site/images/banner/banner2-xsm.jpg">
+                     <source media="(max-width: 768px)" srcset="./site/images/banner/banner2-sm.jpg">
+                     <source media="(max-width: 1024px)" srcset="./site/images/banner/banner2.jpg">                            
+                      <img class="carousel__image" src="./site/images/banner/banner2.jpg" alt="banner">
+                </picture>            
+            </figure>
+            
+          </div><!-- / .carousel inner -->
+          
+          
           
           <!-- Carousel navigation -->
           <a class="carousel__control carousel__control--left" href="#myCarousel" data-slide="prev"></a>
@@ -864,7 +895,7 @@
             <!-- Only mobile footer -->
             
             <div class="col-xs-12 visible-xs">
-                <h2 class="heading heading--white text-center">Контакты</h2>
+                <h2 class="heading heading--sm heading--white text-center">Контакты</h2>
                 
                 <p class="footer__mobile-txt"><br><i class="glyphicon glyphicon-earphone"></i>+7 (863) 2-559-333</p>
                 <p class="footer__mobile-txt"><i class="glyphicon glyphicon-map-marker"></i>г. Ростов-на-Дону, ул. Б. Садовая, 65 (Дом Мод), 4 этаж</p>

@@ -109,6 +109,10 @@
     .mega-drop-down{         
         float: none !important;
         padding: 60px 40px;
+        
+        &__link{
+            padding: 2px;
+        }
       
     }//mega-drop-down
     
@@ -122,6 +126,18 @@
     .banner{
         margin-top: 0;
         min-height: 500px;
+        padding-top: 130px;
+        
+        &--inner{
+            padding-top: 50px;
+            min-height: 400px;
+            
+            .banner__content{
+                padding-left: 40px;
+                padding-right: 40px;
+                justify-content: center;
+            }
+        }
         
         &__content{
             position: relative;
@@ -169,6 +185,10 @@
        
         &--lg{
             font-size: 22px;
+        }
+        
+        &--xl{
+            font-size: 46px;
         }
 
     }// END Heading
@@ -230,13 +250,18 @@
     .bottom-map{
         margin-top: 45px;
         position: relative;
+        
+        &--inner{
+            margin-top: 0 !important;
+        }
+    
 
         &__map{
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
-            z-index: 1;
+            
         }
 
     }// end bottom-map
@@ -269,6 +294,68 @@
     }
     
     
+    /**
+    * Full screen image gallery
+    */
+    .my-gallery{
+        &__preview{
+            width: 24%;
+            width: calc(25% - 2px);
+        }
+    }
+    
+    
+    /**
+    * Call to action section
+    */
+    .call-to-action{
+        padding: 2px;
+        text-align: left;
+    }
+    
+    /**
+    * Testimonials block
+    */
+    .testimonials{
+        
+        
+        &__item{
+           min-height: 385px; 
+        }
+        
+        &__author{
+            position: absolute;
+            left: 50%;
+            bottom: 5px;
+            transform: translate(-50%);
+        }
+        
+        
+        .owl-prev{
+            display: block;
+            margin-top: -8px;
+            width: 16px;
+            height: 31px;
+            background: url(../images/carousel-arrow-dark.png) no-repeat transparent;
+            transform: rotate(180deg);
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+        
+        .owl-next{
+            display: block;
+            margin-top: -8px;
+            width: 16px;
+            height: 31px;
+            background: url(../images/carousel-arrow-dark.png) no-repeat transparent;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+    }
+    
+    
 }// end media query 768px
 
     
@@ -280,6 +367,15 @@
 
 // ***** 996px *****
 @media only screen and (min-width : $desktop--sm) {
+        
+        /**
+        * content image
+        */
+        .image{
+            width: auto;
+        }
+    
+    
     
         /**
         * Navbar navigation
@@ -328,12 +424,24 @@
         * Banner background and text
         */
         .banner{
-            min-height: calc(100vh - 114px);
+            
+            min-height: 700px;
+            height: calc(100vh - 114px);
+            
+            &--inner{
+                min-height: 300px;
+                height: calc(100vh - 114px);
+            }
             
             &__heading{
                 font-size: 70px;
             }
-
+            
+            &__content{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
 
         }//end banner
     
@@ -395,8 +503,7 @@
     * Banner background and text
     */
     .banner{        
-        min-height: 700px;
-        min-height: calc(100vh - 114px);
+        
     }// end banner
     
     
@@ -406,6 +513,16 @@
     .promo{
             
         float: right;
+    }
+    
+    
+    /**
+    * Customize native bootstrap carousel for background image slider
+    */
+    .carousel{
+        &__control{
+            bottom: 45%;
+        }
     }
     
 }// end media query 1200px

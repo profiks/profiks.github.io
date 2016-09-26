@@ -4,6 +4,16 @@
 @media only screen and (min-width : $mobile) {    
     
     
+     
+    .related{
+        .heading{
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid $red;
+            padding-bottom: 25px;
+        }
+    }
+    
     .wellcome-text{
         padding: 0 15px;
     }
@@ -56,6 +66,17 @@
     .d3-tour{
         width: 100%;
     }
+    
+    .article{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .article-form{
+        padding: 0;
+    }
+    
+    
     
 } // end media query 320px
 
@@ -111,7 +132,15 @@
             margin-top: 44px;
         }
     }
-
+    
+    .article{
+        padding-right: 15px;
+    }
+    
+    .article-form .red-form{
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
     
 }// end media query 768px
 
@@ -148,6 +177,12 @@
      .red-form .btn{
             margin-top: 35px;
     }
+    
+    .article .hgroup{
+        margin-top: 0;
+    }
+    
+   
        
    
 }// end media query 996px
