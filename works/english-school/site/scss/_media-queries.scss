@@ -1,9 +1,6 @@
 // ***** 320px *****
-@media only screen and (min-width : $mobile) {
-    
+@media only screen and (min-width : $mobile) {    
     // mobile first
-    
-    
 } // end media query 320px
 
 
@@ -13,8 +10,16 @@
 
 // ***** 480px *****
 @media only screen and (min-width : $mobile--lg) {    
-    
-        
+    /**
+    * Promotion tiles block with images
+    */
+    .promo{
+        width: 230px;
+        max-width: 230px;
+        height: 230px;
+        float: left;
+    }
+            
 }// end media query 480px
 
 
@@ -27,11 +32,246 @@
 // ***** 768px *****
 @media only screen and (min-width : $tablet) {
     
+   
+    /**
+    * Navbar navigation
+    */
+    .navbar{
+        
+        background: $red;
+        
+        &__collapse{
+            width: 100%;
+        }
+        
+        &__header{
+            height: 1px;
+        }
+        
+        &__caret{
+            display: none;
+        }
+        
+         &__logo{
+            display: inline-block;
+            width: 145px;
+            height: 30px;
+            background: url(../images/logo.png) no-repeat transparent;
+            background-size: cover;
+            margin: 14px 0 0 0;
+        }
+        
+        &__nav{
+            width: calc(50% - 101px);
+            padding-right: 40px;
+
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:before, &:after{
+                content: none;
+            }
+
+            &.navbar-right{
+                padding-right: 0;
+                padding-left: 40px;
+            }
+
+            .open > .navbar__link, .open > .navbar__link:hover, .open > .navbar__link:focus {
+                background-color: $dark-red;
+                border-color: none;
+            }
+
+        }// nav
+        
+        &__menu-item{
+            display: inline-block !important;
+            float: none !important;
+            width: auto;
+            position: static !important;
+        }
+       
+        &__link{
+            text-align: center;
+            padding: 23px 5px !important;
+            font-size: 10px;
+        }
+        
+    }// end navbar
+    
+    
+    
+    /**
+    * Mega drop down menu
+    */
+    .mega-drop-down{         
+        float: none !important;
+        padding: 60px 40px;
+      
+    }//mega-drop-down
+    
+    
+    
+    
+    
+    /**
+    * Banner background and text
+    */
+    .banner{
+        margin-top: 0;
+        min-height: 500px;
+        
+        &__content{
+            position: relative;
+            z-index: 3;
+        }
+        
+        &__heading{
+            font-size: 48px;
+        }
+        
+        &__slug{
+            font-size: 12px;
+        }
+        
+    }//end banner
+    
+    
+    
+    /**
+    * Customize native bootstrap carousel for background image slider
+    */
+    .carousel{
+        &__control{
+            display: block;
+            bottom: 150px;
+            
+             &--left{
+                left: 40px;
+                transform: rotate(-180deg);
+            }
+
+            &--right{
+                left: auto;
+                right: 40px;
+            }
+        }
+    }//end carousel
+    
+    
+    
+    /**
+    * Headings size
+    */
+    .heading{
+       
+        &--lg{
+            font-size: 22px;
+        }
+
+    }// END Heading
+    
+    
+    
+    /**
+    * Promotion tiles block with images
+    */
+    .promo{
+        width: 50%;
+        float: left;
+        margin: 0;
+        
+        &--default{
+            .promo__caption{
+                display: block;
+            }
+
+            .promo__text{
+                margin-bottom: 5px;
+            }
+        }
+        
+    }// end promo
+    
+ 
+    
+    
+    /**
+    * Margin top and bottom wrapper for  heading or group of headings like (h1, h2, h3, h4)
+    */
+    .hgroup{
+        margin-top: 25px;
+        margin-bottom: 16px;
+    }// END hgroup
+    
+    
+    
+    /**
+    * Program courses images
+    */
+    .program{
+        &__item{
+            width: 25%;
+            height: auto;
+            float: left;
+        }
+        
+        &__desc{
+            padding: 10px 10px 40px 10px;
+        }
+        
+    }// end program
+    
+    /**
+    * Google map and subscribe form
+    */
+    .bottom-map{
+        margin-top: 45px;
+        position: relative;
+
+        &__map{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: 1;
+        }
+
+    }// end bottom-map
+    
+    
+    /**
+    * News post
+    */
+    .post{
+        &__body{
+            width: calc(100% - 60px);
+            padding: 0 10px;
+        }
+    }
+    
+    
+    /**
+    * OWL dots
+    */
+    .owl-dots{
+        display: none !important;
+    }
+    
+    /**
+    * Google map and subscribe form
+    */
+
+    .bottom-map{
+         margin-top: 45px;
+    }
     
     
 }// end media query 768px
 
-
+    
 
 
 
@@ -40,8 +280,105 @@
 
 // ***** 996px *****
 @media only screen and (min-width : $desktop--sm) {
-
     
+        /**
+        * Navbar navigation
+        */
+        .navbar{
+            
+            &__logo{
+                width: 202px;
+                height: 42px;
+                margin: 7px 0 0 0;
+            }
+        
+            &__link{
+                padding: 23px 5px !important;
+                font-size: 12px;
+            }
+            
+        } //end navbar
+         
+        /**
+        * Top red line before navigation
+        */
+        .top{
+            font-size: 12px;
+
+            &__icon{
+
+            }
+
+        }// end top
+    
+
+        /**
+        * Navbar navigation
+        */
+        .navbar{
+            &__link{
+                padding: 23px 10px !important; 
+            }
+        }//end nav-bar
+    
+    
+    
+    
+         /**
+        * Banner background and text
+        */
+        .banner{
+            min-height: calc(100vh - 114px);
+            
+            &__heading{
+                font-size: 70px;
+            }
+
+
+        }//end banner
+    
+    
+        /**
+        * Promotion tiles colors
+        */
+        .promo{
+            height: auto;
+                        
+            &--default{
+                .promo__caption{
+                    background: transparent;
+                    display: flex;
+                    color: $gray;
+                }
+
+                .promo__text{
+                    margin-bottom: 14px;
+                }
+            }
+        }// end promo
+    
+    
+        /**
+        * Margin top and bottom wrapper for  heading or group of headings like (h1, h2, h3, h4)
+        */
+        .hgroup{
+            margin-top: 40px;
+            margin-bottom: 25px;
+        }// END hgroup
+    
+    
+    
+        /**
+        * Program courses images
+        */
+        .program{
+            &__desc{
+                padding: 40px;
+            }
+
+        }// end program
+    
+   
    
 }// end media query 996px
 
@@ -54,6 +391,22 @@
 // ***** 1200px *****
 @media only screen and (min-width : $desktop--lg) {
     
+    /**
+    * Banner background and text
+    */
+    .banner{        
+        min-height: 700px;
+        min-height: calc(100vh - 114px);
+    }// end banner
+    
+    
+    /**
+    * Promotion tiles colors
+    */
+    .promo{
+            
+        float: right;
+    }
     
 }// end media query 1200px
 

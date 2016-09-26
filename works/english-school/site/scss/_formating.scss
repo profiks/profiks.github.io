@@ -1,61 +1,172 @@
-/**
-* Overwrite general styles for some element
-*/
-.promo-tiles{
-    padding-left: 0;
-}// END promo-tiles
 
-.promo__caption{
-    .btn{
-        width: 120px;
-        display: flex;
-        align-self: flex-end;
+
+// ***** 320px *****
+@media only screen and (min-width : $mobile) {    
+    
+    
+    .wellcome-text{
+        padding: 0 15px;
     }
     
-    .heading{
-        margin-bottom: 18px;
+    .promo-tiles{
+        margin-top: 15px;
+    }// END promo-tiles
+    
+    .bottom-form{
+        padding: 0;
     }
     
-}// END promo__caption
-
-.wellcome-text{
-    padding: 0 60px;
-}// END wellcome-text
-
-
-.ribbon{
     
-    .btn{
-        margin-top: 25px;
-    }
-    
-}// ribbon
 
-.red-form{
-    
-    .btn{
-        margin-top: 35px;
-    }
-}
+    .promo__caption{
+        .btn{
+            width: 120px;
+            display: flex;
+            align-self: flex-end;
+        }
 
-.test-form{
-    .red-form{
-        padding: 80px 30px 160px 30px;
-         .heading{
-            margin-bottom: 75px;
+        .heading{
+            margin-bottom: 18px;
+        }
+
+    }// END promo__caption
+
+
+    .ribbon{
+
+        .btn{
+            margin-top: 25px;
+        }
+
+    }// ribbon
+
+
+
+    .test-form{
+        .red-form{
+            //padding: 80px 30px 160px 30px;
+            padding: 20px;
+             .heading{
+                //margin-bottom: 75px;
+            }
         }
     }
-}
 
 
-.news-block{
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
+    .d3-tour{
+        width: 100%;
+    }
+    
+} // end media query 320px
 
-.d3-tour{
-    width: 100%;
-}
+
+// ***** 480px *****
+@media only screen and (min-width : $mobile--lg) {    
+    
+   .promo-tiles{        
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .program{
+        &__item{        
+            width: 50%;
+            height: auto;
+            float: left;
+        }
+    }
+    
+        
+}// end media query 480px
+
+
+
+
+
+
+// ***** 768px *****
+@media only screen and (min-width : $tablet) {
+    
+  
+    .promo-tiles{
+        padding-right: 15px;
+        margin-top: 0;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }// END promo-tiles
+    
+    
+    .bottom-map .bottom-form{
+        position: relative;
+        z-index: 2;
+    }
+    
+    .test-form{
+        .ribbon, .red-form{
+            height: 290px;
+            overflow: hidden;
+        }
+        
+        .ribbon__text{
+            margin-top: 44px;
+        }
+    }
+
+    
+}// end media query 768px
+
+    
+
+
+
+
+
+
+// ***** 996px *****
+@media only screen and (min-width : $desktop--sm) {
+        
+     .wellcome-text{
+        padding: 0 60px;
+    }
+    
+    .test-form{
+        margin-top: 120px;
+        
+        .ribbon, .red-form{
+            height: auto;
+        }
+        
+        .ribbon__text{
+            margin-top: 0;
+        }
+        
+        .red-form{
+            padding: 80px 20px 160px 20px;
+        }
+    }
+    
+     .red-form .btn{
+            margin-top: 35px;
+    }
+       
+   
+}// end media query 996px
+
+
+
+
+
+
+
+// ***** 1200px *****
+@media only screen and (min-width : $desktop--lg) {
+    
+   
+    
+}// end media query 1200px
+
+
+
+
 
 

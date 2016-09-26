@@ -30,7 +30,7 @@
    
    
    <!-- Top red line  -->
-    <div class="top">        
+    <div class="top hidden-xs">        
         <div class="container">
            
            <!-- Left side -->
@@ -58,16 +58,21 @@
     
     
     <!-- Main navigation -->        
-    <nav class="navbar" id="stickyNavigation">
+    <nav class="navbar navbar-fixed-top" id="stickyNavigation">
       <div class="container">
         
         <!-- Toggle navigation button on mobile -->
         <div class="navbar__header navbar-header">
+         
           <button type="button" class="navbar__toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="navbar-toggle__line navbar-toggle__line--top"></span>
+            <span class="navbar-toggle__line navbar-toggle__line--center"></span>
+            <span class="navbar-toggle__line navbar-toggle__line--bottom"></span>
           </button>
+          
+          <!-- Site logo -->
+          <a href="#" class="logo visible-xs"></a>
+          
         </div>
 
         <!-- Navigation links -->
@@ -75,27 +80,27 @@
          
           <ul class="navbar__nav nav navbar-nav">
             <li class="navbar__menu-item dropdown">
-              <a href="#" class="navbar__link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Программы</a>
+              <a href="#" class="navbar__link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Программы <span class="navbar__caret"></span></a>
               
               
               <!-- Mega drop down menu -->
               <div class="dropdown-menu mega-drop-down">
                 
-                    <ul class="mega-drop-down__container list-unstyled col-xs-12 col-sm-12 col-md-4">
-                        <li class="mega-drop-down__item"><span class="mega-drop-down__title">Программы для взрослых</span></li>
+                    <ul class="mega-drop-down__container list-unstyled col-xs-12 col-sm-6 col-md-4">
+                        <li class="mega-drop-down__item hidden-xs"><span class="mega-drop-down__title">Программы для взрослых</span></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Общеразговорный</a></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Бизнес английский</a></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Подготовка к международным экзаменам</a></li>
                     </ul>
                     
-                    <ul class="mega-drop-down__container list-unstyled col-xs-12 col-sm-12 col-md-4">
-                        <li class="mega-drop-down__item"><span class="mega-drop-down__title">Программы для Детей</span></li>
+                    <ul class="mega-drop-down__container list-unstyled col-xs-12 col-sm-6 col-md-4">
+                        <li class="mega-drop-down__item hidden-xs"><span class="mega-drop-down__title">Программы для Детей</span></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Общеразговорный английский</a></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Подготовка к международным экзаменам</a></li>
                     </ul>
                     
-                    <ul class="mega-drop-down__container list-unstyled col-xs-12 col-sm-12 col-md-4">
-                        <li class="mega-drop-down__item"><span class="mega-drop-down__title">&nbsp;</span></li>
+                    <ul class="mega-drop-down__container list-unstyled col-xs-12 col-sm-6 col-md-4">
+                        <li class="mega-drop-down__item hidden-xs"><span class="mega-drop-down__title">&nbsp;</span></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Корпоративное обучение</a></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Обучение за рубежом</a></li>
                         <li class="mega-drop-down__item"><a href="#" class="mega-drop-down__link">Летние программы</a></li>
@@ -111,7 +116,7 @@
           
           
           <!-- Site logo -->
-          <li class="navbar__menu-item"><a href="#" class="navbar__logo hidden-xs hidden-sm"></a></li>
+          <li class="navbar__menu-item  hidden-xs"><a href="#" class="navbar__logo"></a></li>
           
           
           <ul class="navbar__nav nav navbar-nav navbar-right">
@@ -138,7 +143,7 @@
     <div id="myCarousel" class="carousel slide">
          
         <!-- Indicators -->
-          <ol class="carousel-indicators carousel__indicators">
+          <ol class="carousel-indicators carousel__indicators visible-xs">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -159,7 +164,7 @@
    
    <div class="container banner__content">        
         <!-- Banner text -->
-        <div class="banner__description col-xs-12 col-sm-12 col-md-6">
+        <div class="banner__description col-xs-10 col-sm-6 col-md-6">
             <h1 class="banner__heading">Наши <br> курсы</h1>
             <h2 class="banner__slug">Многолетний опыт позволил убедиться, что то чему мы вас учим на наших
 занятиях будет полезно вам и за пределами классной комнаты.</h2>
@@ -167,7 +172,7 @@
         
         
         <!-- News on banner bottom -->
-        <div class="feed-slider col-xs-12" id="bannerCourses">
+        <div class="feed-slider col-xs-12 hidden-xs" id="bannerCourses">
              
               <a href="#" class="feed-slider__container">
                     <h3 class="feed-slider__heading">Формирующиеся  для взрослых!</h3>
@@ -223,7 +228,7 @@
 <div class="content">
    <div class="container">
        
-       <article class="wellcome-text col-xs-12 col-sm-12 col-md-7">
+       <article class="wellcome-text col-xs-12 col-sm-5 col-md-6">
            
            <hgroup class="hgroup">
                <h4 class="heading heading--gray heading--xs">Добро пожаловать</h4>
@@ -239,11 +244,7 @@
             Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
             XVI века. В то время некий безымянный печатник создал большую коллекцию
             размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
-            XVI века. В то время некий безымянный печатник создал большую коллекцию
-            размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+            Lorem Ipsum - это текст-"рыба", часто изайне.
             Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
             XVI века. В то время некий безымянный печатник создал большую коллекцию</p>
             
@@ -252,7 +253,7 @@
        </article>
        
        <!-- Promotion tiles block -->
-       <div class="promo-tiles col-xs-12 col-sm-12 col-md-5">
+       <div class="promo-tiles col-xs-12 col-sm-7 col-md-6">
            
            <figure class="promo promo--default">               
                <img class="promo__poster" src="./site/images/promo-tile1.jpg" alt="promo tile">
@@ -312,109 +313,105 @@
         </div>
         
         
-        <section class="program col-xs-12">
+        <section class="program col-xs-12" id="programsMob">
             
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program1.jpg" alt="program1">                
-                <figcaption class="program__desc text-center">
-                    <h2 class="heading heading--white heading--xs heading--segoe">Детям и взрослым</h2>
-                    <h3 class="heading heading--white heading--sm">Английский для начинающих</h3>
-                    <span class="program__ico program__ico--1"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
+            <div class="program__wrap">
+                <a href="#1" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program1.jpg" alt="program1">                
+                    <div class="program__desc text-center">
+                        <h2 class="heading heading--white heading--xs heading--segoe">Детям и взрослым</h2>
+                        <h3 class="heading heading--white heading--sm">Английский для начинающих</h3>
+                        <span class="program__ico program__ico--1"></span>
+                    </div>                
+                </a> <!-- / .item -->
+
+                <a href="#2" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program2.jpg" alt="program1">                
+                    <div class="program__desc program__desc--low text-center">
+                        <h2 class="heading heading--sm heading--white">Зарубежные программы</h2>
+                        <span class="program__ico program__ico--2"></span>
+                    </div>                
+                </a> <!-- / .item -->
+
+                <a href="#4" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program3.jpg" alt="program1">                
+                    <div class="program__desc text-center">
+                        <h2 class="heading heading--white heading--xs heading--segoe">Группы от 4х лет</h2>
+                        <h3 class="heading heading--white heading--sm">Английский для Малышей</h3>
+                        <span class="program__ico program__ico--3"></span>
+                    </div>                
+                </a> <!-- / .item -->
+
+                <a href="#4" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program4.jpg" alt="program1">                
+                    <div class="program__desc program__desc--low text-center">
+                        <h2 class="heading heading--sm heading--white">Корпоративный английский</h2>
+                        <span class="program__ico program__ico--4"></span>
+                    </div>                
+                </a> <!-- / .item -->
+            </div>
             
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program2.jpg" alt="program1">                
-                <figcaption class="program__desc program__desc--low text-center">
-                    <h2 class="heading heading--sm heading--white">Зарубежные программы</h2>
-                    <span class="program__ico program__ico--2"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
             
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program3.jpg" alt="program1">                
-                <figcaption class="program__desc text-center">
-                    <h2 class="heading heading--white heading--xs heading--segoe">Группы от 4х лет</h2>
-                    <h3 class="heading heading--white heading--sm">Английский для Малышей</h3>
-                    <span class="program__ico program__ico--3"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
             
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program4.jpg" alt="program1">                
-                <figcaption class="program__desc program__desc--low text-center">
-                    <h2 class="heading heading--sm heading--white">Корпоративный английский</h2>
-                    <span class="program__ico program__ico--4"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
+            <div class="program__wrap">
+                <a href="#6" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program5.jpg" alt="program1">                
+                    <div class="program__desc text-center">
+                        <h2 class="heading heading--white heading--sm">Английский для бизнеса</h2>
+                        <span class="program__ico program__ico--5"></span>
+                    </div>                
+                </a> <!-- / .item -->
+
+                <a href="#6" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program6.jpg" alt="program1">                
+                    <div class="program__desc program__desc--low text-center">
+                        <h2 class="heading heading--sm heading--white">Английский для Взрослых</h2>
+                        <span class="program__ico program__ico--6"></span>
+                    </div>                
+                </a> <!-- / .item -->
+
+                <a href="#6" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program7.jpg" alt="program1">                
+                    <div class="program__desc text-center">
+                        <h2 class="heading heading--white heading--xs heading--segoe">ELTS, TOEFL</h2>
+                        <h3 class="heading heading--white heading--sm">Подготовка к экзаменам</h3>
+                        <span class="program__ico program__ico--7"></span>
+                    </div>                
+                </a> <!-- / .item -->
+
+                <a href="#6" class="program__item">
+                    <img class="program__poster" src="./site/images/program/program8.jpg" alt="program1">                
+                    <div class="program__desc program__desc--low text-center">
+                        <h2 class="heading heading--sm heading--white">Летние программы</h2>
+                        <span class="program__ico program__ico--8"></span>
+                    </div>                
+                </a> <!-- / .item -->
             
-            <!-- ------------------ -->
+            </div>
             
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program5.jpg" alt="program1">                
-                <figcaption class="program__desc text-center">
-                    <h2 class="heading heading--white heading--sm">Английский для бизнеса</h2>
-                    <span class="program__ico program__ico--5"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
-            
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program6.jpg" alt="program1">                
-                <figcaption class="program__desc program__desc--low text-center">
-                    <h2 class="heading heading--sm heading--white">Английский для Взрослых</h2>
-                    <span class="program__ico program__ico--6"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
-            
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program7.jpg" alt="program1">                
-                <figcaption class="program__desc text-center">
-                    <h2 class="heading heading--white heading--xs heading--segoe">ELTS, TOEFL</h2>
-                    <h3 class="heading heading--white heading--sm">Подготовка к экзаменам</h3>
-                    <span class="program__ico program__ico--7"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
-            
-            <figure class="program__item">
-                <img class="program__poster" src="./site/images/program/program8.jpg" alt="program1">                
-                <figcaption class="program__desc program__desc--low text-center">
-                    <h2 class="heading heading--sm heading--white">Летние программы</h2>
-                    <span class="program__ico program__ico--8"></span>
-                </figcaption>                
-            </figure> <!-- / .item -->
+          
             
             
         </section> <!-- / .program -->
         
-        
-        <div class="hgroup col-xs-12 col-sm-12 col-md-8 col-md-offset-4">
-            <h2 class="heading heading--sm text-center">новости и события</h2>
-            
-            <ul class="date-filter list-unstyled list-inline text-center">
-                <li><a href="#" class="date-filter__date">2016</a></li>
-                <li><a href="#" class="date-filter__date">январь</a></li>
-                <li><a href="#" class="date-filter__date">февраль</a></li>
-                <li><a href="#" class="date-filter__date">март</a></li>
-                <li><a href="#" class="date-filter__date">апрель</a></li>
-            </ul>
-            
-        </div>
         
         <!-- Online test and order lesson -->
         <aside class="test-form col-xs-12 col-sm-12 col-md-4">
            
            
            
-           <div class="ribbon col-xs-12">
-               <span class="ribbon__logo logo-red-sm"></span>
+           <div class="ribbon col-xs-12 col-sm-6 col-md-12 hidden-xs">
+               <span class="ribbon__logo logo-red-sm hidden-xs hidden-sm"></span>
                <h2 class="heading heading--sm heading--gray">Пройти on-line тестирование</h2>               
-               <p class="ribbon__text heading--gray">Пройдите онлайн тестирование и подберите нужный вам курс</p>
+               <p class="ribbon__text heading--gray">Пройдя тесты, вы сможете оценить свой 
+                уровень владения грамматикой и 
+                лексикой языка. </p>
                <a href="#" class="btn btn--white btn--right"><i class="btn__chevron"></i>пройти тест</a>               
            </div> <!-- / .ribbon -->
            
            
            
-           <form action="#" class="red-form col-xs-12" id="subscribeForm">
+           <form action="#" class="red-form col-xs-12 col-sm-6 col-md-12" id="subscribeForm">
                <h2 class="heading heading--sm heading--white">Записаться на пробный Урок</h2> 
                
                <div class="red-form__input-group">
@@ -436,28 +433,54 @@
         </aside> <!-- / .test-form -->
         
         
-        <div class="news-block col-xs-12 col-sm-12 col-md-8">
+        <div class="hgroup col-xs-12 col-sm-12 col-md-8">
+            <h2 class="heading heading--sm text-center">новости и события</h2>
             
-            <!-- News post -->
+            
+            <!-- Tabs for news  -->
+            <ul class="date-filter list-unstyled list-inline text-center" role="tablist" id="newsTab">
+                <li role="presentation" class="active">
+                    <a data-toggle="tab" role="tab" aria-expanded="false" href="#year2016" class="date-filter__date">2016</a>
+                    </li>
+                <li role="presentation">
+                    <a data-toggle="tab" role="tab" aria-expanded="false" href="#month01" class="date-filter__date">январь</a>
+                    </li>
+                <li role="presentation">
+                    <a data-toggle="tab" role="tab" aria-expanded="false" href="#month02" class="date-filter__date">февраль</a>
+                    </li>
+                <li role="presentation">
+                    <a data-toggle="tab" role="tab" aria-expanded="false" href="#month03" class="date-filter__date">март</a>
+                </li>
+                <li role="presentation">
+                    <a data-toggle="tab" role="tab" aria-expanded="false" href="#month04" class="date-filter__date">апрель</a>
+                </li>
+            </ul> <!-- / .date-filter -->
+            
+        </div> <!-- / .hgroup -->
+        
+     
+        <!-- *************************  Tab content ******************************* --> 
+         
+         <div role="tabpanel" class="news-block tab-pane fade active in col-xs-12 col-sm-12 col-md-8" id="year2016">
+               
+                <!-- News post -->
             <div class="post col-xs-12 col-sm-6 col-md-6">
                 <img src="./site/images/news/news2.jpg" class="post__img" alt="post">                 
                 
                 <div class="post__header">
                     <!-- Posted date -->               
                     <div class="post__posted">
-                        <span class="post__date">15</span>
-                        <span class="post__month">Августа</span>
+                        <span class="post__date">5</span>
+                        <span class="post__month">June</span>
                     </div>                
                     <!-- Title -->     
-                    <h2 class="post__title">Летняя лингвистическая площадка от образовательного центра «Английская Школа» </h2> 
+                    <h2 class="post__title">образовательного центра «Английская Школа» </h2> 
                 </div> <!-- / .post__header -->
                                   
                 <div class="post__body">                   
                     <p class="post__text">
                         Lorem Ipsum - это текст-"рыба", часто
-                        используемый в печати и вэб-дизайне. Lorem
-                        Ipsum является стандартной "рыбой" для
-                        текстов на латинице с начала XVI века. В то
+                        используемыс начала XVI века. В то
                         время некий безымянный печатник создал
                         большую коллекцию размеров и форм
                         шрифтов, используя Lorem Ipsum для
@@ -570,29 +593,37 @@
                     
                 </div> <!-- / .post__body -->                               
             </div> <!-- / .post -->
+               
+           </div> <!-- / .tab content -->
             
-            
-            
-            
-            <!-- News post -->
+          <!-- *************************  Tab content ******************************* --> 
+           
+         <div role="tabpanel" class="news-block tab-pane fade col-xs-12 col-sm-12 col-md-8" id="month01">
+               
+                <!-- News post -->
             <div class="post col-xs-12 col-sm-6 col-md-6">
-                <img src="./site/images/news/news2.jpg" class="post__img" alt="post">                 
+                <img src="./site/images/news/news1.jpg" class="post__img" alt="post">                 
+                
                 <div class="post__header">
                     <!-- Posted date -->               
                     <div class="post__posted">
-                        <span class="post__date">15</span>
-                        <span class="post__month">Авгghjghjуста</span>
+                        <span class="post__date">31</span>
+                        <span class="post__month">мая</span>
                     </div>                
                     <!-- Title -->     
-                    <h2 class="post__title">Летн от образовательного центра «Английская Школа» </h2> 
-                </div> <!-- / .post__header -->        
+                    <h2 class="post__title">Летняя лингвистическая площадка от образовательного центра «Английская Школа» </h2> 
+                </div> <!-- / .post__header -->
+                                  
                 <div class="post__body">                   
                     <p class="post__text">
                         Lorem Ipsum - это текст-"рыба", часто
                         используемый в печати и вэб-дизайне. Lorem
                         Ipsum является стандартной "рыбой" для
                         текстов на латинице с начала XVI века. В то
-                        время некий безымянный печатни
+                        время некий безымянный печатник создал
+                        большую коллекцию размеров и форм
+                        шрифтов, используя Lorem Ipsum для
+                        распечатки образцов. 
                     </p> <!-- / .post__text -->                      
                     <!-- Tags -->                                                
                     <div class="post__footer">
@@ -602,34 +633,137 @@
                     
                 </div> <!-- / .post__body -->                               
             </div> <!-- / .post -->
+            
+            
+            
+            <!-- News post -->
+            <div class="post col-xs-12 col-sm-6 col-md-6">
+                <img src="./site/images/news/news3.jpg" class="post__img" alt="post">
+                
+                <div class="post__header">                
+                    <!-- Posted date -->               
+                    <div class="post__posted">
+                        <span class="post__date">15</span>
+                        <span class="post__month">ста</span>
+                    </div>                
+                    <!-- Title -->     
+                    <h2 class="post__title">Летнская площадка от образовательного центра «Английская Школа» </h2>                  
+                </div> <!-- / .post__header -->   
+                                  
+                <div class="post__body">                   
+                    <p class="post__text">
+                        Lorem Ipsum - это текст-"рыба", часто
+                        используемый в печати и вэб-дизайне. Lorem
+                        Ipsum является стандартной "рыбой" 
+                        шрифтов, используя Lorem Ipsum для
+                        распечатки образцов. 
+                    </p> <!-- / .post__text -->                      
+                    <!-- Tags -->                                                
+                    <div class="post__footer">
+                        <span class="post__tag">Posted in: <a href="#">Hobbies</a> </span>
+                        <span class="post__tag">Tags: <a href="#">church</a> , <a href="#">educate</a> </span>
+                    </div> 
+                    
+                </div> <!-- / .post__body -->                               
+            </div> <!-- / .post -->
+            
+            
+            
+            
+            <!-- News post -->
+            <div class="post col-xs-12 col-sm-6 col-md-6">
+                <img src="./site/images/news/news2.jpg" class="post__img" alt="post">
+                 <div class="post__header">                
+                    <!-- Posted date -->               
+                    <div class="post__posted">
+                        <span class="post__date">15</span>
+                        <span class="post__month">Августа</span>
+                    </div>                
+                    <!-- Title -->     
+                    <h2 class="post__title">Летняяазовательного центра «Английская Школа» </h2> 
+                </div> <!-- / .post__header --> 
+                              
+                <div class="post__body">                   
+                    <p class="post__text">
+                        Lorem Ipsum -печатник создал
+                        большую коллекцию размеров и форм
+                        шрифтов, используя Lorem Ipsum для
+                        распечатки образцов. 
+                    </p> <!-- / .post__text -->                      
+                    <!-- Tags -->                                                
+                    <div class="post__footer">
+                        <span class="post__tag">Posted in: <a href="#">Hobbies</a> </span>
+                        <span class="post__tag">Tags: <a href="#">church</a> , <a href="#">educate</a> </span>
+                    </div> 
+                    
+                </div> <!-- / .post__body -->                               
+            </div> <!-- / .post -->
+            
+            
+            
+            
+            <!-- News post -->
+            <div class="post col-xs-12 col-sm-6 col-md-6">
+                <img src="./site/images/news/news1.jpg" class="post__img" alt="post">                 
+                <div class="post__header">
+                    <!-- Posted date -->               
+                    <div class="post__posted">
+                        <span class="post__date">15</span>
+                        <span class="post__month">Августа</span>
+                    </div>                
+                    <!-- Title -->     
+                    <h2 class="post__title">Летняя лингвистичесзовательного центра «Английская Школа» </h2> 
+                </div> <!-- / .post__header --> 
+                               
+                <div class="post__body">                   
+                    <p class="post__text">
+                        Lorem Ipsum - это текст-"рыба", часто
+                        используемый в печати и вэб-дизайне. Lorem
+                        Ipsum является стандартной "рыбой" для
+                        текстов на латинице с начала XVI века. В то
+                        время некий безымянный печатни
+                        распечатки образцов. 
+                    </p> <!-- / .post__text -->                      
+                    <!-- Tags -->                                                
+                    <div class="post__footer">
+                        <span class="post__tag">Posted in: <a href="#">Hobbies</a> </span>
+                        <span class="post__tag">Tags: <a href="#">church</a> , <a href="#">educate</a> </span>
+                    </div> 
+                    
+                </div> <!-- / .post__body -->                               
+            </div> <!-- / .post -->
+               
+           </div> <!-- /.tab content -->
          
-            
-            
-        </div> <!-- / .news-block -->
         
         
         
+        <!-- D3 Tour -->
         
-        
+        <!--
         <div class="hgroup col-xs-12">
             <h2 class="heading heading--sm text-center">виртуальный тур по школе</h2>
         </div>
         
-        <!-- D3 Tour -->
-        
         <div class="col-xs-12">
             <img src="./site/images/d3tour/tour.jpg" class="img-responsive d3-tour" alt="sdsd">
         </div>
+        -->
         
         
     </div> <!-- / .container -->    
 </div> <!-- / .content -->
 
 
-<footer class="footer">    
+<section class="bottom-map"> 
+   
+    
+    
+           
+            
     <div class="container"> 
         
-        <aside class="bottom-form col-xs-12 col-sm-12 col-md-4">
+        <aside class="bottom-form col-xs-12 col-sm-6 col-md-4">
            
            
            
@@ -673,52 +807,81 @@
     </div> <!-- / .footer__container -->
     
     
-    <div class="footer__bottom">
+    <iframe class="bottom-map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.696452881667!2d39.71601674155106!3d47.222521423212555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b90c622b164f%3A0x8df034991e52a69f!2sBolshaya+Sadovaya+ul.%2C+65%2C+Rostov%2C+Rostovskaya+oblast&#39;%2C+Russia%2C+344002!5e0!3m2!1sen!2sua!4v1474727807520" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+    
+      
+</section> <!-- / .footer -->
+
+
+<footer class="footer">
+     <div class="footer__bottom">
         <div class="container">
             
-            <div class="col-xs-12">
+            <!-- Only Tablet Desktop footer -->
+            
+            <div class="col-xs-12 hidden-xs">
                 
                 <!-- Left side -->
-            <div class="pull-left footer__flex">            
-                   <a href="#" class="footer__logo"></a> 
-                   
-                    <div class="footer__copyright">
-                        
-                        Адрес: г. Ростов-на-Дону, ул. Б. Садовая, 65, (Дом Мод), 4 этаж <br>
-                        Тел.: +7 (863) 2-559-333 <br>
-                        E-mail: info@ang-school.ru <br>
-                        ИНН     616 306 54 39 <br>
-                        ОГРН  102 610 316 69 79 <br>
-                        
-                    </div>             
-            </div>
-            
-            <!-- Right side -->
-            <div class="pull-right">
-                
-                <div class="footer__copyright text-right">
-                        
-                        <p>
-                            <a href="#" class="simple-ico socicon-instagram"></a>
-                            <a href="#" class="simple-ico socicon-youtube"></a>
-                            <a href="#" class="simple-ico socicon-flickr"></a>
-                            <a href="#" class="simple-ico socicon-googleplus"></a>
-                            <a href="#" class="simple-ico socicon-facebook"></a>
-                            <a href="#" class="simple-ico socicon-pinterest"></a>
-                            <a href="#" class="simple-ico socicon-twitter"></a>
-                        </p>
-                        
-                        © 2003-2016 «НОУ «Английская Школа»
-                        
+                <div class="pull-left footer__flex">            
+                       <a href="#" class="footer__logo"></a> 
+
+                        <div class="footer__copyright">
+
+                            Адрес: г. Ростов-на-Дону, ул. Б. Садовая, 65, (Дом Мод), 4 этаж <br>
+                            Тел.: +7 (863) 2-559-333 <br>
+                            E-mail: info@ang-school.ru <br>
+                            ИНН     616 306 54 39 <br>
+                            ОГРН  102 610 316 69 79 <br>
+
+                        </div>             
+                </div>
+
+                <!-- Right side -->
+                <div class="pull-right">
+
+                    <div class="footer__copyright text-right">
+
+                            <p>
+                                <a href="#" class="simple-ico socicon-instagram"></a>
+                                <a href="#" class="simple-ico socicon-youtube"></a>
+                                <a href="#" class="simple-ico socicon-flickr"></a>
+                                <a href="#" class="simple-ico socicon-googleplus"></a>
+                                <a href="#" class="simple-ico socicon-facebook"></a>
+                                <a href="#" class="simple-ico socicon-pinterest"></a>
+                                <a href="#" class="simple-ico socicon-twitter"></a>
+                            </p>
+
+                            © 2003-2016 «НОУ «Английская Школа»
+
+                    </div>
+
                 </div>
                 
             </div>
+            
+            
+            <!-- Only mobile footer -->
+            
+            <div class="col-xs-12 visible-xs">
+                <h2 class="heading heading--white text-center">Контакты</h2>
+                
+                <p class="footer__mobile-txt"><br><i class="glyphicon glyphicon-earphone"></i>+7 (863) 2-559-333</p>
+                <p class="footer__mobile-txt"><i class="glyphicon glyphicon-map-marker"></i>г. Ростов-на-Дону, ул. Б. Садовая, 65 (Дом Мод), 4 этаж</p>
+                <p class="footer__mobile-txt"><i class="glyphicon glyphicon-envelope"></i>info@ang-school.ru</p>
+                
+                <p class="text-center"><a href="#" class="footer__logo--sm"></a></p> 
+                
+                <p class="footer__mobile-txt text-center">© 2003-2016 «НОУ «Английская Школа»</p>
+                
+              
                 
             </div>
             
         </div> <!-- / .container -->
     </div><!-- / .footer__bottom -->
-      
+   
+    
 </footer> <!-- / .footer -->
 
 <!-- scripts files -->

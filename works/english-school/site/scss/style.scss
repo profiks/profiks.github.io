@@ -112,7 +112,7 @@
     padding: 10px 0;
     
     color: $white;
-    font-size: 12px;
+    font-size: 10px;
     
     
     &__icon{
@@ -134,10 +134,11 @@
     
     &__link{
         color: $white; 
-        text-decoration: underline;
+        text-decoration: none;
         
         &:hover, &:focus{
             color: $white;
+            text-decoration: underline;
         }
     }
     
@@ -151,70 +152,56 @@
 
 .navbar{
     
-    background: $red;
     width: 100%;
     border-radius: 0;
     border: none;
     margin: 0;
     text-align: center;
-    z-index: 9 !important;
+    z-index: 99 !important;
     
-    &__logo{
+   
+    &__caret{
         display: inline-block;
-        width: 202px;
-        height: 42px;
-        background: url(../images/logo.png) no-repeat transparent;
-        margin: 7px 0 0 0;
+        width: 12px;
+        height: 7px;
+        float: right;
+        margin-top: 3px;
+        background: url(../images/menu-caret.png) no-repeat transparent;
+        
+        transition: transform .3s ease;
     }
     
     &__nav{
-        width: calc(50% - 101px);
-        padding-right: 40px;
-        
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        &:before, &:after{
-            content: none;
-        }
-        
-        &.navbar-right{
-            padding-right: 15px;
-            padding-left: 40px;
-        }
-        
-        .open > .navbar__link, .open > .navbar__link:hover, .open > .navbar__link:focus {
-            background-color: $dark-red;
-            border-color: none;
-        }
-        
+        margin: 0;
     }
     
     &__menu-item{
-        display: inline-block !important;
-        float: none !important;
+        float: left;
+        width: 100%;
+        
+        &.open .navbar__caret{
+            transform: rotate(180deg);
+        }
     }
+    
     
     &__collapse{
         padding: 0;
+        position: relative;
     }
     
     &__link{ 
-        padding: 23px 10px !important;
-        
+        padding: 20px 15px !important;        
         color: $white;
         text-transform: uppercase;
         font-size: 12px;
-        text-align: center;
+        text-align: left;
         line-height: 1 !important;
         
         
         &:hover{
-            background: none !important;
+            background: $dark-red !important;
             color: $white;
-            text-decoration: underline !important;
         }
         
         &:focus{
@@ -228,19 +215,123 @@
 
 
 /**
+* Mobile menu header
+*/
+.navbar{
+    
+    &__header{
+        height: 60px;
+        background: $red;
+        
+        .logo{
+            float: left;
+            width: 145px;
+            height: 30px;
+            margin-top: 15px;
+            background: url(../images/logo.png) no-repeat transparent;
+            background-size: cover;
+        }
+    } // end navbar-header
+    
+    
+    &__collapse{
+        width: 250px;
+        background: $red;
+    }// end navbar--collapse
+    
+    
+}// end navbar mobile menu
+
+
+/**
+* Toggle menu on mobile
+*/
+.navbar-toggle{
+    
+    float: left;
+    margin-top: 9px;
+    
+    &.collapsed{
+        .navbar-toggle__line{
+
+            width: 23px;
+            height: 2px;
+            display: block;
+            background: $white;
+            margin: 4px 0;
+            border-radius: 50px;
+            transition: transform .3s ease, width .2s ease;
+            
+            &--top{
+                transform: rotate(0);
+            }
+
+            &--center{
+
+            }
+
+            &--bottom{
+                transform: rotate(0);
+            }
+
+        }// en line
+    }
+    
+    &__line{
+
+            width: 23px;
+            height: 2px;
+            display: block;
+            background: $white;
+            margin: 4px 0;
+            border-radius: 50px;
+            transition: transform .3s ease, width .2s ease;
+            
+            
+        
+            &--top{
+                transform: rotate(-45deg);
+                transform-origin: 80% 90%;
+                 width: 10px;
+            }
+
+            &--center{
+
+            }
+
+            &--bottom{
+                transform: rotate(45deg);
+                transform-origin: 80% 10%;
+                 width: 10px;
+            }
+
+    }// en line
+    
+}//end navbar-toggle
+
+
+.sticky-wrapper{
+   // margin-bottom: 60px;
+}
+
+/**
 * Mega drop down menu
 */
 .mega-drop-down{    
-    width: $desktop--lg;
+    min-width: 100%;
     background: $red;
     top: 110%;
-    padding: 60px 40px;
+    padding: 0;
     border: none;
     box-shadow: none;
     border-radius: 0; 
     
     color: $white;
     text-transform: uppercase;
+    
+    
+    float: left !important;
+    
     
     &__title{
         font-size: 14px;
@@ -251,10 +342,15 @@
         line-height: 1.6;
     }
     
+    
     &__link{
         color: $white;
         font-size: 12px;
         line-height: 1.5;
+        
+        padding: 15px 0 15px 10px;
+        display: block;
+        width: 100%;
         
         &:hover, &:focus{
             color: $white;
@@ -283,38 +379,32 @@
 /**
 * Banner background and text
 */
-
 .banner{
     width: 100%;
-    min-height: 500px;
-    min-height: calc(100vh - 114px);
+    min-height: 400px;
     position: relative;
     padding-top: 130px;
     overflow: hidden;
     color: $white;
-    
+    margin-top: 60px;
     display: flex;
     
     
     &__content{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         position: relative;
         z-index: 3;
-        
     }
     
     &__heading{
         font-family: 'Code PRO', sans-serif;
-        font-size: 70px;
+        font-size: 48px;
         font-weight: bold;
         line-height: 0.8;
         text-transform: uppercase;
     }
     
     &__slug{
-        font-size: 12px;
+        font-size: 8px;
     }
     
 }// END banner
@@ -349,9 +439,9 @@
     left: 0;
     
     &__control{
-        display: block;
+        display: none;
         position: absolute;
-        top: 50%;
+        
         width: 29px;
         height: 56px;
         background: url(../images/carousel-arrow.png) no-repeat transparent;
@@ -388,9 +478,54 @@
 .carousel{
     &__indicators{
         display: none;
+        right: 40px;
+        bottom: 15px;
+        left: auto;
+        width: auto;
+        margin: 0;
+        
+        li{
+            width: 14px;
+            height: 14px;
+            border:none;
+            background: $red;
+            margin: 0;
+            
+            &.active{
+                width: 14px;
+                height: 14px;
+                border:none;
+                background: $white;
+            }
+        }
     }
 }// END carousel
 
+
+
+/**
+* OWL dots
+*/
+.owl-controls{
+    width: 100%;
+}
+.owl-dots{
+    text-align: center;
+    margin: 10px 0;
+    .owl-dot{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border:none;
+        background: $red;
+        margin: 2px;
+        border-radius: 50%;
+        
+        &.active{
+            background: $dark-gray;
+        }
+    }
+}//end dots
 
 /**
 * News feed slider on banner bottom (Owl carousell)
@@ -473,14 +608,13 @@
 /**
 * Promotion tiles block with images
 */
-
 .promo{
-    width: 50%;
-    max-width: 230px;
-    height: 230px;
-    float: left;
+    width: 100%;
+    height: auto;
     position: relative;
     overflow: hidden;
+    float: none;
+    margin: 0 auto;
     
     &__poster{
         width: 100%;
@@ -516,7 +650,6 @@
     &--default{
         .promo__caption{
             background: transparent;
-            
             color: $gray;
         }
     }
@@ -652,7 +785,7 @@
     }
     
     &--lg{
-        font-size: 24px;
+        font-size: 22px;
     }
     
 }// END Heading
@@ -662,8 +795,8 @@
 * Margin top and bottom wrapper for  heading or group of headings like (h1, h2, h3, h4)
 */
 .hgroup{
-    margin-top: 40px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }// END hgroup
 
 
@@ -691,13 +824,12 @@
 * Program courses images
 */
 .program{
-    &__item{
-        width: 25%;
+    &__item{        
+        width: 100%;
         height: auto;
-        //width: 269px;
-        //height: 273px;
         overflow: hidden;
-        float: left;
+        float: none;
+        margin: 0 auto;
         position: relative;
         
         display: flex;
@@ -737,6 +869,7 @@
 */ 
 
 .program{
+    
     &__ico{
         display: block;
         width: 36px;
@@ -793,8 +926,16 @@
         color: $dark-gray;
         font-size: 12px;
         border-bottom: 1px dotted $dark-gray;
+     
         
         &:hover, &:focus{
+            color: $red;
+            text-decoration: none;
+        }
+    }
+    
+    .active{
+        .date-filter__date{
             color: $red;
             text-decoration: none;
         }
@@ -841,6 +982,11 @@
         float: left;
         margin-bottom: 18px;
         position: relative;
+        
+        &.focus .red-form__label{
+            bottom: 25px;
+            font-size: 10px;
+        }
     }
     
     &__label{
@@ -852,6 +998,9 @@
         left: 5px;
         bottom: 15px;
         margin-bottom: 2px;
+        
+        transition: bottom .3s ease, font-size .3s ease;
+        
     }
     
     &__input{
@@ -864,15 +1013,17 @@
         
         line-height: 1;
         font-size: 14px;
-        color: $black;
+        color: $white;
     }
     
 }// END red-form
 
-
+.red-form__input:hover  .red-form__label{
+    bottom: 25px;
+}
 /**
 * Small red logo
-*/
+*/ 
 .logo-red-sm{
     width: 43px;
     height: 35px;
@@ -895,6 +1046,24 @@
 
 
 /**
+* News block tabs
+*/
+.news-block{
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    display: none !important;
+    opacity: 0;
+    transition: opacity .3s ease;
+    
+    &.active{
+        display: block !important;
+        display: flex !important;
+    }
+}
+
+
+/**
 * News post
 */
 .post{
@@ -902,8 +1071,8 @@
     margin-bottom: 18px;
     
     &__img{
-        max-width: 100%;
-        margin-bottom: 25px;
+        width: 100%;
+        margin-bottom: 10px;
     }
     
     &__posted{
@@ -918,7 +1087,8 @@
         color: $paragraph;
         padding: 0 10px;
         
-        font-size: 14px;
+        font-size: 12px;
+        word-wrap: break-word;
         text-transform: uppercase;
         font-weight: bold;
         line-height: 1.4;
@@ -930,10 +1100,10 @@
         float: left;
     }
     
-    &__body{
-        width: calc(100% - 60px);
-        float: right;
-        padding: 0 10px;
+    &__body{        
+        width: 100%;
+        float: right;        
+        padding: 10px 0 0 0;
     }
     
     &__text{
@@ -1044,11 +1214,25 @@
     }
 }
 
+
+/**
+* Google map and subscribe form
+*/
+
+.bottom-map{
+    margin-top: 0;
+    position: relative;
+    
+    &__map{
+        height: 300px;
+    }
+    
+}// end bottom-map
+
 /**
 * Footer
 */
 .footer{
-    margin-top: 45px;
     
     &__logo{
         width: 75px;
@@ -1057,6 +1241,15 @@
         float: left;
         margin-right: 10px;
         background: url(../images/logo-icon-large.png) no-repeat transparent;
+        background-size: cover;
+        
+        &--sm{
+            width: 46px;
+            height: 28px;
+            display: inline-block;
+            background: url(../images/logo-icon.png) no-repeat transparent;
+            background-size: cover;
+        }
     }
     
     &__bottom{
@@ -1065,6 +1258,8 @@
         
         color: $white;
         font-size: 12px;
+        position: relative;
+        z-index: 3;
     }
     
     &__copyright{
@@ -1074,6 +1269,15 @@
     &__flex{
         display: flex;
         align-items: center;
+    }
+    
+    &__mobile-txt{
+        .glyphicon{
+            font-size: 20px;
+            margin-right: 16px;
+            display: block;
+            float: left;
+        }
     }
     
 }// footer
