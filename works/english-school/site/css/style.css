@@ -1132,6 +1132,102 @@
 }
 
 /**
+* Services grid posts 
+*/
+.services-grid {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.services-grid__item {
+  margin-bottom: 17px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.services-grid__poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  float: left;
+  margin-bottom: 15px;
+}
+
+/**
+* Teachers slider
+*/
+.teachers__slider {
+  display: block;
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.teachers__picture {
+  padding: 0;
+  position: relative;
+}
+
+.teachers__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.teachers__caption {
+  display: block;
+  width: 100%;
+  height: auto;
+  float: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(4, 5, 5, 0.4);
+  padding: 13px 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.teachers__link {
+  display: block;
+  width: 33px;
+  height: 33px;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  float: right;
+  opacity: .7;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+}
+
+.teachers__link:hover, .teachers__link:focus {
+  opacity: 1;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(218, 45, 41, 0.2);
+}
+
+/**
 * Social icons link icons
 */
 .red-square {
@@ -1502,6 +1598,10 @@
   .article-form {
     padding: 0;
   }
+  .services-header {
+    text-align: left;
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 480px) {
@@ -1523,6 +1623,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .services-header {
+    text-align: center;
+  }
   .promo-tiles {
     padding-right: 15px;
     margin-top: 0;
@@ -1555,6 +1658,15 @@
   .article-form .red-form {
     padding-top: 40px;
     padding-bottom: 70px;
+  }
+  /**
+    * Teachers slider
+    */
+  .teachers .owl-dots {
+    display: inline-block !important;
+    position: absolute !important;
+    top: -70px;
+    right: 0;
   }
 }
 
@@ -1859,6 +1971,13 @@
     position: absolute;
     top: 50%;
     right: 0;
+  }
+  /**
+    * Services grid posts 
+    */
+  .services-grid__item {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 

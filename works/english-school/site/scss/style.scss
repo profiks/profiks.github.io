@@ -1213,6 +1213,95 @@
     }
 }// end post
 
+/**
+* Services grid posts 
+*/
+.services-grid{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__item{
+        margin-bottom: 17px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    &__poster{
+        width: 100%;
+        height: auto;
+        display: block;
+        float: left;
+        margin-bottom: 15px;
+    }
+}//end services-grid
+
+
+/**
+* Teachers slider
+*/
+.teachers{
+    &__slider{
+        display: block;
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+    }
+    
+    &__picture{
+        padding: 0;
+        position: relative;
+    }
+    
+    &__img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    &__caption{
+        display: block;
+        width: 100%;
+        height: auto;
+        float: left;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgba(#040505, .4);
+        padding: 13px 6px;
+        
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    &__link{
+        display: block;
+        width: 33px;
+        height: 33px;
+        background: none;
+        border: 1px solid $white;
+        border-radius: 50%;
+        float: right;
+        
+        opacity: .7;
+        
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+        
+        &:hover, &:focus{
+            opacity: 1;
+            color: $white;
+            text-decoration: none;
+            background: rgba($red, .2);
+        }
+    }
+    
+}// end teachers
 
 /**
 * Social icons link icons

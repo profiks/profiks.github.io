@@ -153,6 +153,34 @@ $(document).ready(function(){
         items:1
     })
     
+    /**
+    * Teachers carousel
+    */
+    
+    $('#teachersCarousel').owlCarousel({
+        loop:true,
+        nav:true,
+        navText : ['',''],
+        margin:0,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:3
+            },            
+            960:{
+                items:4
+            },
+            1024:{
+                items:4
+            },
+            1200:{
+                items:4
+            }
+        }
+    })
+    
     
     
     

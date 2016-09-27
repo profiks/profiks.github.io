@@ -356,6 +356,18 @@
     }
     
     
+    /**
+    * Services grid posts 
+    */
+    .services-grid{
+
+        &__item{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    
+   
 }// end media query 768px
 
     
