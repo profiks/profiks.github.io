@@ -57,6 +57,19 @@ $(document).ready(function(){
     
     
     /**
+    * Bootstrap carousel on mobile
+    * @use jquery-mobile : site/js/vendor/jquery.mobile-events.min.js
+    */
+    
+    $('.banner__content').swiperight(function() {
+        $("#myCarousel").carousel("prev")
+    }),
+    $('.banner__content').swipeleft(function() {
+        $("#myCarousel").carousel("next")
+    })
+    
+    
+    /**
     * Program courses carousel enabled only on mobile and thablet
     * @use owl carousel plugin : site/js/owl.carousel.min.js
     */
