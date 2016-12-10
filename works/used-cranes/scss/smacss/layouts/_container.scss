@@ -1,0 +1,71 @@
+/**
+* Main container
+*/
+[class$="__container"]{
+    
+    width: 100%;
+    max-width: $desktop--lg;
+    margin: 0 auto;
+    position: relative;
+    
+        
+    &:before{
+        content: '';
+        display: table;
+    }
+    
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+
+/**
+* Fluid container
+*/
+[class^="container--fluid"]{    
+    max-width: 1280px;
+}
+
+
+
+/**
+* Row class
+*/
+[class$="--row"]{
+    margin: 0 -20px;
+}
+
+/**
+* Block floating
+*/
+.block{
+    width: 100%;
+    float: left;
+}
+
+
+/**
+* Columns
+*/
+.column{
+    display: block;
+    float: left;
+    
+    &--half{
+        width: 50%;
+        padding: 0 13px;
+        
+        &:first-child, &:first-of-type{
+            padding-left: 0;
+        }
+        
+        &:last-child, &:last-of-type{
+            padding-right: 0;
+        }
+    }
+}
+
+

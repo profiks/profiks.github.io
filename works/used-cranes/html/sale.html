@@ -1,0 +1,171 @@
+@@include('./blocks/head.html', {
+        "title": "Продать кран"
+})
+    
+
+@@include('./blocks/header.html')     
+     
+         
+<!-- Navigation block -->
+@@include('./blocks/navigation.html',{
+    "nav" : 5
+}) 
+    
+<!-- Site content -->
+ <main class="main block">  
+    <div class="main__container">
+    
+       <article class="content" role="main">
+           
+           
+           <div class="app-tab">
+               
+               <div class="app-tab__header">
+                   
+                   <a  href="buy.html" class="app-tab__switch" data-tab="buyCran">
+                       <span class="app-tab__ico">
+                           <span class="icon icon--cart"></span>
+                       </span>
+                       
+                       <h2 class="app-tab__heading">купить кран</h2>
+                       <h3 class="app-tab__slug">искать по параметрам</h3>
+                       
+                   </a> <!-- /.app-tab__switch -->
+                   
+                   <a href="sale.html" class="app-tab__switch active" data-tab="saleCran">
+                       <span class="app-tab__ico">
+                           <span class="icon icon--hands"></span>
+                       </span>
+                       
+                       <h2 class="app-tab__heading">продать кран</h2>
+                       <h3 class="app-tab__slug">создать объявление</h3>
+                       
+                   </a> <!-- /.app-tab__switch -->
+                   
+               </div> <!-- /.app-tab__header -->
+               
+               
+               
+               
+               <div class="app-tab__content">
+                   
+                   <div class="app-tab__slide current" id="saleCran">
+                       
+                       <p class="paragraph heading--center">Заполните форму на продажу крана, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                   
+                   
+                       <h3 class="heading heading--h3 heading--uppercase">Выберите тип крана:</h3>
+
+                       <div class="control-wrapper">
+
+                          <div class="select">                          
+                              <select name="cranType" id="cranType" class="select__inp">
+                                   <option value="0">Башенные строительные краны</option>
+                                   <option value="1">Грейферы</option>
+                                   <option value="2">Гусеничные краны</option>
+                                   <option value="3">Железнодорожные краны</option>
+                                   <option value="4">Козловые краны</option>
+                                   <option value="5">Консольные краны</option>
+                                   <option value="6">Кран-балки</option>
+                                   <option value="7">Мостовые краны электрические</option>
+                                   <option value="8">Тележки грузовые</option>
+                               </select>
+                          </div>
+
+                       </div>
+
+
+
+                       <h3 class="heading heading--h3 heading--uppercase">Пример заголовка для выбора значений:</h3>
+
+                       <div class="control-wrapper">
+                           <input class="radio__inp" id="radio1" type="radio" name="radio-box" value="0">
+                           <label class="radio__label" for="radio1"><span class="radio__mark"></span> тут пример большого текста этого значения</label>
+
+                           <input class="radio__inp" id="radio2" type="radio" name="radio-box" value="1">
+                           <label class="radio__label" for="radio2"><span class="radio__mark"></span> Значение 1</label>
+
+                           <input class="radio__inp" id="radio3" type="radio" name="radio-box" value="2">
+                           <label class="radio__label" for="radio3"><span class="radio__mark"></span> Значение 2</label>
+
+                           <input class="radio__inp" id="radio4" type="radio" name="radio-box" value="3">
+                           <label class="radio__label" for="radio4"> <span class="radio__mark"></span> Значение 3</label>
+                       </div>
+
+
+                       <h3 class="heading heading--h3 heading--uppercase">Пример заголовка для выбора значений:</h3>
+
+                       <div class="control-wrapper">
+                           <input class="checkbox__inp" id="checkbox1" type="checkbox" name="checkbox1" value="value">
+                           <label for="checkbox1" class="checkbox__label"> <span class="checkbox__mark"></span> Значение 1</label>
+
+                           <input class="checkbox__inp" id="checkbox2" type="checkbox" name="checkbox1" value="value">
+                           <label for="checkbox2" class="checkbox__label"> <span class="checkbox__mark"></span> Значение 1</label>
+
+
+                           <input class="checkbox__inp" id="checkbox3" type="checkbox" name="checkbox1" value="value">
+                           <label for="checkbox3" class="checkbox__label"> <span class="checkbox__mark"></span> Значение 1</label>
+
+                           <input class="checkbox__inp" id="checkbox4" type="checkbox" name="checkbox1" value="value">
+                           <label for="checkbox4" class="checkbox__label"> <span class="checkbox__mark"></span> Значение 1</label>
+
+                       </div>
+
+
+                       <h3 class="heading heading--h3 heading--uppercase">заполните ваши данные:</h3>
+
+                       <form action="#" class="contact-form" id="orderForm">
+
+                           <div class="contact-form__block contact-form__block--third">
+                               <input type="text" tabindex="1" placeholder="Введите Ваше имя" class="contact-form__input">
+                           </div>
+
+                           <div class="contact-form__block contact-form__block--third contact-form__block--center">
+                               <input type="text" tabindex="2" placeholder="Ваш телефон" class="contact-form__input phone-mask">
+                           </div>
+
+                           <div class="contact-form__block contact-form__block--third contact-form__block--right">
+                               <input type="text" tabindex="3" placeholder="Ваш e-mail" class="contact-form__input">
+                           </div>
+
+                           <div class="contact-form__block">
+                               <textarea tabindex="4" class="contact-form__text" name="name" id="" placeholder="Дополнительные пожелания к заказу"></textarea>
+                           </div>
+
+                           <div class="contact-form__block">
+                               <button tabindex="6" type="submit" class="btn btn--orange btn--underline contact-form__btn">разместить объявление</button>
+                           </div>
+
+
+                       </form>
+                       
+                   </div> <!-- /.app-tab__slide -->
+                   
+                   
+                   
+                   
+               </div> <!-- /.app-tab__content -->
+               
+               
+               
+           </div> <!-- /.app-tab -->
+           
+           
+       </article> <!-- /.content -->       
+       
+    </div> <!-- /.container -->
+</main> <!-- /.main -->
+    
+    
+
+    
+<!-- Footer -->
+<!-- Footer -->
+@@include('./blocks/footer.html', {
+    "contacts" : false
+}) 
+    
+
+@@include('./blocks/bottom.html') 
+  
+    

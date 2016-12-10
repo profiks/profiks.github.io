@@ -1,0 +1,125 @@
+// ***** classes for text displaing *****
+
+
+.heading{
+    color: $color--black;
+    line-height: 1.2;
+    
+    &--h1{
+        font-size: em(50);
+        font-weight: bold;
+        text-transform: uppercase;
+        
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    &--med{
+        font-size: em(40);
+        font-weight: bold;
+        text-transform: uppercase;
+        
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    
+    &--h2{
+        font-size: em(26);
+        font-weight: bold;
+        line-height: 1.2;
+        
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+    
+    &--h3{
+        font-size: em(20);
+        letter-spacing: 4px;
+        font-weight: bold;
+        text-transform: uppercase;
+        
+        margin-bottom: 50px;
+    }
+    
+    &--h4{
+        font-size: em(20);
+        font-weight: bold;
+        text-transform: uppercase;
+        
+        margin-bottom: 45px;
+    }
+    
+    &--center{
+        text-align: center;
+    }
+    
+    
+    &--white{
+        color: $color--white;
+    }
+    
+    &--gray{
+        color: $color--gray-dark;
+    }
+    
+}
+
+
+
+
+.text{
+    color: $color--black;
+    font-size: em(16);
+    line-height: 1.4;
+    
+    margin-bottom: 10px;
+    
+    &--white{
+        color: $color--white;
+    }
+}
+
+
+
+
+
+.breadcrumb{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    &__item{
+        display: inline-block;
+        margin-right: 5px;
+        
+        &:after{
+            content: ' / ';
+            color: $color--gray-light;
+            text-decoration: none;
+            font-size: em(13);
+            opacity: .8;
+        }
+        
+        &:last-child{
+            
+            &:after{
+                display: none;
+            }
+            
+            .breadcrumb__link{
+                color: $color--gray-light;
+                opacity: 1;
+            }
+            
+        }
+    }
+    
+    &__link{
+        color: $color--gray-light;
+        text-decoration: none;
+        font-size: em(13);
+        padding: 10px;
+        opacity: .8;
+    }
+}//end breadcrumb

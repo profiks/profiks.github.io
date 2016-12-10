@@ -1,0 +1,148 @@
+@@include('./blocks/head.html', {
+        "title": "Купить кран"
+})
+    
+
+@@include('./blocks/header.html')     
+     
+         
+<!-- Navigation block -->
+@@include('./blocks/navigation.html',{
+    "nav" : 5
+})
+    
+<!-- Site content -->
+ <main class="main block">  
+    <div class="main__container">
+    
+       <article class="content" role="main">
+           
+           
+           <div class="app-tab">
+               
+               <div class="app-tab__header">
+                   
+                   <a  href="buy.html" class="app-tab__switch active" data-tab="buyCran">
+                       <span class="app-tab__ico">
+                           <span class="icon icon--cart"></span>
+                       </span>
+                       
+                       <h2 class="app-tab__heading">купить кран</h2>
+                       <h3 class="app-tab__slug">искать по параметрам</h3>
+                       
+                   </a> <!-- /.app-tab__switch -->
+                   
+                   <a href="sale.html" class="app-tab__switch" data-tab="saleCran">
+                       <span class="app-tab__ico">
+                           <span class="icon icon--hands"></span>
+                       </span>
+                       
+                       <h2 class="app-tab__heading">продать кран</h2>
+                       <h3 class="app-tab__slug">создать объявление</h3>
+                       
+                   </a> <!-- /.app-tab__switch -->
+                   
+               </div> <!-- /.app-tab__header -->
+               
+               
+               
+               
+               <div class="app-tab__content app-tab__content--no-padding">
+                   
+                   <div class="app-tab__slide current" id="buyCran">
+                       
+                       
+                       <div class="cat-filter">
+                           
+                           <p class="paragraph cat-filter__text"><span class="cat-filter__badge"><i class="icon icon--cran"></i></span>Выберите вид крана, подходящий под ваш запрос:</p>
+                           
+                           <div class="select cat-filter__select">                          
+                              <select name="cranType" id="cranType" class="select__inp">
+                                   <option value="0">Башенные строительные краны</option>
+                                   <option value="1">Грейферы</option>
+                                   <option value="2">Гусеничные краны</option>
+                                   <option value="3">Железнодорожные краны</option>
+                                   <option value="4">Козловые краны</option>
+                                   <option value="5">Консольные краны</option>
+                                   <option value="6">Кран-балки</option>
+                                   <option value="7">Мостовые краны электрические</option>
+                                   <option value="8">Тележки грузовые</option>
+                               </select>
+                          </div>
+                          
+                       </div> <!-- cat-filter -->
+                       
+                       
+                       <section class="product">
+                           <img src="i/prod2.jpg" alt="sdfsdf" class="product__img">
+                           <div class="product__info">
+                               <h2 class="heading heading--h2">Гусеничный кран РДК-250</h2>
+
+                               <p class="paragraph">РДК-250 — краны на рельсовом полотне, с поворотной башней переменной. Башенные краны серии КБ-403 находятся под усиленным контролем за эксплуатацией органов Госгортехнадзора.</p>
+
+                               <a href="#callDialog" class="popup-with-zoom-anim product__btn product__btn btn btn--orange">заказать кран</a>
+                               <a href="#callDialog" class="popup-with-zoom-anim product__btn product__btn btn btn--gray">подробнее о кране</a>
+                           </div> <!-- /.info -->
+
+                       </section>
+
+
+                       <section class="product">
+
+                           <img src="i/prod3.jpg" alt="sdfsdf" class="product__img">
+
+                           <div class="product__info">
+                               <h2 class="heading heading--h2">Гусеничный кран РДК-250</h2>
+
+                               <p class="paragraph">РДК-250 — краны на рельсовом полотне, с поворотной башней переменной. Башенные краны серии КБ-403 находятся под усиленным контролем за эксплуатацией органов Госгортехнадзора.</p>
+
+                               <a href="#callDialog" class="popup-with-zoom-anim product__btn product__btn btn btn--orange">заказать кран</a>
+                               <a href="#callDialog" class="popup-with-zoom-anim product__btn product__btn btn btn--gray">подробнее о кране</a>
+                           </div> <!-- /.info -->
+
+                       </section>
+                       
+                   </div><!-- /.app-tab__slide -->
+                   
+                   
+                   
+                   
+                   <div class="action-message">
+
+                       <h3 class="heading heading--h1 heading--center">Не нашли нужный кран?</h3>
+                       
+                       <p class="paragraph heading--center">Заполните форму заявки на заказ крана, consectetur adipisicing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris <br> nisi ut aliquip ex ea commodo consequat.</p>
+
+                   </div> <!-- /.action messsage -->
+                   
+                   
+                    <div class="call-to-action">
+                       <a href="#callDialog" class="popup-with-zoom-anim btn btn--orange btn--underline call-to-action__btn">заполнить форму заявки</a>
+                   </div>
+                   
+                   
+               </div> <!-- /.app-tab__content -->
+               
+               
+               
+           </div> <!-- /.app-tab -->
+           
+           
+       </article> <!-- /.content -->       
+       
+    </div> <!-- /.container -->
+</main> <!-- /.main -->
+    
+    
+
+    
+<!-- Footer -->
+<!-- Footer -->
+@@include('./blocks/footer.html', {
+    "contacts" : false
+}) 
+    
+
+@@include('./blocks/bottom.html') 
+  
+    

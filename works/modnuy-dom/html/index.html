@@ -1,0 +1,250 @@
+@@include('./blocks/head.html', {
+        "title": "Главная"
+})
+    
+    
+@@include('./blocks/header.html', {
+    "nav" : 0  
+})
+   
+   
+@@include('./blocks/navigation.html', {
+    "nav" : 0   
+})
+    
+   
+    
+    
+    
+    
+    <!-- Carousel slider -->
+    
+    <section class="slider block overlay overlay--dark post-nav">
+        <div class="slider__container">
+            
+           @@include('./blocks/rotator.html')
+            
+        </div><!-- /.container -->
+    </section> <!-- /.slider -->
+  
+   
+   
+    <!-- Site content -->
+    <section class="main block"> 
+      
+       <div class="separator">
+           <div class="separator__ico">
+               <span class="icon icon--check"></span>
+           </div>
+       </div>
+        
+       <div class="main__container">
+    
+               <h3 class="heading heading--h3 heading--center">Почему мы?</h3>
+               
+               @@include('./blocks/promo.html')
+                
+       
+       </div> <!-- /.container -->
+    </section> <!-- /.main -->
+    
+    
+    
+    <!-- Our works Gallery -->
+    
+    <section class="work-gallery block">
+        
+        <div class="works-hero overlay overlay--dark">
+            
+            <div class="works-hero__container">
+                <h2 class="heading heading--med heading--white heading--center">наши работы</h2>
+            
+                <p class="works-hero__text paragraph employer__desc heading--center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quis laborum aperiam magnam fuga voluptas quam dolore quo. Deserunt, enim vel porro a provident nisi veritatis molestias iste! Quod, expedita.</p>
+
+                <a href="#" class="button">смотреть все работы</a>
+            </div> <!-- /.container -->
+            
+        </div> <!-- /.works-hero -->
+        
+        
+        
+        @@include('./blocks/gallery.html')
+        
+    </section> <!-- work-gallery -->
+    
+    
+    
+    
+    <!-- Video carousel slider -->
+    
+    <section class="video-slide block">
+       
+       <div class="separator">
+           <div class="separator__ico">
+               <span class="icon icon--camera"></span>
+           </div>
+       </div>
+       
+        <div class="video-slide__container">
+           
+            <h3 class="heading heading--h3 heading--center">узнайте больше</h3>
+            
+            
+            @@include('./blocks/cascade-slider.html')
+            
+        </div> <!-- /.container --> 
+        
+        <div class="separator">
+          <div class="separator__btn">
+               <a href="#" class="button">Больше видео</a>
+           </div>
+           
+       </div>     
+                             
+    </section> <!-- /.video-slide -->
+    
+    
+    
+    <!-- Offers navigation tiles -->
+    
+    <section class="offer-block block">
+       
+        <div class="separator">
+           <div class="separator__ico">
+               <span class="icon icon--offer"></span>
+           </div>
+       </div> <!-- /.separator -->
+       
+        <div class="offer-block__container">
+            
+            <h3 class="heading heading--h3 heading--center">узнайте больше</h3>            
+            
+            @@include('./blocks/offer.html')
+            
+        </div> <!-- /.container -->     
+    </section> <!-- /.offer-block -->
+    
+    
+    
+    <!-- Clients comments -->
+    
+    <section class="testimonials block overlay overlay--dark">
+       
+       <div class="separator">
+           <div class="separator__ico">
+               <span class="icon icon--comments"></span>
+           </div>
+       </div> <!-- /.separator -->
+       
+        <div class="testimonials__container">
+            
+            <h3 class="heading heading--h3 heading--center heading--white">отзывы наших клиентов</h3>  
+            
+            
+            @@include('./blocks/comments.html')
+            
+        </div> <!-- /.container --> 
+        
+        <div class="separator">
+          <div class="separator__btn">
+               <a href="#" class="button">смотреть все отзывы</a>
+           </div>
+           
+       </div>        
+                             
+    </section> <!-- /.testimonials  -->
+    
+    
+    
+    <!-- Our team block -->
+    
+    <section class="team block">
+       
+        <div class="separator">
+           <div class="separator__ico">
+               <span class="icon icon--team"></span>
+           </div>
+       </div> <!-- /.separator -->
+        
+        <div class="team__container">
+            
+            <h3 class="heading heading--h3 heading--center">наша команда</h3> 
+            
+            @@include('./blocks/employers.html')
+            
+            
+        </div> <!-- /.container -->
+    </section> <!-- /.team -->
+    
+    
+    
+    
+    <!-- Jumbotron block -->
+    
+    <section class="jumbotron block">
+        
+        <div class="jumbotron__left overlay overlay--light">            
+            <div class="jumbotron__container">
+              
+                  <h2 class="heading heading--h2 heading--center">Готова Вам помочь!</h2>
+                  
+                  <div class="asistent"> 
+                                      
+                    <span class="employer__thumbnail">
+                        <img src="upload/employer1.jpg" alt="sdfsdf" class="employer__avatar"> 
+                    </span>
+                                       
+                    <span class="asistent__info">
+                        <h3 class="employer__name">Наталья</h3>
+                        <h4 class="employer__position">Директор компании</h4>
+                        <p class="employer__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia numquam recusandae perferendis voluptate voluptates tempora quidem, nobis. Placeat, rem blanditiis. Accusamus maxime saepe non natus, ipsam sequi at quasi, nostrum!</p>
+                    </span> <!-- /.info -->
+                    
+                </div> <!-- /.employer -->
+                
+            </div><!-- .container--half -->         
+        </div> <!-- /.left -->
+        
+        
+        <div class="jumbotron__right overlay overlay--dark">            
+             <div class="jumbotron__container">
+              
+               <h2 class="heading heading--h2 heading--white heading--center">Я помогу Вам <br>сделать все правильно!</h2>
+               <p class="paragraph employer__desc heading--center">Пожалуйста, оставьте свои контакты и я перезвоню Вам:</p>
+               <form action="#" class="contact-form">
+                   <div class="contact-form__input-group">
+                      <span class="icon icon--person"></span>
+                       <input type="text" placeholder="Как к Вам обращаться?" class="contact-form__input">
+                   </div>
+                   <div class="contact-form__input-group">
+                      <span class="icon icon--contact-phone"></span>
+                       <input id="phone" type="text" placeholder="Контактный телефон" class="contact-form__input contact-form__phone">
+                   </div>
+                   <button class="button contact-form__btn">перезвоните мне</button>                   
+               </form>
+                
+            </div><!-- .container--half -->            
+        </div> <!-- /.right -->
+        
+    </section> <!-- /.contact -->
+    
+    
+    
+    <!-- Custom Google map -->
+    
+    <section class="map block js-map" id="mapBlock">
+        <iframe class="map__iframe" src="map.html"></iframe>        
+    </section> <!-- /.map -->
+    
+    
+    
+  <!-- Footer -->
+@@include('./blocks/footer.html', {
+    "nav" : 0   
+}) 
+    
+
+@@include('./blocks/bottom.html') 
+
+  
+    

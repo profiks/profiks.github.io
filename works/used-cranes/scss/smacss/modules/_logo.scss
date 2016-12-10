@@ -1,0 +1,122 @@
+/**
+ * Logo styles
+ */
+.logo-panel{
+    background: $color__white;
+    width: 320px;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(39,39,39,.16);
+}
+
+.logo{
+    color: $color__nav;
+    text-decoration: none;
+    text-align: center;     
+    
+    &--top{
+        display: block;
+        float: left;
+        width: 100%; 
+    }
+    
+    &__icon{
+        display: block;
+        width: 65px;
+        height: 64px;
+        background: url(../img/sprite/logo-big.png#sprite);
+        margin: 0 auto;
+    }
+     
+    &__svg{
+        width: 65px;
+        height: 65px;
+    }
+      
+    &__title{    
+        display: block;
+        margin: 15px auto 10px auto;
+    }
+    &__slug{
+        display: block;
+        margin-right: - em(9);
+        
+        font-size: em(9);
+        text-transform: uppercase;
+        letter-spacing: em(9);
+    }
+    
+    &__desc{
+        padding: 5px 10px;
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    /**
+     * Bottom logo
+     */
+    
+    &--bottom{        
+        display: flex;
+        
+        color: $color__white;
+        
+        .logo__svg{
+            width: 50px;
+            height: 50px;
+        }   
+        
+        .logo__title{
+            font-size: em(24);
+            margin: 0 0 5px 0;
+        }
+        
+        .logo__slug{
+            font-size: em(7);
+        }
+        
+    } // end bottom  
+    
+    
+    &--mobile{ 
+        width: 50%;
+        height: 100%; 
+        background: $color__white; 
+        float: left;
+        padding: 5px;
+        
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+        
+        color: $color__nav;  
+        
+        display: none;
+        
+        
+        .logo__svg{
+            width: 34px;
+            height: 34px;
+        }
+        
+        .logo__title{
+            margin: 0 auto 5px auto;
+            max-width: 90%;
+            width: 100%;
+        }
+        
+        .logo__slug{
+            font-size: em(6);
+            letter-spacing: 1.5px;
+        }
+        
+    } // end bottom
+    
+    
+}// end logo
+
+

@@ -1,0 +1,56 @@
+
+/**
+ * Search form
+ */
+.search-form{ 
+    float: right;
+    min-width: 200px; 
+    width: auto;
+    height: 38px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    position: relative;
+    display: none;
+    
+    &__label{
+        display: block;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    &__input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        background: $color__form;
+        padding: 13px 40px 13px 20px;
+        
+        color: $color__white;
+        font-size: em(12);
+        font-weight: 500;
+        
+        &:focus{
+            outline: $color__orange auto 1px;
+        }
+    }
+    
+    &__submit{
+        display: block;
+        border: 0;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+        cursor: pointer;
+        width: 14px;
+        height: 14px;
+        background-image: url(../img/sprite/m-glass.png#sprite);
+        background-color: transparent;
+        
+        &:focus{
+            outline: none;
+        }
+    }
+    
+}// form

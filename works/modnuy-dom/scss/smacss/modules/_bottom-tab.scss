@@ -1,0 +1,54 @@
+.bottom-tab{
+    width: 100%;
+    
+    
+    &__header{
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid $color--white;
+    }
+    
+    &__item{
+        display: inline-block;
+        width: 33.3%;
+        float: left;
+    }
+    
+    &__link{
+        width: 100%;        
+        padding: 12px;
+        float: left;
+        
+        transition: all .2s linear;
+        
+        text-align: center;
+        font-size: em(13);
+        color: $color--gray;
+        text-decoration: none;
+    }
+    
+    &__block{
+        width: 100%;
+        float: left;
+        display: none;
+    }
+    
+    &__line{
+        width: 100%;
+        float: left;
+        padding-top: 24px;
+        
+        display: flex;
+        align-items: center;
+        
+    }
+    
+    &__text{
+        color: $color--gray;
+        font-size: em(13);
+        line-height: 1.5;
+        width: calc(100% - 50px);
+        padding-left: 24px;
+    }
+    
+}

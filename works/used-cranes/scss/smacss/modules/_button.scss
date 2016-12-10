@@ -1,0 +1,48 @@
+/**
+ * Buttons
+ */
+.btn{
+    display: inline-block;
+    padding: 15px 35px;
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: em(13);
+    font-weight: 500;
+    border-radius: 2px;
+    
+    text-align: center;
+    outline: none;
+    
+    transition: all .2s ease;
+    
+    &--orange{
+        background: $color__orange;
+        border: 1px solid $color__orange;
+        
+        color: $color__white;
+        text-shadow: 1px 1px rgba($color__orange--xdark,.55);
+        
+        &:hover{
+            background: $color__orange--light;
+        }
+    }
+    
+    &--underline{
+        box-shadow: 0 3px 0 0 #d78f06;
+        border-radius: 1px;
+    }
+    
+    &--gray{
+        background: $color__white;
+        border: 1px solid $color__gray;
+        
+        color: $color__line--dark;
+        
+        &:hover{
+            background: rgba($color__gray, .9);
+            color: $color__white;
+        }
+    }
+    
+}//end btn

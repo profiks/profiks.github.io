@@ -1,0 +1,67 @@
+.prod{
+    
+    width: 100%;
+    float: left;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+    &__figure{
+        width: calc(33.3% - 13.3px);
+        
+        float: left;
+        position: relative;
+        margin: 6px;
+        overflow: hidden;
+        cursor: default;
+        
+        &:hover .prod__ing{
+            transform: scale(1.2);
+        }
+        
+        &:hover .prod__btn{
+            transform: scale(1);
+        }
+        
+        &:hover .prod__caption{
+            bottom: 0;
+        }
+        
+    }
+    
+    &__caption{
+        display: block;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        background: rgba($color__nav, .8);
+        color: $color__white;
+        font-size: em(14);
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1.4;
+        transition: all .3s ease;
+    }
+    
+    &__ing{
+        max-width: 100%;
+        max-height: 100%;
+        transition: all .3s ease;
+        width: 100%;
+    }
+    
+    &__btn{
+        margin-top: 15px;
+        transition: all .3s ease;
+        transform: scale(0);
+        cursor: pointer;
+    }
+    
+}//end prod

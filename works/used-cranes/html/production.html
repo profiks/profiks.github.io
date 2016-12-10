@@ -1,0 +1,123 @@
+@@include('./blocks/head.html', {
+        "title" : "Наша продукция"
+})
+    
+
+@@include('./blocks/header.html')     
+     
+         
+<!-- Navigation block -->
+@@include('./blocks/navigation.html',{
+    "nav" : 1
+})
+    
+    
+<!-- Site banner -->
+@@include('./blocks/banner.html')
+
+   
+   
+    <!-- Site content -->
+    <main class="main block">  
+       <div class="main__container">
+    
+       <article class="content" role="main">
+            
+           @@include('./blocks/breadcrumb.html', {
+                "pagename" : "Продукция"
+           })
+            
+            <h1 class="heading heading--h1 heading--underline">Наша продукция</h1>
+           
+          
+           <div class="prod">
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile1.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">
+                       Башенные строительные краны <br>
+                       <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile2.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Гусеничные краны <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile3.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Грейферы <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile4.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Железнодорожные краны <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile5.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Козловые краны <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile6.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Консольные краны <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile7.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Кран-балки <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile1.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Мостовые краны электрические <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               <a href="category.html" class="prod__figure">                   
+                   <img src="i/prod-tile9.jpg" alt="asdasd" class="prod__ing">                   
+                   <span class="prod__caption">Тележки грузовые <br>
+                   <span class="prod__btn btn btn--orange" >подробнее</span>
+                   </span>
+               </a> <!-- figure -->
+               
+               
+           </div> <!-- /.prod -->       
+          
+          
+           
+       </article> <!-- /.content -->
+       
+       
+       </div> <!-- /.container -->
+    </main> <!-- /.main -->
+    
+   
+    
+
+<!-- Footer -->
+@@include('./blocks/footer.html', {
+    "contacts" : false
+}) 
+    
+
+@@include('./blocks/bottom.html') 
+  

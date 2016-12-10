@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Simple Polylines</title>
+        <style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		#map {
+			height: 100%;
+		}
+    	</style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+			  function initMap() {
+                
+                var style = [
+                    {
+                        "featureType": "all",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "gamma": 0.5
+                            }
+                        ]
+                    }
+                ];
+                
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 17,
+					center: {lat: 48.271549, lng: 25.995683},
+                    styles : style
+				});
+				var image    = new google.maps.MarkerImage("img/map-marker.png", new google.maps.Size(85,100),new google.maps.Point(0,0),new google.maps.Point(42,100));
+				var myLatLng = new google.maps.LatLng(48.271549, 25.995683);
+				var marker   = new google.maps.Marker({position:myLatLng, map:map, icon:image, title:"Title"});
+				google.maps.event.addListener(marker,'click', function() {infowindow.open(map,marker);});
+				var contentString = '58023, Adress';
+				var infowindow = new google.maps.InfoWindow({content: contentString});
+			}
+
+
+            
+		</script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALw8v3rBzndGUB0D5QRlf1gnSSf44H40k&callback=initMap&language=ru"></script>
+</body>
+</html>

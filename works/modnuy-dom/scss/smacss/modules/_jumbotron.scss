@@ -1,0 +1,103 @@
+.jumbotron{
+    
+    display: flex;
+    
+    &__container{
+        width: 100%;
+        max-width: #{$desktop--lg / 2 + 30px};
+        margin: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    &__left{
+        background: url(../img/contact-form-left-bg.jpg) no-repeat;
+        padding: 100px 0;
+        background-position: top center;
+        background-size: cover;
+        width: 50%;
+        float: left;
+        position: relative;
+        
+        [class$="__container"]{
+            float: right;
+        }
+        
+        .jumbotron__container{
+             &::after{
+                display: block;
+                width: 80%;
+                height: 2px;
+                background: $color--red;
+                position: absolute;
+                left: 10%;
+                bottom: 0;
+            }
+        }
+        
+    }
+    
+    &__right{
+        background: url(../img/contact-form-right-bg.jpg) no-repeat;
+        padding: 100px 0;
+        background-position: top center;
+        background-size: cover;
+        width: 50%;
+        float: left;
+        position: relative;
+        
+        [class$="__container"]{
+            float: left;
+        }
+        
+        .jumbotron__container{
+             &:before{
+                content: '';
+                display: block;
+                width: 0; 
+                height: 0; 
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+
+                border-left: 18px solid $color--white;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -20px;
+            }
+        }
+               
+    }//end right
+    
+    
+    &--inner{
+        
+        .jumbotron__container{
+            justify-content: flex-start;
+        }
+        
+        .jumbotron__left{
+            background: none;
+            
+            .jumbotron__container::after{
+                display: none;
+            }
+        }
+        
+        .jumbotron__right{
+            background: none;
+            
+            .jumbotron__container::before{
+                display: none;
+            }
+        }
+    }
+    
+    
+}// end contact

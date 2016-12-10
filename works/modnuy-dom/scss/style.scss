@@ -1,0 +1,33 @@
+/*******************************************************************************
+***
+***   Dear friend :
+***   When I wrote this code, only I and God knew what it was.
+***
+***   But now only God knows what is here ! 
+***   
+***   So, if you done trying to 'optimize' this code,
+***   please include this comment as a warning for the next guy who also will  
+***   trying to do this.
+***
+***   Author : denys.ark@gmail.com
+***
+********************************************************************************/
+
+@charset "UTF-8"; 
+
+/**
+* Import styles as SMACSS methodology
+*/
+
+@import './smacss/base/*';
+@import './smacss/layouts/*';
+@import './smacss/modules/*';
+@import './smacss/states/*';
+@import './smacss/theme/*';
+
+
+/**
+ * Responsive
+ */
+@import './smacss/media-queries'
+

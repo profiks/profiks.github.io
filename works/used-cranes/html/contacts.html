@@ -1,0 +1,145 @@
+@@include('./blocks/head.html', {
+        "title" : "Контакты"
+})
+    
+
+@@include('./blocks/header.html')     
+     
+         
+<!-- Navigation block -->
+@@include('./blocks/navigation.html',{
+    "nav" : 3
+})
+    
+    
+<!-- Site banner -->
+@@include('./blocks/banner.html')
+   
+   
+   
+    <!-- Site content -->
+    <main class="main block">  
+       <div class="main__container">
+    
+       <article class="content" role="main">
+           
+           @@include('./blocks/breadcrumb.html', {
+                "pagename" : "Контакты"
+           })
+           
+           <h1 class="heading heading--h1 heading--underline">Наши контакты</h1>
+            
+           
+           <div class="column column--half">
+               
+                <h3 class="heading heading--h3 heading--center heading--lead">Свяжитесь с нами:</h3>
+                
+                
+                <div class="tab">
+                   
+                    <div class="tab__header">
+                        <a href="#" class="tab__switch tab-nav active" data-tab="contact1">
+                            <span class="icon icon--pin"></span>
+                            03680, Украина, Киев, <br> ул. Малинская, 16, офис 2
+                        </a>
+                        
+                        <a href="#" class="tab__switch tab-nav" data-tab="contact2">
+                            <span class="icon icon--pin"></span>
+                            58023, Украина, Черновцы, <br> ул. Русская, 248, 1 этаж
+                        </a>
+                    </div> <!-- /.header -->
+                    
+                    <div class="tab__body">
+                         
+                         <div class="tab__content current" id="contact1">
+                             
+                             <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem minima ab vitae, repellat enim vero velit, autem mollitia unde perspiciatis, placeat ex perferendis. Earum sequi debitis quia magnam quos odio!</p>
+                             
+                             <p class="tab__text"> <span class="icon icon--phone-sm"></span> +38 (050) 375-32-32,   +38 (097) 081-90-00 </p>
+                             
+                             <p class="tab__text"> <span class="icon icon--mail-sm"></span> nik@gutman.com.ua </p>
+                             
+                         </div> <!-- /content -->
+                         
+                        <div class="tab__content" id="contact2"> 
+                             
+                             <p class="tab__text">Lorem ipsum dolor sit amet, consecte sdfsdf аор ллол оь щлва діва івдаоі ваіва ідо ідвало ілдова діа лоі лл л л ждолзждл дtur adi dgdfgodio!</p>
+                             
+                             <p class="tab__text"> <span class="icon icon--phone-sm"></span> +38 (050) 455-32-32,   +38 (097) 081-90-00 </p>
+                             
+                             <p class="tab__text"> <span class="icon icon--mail-sm"></span> nik@gfghfghutman.com.ua </p>
+                             
+                         </div> <!-- /content -->                         
+                        
+                    </div> <!-- /.body -->
+                                        
+                </div><!-- tab -->
+                
+               
+           </div> <!-- /.column -->
+           
+              
+           <div class="column column--half">
+               
+               <h3 class="heading heading--h3 heading--center heading--lead">Задайте нам вопрос:</h3>
+               
+               
+               <form action="#" class="contact-form" id="contactForm">
+                   
+                   <div class="contact-form__block">
+                       <input type="text" tabindex="1" placeholder="Введите Ваше имя" class="contact-form__input">
+                   </div>
+                                      
+                   <div class="contact-form__block contact-form__block--half">
+                       <input type="text" tabindex="2" placeholder="Ваш телефон" class="contact-form__input phone-mask">
+                   </div>
+                   
+                   <div class="contact-form__block contact-form__block--half contact-form__block--right">
+                       <input type="text" tabindex="3" placeholder="Ваш e-mail" class="contact-form__input">
+                   </div>
+                   
+                   <div class="contact-form__block">
+                       <textarea tabindex="4" class="contact-form__text" name="name" id="" placeholder="Напишите Ваш вопрос"></textarea>
+                   </div>
+                   
+                   
+                   <div class="contact-form__block contact-form__block--half">
+                       <img class="captcha" src="i/captcha.jpg" alt="captcha">
+                       <input type="text" tabindex="5" placeholder="Введите текст с картинки" class="contact-form__input contact-form__captcha">
+                   </div>
+                   
+                   <div class="contact-form__block contact-form__block--half contact-form__block--right">
+                       <button tabindex="6" type="submit" class="btn btn--orange contact-form__btn">отправить вопрос</button>
+                   </div>
+                   
+                   
+               </form> <!-- /.contact-form -->
+               
+               
+           </div>  <!-- /.column -->   
+            
+            
+            
+            
+           
+           
+       </article> <!-- /.content -->
+       
+       
+       </div> <!-- /.container -->
+    </main> <!-- /.main -->
+    
+      
+       
+<!-- Google map -->
+@@include('./blocks/g-map.html') 
+    
+<!-- Footer -->
+@@include('./blocks/footer.html', {
+    "contacts" : true
+}) 
+    
+
+@@include('./blocks/bottom.html') 
+  
+    

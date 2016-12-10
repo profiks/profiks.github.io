@@ -1,0 +1,61 @@
+@@include('./blocks/head.html', {
+        "title": "Услуги"
+})
+    
+
+@@include('./blocks/header.html')     
+     
+         
+<!-- Navigation block -->
+@@include('./blocks/navigation.html',{
+    "nav" : 2
+})
+    
+    
+<!-- Site banner -->
+@@include('./blocks/banner.html')
+
+   
+
+  
+    <!-- Site content -->
+ <main class="main block">  
+    <div class="main__container">
+    
+       <article class="content" role="main">
+          
+          @@include('./blocks/breadcrumb.html', {
+                "pagename" : "Услуги"
+           })
+          
+           <h1 class="heading heading--h1 heading--underline">“USED CRANES” - вторая жизнь крана</h1>
+           
+           <p class="paragraph">С помощью нашей компании <span class="paragraph__bold">«Вторая жизнь кранов»</span> Вы легко сможете продать башенный строительный кран, бывший в эксплуатации. У нас часто запрашивают б/у краны, потому что мы так же работаем с предприятиями, которым постоянно нужно купить подъемно транспортное оборудование и краны. Наша компания специализируется на покупке и продаже бу кранов, погрузочно — разгрузочных механизмов, грузоподъемной техники, а также запасных частей для крановых конструкций различных моделей.</p>
+           
+           <h4 class="heading heading--h2">Мы предлагаем несколько вариантов сотрудничества:</h4>
+           
+           <ul class="markers">
+               <li class="markers__item">наши менеджеры могут найти покупателя на ваш кран;</li>
+               <li class="markers__item">наша компания может выкупить ваш кран;</li>
+               <li class="markers__item">мы можем обменять старый кран на новый по системе трейд-ин.</li>
+           </ul>
+           
+           
+           <p class="paragraph"><span class="paragraph__bold">Система трейд-ин </span>— это способ покупки нового крана, при которой стоимость вашего старого крана, будет покрывать часть цены нового крана. Наша компания специализируется на покупке и продаже бу кранов, погрузочно — разгрузочных механизмов, грузоподъемной техники, а также запасных частей для крановых конструкций различных моделей.</p>
+           
+       </article> <!-- /.content -->       
+       
+    </div> <!-- /.container -->
+</main> <!-- /.main -->
+
+
+
+<!-- Footer -->
+@@include('./blocks/footer.html', {
+    "contacts" : false
+}) 
+    
+
+@@include('./blocks/bottom.html') 
+  
+    

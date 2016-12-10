@@ -1,0 +1,160 @@
+/* Slider */
+
+.slick-slider {
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+.slick-arrow{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border: none;
+    background: rgba($color--gray, .5);
+    padding: 0;
+    
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+    z-index: 7;
+    
+    &:before{
+        content: '';
+        display: block;
+        width: 13px;
+        height: 21px;
+        background: url(../img/sprite/arrow.png#sprite);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -10.5px;
+        margin-left: -6.5px;
+    }
+    
+    
+}
+
+
+
+.slick-prev{
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-next{
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+.slick-dots{
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    li{
+        display: inline-block;
+        
+        button{
+            width: 12px;
+            height: 12px;
+            border: none;
+            background: $color--white;
+            font-size: 0;
+            border-radius: 50%;
+            margin: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        &.slick-active{
+            button{
+                background: $color--red;
+                cursor: default;
+            }
+        }
+    }
+}

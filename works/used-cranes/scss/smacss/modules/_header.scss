@@ -1,0 +1,24 @@
+/**
+ * Header styles
+ */
+.header{
+    height: 193px;
+    background: url(../img/header-bg.jpg);
+    background-position: top center;
+    background-repeat: repeat;
+    
+    &__container{
+        height: 100%;
+        
+        display: flex;
+        flex-direction: row;        
+        flex: 1;
+    }
+    
+    &__contacts{
+        width: calc(100% - 320px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,11 @@
+.slider{
+    background: url(../img/slider-bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    &__container{
+        padding-top: 120px;
+        padding-bottom: 120px;
+        position: static;
+    }
+}
