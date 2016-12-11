@@ -1,0 +1,36 @@
+.share{
+    width: 100%;
+    position: relative;
+    
+    
+    
+    &__widget{
+        list-style: none;        
+        padding: 0;
+        margin: 0;
+        width: 40px;        
+        position: absolute;
+        right: -40px;        
+        bottom: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+        
+        transform: scale(1);
+        
+    }
+    
+   
+    
+    &__widget-item{
+        display: block;
+        background: #00b7f6;
+        padding: 7px 4px;
+    }
+    
+    &__widget-link{
+        width: 31px;
+        height: 31px;
+        display: block;
+    }
+}
+

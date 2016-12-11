@@ -30,13 +30,19 @@ $(document).ready(function(){
               $('body').scrollTo(goTo,{
 				duration:900,
                 axis:'y',
-                offset:-20  
+                offset:-40  
               });
               $('.goto span').removeClass('animated'); 
           }, 1000);
               
   });
     
+    
+    
+    $('.carret').on('click', function(e) {
+      $(this).toggleClass("active"); 
+      e.preventDefault();
+    });
     
     
     

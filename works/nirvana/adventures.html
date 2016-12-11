@@ -21,16 +21,6 @@
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
         <![endif]-->
-         <style>
-
-            body,html{
-                 -webkit-user-select: none;  
-                  -moz-user-select: none;    
-                  -ms-user-select: none;      
-                  user-select: none; 
-            }
-
-        </style>
     </head>        
     <body class="adventures-page"> 
         <!-- header -->
@@ -55,7 +45,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse txt-center" aria-expanded="false">
               <ul class="nav navbar-nav navbar-center">
-                <li class="active"><a href="adventures.html">Приключения</a></li>
+                <li class="active"><a href="#">Приключения</a></li>
                 <li><a href="#">Архив</a></li>
                 <li><a href="partner.html">Партнерам</a></li>            
                 <li><a href="contacts.html">Контакты</a></li>            
@@ -71,184 +61,194 @@
         </header> 
         <!-- end header -->
         
-        <section class="container nv-adventure-intro" id="adventuresIntro">
-        	<p><b>В каждом новом сезоне мы стараемся включить в план наших путешествий все пожелания. Мы обязательно посетим пару новых экзотических мест и повторим самые яркие треки из прошлого сезона. Участвуйте в придумывании новых путешествий. Это ведь так увлекательно! Итак вот план наших грядущих приключений.</b> </p>
-        	
-        	<h4 class="txt-center txt-blue">Ближайшие путешествия</h4>
-        	
+        
+        
+        
+        <section class="container container--adventures nv-adv-banner" id="adventuresIntro" style="margin-top:70px;">
+                
+               <figure class="adventures-banner col-xs-12">
+                  
+                  <div class="share">
+                   <img src="img/adventures/adventure1.jpg" class="img-responsive adventures-banner__img" alt="adventures-banner">
+                   <figcaption class="adventures-banner__caption txt-center">
+                       <h4 class="txt-white"><span class="txt-pink">NIRVANA - CRUISE </span><br> «ИТАЛИЯ - СИЦИЛИЯ, ПАРУСА, ВУЛКАНЫ И ВИНО» <br> <span class="txt-pink">июнь 2017</span> <br> 690 евро <a data-toggle="modal" data-target="#priceModal" class="icon" href="#"></a></h4>
+                   </figcaption>
+                   
+                   <ul class="share__widget">
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-like"></a>
+                        </li> 
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-fb"></a>
+                        </li>
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-tw"></a>
+                        </li>
+                    </ul>
+                    </div>
+                   
+               </figure>
+           
+        </section> <!-- end adventures banner -->
+        
+        
+        
+        <section class="container container--adventures">
+                
+            <div class="col-xs-12 col-sm-6 col-md-7">
+                <p>Знаменитый остров Сицилия на самом юге Италии знаменит не только тем, что это родина итальянской мафии но и своей красотой и гостеприимством, прекрасной кухней и винами, развитой инфраструктурой для курортного отдыха. Мы посетим несколько островов, в том числе проведем ночь в море прямо под действующим вулканом. Его рокот способствует выделению адреналина )), а свет ярко-красной лавы вечером окрашивает небо и море в дивные цвета.</p>
+            </div>
+            
+            
+            <div class="col-xs-12 col-sm-6 col-md-5 nv-actual">
+              <h5 class="txt-blue txt-center">Форма бронирования <a data-toggle="modal" data-target="#reservModal" class="icon" href="#"></a></h5>
+                <form action="#" class="col-xs-12 nv-order-form">
+                    <input type="text" class="nv-order-form__input" placeholder="Имя">
+                    <input type="email" class="nv-order-form__input nv-order-form__input--right" placeholder="Ваша почта">
+                    <textarea name="#" class="nv-order-form__area" placeholder="Любая дополнительная информация"></textarea>
+                    <input type="text" class="nv-order-form__input" placeholder="Телефон">
+                    <button class="nv-order-form__btn">ЗАБРОНИРОВАТЬ</button> 
+                    <p class="nv-order-form__text txt-center txt-gray">Мы не разглашаем вашу информацию третьим лицам.</p>   
+                </form>
+                
+                <h5 class="txt-blue txt-center col-xs-12">Текущий статус</h5>
+                <div class="nv-finished">
+                    <p>Набор окончен!</p>
+                </div>
+                
+            </div>
+            
+           
+        </section> <!-- end adventures form -->
+       
+        
+        <section class="container container--adventures">
+            <div class="col-xs-12">
+                <h5 class="txt-blue txt-center">Маршрут путешешествия <a data-toggle="modal" data-target="#routeModal" class="icon" href="#"></a></h5>                
+                <div class="share">
+                    <img src="img/adventures/map.jpg" alt="map" class="img-responsive">
+                    
+                    <ul class="share__widget">
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-like"></a>
+                        </li> 
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-fb"></a>
+                        </li>
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-tw"></a>
+                        </li>
+                    </ul>
+                    
+                </div>               
+            </div>
         </section>
         
         
-        <section class="container nv-adv-container" id="adventures">
-        	
-        	<div class="nv-adv col-xs-12">
-        	
-        			
-        			<div class="nv-adv__thumb col-xs-12 col-sm-7 col-md-3">
-        				<img src="img/adv1.jpg" alt="sf" class="img-responsive">
-        			</div>
-        			        			
-        			
-        			
-        			<div class="nv-adv__map col-xs-12 hidden-xs col-sm-5 col-md-2 col-md-push-7">
-        				<img src="img/map1.jpg" alt="ads" class="img-responsive">
-        			</div>
-        			
-        			<div class="nv-adv__desc col-xs-12 col-sm-12 col-md-7 col-md-pull-2">
-        				<div class="nv-adv__header">
-        					<h4 class="nv-adv__title">ОСТРОВА ГРЕЦИИ</h4>
-        				</div>
-        				<p class="nv-adv__txt">В самый пик сезона мы отправляемся в средиземноморский поход по островам Греции. Каждый остров здесь имеет свою историю и свою субкультуру. Насладимся греческой кухней, лучше которой мы еще нигде не встречали. Все, кто хочет с нами - присоединяйтесь. <br>
-						Стоимость участия - 740 евро. </p>
-       					
-       					<div class="col-xs-6 nv-adv__date">
-       						23-30 июля 2016
-       					</div>
-       					
-       					<div class="col-xs-6 nv-adv__btn">
-       						<a href="contacts.html" class="nv-btn btn-pink">ПРИСОЕДИНИТЬСЯ</a>
-       					</div>
-       			
-        			</div>
-        		
-        		
-        	</div><!-- end one adventure block -->
-        	
-        	
-        	<div class="nv-adv col-xs-12">
-        	
-        			
-        			<div class="nv-adv__thumb col-xs-12 col-sm-7 col-md-3">
-        				<img src="img/adv2.jpg" alt="sf" class="img-responsive">
-        			</div>
-        			        			
-        			
-        			
-        			<div class="nv-adv__map col-xs-12 hidden-xs col-sm-5 col-md-2 col-md-push-7">
-        				<img src="img/map2.jpg" alt="ads" class="img-responsive">
-        			</div>
-        			
-        			<div class="nv-adv__desc col-xs-12 col-sm-12 col-md-7 col-md-pull-2">
-        				<div class="nv-adv__header">
-        					<h4 class="nv-adv__title">БАРХАТНАЯ ХОРВАТИЯ <br>НА ПАРУСНОЙ ЯХТЕ</h4>
-        				</div>
-        				<p class="nv-adv__txt">Отдых в Хорватии в октябре действительно бархатный. Теплое ласковое море, буйная зелень, прекрасные пляжи. Нас ждет рыбалка, подводная охота и вечерние развлечения на островах. И, конечно, вкуснейшая хорватская кухня. <br> Стоимость участия - 790 евро.  </p>
-       					
-       					<div class="col-xs-6 nv-adv__date">
-       						октябрь 2016
-       					</div>
-       					
-       					<div class="col-xs-6 nv-adv__btn">
-       						<a href="contacts.html" class="nv-btn btn-pink">ПРИСОЕДИНИТЬСЯ</a>
-       					</div>
-       			
-        			</div>
-        		
-        		
-        	</div><!-- end one adventure block -->
-        	
-        	<div class="nv-adv col-xs-12">
-        	
-        			
-        			<div class="nv-adv__thumb col-xs-12 col-sm-7 col-md-3">
-        				<img src="img/adv3.jpg" alt="sf" class="img-responsive">
-        			</div>
-        			        			
-        			
-        			
-        			<div class="nv-adv__map col-xs-12 hidden-xs col-sm-5 col-md-2 col-md-push-7">
-        				<img src="img/map3.jpg" alt="ads" class="img-responsive">
-        			</div>
-        			
-        			<div class="nv-adv__desc col-xs-12 col-sm-12 col-md-7 col-md-pull-2">
-        				<div class="nv-adv__header">
-        					<h4 class="nv-adv__title">ТУРЦИЯ</h4>
-        				</div>
-        				<p class="nv-adv__txt">Представьте, вы на беленькой яхте под парусами скользите по бирюзовой глади. Вокруг полно обитаемых и необитаемых островов. Скалистые причудливые берега покрыты зеленью, приморские ресторанчики. Мы останавливаемся где хотим. Купаемся сколько хотим. Загораем прямо на палубе.</p>
-       					
-       					<div class="col-xs-6 nv-adv__date">
-       						2017
-       					</div>
-       					
-       					<div class="col-xs-6 nv-adv__btn">
-       						<a href="contacts.html" class="nv-btn btn-pink">ПРИСОЕДИНИТЬСЯ</a>
-       					</div>
-       			
-        			</div>
-        		
-        		
-        	</div><!-- end one adventure block -->
-        	
-        	<div class="nv-adv col-xs-12">
-        	
-        			
-        			<div class="nv-adv__thumb col-xs-12 col-sm-7 col-md-3">
-        				<img src="img/adv4.jpg" alt="sf" class="img-responsive">
-        			</div>
-        			        			
-        			
-        			
-        			<div class="nv-adv__map col-xs-12 hidden-xs col-sm-5 col-md-2 col-md-push-7">
-        				<img src="img/map4.jpg" alt="ads" class="img-responsive">
-        			</div>
-        			
-        			<div class="nv-adv__desc col-xs-12 col-sm-12 col-md-7 col-md-pull-2">
-        				<div class="nv-adv__header">
-        					<h4 class="nv-adv__title">ИТАЛИЯ</h4>
-        				</div>
-        				<p class="nv-adv__txt">Знаменитый остров Сицилия на самом юге Италии знаменит своей красотой и гостеприимством, прекрасной кухней и винами. Мы посетим несколько островов, в том числе проведем ночь в море прямо под действующим вулканом.  </p>
-       					
-       					<div class="col-xs-6 nv-adv__date">
-       						2017
-       					</div>
-       					
-       					<div class="col-xs-6 nv-adv__btn">
-       						<a href="contacts.html" class="nv-btn btn-pink">ПРИСОЕДИНИТЬСЯ</a>
-       					</div>
-       			
-        			</div>
-        		
-        		
-        	</div><!-- end one adventure block -->
-        	
         
-        	
-        </section> <!-- end adventures container -->
+        <section class="container container--adventures">
+            <div class="col-xs-12">
+                <h5 class="txt-blue txt-center">Программа путешествия <a role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1" class="carret"></a></h5>                                
+            </div>
+            
+            <article id="collapseExample1" class="collapse col-xs-12 adventures-program">
+                
+                <p>Выход из Милаццо – небольшой городок Сицилии с непередаваемо красивыми пейзажами. Главный Мыс (Рromotorio del Capo) со старинный замком, оживленным по вечерам сицилийской молодежью.</p>  
+                 
+                <div class="share">         
+                <img src="img/adventures/adventure2.jpg" alt="ssdsd" class="img-responsive">
+                <ul class="share__widget">
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-like"></a>
+                        </li> 
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-fb"></a>
+                        </li>
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-tw"></a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p>Завтрак, переход на о. Липари (Lipari), купание на Белых Песках (Sabbie Bianche), обед, посещение острова,  ночная стоянка на о. Липари (Lipari). Липари - самый большой из всех Липарских островов. Одно из немногих мест на земле с описанной историей более 6000 лет. </p>
+                  
+                <img src="img/adventures/adventure3.jpg" alt="ssdsd" class="img-responsive">
+                
+                <p>Завтрак, переход на о.Панарея (Panarea), купание на " Вaia Calajunco", обед, стоянка на якоре,  ночная стоянка на о. Панарея. </p>
+                
+                <p>Белоснежные дома на острове, узкие улочки, освещаемые множеством огней на закате дня, сумасшедшая ночная жизнь и оживленная атмосфера. Очень колоритное местечко.</p>
+                
+                <img src="img/adventures/adventure4.jpg" alt="ssdsd" class="img-responsive">
+                
+                <p>Завтрак, купание между рифами о. Панареи (Panarea), обед, переход на о. Стромболи (Stromboli), послеобеденный snack, посещение острова и ночевка. </p>
+                
+                <img src="img/adventures/adventure5.jpg" alt="ssdsd" class="img-responsive">
+                
+                <p>Ярко-красное ночное сияние вулкана и его непрекращающийся рокот. Если заночевать рядом, то это целый спектакль.</p>
+                
+                <p>о. Салина - остров мальвазии (malvasia – сорт винограда, из которого делают десертное вино) и каперсов. Единственный из Липарских остров, где развито земледелие. Очень спокойная атмосфера и местная гастрономия дарят истинное удовольствие от жизни.</p>
+                
+                <p>Завтрак, переход на о.Филикуди (Filicudi), посещение и купание в пещере Морской Бык (Bue Marino), обед, прогулка по острову, переход на о.Вулкано (Vulcano), ночная стоянка.</p>
+                
+                <img src="img/adventures/adventure6.jpg" alt="ssdsd" class="img-responsive">
+                
+                <p>о. Филикуди (Filicudi) окружен темно-синим морем, переходящим в прозрачно-бирюзовое по краю берега, пещерами и скалами, напоминающими причудливые природные скульптурые.</p>
+                
+                <p>Завтрак, купание между морскими скалами (Faraglioni ) на о. Липари (Lipari), обед, посещение Лошадиного грота (Grotta del Cavallo) на о.Вулкан (Vulcano),  Вечером возвращение в Милаццо (Milazzo). </p>
+                
+                <p>о.Вулкано - жилище греческой Йеры, Эфеста и Циклопов навеет атмосферу античного Дантэ с серными испарениями и бурлящими грязями. Море, окружающее остров, остается теплым в любое время года. Любому запомнится такой маршрут и отдых на пляже с мелким черным песком вулканического происхождения.</p>
+                
+                <p> Завтрак. Высадка в Милаццо. Возможно небольшое путешествие по Сицилии и отъезд. </p>
+                
+            </article> <!-- /.program -->
+            
+            <div class="col-xs-12 nv-separator"></div>
+            
+            <div class="col-xs-12">
+                <h5 class="txt-blue txt-center">Фотоотчет путешествия <a role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" class="carret"></a> </h5>                                
+            </div>
+                                              
+            <article id="collapseExample2" class="collapse col-xs-12 adventure-past">
+                <p>Марина "Порторосса" недалеко от Милаццо - очень красивое место. Повсюду цветущие олеандры и огромные пальмы. Заселяемся в каюты и  начинаем приобщение к итальянской культуре. Сицилийская кухня, чудесное мороженое на набережной (они едят его с пончиком). А на морском горизонте видны вершины вулканов на островах.</p>
+                
+                <div class="share">
+                <img src="img/adventures/adventure7.jpg" alt="ssdsd" class="img-responsive">
+                <ul class="share__widget">
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-like"></a>
+                        </li> 
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-fb"></a>
+                        </li>
+                        <li class="share__widget-item">
+                            <a href="#" class="share__widget-link nv-sprite-tw"></a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p>Наутро выходим в открытое море. Трюмы заполнены хлебом и вином, вобщем всем необходимым. Впереди сотни миль пути. </p>
+                
+                <img src="img/adventures/adventure8.jpg" alt="ssdsd" class="img-responsive">
+                
+                <p>Синева Средиземного моря, причудливые формы скал, ласковый ветерок и коктейль со льдом. Что может быть лучше?</p>
+                
+                <img src="img/adventures/adventure9.jpg" alt="ssdsd" class="img-responsive">
+                
+                <p>Это Италия! На берегу от жары можно спасаться в кафешках.</p>
+                
+            </article>                                  
+            
+        </section><!-- /.container -->
         
-    
+        
+        <div class="container container--adventures">
+            <div class="nv-ps col-xs-12">
+                <p>А здесь можно посмотреть <a class="txt-blue txt-bold" href="#">АНОНС НАШЕГО СЛЕДУЮЩЕГО ПУТЕШЕСТВИЯ.</a></p>
+                <p class="txt-pink">С Нирваной всегда на гребне волны!</p>
+            </div>
+        </div>
+       
         <section class="container nv-adv-yacht" id="adventuresAbout">
-                <h4 class="txt-center txt-blue">Что такое отдых на яхте</h4>
-                
-                
-               
-               	<div class="yacht-rest__fsection col-xs-12">
-               		 <div class="col-xs-12 col-sm-6 yacht-rest__thumb">
-                	<img src="img/adv__about2.png" class="yacht-rest__img1" alt="asasa">
-                </div>
-                
-               <article class="col-xs-12 col-sm-6 yacht-rest__desc">
-                <p>Мы будем жыть в каютах, на борту парусной яхты. Видели фильм про Ноев Ковчег? Так вот это совсем не то. Никаких жирафов и носорогов! Чистенькая беленькая парусная яхта. На ней даже пыли не бывает. Все время свежый морской воздух и ласковый шум моря.</p> 
-
-				<p>На яхте есть розетка 220 вольт и можно подзаряжать все гаджеты. </p>
-
-				<p>На яхте есть санузлы, горячий душ и камбуз. Обычные люди называют камбуз "кухней", но это только до тех пор, пока не попадут в море .</p>
-
-				<p>На какой кухне вы встретите газовую плиту, которая свободно вращается в разные стороны, что бы и во время качки закусочка на сковороде продолжала равномерно поджариваться до золотистого цвета? На какой кухне есть всегда полный холодильник и трюмы, забитые деликатесами и при этом действует правило - "каждый ест что хочет и когда хочет"? Перед плаванием мы делаем налет на супермаркет и набираем в дорогу кто что хочет. 
-				</p>
-               </article>
-               	</div>
-             
-               
-                <div class="col-xs-12 col-sm-12 yacht-rest__thumb--bottom">
-                	<img src="img/adv__about3.png" class="hidden-xs yacht-rest__img3" alt="sfdsdf">
-                	
-                	<img src="img/adv__about1.png" class="visible-xs img-responsive" alt="sfdsdf">
-                	<img src="img/adv__about.png" class="visible-xs img-responsive" alt="sfdsdf">
-                </div>
-                
-                
-                <p class="col-xs-12 txt-center">Ну что, поехали?!</p>
-                
                 
                 <a href="#adventuresIntro" class="goto nv-scroll nv-sprite-paluba up"><span class="nv-sprite-shturval"></span></a>
            
@@ -303,6 +303,74 @@
             </div>
           </div>
         </div>
+        
+        
+        
+        <!-- Modal -->
+        <div class="modal fade nv-modal" id="priceModal" tabindex="-1" role="dialog" aria-labelledby="priceModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header modal-text">                
+                <a data-dismiss="modal" class="close-modal" aria-label="Close"><span class="nv-sprite-close"></span></a>
+                
+                <p>
+                    В стоимость входит: <br><br>
+
+                    - сопровождение и координация на месте <br>
+                    - аренда яхты (место в двухместной каюте) <br>
+                    - финальная уборка яхты <br>
+                    - шлюпка(тузик) <br>
+                    - постельное белье и полотенца <br>
+                    - заправка яхты водой и топливом <br>
+                    - портовые сборы при стоянках в маринах <br>
+                    - услуги капитана <br><br>
+
+                    В стоимость не входит: <br><br>
+
+                    - авиа перелет в обе стороны <br>
+                    - виза <br>
+                    - плата за экскурсии <br>
+                    - рестораны и ночные развлечения <br>
+                 
+                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- Modal -->
+        <div class="modal fade nv-modal" id="reservModal" tabindex="-1" role="dialog" aria-labelledby="reservModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header modal-text">                
+                <a data-dismiss="modal" class="close-modal" aria-label="Close"><span class="nv-sprite-close"></span></a>
+                
+                <p>
+                    При отправлении этой формы за Вами резервируется 1 место в экспедиции. Любые вопросы или дополнительную информации при необходимости вносите в поле «Дополнительная информация». Мы с Вами свяжемся. Добро пожаловать на борт! 
+                 
+                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- Modal -->
+        <div class="modal fade nv-modal" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="routeModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header modal-text">                
+                <a data-dismiss="modal" class="close-modal" aria-label="Close"><span class="nv-sprite-close"></span></a>
+                
+                <p class="txt-center">
+                  В зависимости от погодных условий маршрут может быть незначительно изменен
+                 
+                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
       
         
        <script src="js/jquery.min.js"></script>
@@ -312,8 +380,5 @@
        <script src="js/jquery.fittext.js"></script>
        <script src="js/jquery.resize.min.js"></script>
        <script src="js/script.js"></script> 
-       <script>
-         //$('body').on("contextmenu", function(evt) {evt.preventDefault();}); 
-       </script>
     </body>
 </html>

@@ -1,0 +1,64 @@
+/*******************************************************************************
+***
+***   Dear friend :
+***   When I wrote this code, only I and God knew what it was.
+***
+***   But now only God knows what is here ! 
+***   
+***   So, if you done trying to 'optimize' this code,
+***   please include this comment as a warning for the next guy who also will  
+***   trying to do this.
+***
+***   Author : denys.ark@gmail.com
+***
+********************************************************************************/
+
+
+@import 'old';   
+@import './modules/*';
+
+
+
+@media screen and (max-width: 940px) {
+    
+    .share__widget{
+        right: 0;
+    }
+    
+}//end media query
+
+
+
+@media screen and (max-width: 700px) {
+    
+    .adventures-banner__caption h4{
+        font-size: 15px;
+    }
+    
+    .adventures-banner__caption{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    
+    
+    .container--adventures{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+}//end media query
+
+@media screen and (max-width: 480px) {
+    .adventures-banner .share__widget{
+        display: none;
+    }
+    
+    .nv-order-form__input, .nv-order-form__btn{
+        width: 100%;
+        height: 35px;
+        font-size: 13px;
+    }
+    
+}
+
