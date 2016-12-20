@@ -4976,18 +4976,18 @@ a:hover, a:focus {
 }
 
 .adv-tile--archive {
-  background: #40c9f8;
+  background: #00b7f6;
   position: relative;
   min-height: 215px;
   height: 215px;
 }
 
 .adv-tile--archive:hover::before {
-  border-color: #40c9f8;
+  border-color: #00b7f6;
 }
 
 .adv-tile--archive:hover .adv-tile__map::before {
-  background: #40c9f8;
+  background: #00b7f6;
 }
 
 .adv-tile--archive .adv-tile__img, .adv-tile--archive .adv-tile__map-img {
