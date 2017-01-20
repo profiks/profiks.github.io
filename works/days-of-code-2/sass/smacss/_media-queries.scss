@@ -1,0 +1,94 @@
+$q-320: 320px;
+$q-480: 480px;
+$q-600: 600px;
+$q-768: 768px;
+$q-996: 996px;
+$q-1024: 1024px;
+$q-1200: 1200px;
+
+/**
+  * Breakpoint for 1200px
+  */
+@media (max-width: $q-1024) {
+	
+	.header{
+		padding: 15px;
+		
+		&__title{
+			font-size: 1.5em;
+		}
+		
+		&__evident{
+			font-size: 1em;
+		}
+	}
+	
+	.carousel{
+		height: 0;
+		padding-bottom: 300px;
+		
+		&__item{
+			&--active{
+				transform: translateY(-50%) translateX(-50%) scale(1);
+			}
+			
+			&--prev{
+				transform: translateY(-50%) translateX(-10%) scale(0.8);
+			}
+			
+			&--next{
+				transform: translateY(-50%) translateX(-90%) scale(0.8);
+			}
+		}
+	}
+	
+	
+	.copyright{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	
+} /* end 1200px */
+
+
+
+/**
+  * Breakpoint for 768px
+  */
+@media (max-width: $q-768) {
+
+	.app-wrap{
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+	}
+	
+}/* end 768*/
+
+/**
+  * Breakpoint for 480px
+  */
+@media (max-width: $q-480) {
+	
+	.header{
+		&__title{
+			font-size: 1.2em;
+		}
+	}
+	
+	.copyright{
+		&__creator{
+			line-height: 1.2em;
+		}
+		&__reference{
+			line-height: 2em;
+		}
+	}
+	
+	.carousel{
+		padding-bottom: 200px;
+	}
+	
+	
+	
+}/* ENd 480px*/
