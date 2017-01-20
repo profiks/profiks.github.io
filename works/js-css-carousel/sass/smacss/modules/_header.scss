@@ -1,0 +1,22 @@
+.header {
+	padding-top: 30px;
+	padding-bottom: 64px;
+	&__title {
+		text-align: center;
+		font: {
+			size: 30px;
+			weight: 900;
+		}
+		color: $color--secondary;
+		text-shadow: 1px 1px 2px rgba(51,51,51,.8);
+		line-height: 1.5;
+	}
+	
+	&__evident {
+		font: {
+			size: 30px;
+			weight: 900;
+		}
+		color: $color--primary;
+	}
+}

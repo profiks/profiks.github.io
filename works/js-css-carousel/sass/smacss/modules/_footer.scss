@@ -1,0 +1,26 @@
+.copyright {
+	padding-top: 64px;
+	padding-bottom: 30px;
+	
+	text-align: center;
+	
+	&__creator {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $color--primary;
+		line-height: 35px;
+	}
+	
+	&__reference {
+		color: $color--secondary;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 40px;
+	}
+	
+	&__year {
+		font-size: 12px;
+		color: $color--primary;
+		line-height: 35px;
+	}
+}
