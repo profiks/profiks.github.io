@@ -1,0 +1,42 @@
+.addon{
+	
+	
+	&__small{
+		background: #dfdbd4;
+		width: calc(25% - 13.3px);
+		padding: 15px;
+	}
+	
+	&__large{
+		background: #dfdbd4;
+		width: calc(50% - 13.3px);
+		padding: 15px;
+	}
+	
+	&__heading{
+		margin-top: 16px;
+		margin-bottom: 16px;
+		
+		color: $gray-primary;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: em(14);
+	}
+	
+	&__text{
+		color: $gray-primary;
+		font-size: em(13);
+		line-height: 1.4;
+		margin-bottom: 5px;
+	}
+	
+	&__appendix{
+		display: inline-block;
+		
+		color: $gray-primary;
+		font-size: em(13);
+		line-height: 1.4;
+		font-style: italic;
+	}
+	
+}
