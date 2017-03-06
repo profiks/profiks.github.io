@@ -1,0 +1,14 @@
+$q-320: 320px;
+$q-480: 480px;
+$q-600: 600px;
+$q-768: 768px;
+$q-996: 996px;
+$q-1024: 1024px;
+$q-1200: 1200px;
+
+// Breakpoint for 1200px
+@media (max-width: $q-1200) {
+	.red {
+		width: 100%;
+	}
+} //end 1200px

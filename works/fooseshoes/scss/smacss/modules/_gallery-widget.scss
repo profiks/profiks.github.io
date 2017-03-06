@@ -1,0 +1,19 @@
+.gallery-widget{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+	&__item{
+		display: inline-block;
+		flex-basis: calc(33.3% - 5.6px);
+		margin-bottom: 8px;
+	}
+	
+	&__thumb{
+		float: left;
+		width: 100%;
+	}
+	
+	
+}

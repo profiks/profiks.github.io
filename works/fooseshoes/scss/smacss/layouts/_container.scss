@@ -1,0 +1,37 @@
+[class$='__container'] {
+	margin: 0 auto;
+	max-width: $desktop;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	width: 100%;
+	
+	&::before {
+		content: '';
+		display: table;
+	}
+	
+	&::after {
+		clear: both;
+		content: '';		
+		display: table;		
+	}
+}
+
+[class^='container--fluid'] {
+	max-width: 100%;
+}
+
+[class^='container--flex'] {
+	display: flex;
+	justify-content: space-between;
+	
+	&::before, &::after {
+		content: none;
+		display: none;
+	}
+}
+
+[class$='--row'] {
+	margin: 0 -30px;
+}
