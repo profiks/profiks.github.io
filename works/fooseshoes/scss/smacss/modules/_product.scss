@@ -2,6 +2,7 @@
 	background: #fff;
 	width: calc(33.3% - 13.3px);
 	position: relative;
+	overflow: hidden;
 	
 	&__thumbnail{
 		display: block;
@@ -14,7 +15,26 @@
 		width: 100%;
 		padding: 15px 15px 20px 15px;
 		border-top: 1px solid #ccc;
+		position: relative;
+		height: 56px;
 	}
+	
+	&__action{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: calc(100% - 85px);
+		background: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px;
+		height: 55px;
+		
+		transition: transform .3s cubic-bezier(0.78, 0.02, 0.24, 1.04);
+		transform: translateX(100%);
+	}
+	
 	
 	&__name{		
 		padding-left: 85px;
@@ -46,6 +66,10 @@
 		font-weight: 600;
 		
 	}
+}
+
+.product:hover .product__action{
+	transform: translateX(0);
 }
 
 .product--sale{

@@ -1,0 +1,50 @@
+.sortable{
+	display: flex;
+	align-items: center;
+	
+	color: $gray-line;
+	font-size: em(14);
+	font-weight: 600;
+	
+	&__view{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border: 1px solid currentColor;
+		margin: 0 4px;
+		
+		color: $gray-line;
+		text-align: center;
+		line-height: 28px;
+		
+		&:first-child{
+			margin-left: 15px;
+		}
+		
+		&:last-child{
+			margin-right: 15px;
+		}
+		
+		&:hover{
+			color: $green;
+		}
+	}
+	
+	&__drop-mode{
+		display: inline-block;
+		height: 30px;
+		border: 1px solid currentColor;
+		margin-left: 15px;
+		
+		color: $gray-line;
+		text-align: center;
+		line-height: 28px;
+		font-weight: 600;
+		padding: 0 35px;
+		cursor: pointer;
+		
+		&:hover{
+			color: $green;
+		}
+	}
+}

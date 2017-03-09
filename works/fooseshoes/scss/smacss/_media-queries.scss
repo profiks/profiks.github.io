@@ -1,14 +1,16 @@
-$q-320: 320px;
-$q-480: 480px;
-$q-600: 600px;
-$q-768: 768px;
-$q-996: 996px;
-$q-1024: 1024px;
-$q-1200: 1200px;
+// ***** resolution breakpoints *****
 
-// Breakpoint for 1200px
-@media (max-width: $q-1200) {
-	.red {
-		width: 100%;
+$desktop:		960px;
+$tablet:		768px;
+$mobile-lg:		480px;
+$mobile:		320px;
+
+// Breakpoint for 768px
+@media (max-width: $desktop) {
+	
+	[class$='__container'] {
+		max-width: $tablet;
 	}
-} //end 1200px
+	
+	
+} //end 768px
