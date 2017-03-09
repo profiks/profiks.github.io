@@ -23,6 +23,15 @@
 		font-size: em(14);
 	}
 	
+	&__heading > a {
+		color: $gray-primary;
+		text-decoration: none;
+	}
+	
+	&__heading > a:hover{
+		color: $green;
+	}
+	
 	&__text{
 		color: $gray-primary;
 		font-size: em(13);

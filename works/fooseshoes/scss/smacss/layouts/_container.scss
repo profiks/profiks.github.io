@@ -32,6 +32,37 @@
 	}
 }
 
+.container--mansory{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	> * {
+		margin: 10.2px;
+		
+		&:first-child{
+			margin-left: 0;
+		}
+		
+		&:last-child{
+			margin-right: 0;
+		}
+		
+		&:nth-child(-n+3){
+			margin-top: 0;
+		}
+		
+		&:nth-child(3n+3){
+			margin-right: 0;
+		}
+		
+		&:nth-child(3n+4){
+			margin-left: 0;
+		}
+		
+	}
+}
+
 [class$='--row'] {
 	margin: 0 -30px;
 }
