@@ -13,7 +13,7 @@
 	<title>FooseShoes - eCommerce Frontend Project</title>
 </head>
 
-<body>
+<body class="js-popup">
 
 	<header class="header">
 		<div class="container--flex header__container">
@@ -60,13 +60,13 @@
 				</li>
 				
 				<li class="navigation__item">
-					<a href="#" class="navigation__link" data-tooltip="Wishlist">
+					<a href="#" class="navigation__link">
 						<i class="fa fa-star-o" aria-hidden="true"></i>
 						<span class="badge">30</span>
 					</a>
 				</li>
 				<li class="navigation__item">
-					<a href="popup.html" class="navigation__link" data-tooltip="Basket">
+					<a href="#" class="navigation__link">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 						<span class="badge">0</span>
 					</a>
@@ -446,6 +446,86 @@
 	</section>
 	
 	
+	<div class="modal">
+
+		<div class="modal__content cart">
+			
+			<div class="modal__header">
+				<h3 class="cart__title">Basket <span>3</span> items</h3>
+				<a href="#" class="modal__close">x</a>
+			</div>
+
+			<div class="modal__body">
+
+				<ul class="cart__list">
+
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="img/product6.png" alt="sd" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">Collar Wrap</span>
+							<span class="cart__price">$260.20</span>
+						</span>
+						
+						<a href="#" data-tooltip="Remove" class="cart__remove tooltip--top"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="img/product2.png" alt="sd" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">Collar Wrap</span>
+							<span class="cart__price">$260.20</span>
+						</span>
+									
+						<a href="#" class="cart__remove"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="img/product2.png" alt="sd" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">Collar Wrap</span>
+							<span class="cart__price">$260.20</span>
+						</span>
+									
+						<a href="#" class="cart__remove"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="img/product3.png" alt="sd" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">Collar Wds dsdrap</span>
+							<span class="cart__price">$20.20</span>
+						</span>
+															
+						<a href="#" class="cart__remove"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="img/product3.png" alt="sd" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">ErrtCollar Wrap</span>
+							<span class="cart__price">$960</span>
+						</span>						
+									
+						<a href="#" class="cart__remove"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					
+
+				</ul> <!-- /.cart -->
+
+			</div> <!-- /.modal__body -->
+
+			<div class="modal__footer">
+				<div class="cart__sum">
+					<span class="cart__order">Cart subtotal:</span>
+					<span class="cart__order-price">$260.20</span>
+				</div>
+
+				<a href="#" class="cart__btn btn btn--light">Checkout</a>
+
+			</div>
+			
+		</div> <!-- /.content -->
+										
+	</div> <!-- /.modal -->
 
 	<script src="js/scripts.js"></script>
 </body>

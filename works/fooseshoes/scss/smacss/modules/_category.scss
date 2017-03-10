@@ -13,9 +13,20 @@
 		font-weight: 500;
 		text-decoration: none;
 		text-align: center;
+		position: relative;
 		
 		&:hover{
 			background: #7d7d7d;
+		}
+		
+		.carret{
+			position: absolute;
+			right: 22px;
+			top: 50%;
+			margin-top: -7px;
+			i{
+				color: $gray-primary;
+			}
 		}
 	}
 	
