@@ -42,9 +42,20 @@
 		font-weight: 600;
 		padding: 0 35px;
 		cursor: pointer;
+		position: relative;
 		
 		&:hover{
 			color: $green;
+		}
+		
+		.carret{
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			margin-top: -7px;
+			i{
+				color: $background;
+			}
 		}
 	}
 }

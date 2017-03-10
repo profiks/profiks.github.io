@@ -1,0 +1,19 @@
+.hamburger{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	&__line{
+		display: block;
+		width: 23px;
+		height: 2px;
+		margin-bottom: 4px;
+		background: $gray-secondary;
+		
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	
+}
