@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="icon" href="img/favicon.png" type="image/x-icon"/>
 	
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>FooseShoes - eCommerce Frontend Project</title>
 </head>
@@ -78,10 +78,10 @@
 	<section class="slide slide--inner">			
 			<div class="slide__item">
 				<div class="slide__container" data-bg="img/shoes1.png" style="background-image:url(img/shoes5.png)">
-					<hgroup class="slide__heading">
+					<div class="slide__heading">
 						<h2 class="slide__price">$145,99</h2>
 						<h3 class="slide__title">Pink Shoes 2013 Collection</h3>
-					</hgroup>
+					</div>
 					<h4 class="slide__description">Nunc non fermentum nunc. Sed ut ante  eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget</h4>
 
 				</div><!-- /.content -->		
@@ -207,55 +207,31 @@
 				</div>
 			</div>
 			
-			<section class="container--mansory block">
+			<div class="container--mansory block">
 				
 				<figure class="product">
-					<img src="img/product1.png" alt="Even&Odd" class="product__thumbnail">
+					<img src="img/product1.png" alt="Even and Odd" class="product__thumbnail">
 					<figcaption class="product__info">
 						<span class="product__price">$144,95</span>
 						<span class="product__name">Even&amp;Odd</span>
 						
-						<span class="action product__action">
-							<a href="#" data-tooltip="Preview" class="btn btn--white action__link tooltip--top"><i class="fa fa-eye" aria-hidden="true"></i></a>
-							<a href="#" data-tooltip="To wish" class="btn btn--white action__link tooltip--top"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-							<a href="#" data-tooltip="Share" class="btn btn--white action__link tooltip--top"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-							<a href="#" data-tooltip="To cart" class="btn btn--white action__link tooltip--top"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+						<span class="product__action action">
+							<a href="#" data-tooltip="Preview" class="btn btn--white action__link tooltip--top">
+								<i class="fa fa-eye" aria-hidden="true"></i>
+							</a>
+							<a href="#" data-tooltip="To wish" class="btn btn--white action__link tooltip--top">
+								<i class="fa fa-star-o" aria-hidden="true"></i>
+							</a>
+							<a href="#" data-tooltip="Share" class="btn btn--white action__link tooltip--top">
+								<i class="fa fa-share-square-o" aria-hidden="true"></i>
+							</a>
+							<a href="#" data-tooltip="To cart" class="btn btn--white action__link tooltip--top">
+								<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+							</a>
 						</span>
 						
 					</figcaption>
-				</figure>
-				
-				<figure class="product">
-					<img src="img/product1.png" alt="Even&Odd" class="product__thumbnail">
-					<figcaption class="product__info">
-						<span class="product__price">$144,95</span>
-						<span class="product__name">Even&amp;Odd</span>
-						
-						<span class="action product__action">
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-eye" aria-hidden="true"></i></a>
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
-						</span>
-						
-					</figcaption>
-				</figure>
-
-				<figure class="product product--sale" data-badge="on sale!">
-					<img src="img/product2.png" alt="Even&Odd" class="product__thumbnail">
-					<figcaption class="product__info">
-						<span class="product__price">$144,95</span>
-						<span class="product__name" title="Even&Odd">Even&amp;Odd</span>
-						
-						<span class="action product__action">
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-eye" aria-hidden="true"></i></a>
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
-							<a href="#" class="btn btn--white action__link"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
-						</span>
-						
-					</figcaption>
-				</figure>
+				</figure> <!-- /.product -->
 				
 				<figure class="product">
 					<img src="img/product1.png" alt="Even&Odd" class="product__thumbnail">
@@ -277,9 +253,9 @@
 					<img src="img/product2.png" alt="Even&Odd" class="product__thumbnail">
 					<figcaption class="product__info">
 						<span class="product__price">$144,95</span>
-						<span class="product__name" title="Even&Odd">Even&amp;Odd</span>
+						<span class="product__name">Even&amp;Odd</span>
 						
-						<span class="action product__action">
+						<span class="product__action action">
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-eye" aria-hidden="true"></i></a>
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
@@ -295,7 +271,39 @@
 						<span class="product__price">$144,95</span>
 						<span class="product__name">Even&amp;Odd</span>
 						
-						<span class="action product__action">
+						<span class="product__action action">
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-eye" aria-hidden="true"></i></a>
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+						</span>
+						
+					</figcaption>
+				</figure>
+
+				<figure class="product product--sale" data-badge="on sale!">
+					<img src="img/product2.png" alt="Even&Odd" class="product__thumbnail">
+					<figcaption class="product__info">
+						<span class="product__price">$144,95</span>
+						<span class="product__name" title="Even&Odd">Even&amp;Odd</span>
+						
+						<span class="product__action action">
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-eye" aria-hidden="true"></i></a>
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+							<a href="#" class="btn btn--white action__link"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+						</span>
+						
+					</figcaption>
+				</figure>
+				
+				<figure class="product">
+					<img src="img/product1.png" alt="Even&Odd" class="product__thumbnail">
+					<figcaption class="product__info">
+						<span class="product__price">$144,95</span>
+						<span class="product__name">Even&amp;Odd</span>
+						
+						<span class="product__action action">
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-eye" aria-hidden="true"></i></a>
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
@@ -312,7 +320,7 @@
 						<span class="product__price">$95</span>
 						<span class="product__name" title="Bubblegummers">BubblegummersBubblegummers Bubblegummers</span>
 						
-						<span class="action product__action">
+						<span class="product__action action">
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-eye" aria-hidden="true"></i></a>
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
 							<a href="#" class="btn btn--white action__link"><i class="fa fa-share-square-o" aria-hidden="true"></i></a>
@@ -371,11 +379,11 @@
 					</figcaption>
 				</figure>
 				
-			</section>
+			</div>
 			
 			
 		</div> <!-- /.container -->		
-	</div>
+	</div> <!-- /.mansory -->
 	
 	
 	<div class="addon">
@@ -402,10 +410,10 @@
 							<span class="date__month">apr</span>
 							<span class="date__day">01</span>
 						</span>						
-						<span class="news__content">
+						<div class="news__content">
 							<h3><a href="#" class="news__link">Nice &amp; clean. The best for you blog!</a></h3>
 							<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-						</span>
+						</div>
 					</div> <!-- /.news__item -->
 					
 					<div class="news__item">
@@ -413,10 +421,10 @@
 							<span class="date__month">apr</span>
 							<span class="date__day">18</span>
 						</span>						
-						<span class="news__content">
+						<div class="news__content">
 							<h3><a href="#" class="news__link">What is eCommerce Theme</a></h3>
 							<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-						</span>
+						</div>
 					</div> <!-- /.news__item -->
 					
 				</section> <!-- /.news -->
@@ -453,32 +461,32 @@
 				<ul class="gallery-widget">
 					<li class="gallery-widget__item">
 						<a href="#" class="gallery-widget__show">
-							<img src="img/gallery-ms1.jpg" class="gallery-widget__thumb">
+							<img src="img/gallery-ms1.jpg" alt="flicker 1" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
 						<a href="#" class="gallery-widget__show">
-							<img src="img/gallery-ms2.jpg" class="gallery-widget__thumb">
+							<img src="img/gallery-ms2.jpg" alt="flicker 2" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
 						<a href="#" class="gallery-widget__show">
-							<img src="img/gallery-ms3.jpg" class="gallery-widget__thumb">
+							<img src="img/gallery-ms3.jpg" alt="flicker 3" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
 						<a href="#" class="gallery-widget__show">
-							<img src="img/gallery-ms4.jpg" class="gallery-widget__thumb">
+							<img src="img/gallery-ms4.jpg" alt="flicker 4" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
 						<a href="#" class="gallery-widget__show">
-							<img src="img/gallery-ms5.jpg" class="gallery-widget__thumb">
+							<img src="img/gallery-ms5.jpg" alt="flicker 5" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
 						<a href="#" class="gallery-widget__show">
-							<img src="img/gallery-ms6.jpg" class="gallery-widget__thumb">
+							<img src="img/gallery-ms6.jpg" alt="flicker 6" class="gallery-widget__thumb">
 						</a>
 					</li>
 				</ul>
@@ -486,7 +494,7 @@
 			
 		</div> <!-- /.container -->	
 		
-		<section class="social">
+		<div class="social">
 			<div class="container--flex footer__container">
 			
 				<form action="#" class="subscribe">
@@ -512,11 +520,11 @@
 
 			</div> <!-- /.container -->
 		
-		</section>
+		</div>
 				
 	</footer>
 	
-	<section class="copyright">
+	<div class="copyright">
 		<div class="container--flex copyright__container">
 			
 			<p class="copyright__text">Copyright © Fooseshoes 2013. <br> Designed by EnzoLiVolti. </p>
@@ -530,7 +538,7 @@
 			</ul>
 			
 		</div> <!-- /.container -->
-	</section>
+	</div>
 
 	<script src="js/scripts.js"></script>
 </body>
