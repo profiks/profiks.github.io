@@ -344,6 +344,10 @@ $mobile:		320px;
 @media (max-width: $tablet-sm) {
 	
 	
+	.sortable__drop-mode{
+		padding: 0 35px 0 10px;
+	}
+	
 	[data-tooltip]{
 		&::before, &::after{
 			display: none;
