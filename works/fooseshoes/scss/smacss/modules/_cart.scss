@@ -19,6 +19,18 @@
 		margin-left: 8px;
 	}
 	
+	&__info{
+		width: 60%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	&__price{
+		color: $green;
+		font-weight: 600;
+	}
+	
 	&__reference{
 		width: 60px;
 		height: 60px;

@@ -9,7 +9,10 @@
 		width: 23px;
 		height: 2px;
 		margin-bottom: 4px;
-		background: $gray-secondary;
+		background: $gray-secondary;		
+		transition: all .3s ease;
+		opacity: 1;
+		transform: rotate(0);
 		
 		&:last-child{
 			margin-bottom: 0;

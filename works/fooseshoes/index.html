@@ -25,7 +25,7 @@
 					<input type="text" class="search__input" value="" name="searchQuery" placeholder="SEARCH">
 					<button class="btn btn--dark"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>
-				<button class="btn btn--dark">Login <span class="btn__sub">or</span> register</button>
+				<button class="btn btn--dark js-modalOpen" data-target="logInModal">Login <span class="btn__sub">or</span> register</button>
 			</div>
 			
 		</div> <!-- /.container -->
@@ -34,7 +34,7 @@
 	<nav class="nav">
 		<div class="container--flex nav__container">
 			
-			<ul class="navigation navigation--menu">
+			<ul class="navigation navigation--menu" id="navigation">
 				<li class="navigation__item"><a href="index.html" class="navigation__link navigation__link--active">Home</a></li>
 				<li class="navigation__item"><a href="products.html" class="navigation__link">Products</a></li>
 				<li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
@@ -46,7 +46,7 @@
 			<ul class="navigation navigation--actions">
 				
 				<li class="navigation__item visible-mobile">
-					<a href="#" class="hamburger navigation__link">
+					<a href="#" data-target="navigation" class="hamburger navigation__link">
 						<span class="hamburger__line"></span>
 						<span class="hamburger__line"></span>
 						<span class="hamburger__line"></span>
@@ -66,7 +66,7 @@
 					</a>
 				</li>
 				<li class="navigation__item">
-					<a href="popup.html" class="navigation__link" data-tooltip="Basket">
+					<a href="#" class="navigation__link" data-tooltip="Basket">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 						<span class="badge">0</span>
 					</a>
@@ -407,30 +407,33 @@
 			<article class="addon__large">
 				<h2 class="addon__heading"><a href="#">Blog news</a></h2>
 				
-				<section class="news">
-				
-					<div class="news__item">
-						<span class="date">
-							<span class="date__month">apr</span>
-							<span class="date__day">01</span>
-						</span>						
-						<div class="news__content">
-							<h3><a href="#" class="news__link">Nice &amp; clean. The best for you blog!</a></h3>
-							<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-						</div>
-					</div> <!-- /.news__item -->
-					
-					<div class="news__item">
-						<span class="date">
-							<span class="date__month">apr</span>
-							<span class="date__day">18</span>
-						</span>						
-						<div class="news__content">
-							<h3><a href="#" class="news__link">What is eCommerce Theme</a></h3>
-							<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-						</div>
-					</div> <!-- /.news__item -->
-					
+				<section class="news">					
+					<div class="news__wrap" id="newsCarousel">
+											
+						<!-- This is just the placeholder. All real posts are loaded dynamically -->
+						<div class="news__item">
+							<span class="date">
+								<span class="date__month">apr</span>
+								<span class="date__day">01</span>
+							</span>						
+							<div class="news__content">
+								<h3><a href="#" class="news__link">Nice &amp; clean. The best for you blog!</a></h3>
+								<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
+							</div>
+						</div> <!-- /.news__item -->
+						<div class="news__item">
+							<span class="date">
+								<span class="date__month">apr</span>
+								<span class="date__day">18</span>
+							</span>						
+							<div class="news__content">
+								<h3><a href="#" class="news__link">What is eCommerce Theme</a></h3>
+								<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
+							</div>
+						</div> <!-- /.news__item -->
+						<!-- END of the placeholder posts -->
+												
+					</div> <!-- /.news__wrap -->					
 				</section> <!-- /.news -->
 				
 			</article>
@@ -462,35 +465,35 @@
 			</div>
 			<div class="widget">
 				<h2 class="widget__title">Flickr widget</h2>
-				<ul class="gallery-widget">
+				<ul class="gallery-widget" id="lightBox">
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox1.jpg" alt="flicker 1" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Bufallo Decollete" href="uploads/lightbox1.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox1.jpg" alt="Bufallo Decollete" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox2.jpg" alt="flicker 2" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Black and white" href="uploads/lightbox2.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox2.jpg" alt="Black and white" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox3.jpg" alt="flicker 3" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Even and Odd" href="uploads/lightbox3.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox3.jpg" alt="Even and Odd" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox4.jpg" alt="flicker 4" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Sporty Shoes"  href="uploads/lightbox4.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox4.jpg" alt="Sporty Shoes" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox5.jpg" alt="flicker 5" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Pink Shoes" href="uploads/lightbox5.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox5.jpg" alt="Pink Shoes" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox6.jpg" alt="flicker 6" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Colorful High Heels" href="uploads/lightbox6.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox6.jpg" alt="Colorful High Heels" class="gallery-widget__thumb">
 						</a>
 					</li>
 				</ul>
@@ -501,9 +504,9 @@
 		<div class="social">
 			<div class="container--flex footer__container">
 			
-				<form action="#" class="subscribe">
-					<label for="subscribeEmail" class="subscribe__label">Enter email for newsletter</label>			
-					<input required type="email" id="subscribeEmail" class="subscribe__input" name="email">
+				<form action="#" class="subscribe" id="subscribeForm">								
+					<input required type="email" name="email" id="subscribeEmail" class="subscribe__input js-label" name="email">
+					<label for="subscribeEmail" class="subscribe__label">Enter email for newsletter</label>
 					<button class="btn subscribe__btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 				</form>
 
@@ -545,7 +548,63 @@
 	</div>
 	
 	
+	
+	
+	<div class="modal modal--close" id="logInModal">
 
-	<script src="js/scripts.js"></script>
+		<div class="modal__content login-form">
+			
+			<div class="modal__header">
+				<h3 class="login-form__title">Sign In</h3>
+				<a href="#" class="modal__close js-modalClose" data-target="logInModal">x</a>
+			</div>
+
+			<div class="modal__body">
+				
+				<form action="#" name="login">					
+					<div class="login-form__group login-form__group--login">
+						<input type="text" class="login-form__input js-label" id="login" required>
+						<label for="login" class="login-form__label">User name or Email</label>
+					</div>
+					<div class="login-form__group login-form__group--pass">
+						<input type="password" class="login-form__input js-label" id="pass" required>
+						<label for="pass" class="login-form__label">User Password</label>
+					</div>					
+					<div class="login-form__group">					
+						<button class="login-form__btn login-form__submit">Login</button>					
+					</div>
+					<div class="login-form__group">			
+						<input type="checkbox" id="remember" class="login-form__check">
+						<label for="remember" class="login-form__text login-form__remember">
+							Remember me
+							<span class="login-form__checkmark"></span>
+						</label>					
+						<a href="#" class="login-form__text">Forgot password ?</a>						
+					</div>					
+					<div class="login-form__group login-form__group--social">
+						<a href="#" class="btn btn--fb"><i class="fa fa-facebook" aria-hidden="true"></i>
+						Log in with Facebok</a>
+						<a href="#" class="btn btn--tw">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+						Log in with Twitter</a>
+					</div>					
+				</form>
+				
+			</div> <!-- /.modal__body -->
+
+			<div class="modal__footer">
+				
+				<p class="login-form__text">Need new account ?</p>
+				
+				<a href="#" class="login-form__btn">Sign Up</a>
+
+			</div>
+			
+		</div> <!-- /.content -->
+										
+	</div> <!-- /.modal -->
+	
+
+	<script src="js/bundle.js"></script>
 </body>
 </html>

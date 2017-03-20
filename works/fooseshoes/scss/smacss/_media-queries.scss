@@ -129,7 +129,30 @@ $mobile:		320px;
 	}
 	
 	.navigation--menu{
-		display: none;
+		display: block;		
+		position: absolute;
+		left: 0;
+		top: 60px;
+		border-top: 1px solid #eee;
+		height: auto;
+		width: 100%;
+		z-index: 99;
+		
+		transform: translateX(-100%);
+		transition: transform .3s ease;
+		
+		.navigation__item{
+			background: $gray-secondary;
+			border: none;
+		}
+		
+		.navigation__link{
+			color: #fff;
+			
+			&--active{
+				color: $green;
+			}
+		}
 	}
 	
 	.navigation:last-child .navigation__item:first-child {
