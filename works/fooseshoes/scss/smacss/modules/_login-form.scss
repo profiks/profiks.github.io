@@ -1,0 +1,148 @@
+.login-form{
+	
+	&__group{
+		width: 100%;
+		float: left;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 18px;
+		
+		&:last-child{
+			margin-bottom: 0;
+		}
+		
+		&--social{
+			margin-top: 30px;
+		}
+		
+		&--login::after{
+			content: "\f007";			
+			display: inline-block;
+			position: absolute;
+			right: 14px;
+			top: 50%;
+			transform: translateY(-50%);
+			
+			color: $green;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+		}
+			
+		&--pass::after{
+			content: "\f13e";			
+			display: inline-block;
+			position: absolute;
+			right: 14px;
+			top: 50%;
+			transform: translateY(-50%);
+			
+			color: $green;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+	
+	&__input{
+		width: 100%;
+		background: #2e2e2e;
+		padding: 14px 30px 14px 14px;
+		border: none;
+		outline: none;
+		color: #fff;
+		font-size: .9em;
+		
+	}
+	
+	&__btn{
+		border: 1px solid transparent;
+		background: $green;
+		padding: 10px 20px;
+		
+		text-align: center;
+		color: #fff;
+		font-size: .875em;
+		font-weight: bold;
+		text-decoration: none;
+		outline: none;
+		cursor: pointer;
+		transition: all .2s ease;
+		
+		&:hover{
+			background: transparent;
+			color: $green;
+			border-color: currentColor;
+		}
+	}
+	
+	&__submit{
+		width: 100%;
+	}
+	
+	&__text{
+		font-size: em(14);
+		font-weight: 600;
+		text-decoration: none;
+	}
+	
+	
+	
+	&__title{
+		font-weight: 600;
+		font-size: em(18);
+	}
+	
+	&__remember{
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		position: relative;
+	}
+	
+	&__check{
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+		
+		 &:checked + label .login-form__checkmark::after{        
+			transform: scale(0.9);
+		}
+	}
+	
+	&__checkmark{
+		display: inline-block;
+		position: relative;
+		width: 16px;
+		height: 16px;
+		border: 1px solid $gray-primary;
+		margin-right: 15px;
+		
+		cursor: pointer;
+		
+		&::after{
+			content: '';
+			width: 10px;
+			height: 10px;
+			display: block;
+			background: $green;
+			transition: all .2s ease;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			
+			transform: scale(0);
+		}
+	}
+	
+}
+
+a.login-form__text{
+	&:hover{
+		color: $green;
+	}
+}

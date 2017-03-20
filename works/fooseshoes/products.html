@@ -65,7 +65,7 @@
 					</a>
 				</li>
 				<li class="navigation__item">
-					<a href="popup.html" class="navigation__link" data-tooltip="Basket">
+					<a href="#" class="navigation__link js-modalOpen" data-target="cartModal" data-tooltip="Basket">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 						<span class="badge">0</span>
 					</a>
@@ -99,9 +99,9 @@
 					
 						<ul class="category">
 							<li class="category__name">
-								<a href="#" class="category__link">Brands <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+								<a href="#" class="category__link js-dropdown" data-dropdown="subCat1">Brands <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
 
-								<ul class="subcategory">
+								<ul class="subcategory" id="subCat1">
 									<li class="subcategory__item">
 										<a href="#" class="subcategory__link">Buffalo Decolletè</a>
 									</li>
@@ -124,9 +124,9 @@
 						
 						<ul class="category">
 							<li class="category__name">
-								<a href="#" class="category__link">Categories <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+								<a href="#" class="category__link js-dropdown" data-dropdown="subCat2">Categories <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
 
-								<ul class="subcategory">
+								<ul class="subcategory" id="subCat2">
 									<li class="subcategory__item">
 										<a href="#" class="subcategory__link">Buffalo Decolletè</a>
 									</li>
@@ -150,9 +150,9 @@
 						
 						<ul class="category">
 							<li class="category__name">
-								<a href="#" class="category__link">Price <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+								<a href="#" class="category__link js-dropdown" data-dropdown="subCat3">Price <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
 
-								<ul class="subcategory">
+								<ul class="subcategory" id="subCat3">
 									<li class="subcategory__item">
 										<a href="#" class="subcategory__link">Buffalo Decolletè</a>
 									</li>
@@ -656,9 +656,9 @@
 		<div class="social">
 			<div class="container--flex footer__container">
 			
-				<form action="#" class="subscribe">
-					<label for="subscribeEmail" class="subscribe__label">Enter email for newsletter</label>			
-					<input required type="email" id="subscribeEmail" class="subscribe__input" name="email">
+				<form action="#" class="subscribe">								
+					<input required type="email" id="subscribeEmail" class="subscribe__input js-label" name="email">
+					<label for="subscribeEmail" class="subscribe__label">Enter email for newsletter</label>
 					<button class="btn subscribe__btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 				</form>
 
@@ -699,6 +699,68 @@
 		</div> <!-- /.container -->
 	</div>
 
-	<script src="js/scripts.js"></script>
+	<div class="modal modal--close" id="cartModal">
+
+		<div class="modal__content cart">
+			
+			<div class="modal__header">
+				<h3 class="cart__title">Basket <span>3</span> items</h3>
+				<a href="#" class="modal__close js-modalClose" data-target="cartModal">x</a>
+			</div>
+
+			<div class="modal__body">
+
+				<ul class="cart__list">
+
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="uploads/product1-sm.png" alt="Even And Odd" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">Even&amp;Odd</span>
+							<span class="cart__price">$144,95</span>
+						</span>
+						
+						<a href="#" data-tooltip="Remove" class="cart__remove tooltip--top"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="uploads/product6-sm.png" alt="Black Leather" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">Black Leather</span>
+							<span class="cart__price">$100,25</span>
+						</span>
+									
+						<a href="#" data-tooltip="Remove" class="cart__remove tooltip--top"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					
+					<li class="cart__item">					
+						<a href="#" class="cart__reference"><img src="uploads/product3-sm.png" alt="Bufallo Decollete" class="cart__thumb"></a>					
+						<span class="cart__info">
+							<span class="cart__name">Bufallo Decollete</span>
+							<span class="cart__price">$95</span>
+						</span>
+									
+						<a href="#" data-tooltip="Remove" class="cart__remove tooltip--top"><i class="fa fa-times" aria-hidden="true"></i></a>					
+					</li>
+					
+
+				</ul> <!-- /.cart -->
+
+			</div> <!-- /.modal__body -->
+
+			<div class="modal__footer">
+				<div class="cart__sum">
+					<span class="cart__order">Cart subtotal:</span>
+					<span class="cart__order-price">$340.20</span>
+				</div>
+
+				<a href="#" class="cart__btn btn btn--light">Checkout</a>
+
+			</div>
+			
+		</div> <!-- /.content -->
+										
+	</div> <!-- /.modal -->
+	
+
+	<script src="js/bundle.js"></script>
 </body>
 </html>

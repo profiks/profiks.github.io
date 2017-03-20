@@ -1,3 +1,56 @@
 .js-popup{
 	overflow: hidden;
 }
+
+.js-gallery{
+	overflow: hidden;
+}
+
+.js-label{
+	
+	& + label{
+		position: absolute;
+		left: 14px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		cursor: text;
+		color: #7d7d7d;
+		font-size: em(12);
+		font-style: italic;
+		
+		transition: all .2s ease;
+	}
+	
+	&:focus + label, &.js-label--active + label{
+		top: -10px;
+		font-size: em(11);
+		font-style: normal;
+	}
+}
+
+
+.navigation--menu.active{
+	transform: translateX(0);
+}
+
+.hamburger.opened{
+	
+	.hamburger__line{
+		
+		&:nth-child(1){
+			transform: rotate(45deg);
+			transform-origin: 14% 86%;
+		}
+		
+		&:nth-child(2){
+			opacity: 0;
+		}
+		
+		&:nth-child(3){
+			transform: rotate(-45deg);
+			transform-origin: 12% 88%;
+		}
+	}
+	
+}

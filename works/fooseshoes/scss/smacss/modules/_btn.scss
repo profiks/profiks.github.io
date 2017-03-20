@@ -70,3 +70,44 @@
 		color: $gray-primary;
 	}
 }
+
+
+.btn--fb{
+	background: #3b5a9a;
+	padding: 10px 15px;
+	display: flex;
+    align-items: center;
+	
+	color: #fff;
+	font-size: em(13);
+	text-decoration: none;
+	text-align: center;
+	
+	&:hover{
+		color: #000;
+	}
+	
+	i{
+		margin-right: 5px;
+	}
+}
+
+.btn--tw{
+	background: #2ca8d2;
+	padding: 10px 15px;
+	display: flex;
+    align-items: center;
+	
+	color: #fff;
+	font-size: em(13);
+	text-decoration: none;
+	text-align: center;
+	
+	&:hover{
+		color: #000;
+	}
+	
+	i{
+		margin-right: 5px;
+	}
+}

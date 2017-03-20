@@ -43,22 +43,36 @@
 		background: #2e2e2e;
 		padding: 14px;
 		border: none;
+		border: 1px solid #2e2e2e;
+		
+		transition: all .2s ease;
 		
 		outline: none;
 		color: #7d7d7d;
 		font-size: em(12);
 	}
 	
+	&__greeting{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: $gray-primary;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		animation: fadeIn .3s;
+		
+		font-size: em(14);
+		color: #fff;
+		text-align: center;
+	}
+	
 	&__label{
 		display: inline-block;
-		position: absolute;
-		left: 14px;
-		top: 13px;
-		
-		cursor: text;
-		color: #7d7d7d;
-		font-size: em(12);
-		font-style: italic;
 	}
 	
 	&__btn{
@@ -77,4 +91,20 @@
 			color: #7d7d7d;
 		}
 	}
+}
+
+
+.subscribe--error{
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+	
+	.subscribe__input{
+		border-color: red;
+	}
+}
+
+.subscribe--sent{
+	overflow: hidden;
 }
