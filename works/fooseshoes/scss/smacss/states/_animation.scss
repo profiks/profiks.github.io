@@ -52,3 +52,49 @@
     transform: translate3d(4px, 0, 0);
   }
 }
+
+
+@keyframes slidePrice {
+	from {
+		transform: translateY(-500%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideTitle {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes slideDescription {
+	from {
+		transform: translateX(500%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideActions {
+	from {
+		transform: translateX(500%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideBackground {
+	from {
+		background-position-x: -800px;
+	}
+	to {
+		background-position-x: 0;
+	}
+}

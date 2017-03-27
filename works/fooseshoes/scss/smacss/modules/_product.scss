@@ -4,11 +4,14 @@
 	position: relative;
 	overflow: hidden;
 	
+	transition: all .4s ease;
+	
 	&__thumbnail{
 		display: block;
 		height: 220px;
 		max-width: 100%;
-		margin: 0 auto;		
+		margin: 0 auto;	
+		transition: all .4s ease;
 	}
 	
 	&__info{
@@ -17,6 +20,7 @@
 		border-top: 1px solid #ccc;
 		position: relative;
 		height: 56px;
+		transition: all .4s ease;
 	}
 	
 	&__action{
@@ -43,11 +47,15 @@
 		overflow: hidden;
 		width: 100%;
 		
+		pointer-events: none;
+		user-select: none;
+		
 		font-size: em(18);
 		color: $gray-primary;
 		font-weight: 600;
 		text-overflow: ellipsis;
 		line-height: 1;
+		transition: all .4s ease;
 	}
 	
 	&__price{		
@@ -64,6 +72,7 @@
 		color: #fff;
 		font-size: em(13);
 		font-weight: 600;
+		transition: all .4s ease;
 		
 	}
 }
@@ -114,4 +123,66 @@
 		font-weight: 600;
 		font-size: em(13);
 	}
+}
+
+
+.list .product{
+	width: 100%;
+	margin: 0 0 20px 0;
+	padding: 5px;
+	overflow: visible;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	&::before{
+		display: none;
+	}
+
+	&__thumbnail{
+		height: 70px;
+		width: 70px;
+		float: left;
+	}
+
+	&__name{
+		padding: 0 15px;
+		font-size: em(15);
+		height: 16px;
+	}
+
+	&__info{
+		padding: 0;
+		border: none;
+		height: 70px;
+		float: left;
+		width: calc(100% - 70px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__price{
+		width: 100px;
+		flex-basis: 100px;
+		position: static;
+		background: transparent;
+		color: $green;
+		font-size: em(16);
+	}
+
+	&__action{
+		flex-basis: 200px;
+		background: none;
+		padding: 0;
+		position: static;
+		transform: none;			
+	}
+
+	.action__link{
+		border: 1px solid currentColor;
+		margin: 3px;
+	}
+
 }

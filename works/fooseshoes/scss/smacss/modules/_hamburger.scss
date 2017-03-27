@@ -13,6 +13,7 @@
 		transition: all .3s ease;
 		opacity: 1;
 		transform: rotate(0);
+		pointer-events: none;
 		
 		&:last-child{
 			margin-bottom: 0;

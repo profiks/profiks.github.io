@@ -64,13 +64,6 @@
 	}
 	
 	
-	&__point--active &__name{
-		color: #fff;
-	}	
-	
-	&__point--active::before, &__point--active:hover::before{
-		opacity: 1;
-	}
 	
 	&__name{
 		display: block;
@@ -81,6 +74,7 @@
 		font-weight: 600;
 		
 		transition: color .3s ease;
+		pointer-events: none;
 	}
 	
 	&__price{
@@ -91,5 +85,6 @@
 		font-size: em(12);
 		color: #adadad;
 		font-weight: 600;
+		pointer-events: none;
 	}
 }
