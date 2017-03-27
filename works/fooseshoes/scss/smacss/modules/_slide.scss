@@ -2,16 +2,21 @@
 	height: 460px;
 	overflow: hidden;
 	
-	&--inner{
-		height: 260px;
-	}
 	
 	&__item{
-		display: flex;
+		display: none;
 		width: 100%;
 		height: 100%;
 		background-repeat: no-repeat;		
 		background-color: $background;
+	}
+	
+	&--inner{
+		height: 260px;
+		
+		.slide__item{
+			display: flex;
+		}
 	}
 	
 	&__container{

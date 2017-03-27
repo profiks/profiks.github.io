@@ -9,18 +9,32 @@ export default class classSwitcher {
      */    
     constructor(toggleElement) { 
 		
-		let click, switcher, targetEl, target, state = false
+		let click, clickEnd, switcher, targetEl, target, state = false
 		
 		click = ('ontouchstart' in window ? 'touchstart' : 'click')
+		clickEnd = ('ontouchend' in window ? 'touchend' : 'click')
 		switcher = toggleElement[0]		
 		targetEl = switcher.dataset.target		
 		target = document.getElementById(targetEl)
 		
 		switcher.addEventListener(click, (e)=>{
 			e.preventDefault()
-			target.classList.toggle('active')
-			switcher.classList.toggle('opened')
+			this.toggleClass(target, switcher)
 		})
 		
-    } 
+		window.addEventListener(clickEnd, (e)=>{
+			
+			let clickedEl = e.target			
+		 	if (clickedEl.parentElement !== target && target.classList.contains('active') && clickedEl !== switcher) {
+				this.toggleClass (target, switcher)			
+		 	} 
+			
+		}, false)
+		
+    }
+	
+	toggleClass (target, switcher){
+		target.classList.toggle('active')
+		switcher.classList.toggle('opened')
+	}
 }

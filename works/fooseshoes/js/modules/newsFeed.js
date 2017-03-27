@@ -43,7 +43,7 @@ export default class newsFedd {
      * @returns {promise}
      */
     loadNews(){		
-		let newsUrl = 'js/news.json'
+		const newsUrl = 'js/news.json'
 		
 		return fetch(newsUrl).then((response) => {			
 			return response.json()			

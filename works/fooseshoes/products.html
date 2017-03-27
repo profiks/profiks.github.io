@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
 	<link rel="icon" href="img/favicon.png" type="image/x-icon"/>
 	
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -20,11 +21,18 @@
 			<a href="index.html" class="logo">FooseShoes</a>
 			
 			<div class="header__right">
-				<form action="#" name="search" class="search">
-					<input type="text" class="search__input" value="" name="searchQuery" placeholder="SEARCH">
-					<button class="btn btn--dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+				<form action="#" name="search" class="search" id="ajaxTypeAhead" >
+					<input type="text" class="search__input" value="" id="searchQuery" name="searchQuery" placeholder="SEARCH">
+					<a href="#" class="btn btn--dark js-search-btn" data-target="ajaxTypeAhead"><i class="fa fa-search" aria-hidden="true"></i></a>
+					
+					<div class="search__result" id="searchResult">
+						<a href="#" class="search__result-item">Men shoes</a>
+						<a href="#" class="search__result-item">Kids</a>
+						<a href="#" class="search__result-item">New collection</a>
+					</div>
+					
 				</form>
-				<button class="btn btn--dark">Login <span class="btn__sub">or</span> register</button>
+				<button class="btn btn--dark js-modalOpen" data-target="logInModal">Login <span class="btn__sub">or</span> register</button>
 			</div>
 			
 		</div> <!-- /.container -->
@@ -33,9 +41,9 @@
 	<nav class="nav">
 		<div class="container--flex nav__container">
 			
-			<ul class="navigation navigation--menu">
+			<ul class="navigation navigation--menu" id="navigation">
 				<li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
-				<li class="navigation__item"><a href="products.html" class="navigation__link--active navigation__link">Products</a></li>
+				<li class="navigation__item"><a href="products.html" class="navigation__link navigation__link--active">Products</a></li>
 				<li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
 				<li class="navigation__item"><a href="#" class="navigation__link">Pages</a></li>
 				<li class="navigation__item"><a href="#" class="navigation__link">Blog</a></li>
@@ -45,7 +53,7 @@
 			<ul class="navigation navigation--actions">
 				
 				<li class="navigation__item visible-mobile">
-					<a href="#" class="hamburger navigation__link">
+					<a href="#" data-target="navigation" class="hamburger navigation__link">
 						<span class="hamburger__line"></span>
 						<span class="hamburger__line"></span>
 						<span class="hamburger__line"></span>
@@ -53,31 +61,38 @@
 				</li>
 				
 				<li class="navigation__item visible-mobile">
-					<a href="#" class="navigation__link">
+					<a href="#" class="navigation__link js-search-mobile" data-target="noAjaxSearch">
 						<i class="fa fa-search" aria-hidden="true"></i>
-					</a>
+					</a>					
 				</li>
 				
 				<li class="navigation__item">
-					<a href="#" class="navigation__link" data-tooltip="Wishist">
+					<a href="#" class="navigation__link" data-tooltip="Wishlist">
 						<i class="fa fa-star-o" aria-hidden="true"></i>
 						<span class="badge">30</span>
 					</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#" class="navigation__link js-modalOpen" data-target="cartModal" data-tooltip="Basket">
+					<a href="#" class="navigation__link" data-tooltip="Basket">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 						<span class="badge">0</span>
 					</a>
 				</li>
 			</ul>
 			
+			
 		</div> <!-- /.container -->
+		
+		<form action="#" class="search--mobile" id="noAjaxSearch">
+			<input type="text" autofocus class="search__input" value="" name="searchNoAjax" placeholder="SEARCH">
+			<button class="search__btn">GO</button>
+		</form>
+		
 	</nav>
 	
 	<section class="slide slide--inner">			
 			<div class="slide__item">
-				<div class="slide__container" data-bg="uploads/shoes3.png" style="background-image:url(uploads/shoes3.png)">
+				<div class="slide__container" style="background-image:url(uploads/shoes1.png)">
 					<div class="slide__heading">
 						<h2 class="slide__price">$145,99</h2>
 						<h3 class="slide__title">Pink Shoes 2013 Collection</h3>
@@ -97,80 +112,42 @@
 					
 					<div class="filtering">
 					
-						<ul class="category">
-							<li class="category__name">
-								<a href="#" class="category__link js-dropdown" data-dropdown="subCat1">Brands <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-
-								<ul class="subcategory" id="subCat1">
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Buffalo Decolletè</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Even&amp;Odd</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Prada</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Casadei</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Mellow Yellow</a>
-									</li>
-								</ul>						
-							</li>
-						</ul>
+						<div class="category">								
+							<select class="js-select" data-addclass="subcategory" id="subcat1">
+								<option value="Brands" selected="">Brands</option>
+								<option value="Buffalo Decolletè">Buffalo Decolletè</option>
+								<option value="Even & Odd">Even&amp;Odd</option>
+								<option value="Prada">Prada</option>
+								<option value="Casadei">Casadei</option>
+								<option value="Mellow Yellow">Mellow Yellow</option>
+							</select>
+						</div>
 						
 						
-						<ul class="category">
-							<li class="category__name">
-								<a href="#" class="category__link js-dropdown" data-dropdown="subCat2">Categories <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-
-								<ul class="subcategory" id="subCat2">
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Buffalo Decolletè</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Even&amp;Odd</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Prada</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Casadei</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Mellow Yellow</a>
-									</li>
-								</ul>						
-							</li>
-						</ul>
+						<div class="category">								
+							<select class="js-select" data-addclass="subcategory" id="subcat2">
+								<option value="Categories" selected="">Categories</option>
+								<option value="Aerobic Shoes">Aerobic Shoes</option>
+								<option value="Ballet Shoes">Ballet Shoes</option>
+								<option value="Booties">Booties</option>
+								<option value="Calf Boots">Calf Boots</option>
+								<option value="Comfort Shoes">Comfort Shoes</option>
+								<option value="Dress Shoes">Dress Shoes</option>
+								<option value="Water Shoes">Water Shoes</option>
+							</select>
+						</div>
 						
 						
 						
-						<ul class="category">
-							<li class="category__name">
-								<a href="#" class="category__link js-dropdown" data-dropdown="subCat3">Price <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-
-								<ul class="subcategory" id="subCat3">
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Buffalo Decolletè</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Even&amp;Odd</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Prada</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Casadei</a>
-									</li>
-									<li class="subcategory__item">
-										<a href="#" class="subcategory__link">Mellow Yellow</a>
-									</li>
-								</ul>						
-							</li>
-						</ul>
+						<div class="category">
+							<select class="js-select" data-addclass="subcategory" id="subcat3">
+								<option value="Price" selected="">Price</option>
+								<option value="$10 - $50">$10 - $50</option>
+								<option value="$50 - $100">$50 - $100</option>
+								<option value="$100 - $200">$100 - $200</option>
+								<option value="$500+">$500+</option>									
+							</select>
+						</div>
 						
 						
 						
@@ -195,19 +172,27 @@
 				</div>
 				<div class="sortable">
 					Viev as
-					<a href="#" class="sortable__view" data-tooltip="Tiles"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-					<a href="#" class="sortable__view" data-tooltip="List"><i class="fa fa-list" aria-hidden="true"></i></a>
+					<a href="#" class="sortable__view js-viewmode active" data-class="tiles" data-container="allProducts" data-tooltip="Tiles">
+						<i class="fa fa-th-large" aria-hidden="true"></i>
+					</a>
+					<a href="#" class="sortable__view js-viewmode" data-class="list" data-container="allProducts" data-tooltip="List">
+						<i class="fa fa-list" aria-hidden="true"></i>
+					</a>
 					
-					<ul class="sortable__dropdown">
-						<li class="sortable__drop-mode">
-							Sort alphabetically <span class="carret"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
-						</li>
-					</ul>
+					<div class="sort-filter">
+						<select class="js-select" data-addclass="sort-mode" id="sort">
+							<option value="Sort alphabetically" selected="">Sort alphabetically</option>
+							<option value="By rating">By rating</option>
+							<option value="The popular">The popular</option>
+							<option value="Novelties">Novelties</option>
+						</select>
+					</div>
+					
 					
 				</div>
 			</div>
 			
-			<div class="container--mansory block">
+			<div class="container--mansory block tiles" id="allProducts">
 				
 				<figure class="product">					
 					<picture>
@@ -562,30 +547,33 @@
 			<article class="addon__large">
 				<h2 class="addon__heading"><a href="#">Blog news</a></h2>
 				
-				<section class="news">
-				
-					<div class="news__item">
-						<span class="date">
-							<span class="date__month">apr</span>
-							<span class="date__day">01</span>
-						</span>						
-						<div class="news__content">
-							<h3><a href="#" class="news__link">Nice &amp; clean. The best for you blog!</a></h3>
-							<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-						</div>
-					</div> <!-- /.news__item -->
-					
-					<div class="news__item">
-						<span class="date">
-							<span class="date__month">apr</span>
-							<span class="date__day">18</span>
-						</span>						
-						<div class="news__content">
-							<h3><a href="#" class="news__link">What is eCommerce Theme</a></h3>
-							<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-						</div>
-					</div> <!-- /.news__item -->
-					
+				<section class="news">					
+					<div class="news__wrap" id="newsCarousel">
+											
+						<!-- This is just the placeholder. All real posts are loaded dynamically -->
+						<div class="news__item">
+							<span class="date">
+								<span class="date__month">apr</span>
+								<span class="date__day">01</span>
+							</span>						
+							<div class="news__content">
+								<h3><a href="#" class="news__link">Nice &amp; clean. The best for you blog!</a></h3>
+								<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
+							</div>
+						</div> <!-- /.news__item -->
+						<div class="news__item">
+							<span class="date">
+								<span class="date__month">apr</span>
+								<span class="date__day">18</span>
+							</span>						
+							<div class="news__content">
+								<h3><a href="#" class="news__link">What is eCommerce Theme</a></h3>
+								<p class="news__desc">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
+							</div>
+						</div> <!-- /.news__item -->
+						<!-- END of the placeholder posts -->
+												
+					</div> <!-- /.news__wrap -->					
 				</section> <!-- /.news -->
 				
 			</article>
@@ -604,48 +592,44 @@
 			</div>
 			<div class="widget">
 				<h2 class="widget__title">Twitter widget</h2>
-				<ul class="twitter-widget">
-					<li class="twitter-widget__item">
-						<p class="widget__text"> <span class="widget__evident">@nickname </span> Why thank you. Your work looks awesome by the way! <a href="#" class="widget__evident">@treemelody</a>  </p>
-						<span class="widget__date">19 days ago</span>
-					</li>
-					<li class="twitter-widget__item">
-						<p class="widget__text"> <span class="widget__evident">@roymarvelous </span>You can seek a refund through TF if it is not as advertised - but it is :)  </p>
-						<span class="widget__date">5 days ago</span>
-					</li>
-				</ul>
+				
+				<section class="twitter-widget">
+					<ul class="twitter-widget__content" id="tweeterWidget"></ul>
+				</section>				
+				
+				
 			</div>
 			<div class="widget">
 				<h2 class="widget__title">Flickr widget</h2>
-				<ul class="gallery-widget">
+				<ul class="gallery-widget" id="lightBox">
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox1.jpg" alt="flicker 1" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Bufallo Decollete" href="uploads/lightbox1.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox1.jpg" alt="Bufallo Decollete" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox2.jpg" alt="flicker 2" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Black and white" href="uploads/lightbox2.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox2.jpg" alt="Black and white" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox3.jpg" alt="flicker 3" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Even and Odd" href="uploads/lightbox3.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox3.jpg" alt="Even and Odd" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox4.jpg" alt="flicker 4" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Sporty Shoes"  href="uploads/lightbox4.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox4.jpg" alt="Sporty Shoes" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox5.jpg" alt="flicker 5" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Pink Shoes" href="uploads/lightbox5.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox5.jpg" alt="Pink Shoes" class="gallery-widget__thumb">
 						</a>
 					</li>
 					<li class="gallery-widget__item">
-						<a href="#" class="gallery-widget__show">
-							<img src="uploads/lightbox6.jpg" alt="flicker 6" class="gallery-widget__thumb">
+						<a target="_blank" data-caption="Colorful High Heels" href="uploads/lightbox6.jpg" class="gallery-widget__show">
+							<img src="uploads/lightbox6.jpg" alt="Colorful High Heels" class="gallery-widget__thumb">
 						</a>
 					</li>
 				</ul>
@@ -656,8 +640,8 @@
 		<div class="social">
 			<div class="container--flex footer__container">
 			
-				<form action="#" class="subscribe">								
-					<input required type="email" id="subscribeEmail" class="subscribe__input js-label" name="email">
+				<form action="#" class="subscribe" id="subscribeForm">								
+					<input required type="email" name="email" id="subscribeEmail" class="subscribe__input js-label">
 					<label for="subscribeEmail" class="subscribe__label">Enter email for newsletter</label>
 					<button class="btn subscribe__btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 				</form>
@@ -698,61 +682,57 @@
 			
 		</div> <!-- /.container -->
 	</div>
+	
+	
+	
+	
+	<div class="modal modal--close" id="logInModal">
 
-	<div class="modal modal--close" id="cartModal">
-
-		<div class="modal__content cart">
+		<div class="modal__content login-form">
 			
 			<div class="modal__header">
-				<h3 class="cart__title">Basket <span>3</span> items</h3>
-				<a href="#" class="modal__close js-modalClose" data-target="cartModal">x</a>
+				<h3 class="login-form__title">Sign In</h3>
+				<a href="#" class="modal__close js-modalClose" data-target="logInModal">x</a>
 			</div>
 
 			<div class="modal__body">
-
-				<ul class="cart__list">
-
-					<li class="cart__item">					
-						<a href="#" class="cart__reference"><img src="uploads/product1-sm.png" alt="Even And Odd" class="cart__thumb"></a>					
-						<span class="cart__info">
-							<span class="cart__name">Even&amp;Odd</span>
-							<span class="cart__price">$144,95</span>
-						</span>
-						
-						<a href="#" data-tooltip="Remove" class="cart__remove tooltip--top"><i class="fa fa-times" aria-hidden="true"></i></a>					
-					</li>
-					<li class="cart__item">					
-						<a href="#" class="cart__reference"><img src="uploads/product6-sm.png" alt="Black Leather" class="cart__thumb"></a>					
-						<span class="cart__info">
-							<span class="cart__name">Black Leather</span>
-							<span class="cart__price">$100,25</span>
-						</span>
-									
-						<a href="#" data-tooltip="Remove" class="cart__remove tooltip--top"><i class="fa fa-times" aria-hidden="true"></i></a>					
-					</li>
-					
-					<li class="cart__item">					
-						<a href="#" class="cart__reference"><img src="uploads/product3-sm.png" alt="Bufallo Decollete" class="cart__thumb"></a>					
-						<span class="cart__info">
-							<span class="cart__name">Bufallo Decollete</span>
-							<span class="cart__price">$95</span>
-						</span>
-									
-						<a href="#" data-tooltip="Remove" class="cart__remove tooltip--top"><i class="fa fa-times" aria-hidden="true"></i></a>					
-					</li>
-					
-
-				</ul> <!-- /.cart -->
-
+				
+				<form action="#" name="login">					
+					<div class="login-form__group login-form__group--login">
+						<input type="text" class="login-form__input js-label" id="login" required>
+						<label for="login" class="login-form__label">User name or Email</label>
+					</div>
+					<div class="login-form__group login-form__group--pass">
+						<input type="password" class="login-form__input js-label" id="pass" required>
+						<label for="pass" class="login-form__label">User Password</label>
+					</div>					
+					<div class="login-form__group">					
+						<button class="login-form__btn login-form__submit">Login</button>					
+					</div>
+					<div class="login-form__group">			
+						<input type="checkbox" id="remember" class="login-form__check">
+						<label for="remember" class="login-form__text login-form__remember">
+							Remember me
+							<span class="login-form__checkmark"></span>
+						</label>					
+						<a href="#" class="login-form__text">Forgot password ?</a>						
+					</div>					
+					<div class="login-form__group login-form__group--social">
+						<a href="#" class="btn btn--fb"><i class="fa fa-facebook" aria-hidden="true"></i>
+						Log in with Facebok</a>
+						<a href="#" class="btn btn--tw">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+						Log in with Twitter</a>
+					</div>					
+				</form>
+				
 			</div> <!-- /.modal__body -->
 
 			<div class="modal__footer">
-				<div class="cart__sum">
-					<span class="cart__order">Cart subtotal:</span>
-					<span class="cart__order-price">$340.20</span>
-				</div>
-
-				<a href="#" class="cart__btn btn btn--light">Checkout</a>
+				
+				<p class="login-form__text">Need new account ?</p>
+				
+				<a href="#" class="login-form__btn">Sign Up</a>
 
 			</div>
 			

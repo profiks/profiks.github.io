@@ -4,13 +4,51 @@
 	height: 100%;
 	position: relative;
 	
+	&--mobile{
+		display: none;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 105px;
+		border-top: 1px solid #eee;
+		height: 0;
+		overflow: hidden;
+		transition: all .3s ease-in-out;
+		z-index: 5;
+		
+		.search__input{
+			width: calc(100% - 60px);
+			float: left;
+			height: 60px;
+			background: #fff;
+			padding: 15px;
+			border: none;
+			font-size: .8em;
+		}
+		
+		.search__btn{
+			width: 60px;
+			height: 60px;			
+			border: none;
+			outline: none;
+			background: #fff;
+			color: $gray-primary;
+			font-weight: 600;
+			font-size: 1em;
+			text-transform: uppercase;
+			
+			&:focus{
+				background: $gray-primary;
+				color: #eee;
+			}
+		}
+	}
+	
 	
 	&__input{
 		background: transparent;
 		border: none;
-		border-left: 1px solid #383838;
-		//width: 200px;
-		//padding: 15px 18px;
+		border-left: 1px solid #383838;		
 		width: 1px;
 		padding: 0;
 		overflow: hidden;
@@ -22,6 +60,51 @@
 		
 		&::placeholder{
 			color: $gray-light;
+		}
+	}
+	
+	&__result{
+		display: none;
+		width: 100%;
+		height: auto;
+		max-height: 390px;
+		overflow: hidden;
+		transition: all .3s ease;
+		
+		position: absolute;
+		top: 45px;
+		left: 0;
+		z-index: 7;
+	}
+	
+	&__pickout{
+		display: inline-block;
+		background: $green;
+		color: #fff;
+	}
+	
+	&__result-item{
+		width: 100%;
+		float: left;
+		background: $gray-secondary;
+		padding: 12px 15px;
+		overflow: hidden;
+		border-bottom: 1px solid #666464;
+		
+		&:last-child{
+			border-bottom-color: transparent;
+		}
+		
+		text-overflow: ellipsis;
+		word-break: keep-all;
+		white-space: nowrap;
+		font-size: em(12);
+		color: #aaa;
+		text-decoration: none;
+		text-transform: uppercase;		
+		
+		&:hover{
+			color: $green;
 		}
 	}
 	
