@@ -1,0 +1,65 @@
+.icon{
+    display: inline-block;
+    font-size: 0;
+    
+    &::before{
+        content: '';
+        display: block;
+        background-repeat: no-repeat;
+    }
+    
+    &--msg::before{        
+        width: 27px;
+        height: 27px;
+        background-image: url(../img/icon-convs.png);        
+    }
+        
+    &--group::before{
+        width: 31px;
+        height: 19px;
+        background-image: url(../img/icon-friens.png);  
+    }
+        
+    &--numpad::before{
+        width: 22px;
+        height: 31px;
+        background-image: url(../img/icon-dial.png);  
+    }
+        
+    &--settings::before{
+        width: 27px;
+        height: 27px;
+        background-image: url(../img/icon-settings.png);  
+    }
+        
+    &--gear::before{
+        width: 21px;
+        height: 21px;
+        background-image: url(../img/icon-gear.png); 
+    }
+        
+    &--smile::before{
+        width: 21px;
+        height: 21px;
+        background-image: url(../img/icon-emoji.png);        
+    }
+        
+    &--send::before{
+        width: 31px;
+        height: 27px;
+        background-image: url(../img/icon-send.png);        
+    }
+    
+    &--file::before{
+        width: 12px;
+        height: 31px;
+        background-image: url(../img/icon-file.png);        
+    }
+        
+    &--invited::before{
+        width: 23px;
+        height: 17px;
+        background-image: url(../img/icon-invited.png);   
+    }
+        
+}

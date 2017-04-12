@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desktop messaging app</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+   
+   <main class="app-container">
+       
+       <aside class="sidebar">
+          
+          <div class="profile profile--online profile--main profile--bell">              
+              <div class="profile__thumbnail">
+                  <img src="img/user1.jpg" class="profile__avatar" alt="User">
+              </div>              
+              <div class="profile__info">
+                  <p class="profile__name">Denys Arkan</p>
+                  <p class="profile__msg">Available for freelance work.</p>
+              </div>              
+          </div> <!-- / .profile -->
+          
+          
+          <div class="action">              
+              <a href="#" class="action__item new-message icon icon--msg">Message</a>
+              <a href="#" class="action__item icon icon--group">Create group</a>
+              <a href="#" class="action__item icon icon--numpad">Call number</a>
+              <a href="#" class="action__item icon icon--settings">Settings</a>              
+          </div> <!-- / .action -->
+          
+          
+          <form action="#" class="search" name="search">
+                <input id="searchText" type="text" class="search__input" autocomplete="off" name="search" placeholder="Search">
+          </form> <!-- / .search -->
+          
+          
+          <div class="conversations">
+              
+               <div class="profile profile--online profile--new-msg">              
+                  <div class="profile__thumbnail">
+                      <img src="img/user2.jpg" class="profile__avatar" alt="User">
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Manuel Preuß <span class="profile__msg-time">Just now</span></p>
+                      <p class="profile__msg">Hey Rafael! Can we talk about last conversation just in momment</p>
+                  </div>              
+              </div> <!-- / .profile -->
+                            
+               <div class="profile profile--online profile--active">              
+                  <div class="profile__thumbnail">
+                      <img src="img/user3.jpg" class="profile__avatar" alt="User">
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Beerfest <span class="profile__msg-time">8 min</span></p>
+                      <p class="profile__msg">Dmitry: I am new here. Nice to meet</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              <div class="profile profile--away">              
+                  <div class="profile__thumbnail">
+                      <img src="img/user4.jpg" class="profile__avatar" alt="User">
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Dmitry Shirshov <span class="profile__msg-time">21 min</span></p>
+                      <p class="profile__msg">Can you invite me to your conversati</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              <div class="profile profile--online profile--delivered-msg">              
+                  <div class="profile__thumbnail">
+                      <img src="img/user5.jpg" class="profile__avatar" alt="User">
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Helga Källström <span class="profile__msg-time">3 hours</span></p>
+                      <p class="profile__msg">I’m very happy to introduce it!</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+               <div class="profile profile--sent-msg">              
+                  <div class="profile__thumbnail">
+                      <img src="img/user6.jpg" class="profile__avatar" alt="User">
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Hugh Reynolds <span class="profile__msg-time">April 5</span></p>
+                      <p class="profile__msg">Sup bro! Can you call me pls?</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+               <div class="profile profile--busy">              
+                  <div class="profile__thumbnail">
+                      <img src="img/user7.jpg" class="profile__avatar" alt="User">
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Ethan Coleman <span class="profile__msg-time">April 5</span></p>
+                      <p class="profile__msg">Thanks! Have a nice day!</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+          </div> <!-- / .conversations -->
+          
+       </aside> <!-- / .sidebar -->
+       
+       
+       
+    <div class="messenger">
+         
+        <div class="messenger__header">
+             
+             <div class="profile profile--online profile--dark profile--main">              
+                  <div class="profile__thumbnail">
+                      <img src="img/user3.jpg" class="profile__avatar" alt="User">
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Beerfest</p>
+                      <p class="profile__msg">Ideas about the weekend party!</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              <div class="function">
+                  <a href="#" class="function__item">12 participants</a>
+                  <a href="#" class="function__item">Invite</a>
+                  <a href="#" class="function__item icon icon--gear">Settings</a>
+              </div> <!-- / .function -->
+             
+        </div> <!-- / .messenger__header -->
+         
+         
+        <div class="messenger__body">
+            
+            
+             <div class="profile profile--online">              
+                  <div class="profile__thumbnail">
+                      <a href="#"><img src="img/user10.jpg" class="profile__avatar" alt="User"></a>
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Josefine Newton <span class="profile__msg-time">10:27 am</span></p>
+                      <img class="msg" src="img/test-msg-image.jpg" alt="Alternative text for image">
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              <div class="profile profile--online">              
+                  <div class="profile__thumbnail">
+                      <a href="#"><img src="img/user5.jpg" class="profile__avatar" alt="User"></a>
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Helga Källström <span class="profile__msg-time">3 hours</span></p>
+                      <p class="msg">We can go to the bar we were last Saturday. I like it.</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              
+              <div class="profile profile--online">              
+                  <div class="profile__thumbnail">
+                      <a href="#"><img src="img/user9.jpg" class="profile__avatar" alt="User"></a>
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Kevin Thomson <span class="profile__msg-time">21 min</span></p>
+                      <p class="msg">This is a great idea! We will start from Joe’s then we will go to the Fortune Pub and after we will stay at the Natalie’s home.</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              
+              <p class="chat-info chat-info--center"> <span class="icon icon--invited"></span> Denys Arkan has invited Dmitry Shirshov</p>
+              
+              <div class="profile profile--online profile--owner">              
+                  <div class="profile__thumbnail">
+                      <a href="#"><img src="img/user1.jpg" class="profile__avatar" alt="User"></a>
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Denys Arkan<span class="profile__msg-time">16 min</span></p>
+                      <p class="msg">Hey Dmitry! Welcome to the chat.</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              <div class="profile profile--away">              
+                  <div class="profile__thumbnail">
+                      <a href="#"><img src="img/user4.jpg" class="profile__avatar" alt="User"></a>
+                  </div>              
+                  <div class="profile__info">
+                      <p class="profile__name">Dmitry Shirshov <span class="profile__msg-time">8 min</span></p>
+                      <p class="msg">Hi everyone!</p>
+                      <p class="msg">I am new here. Nice to meet you guys.</p>
+                  </div>              
+              </div> <!-- / .profile -->
+              
+              
+              <p class="chat-info typing">Josefine and Kevin are typing</p>
+             
+        </div> <!-- / .messenger_body -->
+        
+         
+        <form action="#" name="message" class="messenger__footer write">            
+            <input type="text" class="write__text" placeholder="Write a message">
+            
+            <div class="write__actions">
+                <label for="file" class="write__file-label">File</label>             
+                <input type="file" class="write__file" id="file">
+                <a href="#" class="write__smile icon icon--smile">Smile</a>
+                <button class="write__send icon icon--send">Send</button>
+            </div>
+             
+        </form> <!-- / .messenger__footer -->
+         
+          
+    </div> <!-- / .messenger -->
+       
+   </main> <!-- / .app-container -->
+   
+    
+</body>
+</html>

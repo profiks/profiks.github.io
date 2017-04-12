@@ -1,0 +1,86 @@
+.messenger{
+    display: grid;
+    grid-template-rows: 115px auto 100px; 
+    grid-template-areas: "header" 
+                          "body" 
+                          "footer";
+    &__header{
+        grid-area: header;
+        background: #fff;
+        box-shadow: 0 0 13px 1px rgba(0,0,0,.1);
+        display: flex;
+        padding: 0 70px 0 30px;
+        width: 100%;
+        float: left;
+        position: relative;
+        z-index: 1;
+    }
+    
+    &__body{
+        grid-area: body;
+        width: 100%;
+        float: left;
+        background: var(--light-bg, #ebeafd);
+        padding: 0 70px;
+        overflow: auto;
+        height: calc(100vh - 215px);
+        
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        
+        .profile{
+            padding-left: 0;
+            padding-right: 0;
+            color: var(--font-primary, #1d1e2c);
+            
+            &__info{
+                width: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                
+                &::after{
+                   display: none;
+                }
+            }
+            
+            &:hover, &:active{
+                background: transparent !important;
+                cursor: default;
+            }
+            
+            &--owner{
+                flex-direction: row-reverse;
+                
+                .profile__info{
+                    padding-left: 0;
+                    padding-right: 25px;
+                    text-align: right;
+                    align-items: flex-end;
+                }
+                
+                .msg{
+                    background: #fff;
+                    color: var(--font-primary, #1d1e2c);
+                    
+                    &:nth-child(2){
+                        border-top-left-radius: var(--message-border-radius, 40px);
+                        border-top-right-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+    
+    &__footer{
+        grid-area: footer;
+        background: #fff;
+        display: flex;
+        padding: 30px 70px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        float: left;
+    }
+    
+}
