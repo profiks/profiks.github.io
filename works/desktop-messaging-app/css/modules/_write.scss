@@ -1,0 +1,43 @@
+.write{
+    
+    &__actions{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-basis: 150px;
+    }
+    
+    &__text{
+        background: transparent;
+        border: none;
+        outline: none;
+        flex-basis: 90%;
+        
+        font-weight: normal;
+        color: var(--font-secondary, #8b8da9);
+        font-size: 16px;
+    }
+    
+    &__file-label{
+        display: inline-block;
+        width: 12px;
+        height: 23px;
+        background: url(../img/icon-file.png) no-repeat transparent;
+        border: none;
+        
+        font-size: 0;
+        cursor: pointer;
+    }
+    
+    &__file{
+        display: none;
+    }
+    
+    &__send{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+    }
+}

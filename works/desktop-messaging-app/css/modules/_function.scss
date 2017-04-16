@@ -1,0 +1,24 @@
+.function{
+    display: flex;
+    align-items: center;
+    
+    &__item{
+        display: inline-block;
+        padding: 4px 18px;
+        border-right: 1px solid var(--font-secondary, #8b8da9);
+        
+        text-decoration: none;
+        white-space: nowrap;
+        color: var(--font-secondary, #8b8da9);
+        font-size: 16px;
+        
+        &:hover{
+            color: var(--message, #44337b);
+        }
+        
+        &:last-child{
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+}
