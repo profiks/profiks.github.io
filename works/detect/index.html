@@ -5,18 +5,77 @@
         <title>Detection Vision</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         <!-- SEO -->
+    <meta  name="description" content="Website development in Chernivtsi, Ukraine. Design and development of low-cost sites in Chernivtsi. Order website in Chernivtsi. Services for creating web sites like : portfolio, online store, website for business, information site. Professional development. Order website in Chernivtsi, Khmelnytsky, Ivano-Frankivsk, Ternopil.">
+    
+    <meta name="keywords" content="" />
+    
+    <meta name="robots" content="all"> 
+    <meta name="robots" content="index, follow">
+    <meta name="subject" content="web design">
+    <meta name="page-type" content="web design">
+    <meta name="document-state" content="dynamic">
+    <meta name="resource-type" content="document">
+    <meta name="audience" content="all">
+    <meta name="language" content="en">
+    <meta name="author" content="Denys Arkan">
+    
+    
+    
+    <link rel="canonical" href="https://profiks.github.io/" />
+    <link rel='shortlink' href='https://profiks.github.io/' />
+    
+    <!-- sitemap -->
+    <link rel="sitemap" type="application/xml" title="sitemap" href="https://profiks.github.io/sitemap.xml" />
+    
+    <!-- verification -->
+    <meta name="yandex-verification" content="df1916fc7e2797b1" />
+    <meta name="wot-verification" content="153ef48412a09933baa3"/>
+    <meta name='freelancehunt-verification' content='d4d7643dabf34f0' />
+    
+    <!-- The Open Graph protocol -->
+    <meta property="og:title" content="Professional Website Development | Chernivtsi" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://profiks.github.io/" />
+    <meta property="og:image" content="https://profiks.github.io/icon/poster.jpg" />
+    <meta property="og:description" content="Professional development and design of web sites like : portfolio, online store, website for business, information site. " />
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://profiks.github.io/icon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://profiks.github.io/icon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://profiks.github.io/icon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://profiks.github.io/icon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://profiks.github.io/icon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://profiks.github.io/icon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://profiks.github.io/icon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://profiks.github.io/icon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://profiks.github.io/icon/apple-touch-icon-180x180.png" />
+    <link rel="icon" sizes="192x192" href="https://profiks.github.io/icon/mobile-web-app-icon-192x192.png">
+    
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#363c4c">
+    
+    <!-- Manifest  -->
+    <link rel="manifest" href="https://profiks.github.io/manifest.json">
+    
+    <script>
+        (function(h,e,a,t,m,p) {
+        m=e.createElement(a);m.async=!0;m.src=t;
+        p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+        })(window,document,'script','https://u.heatmap.it/log.js');
+    </script>  
+    
         <style>
             body{
                 margin:0;
-                padding:0
+                padding:0;
+                background: #34495e;
+                height: 100vh;
             }
             .center-horizontal.vs-app {
                 margin: 0;
-            }
-
-            body {
-                height: 100vh;
-                background: #f7f7f7;
             }
 
             #image.vs-image {
@@ -34,9 +93,17 @@
             #fullTextAnnotation,
             #imagePropertiesAnnotation,
             #safeSearchAnnotation,
-            #jsonExample,
-            #webDetection {
+            #jsonExample {
                 display: none;
+            }
+
+            .score.vs-web {
+              display: none;
+            }
+
+            .name.vs-web {
+              width: 100%;
+              text-align: left;
             }
 
             vs-json,
@@ -54,15 +121,31 @@
                 display: block;
             }
 
+            .modal.vs-loading {
+              height: 100vh;
+            }
+
             paper-card.vs-card {
                 max-height: none !important;
                 min-height: auto;
-                padding: 18px 0;
+                padding: 18px 10px;
                 width: 100%;
             }
 
             .row.vs-landmarks {
                 margin: 0;
+            }
+
+            vs-app {
+              background: transparent;
+            }
+
+            #exit.vs-app {
+              color: #fff;
+            }
+
+            vs-image {
+              width: 100%;
             }
         </style>
     </head>
@@ -969,11 +1052,4 @@
         </div>
         <vs-app></vs-app>
         <script src="vision.min.js"></script>
-        <script>
-            var mutationObserver = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    console.log(mutation);
-                });
-            });
-        </script>
     </body></html>
