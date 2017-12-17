@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Detection Vision</title>
+        <title>Place Detection</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,7 +35,7 @@
     <meta name='freelancehunt-verification' content='d4d7643dabf34f0' />
     
     <!-- The Open Graph protocol -->
-    <meta property="og:title" content="Professional Website Development | Chernivtsi" />
+    <meta property="og:title" content="Place Detection" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://profiks.github.io/" />
     <meta property="og:image" content="https://profiks.github.io/icon/poster.jpg" />
@@ -58,7 +58,7 @@
     <meta name="theme-color" content="#363c4c">
     
     <!-- Manifest  -->
-    <link rel="manifest" href="https://profiks.github.io/manifest.json">
+    <link rel="manifest" href="manifest.json">
     
     <script>
         (function(h,e,a,t,m,p) {
@@ -71,7 +71,7 @@
             body{
                 margin:0;
                 padding:0;
-                background: #34495e;
+                background: #363c4c;
                 height: 100vh;
             }
             .center-horizontal.vs-app {
@@ -93,7 +93,9 @@
             #fullTextAnnotation,
             #imagePropertiesAnnotation,
             #safeSearchAnnotation,
-            #jsonExample {
+            #jsonExample,
+            #webDetection,
+            #tabs {
                 display: none;
             }
 
@@ -113,8 +115,34 @@
             vs-logos,
             vs-labels,
             vs-faces,
+            vs-web,
             .score.vs-landmarks {
                 display: none;
+            }
+
+            paper-card {
+              margin-bottom: 15px;
+            }
+
+            #results.vs-app {
+              height: auto;
+              position: relative;
+            }
+
+            #results.vs-app::before {
+               content: "Nothing found";
+               display: inline-block;
+               width: 100%;
+               height: 40px;
+               position: absolute;
+               top: 0;
+               left: 0;
+               color: #fff;
+            }
+
+            #exit.vs-app {
+              font-weight: 100;
+              color: #fff;
             }
 
             #landmarkAnnotations[role="tab"] #webDetection {
@@ -138,6 +166,7 @@
 
             vs-app {
               background: transparent;
+              padding-top: 40px;
             }
 
             #exit.vs-app {
@@ -147,6 +176,44 @@
             vs-image {
               width: 100%;
             }
+
+            #dropzone.vs-app {
+              background: no-repeat transparent url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU4IDU4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1OCA1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxnPgoJPHBhdGggZD0iTTU3LDZIMUMwLjQ0OCw2LDAsNi40NDcsMCw3djQ0YzAsMC41NTMsMC40NDgsMSwxLDFoNTZjMC41NTIsMCwxLTAuNDQ3LDEtMVY3QzU4LDYuNDQ3LDU3LjU1Miw2LDU3LDZ6IE01Niw1MEgyVjhoNTRWNTB6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNMTYsMjguMTM4YzMuMDcxLDAsNS41NjktMi40OTgsNS41NjktNS41NjhDMjEuNTY5LDE5LjQ5OCwxOS4wNzEsMTcsMTYsMTdzLTUuNTY5LDIuNDk4LTUuNTY5LDUuNTY5ICAgQzEwLjQzMSwyNS42NCwxMi45MjksMjguMTM4LDE2LDI4LjEzOHogTTE2LDE5YzEuOTY4LDAsMy41NjksMS42MDIsMy41NjksMy41NjlTMTcuOTY4LDI2LjEzOCwxNiwyNi4xMzhzLTMuNTY5LTEuNjAxLTMuNTY5LTMuNTY4ICAgUzE0LjAzMiwxOSwxNiwxOXoiIGZpbGw9IiNGRkZGRkYiLz4KCTxwYXRoIGQ9Ik03LDQ2YzAuMjM0LDAsMC40Ny0wLjA4MiwwLjY2LTAuMjQ5bDE2LjMxMy0xNC4zNjJsMTAuMzAyLDEwLjMwMWMwLjM5MSwwLjM5MSwxLjAyMywwLjM5MSwxLjQxNCwwczAuMzkxLTEuMDIzLDAtMS40MTQgICBsLTQuODA3LTQuODA3bDkuMTgxLTEwLjA1NGwxMS4yNjEsMTAuMzIzYzAuNDA3LDAuMzczLDEuMDQsMC4zNDUsMS40MTMtMC4wNjJjMC4zNzMtMC40MDcsMC4zNDYtMS4wNC0wLjA2Mi0xLjQxM2wtMTItMTEgICBjLTAuMTk2LTAuMTc5LTAuNDU3LTAuMjY4LTAuNzItMC4yNjJjLTAuMjY1LDAuMDEyLTAuNTE1LDAuMTI5LTAuNjk0LDAuMzI1bC05Ljc5NCwxMC43MjdsLTQuNzQzLTQuNzQzICAgYy0wLjM3NC0wLjM3My0wLjk3Mi0wLjM5Mi0xLjM2OC0wLjA0NEw2LjMzOSw0NC4yNDljLTAuNDE1LDAuMzY1LTAuNDU1LDAuOTk3LTAuMDksMS40MTJDNi40NDcsNDUuODg2LDYuNzIzLDQ2LDcsNDZ6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==) 50% 50%;
+              background-size: 30%;
+              color: #fff;
+              border: none;
+              font-size: 4.5vw;
+              line-height: 1.5;
+              min-height: 100vw;
+              box-sizing: border-box;
+            }
+            
+            @media (min-width: 768px) {
+              #dropzone.vs-app {
+                font-size: 3vw;
+                min-height: 50vw;
+                background-size: 18%;
+              }
+            }
+
+            @media (min-width: 980px) {
+              #dropzone.vs-app {
+                font-size: 2vw;
+                min-height: 50vw;
+                background-size: 15%;
+                background-position: 75% 50%;
+              }
+            }
+
+            @media (min-width: 1024px) {
+              #dropzone.vs-app {
+                font-size: 20px;
+                min-height: 500px;
+                background-size: 15%;
+                background-position: 75% 50%;
+              }
+            }
+
         </style>
     </head>
     <body>
