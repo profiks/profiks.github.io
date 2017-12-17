@@ -945,7 +945,8 @@
         </a>
         </div>
         <div class="score">[[item.score]]%</div>
-        <google-map api-key="[[mapsApiKey]]" zoom="18" latitude="[[item.lat]]" longitude="[[item.long]]" additional-map-options="{&quot;mapTypeId&quot;:&quot;satellite&quot;}">
+        <google-map fit-to-markers api-key="[[mapsApiKey]]" zoom="18" latitude="[[item.lat]]" longitude="[[item.long]]" additional-map-options="{&quot;mapTypeId&quot;:&quot;roadmap&quot;}">
+            <google-map-marker latitude="[[item.lat]]" longitude="[[item.long]]" draggable="false" animation="DROP" icon="marker.png"></google-map-marker>
         </google-map>
         <div class="location">
         <b>Location</b>:&nbsp; [[item.latText]], [[item.longText]]
