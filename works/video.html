@@ -32,11 +32,21 @@
     <script src="videojs-Background.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
+
             setTimeout(() => {
                 videojs('bg-video').Background({
                     'container': 'video-container' // #video-container
                 });
             }, 1000);
+
+            var body = document.getElementsByTagName('body')[0],
+                initialized = false;
+
+            body.addEventListener('mousedown', function () {
+                videojs('bg-video').Background({
+                    'container': 'video-container' // #video-container
+                });
+            }, false);
 
             //run videojs('bg-video').Background({'container': 'video-container'}); in browser console
         });
