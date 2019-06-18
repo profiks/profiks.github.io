@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fullscreen Video</title>
+    <link rel="stylesheet" href="video-js.css">
+    <link rel="stylesheet" href="flexboxgrid.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap" id="video-container">
+        <video id="bg-video"
+            class="video-js vjs-default-skin"
+            height="100%"
+            width="100%"
+            poster="cover.png"
+            loop>
+
+            <p> Your browser doesn't support video. Please <a href="http://browsehappy.com/">upgrade your browser</a> to see the example.</p>
+
+            <source src="particle.mp4" type="video/mp4">
+            <source src="particle.webm" type="video/webm">
+        </video>
+    </div>
+
+    <div class="container">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+    <script src="video.js"></script>
+    <script src="videojs-Background.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                videojs('bg-video').Background({
+                    'container': 'video-container' // #video-container
+                });
+            }, 1000);
+
+            //run videojs('bg-video').Background({'container': 'video-container'}); in browser console
+        });
+    </script>
+</body>
+</html>
