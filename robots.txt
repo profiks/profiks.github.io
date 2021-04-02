@@ -1,4 +1,5 @@
+# Allow crawling of all content
 User-agent: *
-Disallow: /works/*
-Sitemap: http://profiks.github.io/sitemap.xml
-Host: profiks.github.io
+Allow: /
+
+Sitemap: https://profiks.github.io/sitemap.xml

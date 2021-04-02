@@ -1,8 +1,0 @@
-{
-    "sass.enabled": true,
-    "sass.options": {
-		"outputDir": "../css/",
-		"sourceComments": false,
-		"outputStyle": "expanded"
-	}
-}
