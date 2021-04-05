@@ -1,0 +1,43 @@
+{
+  "name": " ",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": "",
+  "license": "",
+  "author": "",
+  "scripts": {
+    "start": "parcel serve ./app/index.html --port 8879 --open --no-cache",
+    "build": "parcel build ./app/index.html --no-source-maps --no-cache --no-content-hash"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@parcel/optimizer-data-url": "^2.0.0-beta.2",
+    "@parcel/packager-raw-url": "^2.0.0-beta.2",
+    "@parcel/runtime-browser-hmr": "^2.0.0-alpha.3",
+    "@parcel/transformer-inline-string": "^2.0.0-beta.2",
+    "@parcel/transformer-jsonld": "^2.0.0-beta.2",
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "parcel": "^2.0.0-beta.2",
+    "parcel-namer-custom": "^0.2.0",
+    "parcel-namer-rewrite": "^2.0.0-beta.1-8",
+    "parcel-plugin-robot": "^1.0.0",
+    "postcss": "^8.2.9",
+    "posthtml-include": "^1.7.0",
+    "sass": "^1.26.3",
+    "sharp": "^0.28.0"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "@glidejs/glide": "^3.4.1",
+    "gsap": "^3.6.1",
+    "parcel-plugin-browserconfig": "^1.0.5"
+  }
+}

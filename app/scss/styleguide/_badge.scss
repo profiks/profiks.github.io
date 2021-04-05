@@ -1,0 +1,20 @@
+.badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 8px;
+    border-radius: 0 8px;
+    text-transform: uppercase;
+
+    &--new {
+        background: var(--casal);
+        color: var(--white);
+    }
+
+    &--discount {
+        background: var(--goldenGrass);
+        color: var(--black);
+    }
+}

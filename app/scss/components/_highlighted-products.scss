@@ -1,0 +1,10 @@
+.component-highlighted-products {
+    padding: 16px;
+    background: var(--black);
+    color: var(--white);
+
+    &__heading {
+        text-align: center;
+        margin: 0 0 16px 0;
+    }
+}

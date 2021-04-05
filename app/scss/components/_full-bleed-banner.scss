@@ -1,0 +1,64 @@
+.component-full-bleed-banner {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: transparent;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__logo {
+        margin: 0 0 16px 0;
+    }
+
+    &__title {
+        margin: 0 0 16px 0;
+    }
+
+    &__subtitle {
+        margin: 0 0 16px 0;
+    }
+
+    &--dark {
+        background: var(--black);
+        color: var(--white);
+
+        &::before {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    &--light {
+        background: var(--white);
+        color: var(--black);
+
+        &::before {
+            background: rgba(255, 255, 255, 0.8);
+        }
+    }
+}

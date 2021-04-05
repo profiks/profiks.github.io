@@ -1,0 +1,67 @@
+.discount-coupon {
+    position: relative;
+    border-radius: 8px;
+    background: var(--black);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 160px auto;
+    grid-template-rows: auto;
+    gap: 16px;
+    padding: 16px;
+
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: auto 200px;
+    }
+
+    &__details {
+        min-height: 160px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    &__title {
+        width: 100%;
+        margin: 0 0 8px 0;
+    }
+
+    &__value {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        border-left: 1px dashed var(--gray);
+        position: relative;
+        padding: 0 0 0 8px;
+        color: var(--goldenGrass);
+
+        &::before,
+        &::after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: var(--white);
+            border-radius: 50%;
+            position: absolute;
+            left: -8px;
+        }
+
+        &::before {
+            top: -24px;
+        }
+
+        &::after {
+            bottom: -24px;
+        }
+    }
+
+    &__note {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 8px 0 0 0;
+    }
+}

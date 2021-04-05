@@ -1,0 +1,54 @@
+.component-title-text-cta {
+    padding: 48px 0;
+    background: var(--white);
+    color: var(--black);
+    text-align: center;
+
+    &__surtitle {
+        margin: 0 0 16px 0;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        max-width: 600px;
+        margin: 0 auto 16px auto;
+    }
+
+    &__curve-title {
+        max-width: 600px;
+        margin: 0 auto 16px auto;
+        font-size: 32px;
+        text-transform: uppercase;
+    }
+
+    &__curve-svg {
+        fill: transparent;
+    }
+
+    &__description {
+        max-width: 600px;
+        margin: 0 auto 16px auto;
+    }
+
+    &__cta-box {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: auto;
+        gap: 16px;
+        max-width: 500px;
+        margin: 0 auto;
+
+        @media only screen and (min-width: 768px) {
+            gap: 32px;
+            grid-template-columns: repeat(2, calc(50% - 16px));
+        }
+    }
+
+    &__button {
+        width: 100%;
+
+        @media only screen and (min-width: 768px) {
+            width: auto;
+        }
+    }
+}

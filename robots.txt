@@ -1,5 +1,0 @@
-# Allow crawling of all content
-User-agent: *
-Allow: /
-
-Sitemap: https://profiks.github.io/sitemap.278a600a.xml

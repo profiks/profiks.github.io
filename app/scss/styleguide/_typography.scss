@@ -1,0 +1,78 @@
+/* Typography */
+/* The headlines are inheriting the styles already added for the H1, H2, etc. tags, so no need to add specific classes, just add the tag.
+Usage example: <h1>Headline</h1>. */
+
+h1,
+.h1 {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 34px;
+    letter-spacing: -1.2px;
+}
+
+h2,
+.h2 {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: -1px;
+}
+
+h3,
+.h3 {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.6px;
+}
+
+h4,
+.h4 {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+}
+
+p,
+.p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+}
+
+small,
+.small {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+}
+
+a,
+.link {
+    color: var(--antiqueBrass);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+        color: var(--antiqueBrass);
+    }
+
+    &--alternate {
+        text-decoration: underline;
+        color: var(--casal);
+    }
+
+    &.disabled {
+        pointer-events: none;
+        color: var(--gray);
+    }
+}

@@ -1,0 +1,37 @@
+.product-tile {
+    position: relative;
+
+    &__image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+        border-radius: 8px;
+    }
+
+    &__details {
+        text-align: center;
+    }
+
+    &__name {
+        margin-bottom: 8px;
+    }
+
+    &__price {
+        margin-bottom: 8px;
+        color: var(--antiqueBrass);
+    }
+
+    &__price-discount {
+        color: var(--black);
+
+        &--white {
+            color: var(--white);
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

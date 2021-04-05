@@ -1,0 +1,58 @@
+.component-up-2-cta {
+    padding: 48px 0;
+    background: var(--white);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+
+    &--dark {
+        background: var(--black);
+        color: var(--white);
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: auto;
+        gap: 32px;
+
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, calc(50% - 16px));
+        }
+    }
+
+    &__title {
+        margin: 0 0 16px 0;
+        line-height: 1.5;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        margin: 0 0 16px 0;
+    }
+
+    &__picture {
+        &--centered {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    &__button {
+        width: 100%;
+
+        @media only screen and (min-width: 768px) {
+            width: auto;
+        }
+    }
+}
