@@ -29,7 +29,7 @@
     "parcel-namer-custom": "^0.2.0",
     "parcel-namer-rewrite": "^2.0.0-beta.1-8",
     "parcel-plugin-robot": "^1.0.0",
-    "postcss": "^8.2.9",
+    "postcss": "^8.2.10",
     "posthtml-include": "^1.7.0",
     "sass": "^1.26.3",
     "sharp": "^0.28.0"
